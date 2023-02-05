@@ -32,7 +32,7 @@
 
 ## 编写数据过滤函数
 
-![过滤函数](../../public/imgs/guide/screen/pageGuide3.5d659d14.png) ![过滤函数](../../.vuepress/public/screen/pageGuide4.7e00ab6a.png)
+![过滤函数](../../public/imgs/guide/screen/pageGuide3.5d659d14.png) ![过滤函数](../../public/imgs/guide/screen/pageGuide4.7e00ab6a.png)
 
 ## 快捷键列表
 

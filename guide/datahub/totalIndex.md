@@ -78,12 +78,11 @@ AutopullServer
 
 将应用服务目录复制到目标位置，里面已经写好了执行的脚本，通过脚本来执行。
 
-```
+
 curl.sh脚本参数：
 
 start|stop|restart|status|tail
 
-```
 
 > start：启动应用
 > stop：停止应用
@@ -105,12 +104,12 @@ windows系统直接打开使用即可。
 
 将应用服务目录复制到目标位置，里面已经写好了执行的脚本，通过脚本来执行。
 
-```
+
 curl.sh脚本参数：
 
 start|stop|restart|status|tail
 
-```
+
 > start：启动应用
 > stop：停止应用
 > restart：重新启动应用
@@ -123,7 +122,7 @@ start|stop|restart|status|tail
 
 推荐使用Nginx作为反向代理的前端接入层，有两种配置方式实现动静态请求的拆分。
 
-```
+```nginx
 server {
     listen       80;
     server_name  www.abc.com;
@@ -159,7 +158,7 @@ server {
 
 `supervisor`是用`Python`开发的一套通用的进程管理程序，能将一个普通的命令行进程变为后台`daemon`，并监控进程状态，异常退出时能自动重启。官方网站：http://supervisord.org/ 常见配置如下：
 
-```undefined
+```yaml
 [program:AssessServer]
 user=root
 command=/var/www/AssessServer

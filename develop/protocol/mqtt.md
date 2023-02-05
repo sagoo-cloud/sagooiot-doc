@@ -39,7 +39,6 @@
 
 流程图
 
-![flow-mqtt](images/flow-mqtt.png)
 
 ### 设备相关topic及数据上报
 

@@ -4,7 +4,7 @@
 
 基于一款可视化的流编程工具，可以非常轻松的实现对设备的数据转发。
 
-![img](../../.vuepress/public/ruleEngine/access_engine_01_01-ea71c7ba1fb539360b22a8c9ca7e73ec-20221005105334884.png)
+![img](../../public/imgs/guide/ruleEngine/access_engine_01_01-ea71c7ba1fb539360b22a8c9ca7e73ec-20221005105334884.png)
 
 ## 操作步骤
 
@@ -19,7 +19,7 @@
 创建好规则后，就可以点击`编辑`按钮进入可视化的流编程工具，编辑节点。
 如图：
 
-![img.png](../../.vuepress/public/ruleEngine/access_engine_02_02-f3ecd9a0bb90e5d8f61486b20a2751c1-20221005105334629.png)
+![img.png](../../public/imgs/guide/ruleEngine/access_engine_02_02-f3ecd9a0bb90e5d8f61486b20a2751c1-20221005105334629.png)
 
 编辑完后不要忘了点击`保存并运行`，否则规则不会生效。
 
