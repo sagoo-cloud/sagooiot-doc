@@ -1,9 +1,7 @@
 <template>
   <div class="layout-bottom">
-    Copyright © 2016-2023 <a href="https://sagoo.cn">Sagoo Inc.</a>
-    <span>|</span>
-    备案号
-    <a href="http://beian.miit.gov.cn/">辽ICP备20007259号</a>
+    <div>Copyright © 2016-2023 <a href="https://sagoo.cn">Sagoo Inc.</a></div>
+    <div>备案号<a href="http://beian.miit.gov.cn/">辽ICP备20007259号</a></div>
   </div>
 </template>
 

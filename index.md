@@ -2,7 +2,7 @@
 layout: home
 
 title: SagooIOT
-titleTemplate: SagooIOT 沙果物联网应用平台
+titleTemplate: 沙果物联网应用平台
 
 hero:
   name: SagooIOT
