@@ -386,6 +386,12 @@ function sidebarDevelop() {
         { text: '编译与部署', link: '/develop/front/build' },
       ]
     },
+    {
+      text: 'OpenAPIs',
+      items: [
+        { text: 'AKSK鉴权', link: '/develop/openapi/start' },
+      ]
+    },
   ]
 }
 
