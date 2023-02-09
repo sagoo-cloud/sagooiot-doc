@@ -390,6 +390,9 @@ function sidebarDevelop() {
       text: 'OpenAPIs',
       items: [
         { text: 'AKSK鉴权', link: '/develop/openapi/start' },
+        { text: 'Access Key', link: '/develop/openapi/safety' },
+        { text: '调用示例', link: '/develop/openapi/example' },
+
       ]
     },
   ]
