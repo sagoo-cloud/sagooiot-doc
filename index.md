@@ -7,7 +7,7 @@ titleTemplate: 沙果物联网应用平台
 hero:
   name: SagooIOT
   text: 开源物联网平台
-  tagline: 旨在提高物联网项目落地效率，让其更简单，更快速。
+  tagline: 旨在提供高性能、低成本、易用的物联网系统。
   image:
     src: /imgs/sagooiot.svg
     alt: SagooIOT
@@ -25,7 +25,7 @@ hero:
       link: https://zhgy.sagoo.cn/
     - theme: alt
       text: 许可版本
-      link: /guide/base/introduce.html#%E8%AE%B8%E5%8F%AF%E7%89%88%E6%9C%AC
+      link: /guide/base/version
 
 features:
   - title: 低代码开发

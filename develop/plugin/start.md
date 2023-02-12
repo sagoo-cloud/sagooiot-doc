@@ -73,5 +73,5 @@ go-plugin目前仅设计为在本地[可靠]网络上工作，不支持go-plugin
 
 即不能将go-plugin用于在两台服务器之间的远程过程调用，这点和传统的RPC有很大区别，望谨记。
 
-更多内容请见
+更多内容请见文章出处：
 [https://zhuanlan.zhihu.com/p/451382884](https://zhuanlan.zhihu.com/p/451382884)
