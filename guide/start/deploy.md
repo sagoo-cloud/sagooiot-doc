@@ -71,6 +71,14 @@ server {
 
 其中，8200为本地编译的应用Web服务监听端口。这个端口在config.toml文件的Address参数中配置。
 
+**如果采用HTTPS方式时SSE不工作，需要如下配置：**
+
+```Nginx
+    proxy_set_header Connection '';
+    proxy_http_version 1.1;
+    chunked_transfer_encoding off; 
+```
+
 
 ## 集群部署
 

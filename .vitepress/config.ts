@@ -109,9 +109,18 @@ function sidebarGuide() {
       items: [
         { text: '系统介绍', link: '/guide/base/introduce' },
         { text: '页面展示', link: '/guide/base/demopic' },
-        { text: '系统安装', link: '/guide/start/install' },
         { text: '快速开始', link: '/guide/start/quick' },
         { text: '更新记录', link: '/guide/base/history' },
+
+      ]
+    },
+    {
+      text: '系统安装',
+      collapsed: false,
+      items: [
+        { text: '部署说明', link: '/guide/start/deploy' },
+        { text: '基础环境安装', link: '/guide/start/install' },
+        { text: 'SagooIOT安装', link: '/guide/start/sagooiot-install' },
 
       ]
     },
