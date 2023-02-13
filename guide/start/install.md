@@ -1,105 +1,15 @@
-# 安装系统
 
+# 详细安装过程
 
-该程序可以独立部署，直接执行使用，也可以与nginx或是apache联合使用。
-
-
-## 硬件要求
-
-**最低配置**
-
-|CPU|1核心|
-|--|--|
-|内存|1GB|
-|硬盘|40G|
-
-**推荐配置**
-
-|CPU|2核+|
-|--|--|
-|内存|4GB+|
-|硬盘|40GB+|
-
-
-## 环境安装
-
-Mysql5.6以上
-
-Redis6.x
-
-TDengine 3.0【[安装文档](https://docs.taosdata.com/get-started/package/)】
-
-## 独立部署
-
-服务器推荐使用lnix服务器系列(包括:Linux, MacOS, *BSD)，以下使用Linux系统为例，介绍如何部署。
-将应用服务目录复制到目标位置，里面写好了执行的脚本，通过脚本来执行。
-
-
-```
-curl.sh脚本参数：
-
-start|stop|restart|status|tail
-
-```
-
-
-## 代理部署
-
-推荐使用Nginx作为反向代理的前端接入层，有两种配置方式实现动静态请求的拆分。
-
-```
-server {
-    listen       80;
-    server_name  www.abc.org;
-
-    access_log   /var/log/gf-app-access.log;
-    error_log    /var/log/gf-app-error.log;
-
-    location ~ .*\.(gif|jpg|jpeg|png|js|css|eot|ttf|woff|svg|otf)$ {
-        access_log off;
-        expires    1d;
-        root       /var/www/gf-app/public;
-        try_files  $uri @backend;
-    }
-
-    location / {
-        try_files $uri @backend;
-    }
-
-    location @backend {
-        proxy_pass                 http://127.0.0.1:8200;
-        proxy_redirect             off;
-        proxy_set_header           Host             $host;
-        proxy_set_header           X-Real-IP        $remote_addr;
-        proxy_set_header           X-Forwarded-For  $proxy_add_x_forwarded_for;
-    }
-}
-
-```
-
-其中，8200为本地编译的应用Web服务监听端口。这个端口在config.toml文件的Address参数中配置。
-
-
-## 集群部署
-
-**系统部署图**
-
-![集群部署](../../public/imgs/guide/start/deploy.png)
-
-
-## 详细安装过程
-
-### 基础服务
+## 基础环境安装
 
 1. Redis 7.0.4
-2. TDengine 3.0.1.5
+2. TDengine 3.0.1.5 【[安装文档](https://docs.taosdata.com/get-started/package/)】
 3. EMQX 5.0.9-el8
 4. Nginx 1.22.0
 5. rule-engine
 
-部署步骤
-
-#### 1. 安装redis
+### 1. 安装redis
 
 1. 安装目录: `/www/service/redis`
 
@@ -111,7 +21,7 @@ server {
 
        使用宝塔进行启动或者进入到src目录下使用./redis-server进行启动
 
-#### 2. 安装TDengine
+### 2. 安装TDengine
 
 1. 官网地址:` https://www.taosdata.com/`
 
@@ -135,7 +45,7 @@ server {
 
 9. 系统使用http形式连接，故需`systemctl start taosadapter`启动taosadapter
 
-#### 3. 安装EMQX
+### 3. 安装EMQX
 
 1. 官网地址:` https://www.emqx.com/zh`
 
@@ -151,7 +61,7 @@ server {
 
    ![image-20221101231856257](../../public/imgs/guide/install/image-20221101231856257.png)
 
-#### 4.  安装Nginx
+### 4.  安装Nginx
 
 1. 安装目录` /www/server/nginx`(通过宝塔进行安装)
 2. 使用宝塔启动方式进行启动
@@ -172,7 +82,7 @@ server {
 
     4. 进入到sagoo-admin目录下，使用`./curl.sh start`启动
 
-#### 5.  rule-engine
+### 5.  rule-engine
 
 **服务器(cent os)安装nodejs 最新版**
 
@@ -188,7 +98,80 @@ server {
 4. 启动项目 `pm2 start packages/node_modules/node-red/red.js --name rule-engine:1880`  之后可以通过 `pm2 show rule-engine:1880` 查看项目运行情况
 5. 按照【rule-engine】项目下 `nginx/node-red.conf` 文件的配置增加一下nginx配置，来保证规则引擎和iot的同源
 
-#### 6. 前端部署
+
+
+## SagooIOT安装
+
+### 服务端安装
+
+通过源码进行编译安装
+
+#### build.sh编译脚本
+
+可以使用build.sh进行程序编译，如果在使用build.sh脚本进行程序编译时，提示
+
+```
+fatal: No names found, cannot describe anything.
+./build.sh linux|windows|mac
+
+```
+是因为源码没有进行git版本的标签设置。
+
+支持将git的tag编译到程序中。需要创建git的tag。只有创建了tag，编译的程序才会显示版本号。
+
+```
+git tag v0.0.1
+
+git push origin v0.0.1
+```
+
+编译后，将bin目录下生成的全部文件放到需要部署的文件目录即可。
+
+#### 编译后执行脚本
+
+编译后生成的可执行文件放在bin目录下，将bin目录下的文件放到目标服务器，执行`./curl.sh start` 运行即可。
+
+```
+curl.sh脚本参数：
+
+start|stop|restart|status|tail
+
+```
+
+分别对应 启动、停止、重启、状态、显示动态日志运行信息
+
+####  插件编译
+
+如果要使用插件，需要提前将插件进行编译。直接使用plugins下面的编译脚本直接执行就可以。
+
+
+#### 其它问题
+
+**如果在macOS下遇到 Warning :`IOMasterPort`：**
+
+```
+warning: ‘IOMasterPort‘ is deprecated: first deprecated in macOS 12.0 [-Wdeprecated-declarations]
+```
+**原因**
+
+依赖包跟MacOS的版本有兼容问题。
+
+解决方案
+切换CGO编译方式
+```
+go env -w CGO_ENABLED="0"
+```
+
+ **如果采用HTTPS方式时SSE不工作，需要如下配置：**
+
+```Nginx
+    proxy_set_header Connection '';
+    proxy_http_version 1.1;
+    chunked_transfer_encoding off; 
+```
+
+
+### 前端部署
 
 1. 点击build打包构建
 
@@ -197,4 +180,3 @@ server {
 2. 将打包后的文件上传至服务器`/www/wwwroot/huanbao.lngxny.com`目录下即可
 
    ![image-20221102000945463](../../public/imgs/guide/install/image-20221102000945463.png)
-
