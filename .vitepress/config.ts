@@ -10,7 +10,7 @@ const ogUrl = 'http://iotdoc.sagoo.cn/'
 
 export default defineConfig({
   title: 'SagooIOT',
-  description: '沙果可快速构建物联网应用的基础平台',
+  description: '沙果物联网系统是开源免费的物联网一站式系统，多协议支持，Modbus和主流PLC等多种协议，支持数据采集、公式计算、定时控制、自动控制、异常报警、流量监控、Web组态、远程调试等功能，适用于大部分物联网和工业互联网应用场景。',
   lang: 'zh-CN',
 
   head: [
@@ -31,6 +31,17 @@ export default defineConfig({
         'data-spa': '',
         defer: ''
       }
+    ],
+    [
+      'script', {}, `
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b8d6166a7eddaa8fe0a45f63a1a82066";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            `
     ]
   ],
 
@@ -122,24 +133,6 @@ function sidebarGuide() {
         { text: '基础环境安装', link: '/guide/start/install' },
         { text: 'SagooIOT安装', link: '/guide/start/sagooiot-install' },
 
-      ]
-    },
-    {
-      text: '数据中心',
-      collapsed: false,
-      items: [
-        {
-          text: '总指数管理',
-          link: '/guide/datahub/totalIndex'
-        },
-        {
-          text: '数据源管理',
-          link: '/guide/datahub/source'
-        },
-        {
-          text: '数据建模',
-          link: '/guide/datahub/modeling'
-        }
       ]
     },
     {
@@ -287,6 +280,24 @@ function sidebarGuide() {
         {
           text: '告警配置',
           link: '/guide/alarm/config'
+        }
+      ]
+    },
+    {
+      text: '数据中心',
+      collapsed: false,
+      items: [
+        {
+          text: '总指数管理',
+          link: '/guide/datahub/totalIndex'
+        },
+        {
+          text: '数据源管理',
+          link: '/guide/datahub/source'
+        },
+        {
+          text: '数据建模',
+          link: '/guide/datahub/modeling'
         }
       ]
     },

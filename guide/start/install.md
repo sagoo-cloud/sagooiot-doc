@@ -99,6 +99,9 @@
 
 9. 系统使用http形式连接，故需`systemctl start taosadapter`启动taosadapter
 
+详细的安装过程请看Tdengine的官网说明：[官网安装手册](https://docs.taosdata.com/get-started/package/)
+
+
 ### 3. 安装EMQX
 
 1. 官网地址:` https://www.emqx.com/zh`
@@ -114,6 +117,9 @@
 6. 设置权限认证
 
    ![image-20221101231856257](../../public/imgs/guide/install/image-20221101231856257.png)
+
+详细的安装过程请看EMQX的官网说明：[官网安装手册](https://www.emqx.io/docs/zh/v5.0/deploy/install.html)
+
 
 ### 4.  安装Nginx
 
@@ -136,19 +142,49 @@
 
     4. 进入到sagoo-admin目录下，使用`./curl.sh start`启动
 
+详细的安装过程请看 [Nginx安装教程](https://www.runoob.com/linux/nginx-install-setup.html)
+
 ### 5.  rule-engine
 
 **服务器(cent os)安装nodejs 最新版**
 
-1. `yum list nodejs` 查看是否为最新版本
-2. 如果不是，通过下面代码增加源信息 `curl --silent --location https://rpm.nodesource.com/setup_18.x | sudo bash`
-3. 然后在 `yun install nodejs`
+1. 查看是否为最新版本
 
-**如果安装包过慢，可以先设置淘宝源  `npm config set registry https://registry.npm.taobao.org/`**
+```shell
+  yum list nodejs
+``` 
 
-1. 全局安装 pm2 `sudo npm i pm2 -g`
-2. 将【rule-engine】项目拷贝到服务器上
-3. 在【rule-engine】目录下安装包依赖 `npm install`
-4. 启动项目 `pm2 start packages/node_modules/node-red/red.js --name rule-engine:1880`  之后可以通过 `pm2 show rule-engine:1880` 查看项目运行情况
-5. 按照【rule-engine】项目下 `nginx/node-red.conf` 文件的配置增加一下nginx配置，来保证规则引擎和iot的同源
+2. 如果不是，通过下面代码增加源信息
+```shell
+  curl --silent --location https://rpm.nodesource.com/setup_18.x | sudo bash
+```
+
+3. 然后在
+
+```shell
+    yun install nodejs
+```
+
+**如果安装包过慢，可以先设置淘宝源  
+```shell
+  npm config set registry https://registry.npm.taobao.org/
+```
+
+4. 全局安装 pm2 
+```shell
+  sudo npm i pm2 -g
+ ```
+5. 将【rule-engine】项目拷贝到服务器上
+6. 在【rule-engine】目录下安装包依赖
+   ```shell
+    npm install
+    ```
+7. 启动项目 
+```shell
+    pm2 start packages/node_modules/node-red/red.js --name rule-engine:1880
+```
+之后可以通过 `pm2 show rule-engine:1880` 查看项目运行情况
+8. 按照【rule-engine】项目下 `nginx/node-red.conf` 文件的配置增加一下nginx配置，来保证规则引擎和iot的同源
+
+
 
