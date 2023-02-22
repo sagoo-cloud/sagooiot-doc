@@ -1,6 +1,6 @@
 # 介绍
 
-基于 vue3.x + CompositionAPI + typescript + vite + element plus + vue-router-next + next.vuex开发。
+基于 vue3.x + CompositionAPI + typescript + vite + element plus + vue-router-next + vuex开发。
 
 详情见开源前端模版项目 [https://gitee.com/lyt-top/vue-next-admin](https://gitee.com/lyt-top/vue-next-admin)
 
