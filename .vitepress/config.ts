@@ -302,6 +302,18 @@ function sidebarGuide() {
       ]
     },
     {
+      text: '系统管理',
+      collapsed: false,
+      items: [
+        {
+          text: '权限配置',
+          link: '/guide/system/authorize_config'
+        }
+
+      ]
+    },
+
+    {
       text: '其它',
       collapsed: false,
       items: [
@@ -366,7 +378,6 @@ function sidebarDevelop() {
       text: '系统开发',
       items: [
         { text: '权限开发', link: '/develop/system/authorize' },
-        { text: '权限配置', link: '/develop/system/authorize_config' },
         { text: '数据中心', link: '/develop/system/datahub' },
       ]
     },
