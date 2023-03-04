@@ -136,6 +136,18 @@ function sidebarGuide() {
       ]
     },
     {
+      text: '设备接入',
+      collapsed: false,
+      items: [
+        { text: '创建产品', link: '/guide/device_access/product' },
+        { text: '配置物模型', link: '/guide/device_access/setup_tsl' },
+        { text: '创建设备', link: '/guide/device_access/device' },
+        { text: '接入设备', link: '/guide/device_access/access' },
+        { text: '测试设备接入', link: '/guide/device_access/mqtt' },
+
+      ]
+    },
+    {
       text: '设备管理',
       collapsed: false,
       items: [
