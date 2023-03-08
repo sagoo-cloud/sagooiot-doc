@@ -139,6 +139,7 @@ function sidebarGuide() {
       text: '设备接入',
       collapsed: false,
       items: [
+        { text: '接入流程', link: '/guide/device_access/flow' },
         { text: '创建产品', link: '/guide/device_access/product' },
         { text: '配置物模型', link: '/guide/device_access/setup_tsl' },
         { text: '创建设备', link: '/guide/device_access/device' },
