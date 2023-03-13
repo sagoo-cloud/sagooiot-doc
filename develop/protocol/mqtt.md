@@ -46,9 +46,9 @@
 
 ### DataBus(内部)相关topic&结构体简介
 
-1. 所有设备消息的topic的前缀均为: /device/{productKey}/{deviceKey}. 下面topic已经省略，写的时候请加上
-   如:产品product-1下的设备device-1上线消息:/device/product-1/device-1/online.
-2. 可通过通配符订阅所有设备的指定消息,如:/device/*/*/online,或者订阅所有消息:/device/**. 使用通配符订阅可能将收到大量的消息,请保证消息的处理速度,否则会影响系统消息吞吐量.
+1. 所有设备消息的topic的前缀均为: device/{productKey}/{deviceKey}. 下面topic已经省略，写的时候请加上
+   如:产品product-1下的设备device-1上线消息:device/product-1/device-1/online.
+2. 可通过通配符订阅所有设备的指定消息,如:device/*/*/online,或者订阅所有消息:device/**. 使用通配符订阅可能将收到大量的消息,请保证消息的处理速度,否则会影响系统消息吞吐量.
 
 | topic                                              | topic说明                      |
 |:---------------------------------------------------|:-----------------------------|

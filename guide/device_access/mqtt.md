@@ -4,6 +4,8 @@
 
 通过一个模拟设备的接入，来演示系统接入设备的情况。以MQTTX为例，介绍使用第三方软件以MQTT协议接入SagooIOT物联网平台。
 
+**注：这里采用的是SagooIOT官方标准Json格式数据** [非官方数据格式的处理请见这里](mqtt2.md)
+
 ## 下载并安装MQTTX
 
 前往[官网下载](https://mqttx.app/)安装
@@ -36,6 +38,7 @@
 1，MQTTX 进行数据上报
 
 ![mqttx-willmessage](../../public/imgs/guide/device_access/mqttx-willmessage.png)
+
 
 | 参数      | 说明                                                         |
 | --------- | ------------------------------------------------------------ |
