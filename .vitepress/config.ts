@@ -411,7 +411,8 @@ function sidebarDevelop() {
     {
       text: '插件开发',
       items: [
-        { text: '开发规范', link: '/develop/plugin/start' },
+        { text: '插件介绍', link: '/develop/plugin/hashicorp' },
+        { text: '开发说明', link: '/develop/plugin/start' },
         { text: '协议插件', link: '/develop/plugin/protocol' },
         { text: '通知插件', link: '/develop/plugin/notice' },
       ]

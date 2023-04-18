@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="-331 -153 657.138 748.5" width="657.138" height="748.5">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="-331 -153 657.138 748.5" width="657.138" height="748.5">
     <defs>
-        <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="black">
-            <g>
-                <path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
-            </g>
-        </marker>
-        <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker_2" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="black">
+        <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="#a5a5a5">
             <g>
                 <path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
             </g>
         </marker>
     </defs>
-    <metadata> Produced by OmniGraffle 7.21.3\n2023-03-06 23:03:50 +0000</metadata>
-    <g id="版面_____-2" fill="none" stroke="none" stroke-opacity="1" stroke-dasharray="none" fill-opacity="1">
+    <metadata> Produced by OmniGraffle 7.21.3\n2023-03-21 11:59:55 +0000</metadata>
+    <g id="版面_____-2" stroke="none" fill-opacity="1" stroke-opacity="1" fill="none" stroke-dasharray="none">
         <title>设备接入流程</title>
         <g id="版面_____-2_图层_1">
             <title>图层 1</title>
@@ -33,7 +28,7 @@
                 </text>
             </g>
             <g id="Line_4">
-                <line x1="-55.5" y1="-114" x2="-55.5" y2="-71.9" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                <line x1="-55.5" y1="-114" x2="-55.5" y2="-71.9" marker-end="url(#FilledArrow_Marker)" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
             </g>
             <g id="Graphic_6">
                 <rect x="-111.5" y="333.5" width="117" height="38.5" fill="#c0ffff"/>
@@ -43,7 +38,7 @@
                 </text>
             </g>
             <g id="Line_7">
-                <line x1="-55.353606" y1="-16.060126" x2="-53.18602" y2="323.6002" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                <line x1="-55.353606" y1="-16.060126" x2="-53.18602" y2="323.6002" marker-end="url(#FilledArrow_Marker)" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
             </g>
             <g id="Graphic_8">
                 <rect x="-82.54289" y="110.02299" width="56.192" height="32" fill="white"/>
@@ -59,7 +54,7 @@
                 </text>
             </g>
             <g id="Line_10">
-                <path d="M .5 -39 L 10.5 -39 L 47.5 -38.76172 L 246 -38.76172 L 246 75.6" marker-end="url(#FilledArrow_Marker_2)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                <path d="M .5 -39 L 10.5 -39 L 47.5 -38.76172 L 246 -38.76172 L 246 75.6" marker-end="url(#FilledArrow_Marker)" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
             </g>
             <g id="Graphic_11">
                 <rect x="81.50595" y="-54.76172" width="106" height="32" fill="white"/>
@@ -68,8 +63,8 @@
                 </text>
             </g>
             <g id="Graphic_12">
-                <text transform="translate(31.999997 -23.5)" fill="black">
-                    <tspan font-family="PingFang SC" font-size="9" fill="black" x="0" y="10">（mudbus、CoAP、HTTP、WebSocket）</tspan>
+                <text transform="translate(43.999997 -23.5)" fill="#76d6ff">
+                    <tspan font-family="PingFang SC" font-size="9" fill="#76d6ff" x="0" y="10">（mudbus、CoAP、HTTP、WebSocket）</tspan>
                 </text>
             </g>
             <g id="Graphic_13">
@@ -80,7 +75,7 @@
                 </text>
             </g>
             <g id="Line_14">
-                <path d="M 187.5 104.75 L 177.5 104.75 L 144.15625 105.15625 L 135 105.15625 L 135 217.1" marker-end="url(#FilledArrow_Marker_2)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                <path d="M 187.5 104.75 L 177.5 104.75 L 144.15625 105.15625 L 135 105.15625 L 135 217.1" marker-end="url(#FilledArrow_Marker)" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
             </g>
             <g id="Graphic_15">
                 <rect x="71.672" y="116.59429" width="126.656" height="32" fill="white"/>
@@ -89,10 +84,10 @@
                 </text>
             </g>
             <g id="Line_17">
-                <path d="M 246 124 L 246 134 L 246.44922 282.9297 L 246.44922 352.75 L 15.4 352.75" marker-end="url(#FilledArrow_Marker_2)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                <path d="M 246 124 L 246 134 L 246.44922 282.9297 L 246.44922 352.75 L 15.4 352.75" marker-end="url(#FilledArrow_Marker)" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
             </g>
             <g id="Line_18">
-                <path d="M 135 265.5 L 135 352.75 L 26.35168 352.75" marker-end="url(#FilledArrow_Marker_2)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                <path d="M 135 265.5 L 135 352.75 L 26.3258 352.75" marker-end="url(#FilledArrow_Marker)" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
             </g>
             <g id="Graphic_19">
                 <rect x="174.138" y="163.74525" width="152" height="32" fill="white"/>
@@ -108,7 +103,7 @@
                 </text>
             </g>
             <g id="Line_21">
-                <line x1="-53" y1="372" x2="-53" y2="435.1" marker-end="url(#FilledArrow_Marker_2)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                <line x1="-53" y1="372" x2="-53" y2="435.1" marker-end="url(#FilledArrow_Marker)" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
             </g>
             <g id="Graphic_22">
                 <rect x="-330.5" y="132.25" width="117" height="72.62937" fill="#c0ffff"/>
@@ -118,10 +113,10 @@
                 </text>
             </g>
             <g id="Line_23">
-                <path d="M -111.5 -39 L -121.5 -39 L -219.66406 -38.55078 L -272 -38.55078 L -272 122.35" marker-end="url(#FilledArrow_Marker_2)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                <path d="M -111.5 -39 L -121.5 -39 L -219.66406 -38.55078 L -272 -38.55078 L -272 122.35" marker-end="url(#FilledArrow_Marker)" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
             </g>
             <g id="Line_24">
-                <path d="M -272 204.87937 L -272 214.87937 L -271.5 352 L -271.5 352.75 L -121.4 352.75" marker-end="url(#FilledArrow_Marker_2)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                <path d="M -272 204.87937 L -272 214.87937 L -271.5 352 L -271.5 352.75 L -121.4 352.75" marker-end="url(#FilledArrow_Marker)" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
             </g>
             <g id="Graphic_25">
                 <rect x="-111.5" y="556.5" width="117" height="38.5" fill="#c0ffff"/>
@@ -131,11 +126,11 @@
                 </text>
             </g>
             <g id="Line_26">
-                <line x1="-53" y1="483.5" x2="-53" y2="546.6" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                <line x1="-53" y1="483.5" x2="-53" y2="546.6" marker-end="url(#FilledArrow_Marker)" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
             </g>
             <g id="Graphic_27">
-                <text transform="translate(-131 377)" fill="black">
-                    <tspan font-family="PingFang SC" font-size="12" fill="black" x="0" y="13">如果是新产品，需要设置物模型</tspan>
+                <text transform="translate(-131 377)" fill="#76d6ff">
+                    <tspan font-family="PingFang SC" font-size="12" fill="#76d6ff" x="0" y="13">如果是新产品，需要设置物模型</tspan>
                 </text>
             </g>
         </g>
