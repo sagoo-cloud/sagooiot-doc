@@ -88,6 +88,7 @@ function nav() {
     { text: '使用手册', link: '/guide/what-is-sagooiot', activeMatch: '/guide/' },
     { text: '开发手册', link: '/develop/readme', activeMatch: '/develop/' },
     { text: '项目案例', link: '/cases/introduction', activeMatch: '/cases/' },
+    { text: '问题反馈', link: 'https://support.qq.com/product/595720'},
     {
       text: "相关链接",
       items: [
