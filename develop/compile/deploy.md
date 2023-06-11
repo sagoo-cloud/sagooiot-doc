@@ -79,3 +79,25 @@ warning: ‘IOMasterPort‘ is deprecated: first deprecated in macOS 12.0 [-Wdep
 ```
 go env -w CGO_ENABLED="0"
 ```
+
+安装mysql为8.x以上，则需要按照一下部署进行修改 
+
+1. 输入管理员用户名和密码，以登录 MySQL 客户端
+        ```mysql
+        mysql -uroot -p
+        ```
+2. 输入以下命令，以查看当前的 innodb_strict_mode 设置：
+        ```mysql
+        SELECT @@GLOBAL.innodb_strict_mode;
+        ```
+    如果该命令返回了“1”，则表示 innodb_strict_mode 已启用。如果该命令返回了“0”，则表示 innodb_strict_mode 已禁用
+3. 禁用 innodb_strict_mode
+        ```mysql
+        SET GLOBAL innodb_strict_mode=0;
+        ```
+4. 验证已修改的 innodb_strict_mode 设置是否生效
+        ```mysql
+        SELECT @@.innodb_strict_mode;
+        ```
+
+windows部署emqx, 需要使用管理员运行cmd，进入到bin目录下使用`./emqx start`命令进行启动
