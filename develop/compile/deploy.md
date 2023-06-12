@@ -80,7 +80,7 @@ warning: ‘IOMasterPort‘ is deprecated: first deprecated in macOS 12.0 [-Wdep
 go env -w CGO_ENABLED="0"
 ```
 
-安装mysql为8.x以上，则需要按照一下部署进行修改 
+安装mysql为8.x以上，则需要按照以下步骤进行修改 
 
 1. 输入管理员用户名和密码，以登录 MySQL 客户端
         ```mysql
