@@ -6,7 +6,7 @@
 
 中间件：Redis、Nginx
 
-业务数据库：Mysql
+业务数据库：Mysql、Postgresql
 
 时序数据库：TDengine
 
