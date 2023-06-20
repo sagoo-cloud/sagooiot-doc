@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="advantage">
     <div class="container">
@@ -9,46 +7,30 @@
           SagooIOT提供了支持私有化或容器化形式的部署，用户可以将其轻松部署在单机、集群或容器服务环境中，并且支持横向扩展，以满足不同规模的业务需求。使用SagooIOT能够获得出色的性能表现，提供优异的IOT服务能力。
         </p>
       </div>
+
       <div class="items">
         <div class="item grid-2">
-        <span class="VPLink VPFeature">
-        <article class="box">
-        <h2 class="item-title">百万级</h2>
+          <h2 class="item-title">百万级</h2>
           <span class="item-subtitle">数据并发</span>
-        <p class="details">系统可分布式部署，支持百万级数据并发。</p>
-        </article>
-        </span>
+          <p class="details">系统可分布式部署，支持百万级数据并发。</p>
         </div>
 
-
         <div class="item grid-2">
-        <span class="VPLink VPFeature">
-        <article class="box">
-        <h2 class="item-title">千万级</h2>
+          <h2 class="item-title">千万级</h2>
           <span class="item-subtitle">设备接入</span>
-        <p class="details">设备网关水平扩容，支持千万级设备接入。</p>
-        </article>
-        </span>
+          <p class="details">设备网关水平扩容，支持千万级设备接入。</p>
         </div>
 
         <div class="item grid-2">
-        <span class="VPLink VPFeature">
-        <article class="box">
-        <h2 class="item-title">亿万级</h2>
+          <h2 class="item-title">亿万级</h2>
           <span class="item-subtitle">数据采集</span>
-        <p class="details">TDengine时序数据库，支持上亿数据采集点</p>
-        </article>
-        </span>
+          <p class="details">TDengine时序数据库，支持上亿数据采集点</p>
         </div>
 
         <div class="item grid-2">
-        <span class="VPLink VPFeature">
-        <article class="box">
-        <h2 class="item-title">低延迟</h2>
+          <h2 class="item-title">低延迟</h2>
           <span class="item-subtitle">数据通讯</span>
-        <p class="details">高性能网络组件，非阻塞网络编程，具有极低的通讯延迟。</p>
-        </article>
-        </span>
+          <p class="details">高性能网络组件，非阻塞网络编程，具有极低的通讯延迟。</p>
         </div>
 
       </div>
@@ -64,7 +46,6 @@
 
 .title {
   padding-top: 40px;
-  color: #000;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -116,16 +97,19 @@
   padding: 8px;
   width: 100%;
 }
-.item-title{
-  margin:20px;
+
+.item-title {
+  margin: 20px;
   font-size: 2.5rem;
   color: #10b981;
 }
-.item-subtitle{
-  margin:20px;
+
+.item-subtitle {
+  margin: 20px;
   font-size: 1.5rem;
 
 }
+
 @media (min-width: 640px) {
   .item.grid-2,
   .item.grid-4,
