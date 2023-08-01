@@ -123,24 +123,109 @@
 
 ### 4.  安装Nginx
 
-1. 安装目录` /www/server/nginx`(通过宝塔进行安装)
-2. 使用宝塔启动方式进行启动
+1. 官网地址：`http://nginx.org/en/download.html`
+2. 将下载后的nginx上传至`/opt/nginx`下
+3. 使用`tar zxf`对nginx进行解压
+   ```linux
+    tar -zxf nginx-1.25.1.tar.gz
+   ```
+4. 进入到nginx-1.25.1目录进行编译安装
+   ```linux
+    1. ./configure --prefix=/usr/local/nginx --with-http_ssl_module
+    2. make && make install
+   ```
+5. 进入到安装目录下修改nginx.conf配置文件
+   ```linux
+   1. cd /usr/local/nginx
+   2. vi conf/nginx.conf
+   ```
+6. 配置内容参考
+   ```nginx
+      server {
+        listen       80;
+        server_name  localhost;
+        
+        #ssl_certificate /data/nginx/conf/vhost/cert/localhost/fullchain.pem;     
+        #ssl_certificate_key /data/nginx/conf/vhost/cert/localhost/privkey.pem;
 
-1. 部署应用服务
+        #前端路由
+        location / {
+            root /opt/sagoo/iot-ui;
+        }
+        
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+       #规则引擎路由
+      location /rule-engine  {
+                proxy_pass http://127.0.0.1:2877/rule-engine;
+                autoindex on;
+                autoindex_exact_size on;
+                autoindex_localtime on;
+      }
+      
+      location /rule-engine/comms {
+                proxy_pass http://127.0.0.1:2877;
+                proxy_read_timeout 300s;
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;             
+                proxy_set_header Connection "upgrade";
+      }
 
-    1. 更改config.yaml配置
+      #sagoo-iot路由
+      location /base-api/ {
+                proxy_set_header Connection upgrade; 
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_http_version 1.1; 
+                chunked_transfer_encoding off; 
+                proxy_pass                 http://127.0.0.1:8199/;
+                proxy_redirect             off;
+                proxy_set_header           Host             $host;
+                proxy_set_header           X-Real-IP        $remote_addr;
+                proxy_set_header           X-Forwarded-For  $proxy_add_x_forwarded_for;
+      }
+    
+      #接口文档路由
+      location /base-api/swagger/api.json {
+           proxy_pass                 http://127.0.0.1:8199/base-api/swagger/api.json;
+      }
+      #指数服务路由
+      location /base-api/assess/ {
+           proxy_pass                 http://127.0.0.1:8188/;
+           proxy_redirect             off;
+           proxy_set_header           Host             $host;
+           proxy_set_header           X-Real-IP        $remote_addr;
+           proxy_set_header           X-Forwarded-For  $proxy_add_x_forwarded_for;
 
-       ![image-20221101180600386](../../public/imgs/guide/install/image-20221101180600386.png)
+     }
+     #modbus路由
+     location /base-api/modbus/ {
+          proxy_pass                 http://127.0.0.1:8177/;
+          proxy_redirect             off;
+          proxy_set_header           Host             $host;
+          proxy_set_header           X-Real-IP        $remote_addr;
+          proxy_set_header           X-Forwarded-For  $proxy_add_x_forwarded_for;
 
-       ![image-20221101180626022](../../public/imgs/guide/install/image-20221101180626022.png)
+     }
+     #流媒体服务路由
+     location /media/ {
+           proxy_pass    http://127.0.0.1:8166/;
+           proxy_redirect             off;
+           proxy_set_header           Host             $host;
+           proxy_set_header           X-Real-IP        $remote_addr;
+           location ~* \.(jpg|jpeg|png|ico|css|js)$ 
+           {
+                rewrite ^/media/(.*)$ /$1 break;
+                root /opt/sagoo/iot-server/bin/SagooMedia/public;
+            }
 
-    2. 使用`./build.sh linux`进行打包
-
-    3. 将编译后的文件上传至服务器
-
-       目录为: `/home/sagoo-admin`
-
-    4. 进入到sagoo-admin目录下，使用`./curl.sh start`启动
+        }
+    }
+   ```
 
 详细的安装过程请看 [Nginx安装教程](https://www.runoob.com/linux/nginx-install-setup.html)
 
