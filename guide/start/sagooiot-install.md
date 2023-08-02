@@ -31,8 +31,7 @@ git push origin v0.0.1
 3. 编译后，将bin目录下生成的全部文件上传到服务器`/opt/sagoo/iot-server`目录下。
 4. 进入到`/opt/sagoo/iot-server/bin/config`目录下，找到config.yml文件
 5. 使用`vi config.yml`对文件进行编辑，可参考以下配置内容：
-
-       ```yaml
+    ```yaml
             # 配置文件的键名命名方式统一使用小驼峰。
             # HTTP Server.
             server:
