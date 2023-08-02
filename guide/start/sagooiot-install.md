@@ -31,8 +31,7 @@ git push origin v0.0.1
 3. 编译后，将bin目录下生成的全部文件上传到服务器`/opt/sagoo/iot-server`目录下。
 4. 进入到`/opt/sagoo/iot-server/bin/config`目录下，找到config.yml文件
 5. 使用`vi config.yml`对文件进行编辑，可参考以下配置内容：
-
-       ```yml
+    ```yaml
             # 配置文件的键名命名方式统一使用小驼峰。
             # HTTP Server.
             server:
@@ -189,7 +188,7 @@ git push origin v0.0.1
 2. 进入到服务器`/opt/sagoo/iot-server/bin`下
 3. 创建server文件夹及sagoo-modbus子文件夹，并将第一步编译后的所有文件放到sagoo-modbus子文件夹下
 4. 进入到`server/sagoo-modbus/config`目录下修改config.toml配置，可参考以下配置内容
-      ```yml
+      ```yaml
          # mqtt 连接配置
         broker:
           address: tcp://47.100.218.61:9112 # 连接mqtt hub的地址
