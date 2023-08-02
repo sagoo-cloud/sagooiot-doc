@@ -126,16 +126,16 @@
 1. 官网地址：`http://nginx.org/en/download.html`
 2. 将下载后的nginx上传至`/opt/nginx`下
 3. 使用`tar zxf`对nginx进行解压
-   ```linux
+   ```shell
     tar -zxf nginx-1.25.1.tar.gz
    ```
 4. 进入到nginx-1.25.1目录进行编译安装
-   ```linux
+   ```shell
     1. ./configure --prefix=/usr/local/nginx --with-http_ssl_module
     2. make && make install
    ```
 5. 进入到安装目录下修改nginx.conf配置文件
-   ```linux
+   ```shell
    1. cd /usr/local/nginx
    2. vi conf/nginx.conf
    ```
