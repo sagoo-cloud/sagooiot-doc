@@ -302,10 +302,6 @@ function sidebarGuide() {
       collapsed: false,
       items: [
         {
-          text: '总指数管理',
-          link: '/guide/datahub/totalIndex'
-        },
-        {
           text: '数据源管理',
           link: '/guide/datahub/source'
         },
@@ -322,6 +318,33 @@ function sidebarGuide() {
         {
           text: '权限配置',
           link: '/guide/system/authorize_config'
+        }
+
+      ]
+    },
+    {
+      text: '周边服务',
+      collapsed: false,
+      items: [
+        {
+          text: '指数计算管理',
+          link: '/guide/datahub/totalIndex'
+        },
+        {
+          text: '大屏协同工具',
+          link: '/guide/extended/lsc'
+        },
+        {
+          text: 'Modbus云网关',
+          link: '/guide/extended/modbus'
+        },
+        {
+          text: 'ICE104云网关',
+          link: '/guide/extended/ice104'
+        },
+        {
+          text: '本地设备端网关',
+          link: '/guide/extended/gw'
         }
 
       ]
@@ -386,6 +409,8 @@ function sidebarDevelop() {
         { text: '开发环境', link: '/develop/compile/environment' },
         { text: '源码编译', link: '/develop/compile/build' },
         { text: '服务部署', link: '/develop/compile/deploy' },
+        { text: 'Docker编译', link: '/develop/compile/docker' },
+
       ]
     },
     {
