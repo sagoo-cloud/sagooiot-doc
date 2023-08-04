@@ -35,7 +35,7 @@ git push origin v0.0.1
             # 配置文件的键名命名方式统一使用小驼峰。
             # HTTP Server.
             server:
-              address: ":8199"
+              address: ":8200"
               serverRoot: "resource/public"
               dumpRouterMap: false
               routeOverWrite: true
@@ -209,7 +209,7 @@ git push origin v0.0.1
         
         # modbus Server.
         modbusServer:
-          address:             ":8200"
+          address:             ":8201"
         
         # HTTP Server.
         server:
@@ -405,23 +405,6 @@ git push origin v0.0.1
 
 2. 进入`/opt/sagoo/iot-ui`目录下创建plugin文件夹
 3. 将编译之后生成的topo全部文件上传到服务器`/opt/sagoo/iot-ui/plugin`目录下
-    
-### 其它问题
-
-**如果在macOS下遇到 Warning :`IOMasterPort`：**
-
-```
-warning: ‘IOMasterPort‘ is deprecated: first deprecated in macOS 12.0 [-Wdeprecated-declarations]
-```
-**原因**
-
-依赖包跟MacOS的版本有兼容问题。
-
-解决方案
-切换CGO编译方式
-```
-go env -w CGO_ENABLED="0"
-```
 
 ## Nginx配置
 
@@ -446,14 +429,14 @@ SagooIOT相关组件都部署后，需要进行Nginx配置， 配置内容参考
         }
        #规则引擎路由
       location /rule-engine  {
-                proxy_pass http://127.0.0.1:2877/rule-engine;
+                proxy_pass http://127.0.0.1:2881/rule-engine;
                 autoindex on;
                 autoindex_exact_size on;
                 autoindex_localtime on;
       }
       
       location /rule-engine/comms {
-                proxy_pass http://127.0.0.1:2877;
+                proxy_pass http://127.0.0.1:2881;
                 proxy_read_timeout 300s;
                 proxy_set_header Host $host;
                 proxy_set_header X-Real-IP $remote_addr;
@@ -469,7 +452,7 @@ SagooIOT相关组件都部署后，需要进行Nginx配置， 配置内容参考
                 proxy_set_header Upgrade $http_upgrade;
                 proxy_http_version 1.1; 
                 chunked_transfer_encoding off; 
-                proxy_pass                 http://127.0.0.1:8199/;
+                proxy_pass                 http://127.0.0.1:8200/;
                 proxy_redirect             off;
                 proxy_set_header           Host             $host;
                 proxy_set_header           X-Real-IP        $remote_addr;
@@ -478,7 +461,7 @@ SagooIOT相关组件都部署后，需要进行Nginx配置， 配置内容参考
     
       #接口文档路由
       location /base-api/swagger/api.json {
-           proxy_pass                 http://127.0.0.1:8199/base-api/swagger/api.json;
+           proxy_pass                 http://127.0.0.1:8200/base-api/swagger/api.json;
       }
       #指数服务路由
       location /base-api/assess/ {
@@ -500,6 +483,9 @@ SagooIOT相关组件都部署后，需要进行Nginx配置， 配置内容参考
      }
      #流媒体服务路由
      location /media/ {
+           proxy_http_version 1.1;
+           proxy_set_header Upgrade $http_upgrade;
+           proxy_set_header Connection upgrade;
            proxy_pass    http://127.0.0.1:8166/;
            proxy_redirect             off;
            proxy_set_header           Host             $host;
@@ -513,4 +499,33 @@ SagooIOT相关组件都部署后，需要进行Nginx配置， 配置内容参考
         }
     }
    ```
+   
+部署完可以通过`http://localhost`进行访问, 超级管理员账号: `admin` 密码: `admin123456`
 
+### 其它问题
+
+**如果在macOS下遇到 Warning :`IOMasterPort`：**
+
+```
+warning: ‘IOMasterPort‘ is deprecated: first deprecated in macOS 12.0 [-Wdeprecated-declarations]
+```
+**原因**
+
+依赖包跟MacOS的版本有兼容问题。
+
+解决方案
+切换CGO编译方式
+```
+go env -w CGO_ENABLED="0"
+```
+
+**如果访问过程中，发现视频监控下的菜单打不开，可参考以下步骤进行排查：**
+
+1. 进入`/opt/sagoo/iot-server/bin/server/SagooMedia/var`目录下，使用`tail -f`查看服务是否启动成功
+2. 使用超级管理员账户进行登录，打开系统配置-菜单管理，找到物联管理-视频监控查看对应的菜单链接地址是否为当前域名和端口号，更改完需退出重新登陆方可生效。
+3. 查看nginx配置，检查流媒体路由是否配置正确(ip、端口号)
+
+**如果访问过程中，发现规则引擎-规则编排的菜单里面的规则编辑打不开或者点开跳转的是登录页面，可参考以下步骤进行排查：**
+
+1. 检查规则引擎是否启动成功，开放端口是否跟nginx配置转发路由端口一致
+2. 查看`/opt/sagoo/iot-server/bin/sagoo-admin`是否以8200端口进行启动
