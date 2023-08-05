@@ -133,7 +133,7 @@ function sidebarGuide() {
         { text: '部署说明', link: '/guide/start/deploy' },
         { text: '基础环境安装', link: '/guide/start/install' },
         { text: 'SagooIOT安装', link: '/guide/start/sagooiot-install' },
-
+        { text: '其他服务安装', link: '/guide/start/other-install' },
       ]
     },
     {

@@ -4,9 +4,13 @@
 ## 基础环境安装
 
 1. Redis 7.0.4
+
 2. TDengine 3.0.1.5 【[安装文档](https://docs.taosdata.com/get-started/package/)】
+
 3. EMQX 5.0.9-el8
+
 4. Nginx 1.22.0
+
 5. rule-engine
 
 ### 1. 安装redis
@@ -124,65 +128,27 @@
 ### 4.  安装Nginx
 
 1. 官网地址：`http://nginx.org/en/download.html`
+
 2. 将下载后的nginx上传至`/opt/nginx`下
+
 3. 使用`tar zxf`对nginx进行解压
+
    ```shell
     tar -zxf nginx-1.25.1.tar.gz
    ```
+
 4. 进入到nginx-1.25.1目录进行编译安装
+
    ```shell
     1. ./configure --prefix=/usr/local/nginx --with-http_ssl_module
     2. make && make install
    ```
+
 5. 进入到安装目录下修改nginx.conf配置文件
+
    ```shell
    1. cd /usr/local/nginx
    2. vi conf/nginx.conf
    ```
 
 详细的安装过程请看 [Nginx安装教程](https://www.runoob.com/linux/nginx-install-setup.html)
-
-### 5.  rule-engine
-
-**服务器(cent os)安装nodejs 最新版**
-
-1. 查看是否为最新版本
-
-```shell
-  yum list nodejs
-``` 
-
-2. 如果不是，通过下面代码增加源信息
-```shell
-  curl --silent --location https://rpm.nodesource.com/setup_18.x | sudo bash
-```
-
-3. 然后在
-
-```shell
-    yum install nodejs
-```
-
-**如果安装包过慢，可以先设置淘宝源  
-```shell
-  npm config set registry https://registry.npm.taobao.org/
-```
-
-4. 全局安装 pm2 
-```shell
-  sudo npm i pm2 -g
- ```
-5. 将【rule-engine】项目拷贝到服务器上
-6. 在【rule-engine】目录下安装包依赖
-   ```shell
-    npm install
-    ```
-7. 启动项目 
-```shell
-    pm2 start packages/node_modules/node-red/red.js --name rule-engine:2881
-```
-之后可以通过 `pm2 show rule-engine:2881` 查看项目运行情况
-8. 按照【rule-engine】项目下 `nginx/node-red.conf` 文件的配置增加一下nginx配置，来保证规则引擎和iot的同源
-
-
-
