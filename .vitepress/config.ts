@@ -171,6 +171,10 @@ function sidebarGuide() {
         {
           text: '物模型说明',
           link: '/guide/device/tsl'
+        },
+        {
+          text: '设备影子',
+          link: '/guide/device/shadow'
         }
       ]
     },
