@@ -133,13 +133,16 @@ function sidebarGuide() {
         { text: '部署说明', link: '/guide/start/deploy' },
         { text: '基础环境安装', link: '/guide/start/install' },
         { text: 'SagooIOT安装', link: '/guide/start/sagooiot-install' },
-
+        { text: '其他服务安装', link: '/guide/start/other-install' },
       ]
     },
     {
       text: '设备接入',
       collapsed: false,
       items: [
+        { text: '设备连网方式', link: '/guide/device_access/network' },
+        { text: '设备接入协议', link: '/guide/device_access/protocol' },
+        { text: '设备证书', link: '/guide/device_access/certificate' },
         { text: '接入流程', link: '/guide/device_access/flow' },
         { text: '创建产品', link: '/guide/device_access/product' },
         { text: '配置物模型', link: '/guide/device_access/setup_tsl' },
@@ -302,10 +305,6 @@ function sidebarGuide() {
       collapsed: false,
       items: [
         {
-          text: '总指数管理',
-          link: '/guide/datahub/totalIndex'
-        },
-        {
           text: '数据源管理',
           link: '/guide/datahub/source'
         },
@@ -322,6 +321,33 @@ function sidebarGuide() {
         {
           text: '权限配置',
           link: '/guide/system/authorize_config'
+        }
+
+      ]
+    },
+    {
+      text: '周边服务',
+      collapsed: false,
+      items: [
+        {
+          text: '指数计算管理',
+          link: '/guide/datahub/totalIndex'
+        },
+        {
+          text: '大屏协同工具',
+          link: '/guide/extended/lsc'
+        },
+        {
+          text: 'Modbus云网关',
+          link: '/guide/extended/modbus'
+        },
+        {
+          text: 'ICE104云网关',
+          link: '/guide/extended/ice104'
+        },
+        {
+          text: '本地设备端网关',
+          link: '/guide/extended/gw'
         }
 
       ]
@@ -386,6 +412,8 @@ function sidebarDevelop() {
         { text: '开发环境', link: '/develop/compile/environment' },
         { text: '源码编译', link: '/develop/compile/build' },
         { text: '服务部署', link: '/develop/compile/deploy' },
+        { text: 'Docker编译', link: '/develop/compile/docker' },
+
       ]
     },
     {

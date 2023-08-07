@@ -2,7 +2,7 @@
 
 SagooIOT提供OpenAPIs功能，方便第三方应用直接调用系统相关的开发接口。
 
-该接是通过AK/SK的方式进行鉴权。需要调用方跟据Secret Key与Access Key值计算签名。
+该接口是通过AK/SK的方式进行鉴权。需要调用方跟据Secret Key与Access Key值计算签名。
 
 
 ## 什么是AKSK
@@ -30,7 +30,7 @@ https://xxx.com/students?ak=reewrwererw&time=1640494526&sign=54acba6857b284a8a48
 
 ## 签名生成方式
 
-go语言的直接看系统代码里面的单元测试文件
+go语言的直接看系统代码里面的单元测试文件，或是通过[示例了解](example.md)
 
 其它语言：
 

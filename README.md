@@ -1,16 +1,23 @@
 # SagooIOT 说明文档 
 
-SagooIOT说明文档，SagooIOT 是一个基于Golang开发的简单实用的iot系统
+采用 VitePress 搭建
 
-基于 VitePress 搭建
-
-在线地址：http://iotdoc.sagoo.cn
-
+在线地址：https://iotdoc.sagoo.cn/
 
 启动代码：npm run dev
 
 打包代码：npm run build
 
+Make方式：make dev / make dist
+
+VitePress 说明文档：https://vitepress.vuejs.org/
+
+## 文档编辑
+**1，文档目录的修改：** 修改工程的根目下.viteprees/config.ts 跟据需要内容修改即可。
+
+**2，文档内的图片存放位置：** public/imgs 建议跟据图片所在文档的路径创建相关目录，方便管理。
+
+**3，文档内容编写：** 当前主要文档有三类：guide(用户使用手册)、develop(开发手册)、cases(案例)
 
 ## 安装
 
@@ -60,6 +67,7 @@ yarn run build
 make dist
 
 ```
+
 
 ## 鸣谢 GoView https://www.mtruning.club/
 

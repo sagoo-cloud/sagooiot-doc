@@ -3,9 +3,11 @@
 
 ## 本地源码运行
 
-修改config下的config.toml文件，并配置相关项
+将manifest/config/config.example.yaml 这个文件改名为 config.yaml
 
-请跟据注释进行配置修改，包括服务相关配置，日志相关
+修改config.toml文件，并配置相关项
+
+请跟据注释进行配置修改，包括服务相关配置，日志相关配置。
 
 `go run main.go`
 
