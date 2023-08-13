@@ -2,11 +2,12 @@
 
 SagooIOT的私有协议解决采用的是插件的方式进行扩展支持的。
 
-插件的源码示例参考 https://github.com/sagoo-cloud/protocol-plugin-tgn52
+插件的源码示例参考 
+https://github.com/sagoo-cloud/protocol-plugin-tgn52
 
 插件的目录结构如下：
 
-```angular2html
+```
 --built 编译输出目录
 --config 插件配置目录
 --Makefile 插件编译脚本
