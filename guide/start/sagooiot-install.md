@@ -132,15 +132,16 @@
   2. 在项目根目录下找到`.env.development`文件，修改对应的配置信息，以下是参考内容:
 
   ```shell
-    VITE_SERVER_PROTOCOL = 'http://'
+    VITE_SERVER_PROTOCOL = 'http:'
     VITE_SERVER_HOSTNAME = 'localhost:8200'
-    # 基础服务路径
+
+    # 基础服务路径 通过 nginx 配置 前后端直连就写 / 或者写在nginx上配置的路径 如 /base-api
     VITE_SERVER_URL = ''
     # 基础接口路径
     VITE_API_URL = '/api/v1'
   ```
 
-  3. 使用`npm install`进行项目依赖安装
+  3. 使用`npm install`或`yarn`进行项目依赖安装
   4. 使用`npm run dev`启动项目
 
 ### 源码编译部署
