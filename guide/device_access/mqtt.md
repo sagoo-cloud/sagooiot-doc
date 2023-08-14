@@ -214,7 +214,7 @@ MQTTX 进行数据上报
 
 #### 请求
 
-1. 请求Topic：`/sys/${productKey}/${deviceKey}/thing/event/property/pack/pos`
+1. 请求Topic：`/sys/${productKey}/${deviceKey}/thing/event/property/pack/post`
 2. 请求数据格式：
 
 ```json
