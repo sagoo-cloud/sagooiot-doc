@@ -61,7 +61,7 @@ SagooIOT是一个基于golang开发的开源的企业级物联网基础开发平
 
 ## 系统架构
 
-![系统架构](../../public/imgs/framework.jpg)
+![系统架构](../../public/imgs/framework.png)
 
 
 
