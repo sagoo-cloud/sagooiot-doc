@@ -74,7 +74,8 @@ export default defineConfig({
     sidebar: {
       '/guide/': sidebarGuide(),
       '/develop/': sidebarDevelop(),
-      '/cases/': sidebarCases()
+      '/cases/': sidebarCases(),
+      '/join/': sidebarJoin()
 
     },
 
@@ -89,6 +90,7 @@ function nav() {
     { text: '开发手册', link: '/develop/readme', activeMatch: '/develop/' },
     { text: '项目案例', link: '/cases/introduction', activeMatch: '/cases/' },
     { text: '问题反馈', link: 'https://support.qq.com/product/595720'},
+    { text: '加入我们', link: '/join/readme', activeMatch: '/join/' },
     {
       text: "相关链接",
       items: [
@@ -486,6 +488,18 @@ function sidebarCases(){
         { text: '电力运维', link: '/cases/power' },
         { text: '智慧园区', link: '/cases/park' },
         { text: '供热运维', link: '/cases/heating' }
+      ]
+    }
+  ]
+}
+
+function sidebarJoin(){
+  return [
+    {
+      text: '贡献代码',
+      items: [
+        { text: '参与代码贡献', link: '/join/partake/code' },
+        { text: '参与文档贡献', link: '/join/partake/doc' }
       ]
     }
   ]
