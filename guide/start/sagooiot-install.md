@@ -1,15 +1,17 @@
 # SagooIOT安装
 
-## 源码启动运行
+可以获取SagooIOT的二进制编译文件进行部署，也可以通过获取源码自行编译部署。
 
-### 初始化数据库脚本
+## 初始化数据库脚本
+
+基础环境安装后，需要初始化数据库脚本。
 
 1. 创建sagoo_iot数据库
 2. 执行`manifest/sql`目录下`init.sql`数据脚本
 
-### 启动项目
+## 本地编译运行
 
- 一、服务端本地启动
+ ### 一、服务端本地启动
 
    1. 将项目clone到本地工作空间, `https://github.com/sagoo-cloud/sagooiot.git`
 
@@ -126,7 +128,7 @@
               model: "redis"  #存储引擎 （memory使用内存|redis使用redis）
       ```
 
-  二、前端本地启动
+### 二、前端本地启动
 
   1. 将项目clone到本地工作空间, `https://github.com/sagoo-cloud/sagooiot-ui.git`.
   2. 在项目根目录下找到`.env.development`文件，修改对应的配置信息，以下是参考内容:
@@ -144,9 +146,9 @@
   3. 使用`npm install`或`yarn`进行项目依赖安装
   4. 使用`npm run dev`启动项目
 
-### 源码编译部署
+## 源码编译部署
 
-  一、服务端源码编译
+### 一、服务端源码编译
 
   1. 进入到项目根目录下,使用`./build.sh linux|windows|mac`进行程序编译
 
@@ -177,12 +179,12 @@
 
       分别对应 启动、停止、重启、状态、显示动态日志运行信息
 
-  二、前端源码编译
+###  二、前端源码编译
 
   1. 进入到项目根目录下使用`npm run build`命令进行编译
   2. 编译后会在项目根目录下出现dist目录，将dist目录下所有的编译文件上传到服务器`/opt/sagoo/iot-ui`目录下
 
-  三、nginx配置
+### 三、nginx配置
 
   1. 进入到`/usr/local/nginx/conf`并对`nginx.conf`进行编辑
   2. 修改配置文件，以下是参考内容:
@@ -232,7 +234,7 @@
   账号: admin
   密码: admin123456
 
-### 其它问题
+## 其它问题
 
 **如果在macOS下遇到 Warning :`IOMasterPort`：**
 
