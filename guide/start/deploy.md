@@ -21,7 +21,7 @@
 |硬盘|40GB+|
 
 ## 支持平台
-SagooIOT采用Golang开发，拥有良好的跨平台特性。支持的平台如下：
+SagooIOT采用Golang开发，拥有良好的跨平台特性，主要支持linux、windows、MacOS等。详细支持的平台如下：
 
 ```
 aix/ppc64
@@ -131,6 +131,26 @@ server {
 **系统部署图**
 
 ![集群部署](../../public/imgs/guide/start/deploy.png)
+
+
+
+- 如果使用集群，可以开启redis token模式；在SagooIOT的主程序中修改配置文件如下：
+
+```
+# 缓存模式 1 gcache 2 gredis
+cache-mode = 2
+
+# Redis数据库配置
+[redis]
+  default = "127.0.0.1:16379,0,soccer"
+  cache   = "127.0.0.1:16379,1,soccer?idleTimeout=600"
+```
+
+- 数据库单独做集群
+
+- SagooIOT主系统做多个部署，需要通过Nginx进行路由分发。
+
+  
 
 
 
