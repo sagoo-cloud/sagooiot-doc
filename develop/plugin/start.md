@@ -44,22 +44,23 @@ info.json 的基础模板如下：
 
 ```json
 {
-    "id": "",
-    "version": "",
-    "name": "",
-    "description": "",
-    "author": [""],
-    "link": "",
-    "command": "",
-    "args": [],
-    "type": "gRPC",
-    "root": false,
-    "icon": "",
-    "frontend": {
-        "ui": true,
-      	"url":"",
-        "configuration": true
-    }
+  "types": "protocol",
+  "handleType": "tcp",
+  "name": "TGN52",
+  "title": "TGN52",
+  "description": "TGN52设备与服务通讯协议",
+  "version": "0.0.1",
+  "author": ["microrain"],
+  "icon": "mdi-book",
+  "link": "sagoo.cn",
+  "command": "",
+  "args": [""],
+  "root": false,
+  "frontend": {
+    "ui": false,
+    "url":"",
+    "configuration": false
+  }
 }
 ```
 
@@ -67,19 +68,21 @@ info.json 的基础模板如下：
 
 | 名称                  | 类型     | 说明                                                         | 注意事项                                                     |
 | --------------------- | -------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| id                    | string   | 插件ID（即插件识别码）相当于插件的“身份证”。确保该值与文件夹名称匹配。SagooIOT 通过插件ID来区分各个插件并检测插件之间的依赖关系。在SagooIOT中加载的所有插件都应具有唯一的插件ID。如果新加载的插件与现有插件具有完全相同的插件ID，新插件将无法加载。谨慎选择插件ID。强烈建议发布插件后不要再修改插件ID。 | 要注意可能的包名冲突问题。不推荐插件名取一个与标准库或与第三方库名相同的 id，如 test，否则 SagooIOT 可能无法正常加载插件 |
-| version               | string   | 插件版本                                                     |                                                              |
+| types               | string   | 插件与SagooIOT的通信方式，目前可选的值只有`notice`与`protocol`                                              |                                                              |
+| handleType               | string   | 目前可选的值只有`tcp` 与`mqtt`                                                    |                                                              |
 | name                  | string   | 插件名称，尽量不要使插件名称太长。你可以把插件的详细信息放在 `description` 之中 |                                                              |
+| title                  | string   | |                                                              |
 | description           | string   | 插件描述                                                     |                                                              |
+| version               | string   | 插件版本                                                     |                                                              |
 | author                | string[] | 插件作者。该值为数组，可以容纳多个作者                       |                                                              |
+| icon                  | string   | 插件图标，该值为`mdi-` + [Material Design Iconsopen in new window](https://materialdesignicons.com/)上的所有可选图标代码，如`mdi-user-arrow-left-outline` |                                                              |
 | link                  | string   | 插件的网址。指向插件的 github 链接。值应为一个可访问的网址   |                                                              |
 | command               | string   | 插件的运行指令，如`./plugin`，`python plugin.py`，`java -jar plugin.jar`等。 |                                                              |
 | args                  | string[] | 插件的指令参数                                               |                                                              |
-| type                  | string   | 插件与SagooIOT的通信方式，目前可选的值只有`gRPC`与`netRPC`   |                                                              |
-| icon                  | string   | 插件图标，该值为`mdi-` + [Material Design Iconsopen in new window](https://materialdesignicons.com/)上的所有可选图标代码，如`mdi-user-arrow-left-outline` |                                                              |
-| rontend.ui            | bool     | 是否有插件页面                                               |                                                              |
-| rontend.url           | string   | 插件页面地址                                                 |                                                              |
-| rontend.configuration | bool     | 是否显示配置页面                                             |                                                              |
+| root                  | string   |    |                                                              |
+| frontend.ui            | bool     | 是否有插件页面                                               |                                                              |
+| frontend.url           | string   | 插件页面地址                                                 |                                                              |
+| frontend.configuration | bool     | 是否显示配置页面                                             |                                                              |
 
 ## 实例
 
@@ -87,21 +90,22 @@ info.json 的基础模板如下：
 
 ```json
 {
-    "id": "count_plugin",
-    "version": "0.0.1",
-    "name": "CountPlugin",
-    "description": "一个统计访问次数的插件",
-    "author": ["microrain"],
-    "link": "sagoo.cn",
-    "command": "",
-    "args": [],
-    "type": "gRPC",
-    "root": false,
-    "icon": "mdi-book",
-    "frontend": {
-        "ui": true,
-        "url": true,
-        "configuration": true
-    }
+  "types": "protocol",
+  "handleType": "tcp",
+  "name": "TGN52",
+  "title": "TGN52",
+  "description": "TGN52设备与服务通讯协议",
+  "version": "0.0.1",
+  "author": ["microrain"],
+  "icon": "mdi-book",
+  "link": "sagoo.cn",
+  "command": "",
+  "args": [""],
+  "root": false,
+  "frontend": {
+    "ui": false,
+    "url":"",
+    "configuration": false
+  }
 }
 ```
