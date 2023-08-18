@@ -172,6 +172,8 @@
 
 8. 按照【rule-engine】项目下 `nginx/node-red.conf` 文件的配置增加一下nginx配置，来保证规则引擎和iot的同源
 
+9. 如果要修改favicon.ico, 就将`packages/node_modules/@node-red/editor-client/public/favicon.ico`这个文件进行替换即可。
+
 ## 前端编译部署
 
 一、大屏项目部署
