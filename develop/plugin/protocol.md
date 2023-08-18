@@ -43,6 +43,25 @@ func (p *ProtocolTgn52) Decode(data model.DataReq) model.JsonRes {
    // ......
 }
 ```
+在Info()方法中需要指定插件的类型（协议插件、通知插件），处理方式类型，插件名称（就是插件的ID）。
+
+示例：
+
+```go
+
+func (p *ProtocolTgn52) Info() model.PluginInfo {
+	var res = model.PluginInfo{}
+	res.Name = "tgn52" //插件ID
+	res.Types = PluginType.Notice //插件类型为通知插件
+	res.HandleType = PluginHandleType.TcpServer //处理方式为TCP服务
+	res.Title = "TG-N5 v2设备协议"
+	res.Author = "Microrain"
+	res.Description = "对TG-N5插座设备进行数据采集v2"
+	res.Version = "0.01"
+	return res
+}
+
+```
 
 ### 实现插件本身接口
 需要实现go-plugin要求的Plugin接口，代码参考如下：
