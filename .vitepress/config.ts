@@ -410,6 +410,8 @@ function sidebarDevelop() {
         { text: '概要说明', link: '/develop/base/introduce' },
         { text: '开发规范', link: '/develop/base/standard' },
         { text: '开发说明', link: '/develop/base/explain' },
+        { text: 'API 文档', link: 'https://console-docs.apipost.cn/preview/d393eb385b7dd7bd/48d460f580a0997b' },
+
       ]
     },
     {
@@ -464,6 +466,7 @@ function sidebarDevelop() {
       items: [
         { text: '前端介绍', link: '/develop/front/introduce' },
         { text: '增加新页面', link: '/develop/front/addPage' },
+        { text: '字典的使用', link: '/develop/front/dict' },
         { text: '编译与部署', link: '/develop/front/build' },
       ]
     },
