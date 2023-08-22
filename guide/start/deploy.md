@@ -15,10 +15,13 @@
 
 **推荐配置**
 
-|CPU|2核+|
+|CPU|4核+|
 |--|--|
-|内存|4GB+|
+|内存|16GB+|
 |硬盘|40GB+|
+
+SagooIOT的系统采用Golang开发，系统本身对于环境要求不高。主要是基础环境的要求。
+可以参考TDengine系统运行所需要的内存、CPU 以及硬盘空间。 [TDengine容量规划](https://docs.taosdata.com/operation/planning/)
 
 ## 支持平台
 SagooIOT采用Golang开发，拥有良好的跨平台特性，主要支持linux、windows、MacOS等。详细支持的平台如下：
@@ -146,8 +149,9 @@ cache-mode = 2
   cache   = "127.0.0.1:16379,1,soccer?idleTimeout=600"
 ```
 
-- 数据库单独做集群
-
+- mysql数据库集群 【[参考这个内容](https://zhuanlan.zhihu.com/p/365812699)】
+- EMQX 集群【[参考这个内容](https://docs.emqx.com/zh/emqx-terraform/latest/getting-started/getting-started-ali.html)】
+- TDengine 集群【[参考这个内容](https://docs.taosdata.com/deployment/deploy/)】
 - SagooIOT主系统做多个部署，需要通过Nginx进行路由分发。
 
   

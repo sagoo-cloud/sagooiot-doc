@@ -2,16 +2,18 @@
 # 详细安装过程
 
 ## 基础环境安装
+SagooIOT基础环境安装包括以下几个部分：
 
-1. Redis 7.0.4
+1. Redis 7.0.4   【[官方安装文档](https://redis.io/docs/getting-started/installation/)】
 
-2. TDengine 3.0.1.5 【[安装文档](https://docs.taosdata.com/get-started/package/)】
+2. TDengine 3.0.1.5 【[官方安装文档](https://docs.taosdata.com/get-started/package/)】
 
-3. EMQX 5.0.9-el8
+3. EMQX 5.0.9-el8  【[官方安装文档](https://www.emqx.io/docs/zh/v5.1/getting-started/getting-started.html)】
 
 4. Nginx 1.22.0
 
-5. MySQL 5.7
+5. MySQL 5.7 或 PostgreSQL 13.4
+
 
 ### 1. 安装redis
 
