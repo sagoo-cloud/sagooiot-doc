@@ -11,9 +11,9 @@
 
 ## 在线演示
 
-[在线演示](http://sagoo.top)
+[在线演示](https://zhgy.sagoo.cn)
 
-用户名：demo  密码：admin123456
+用户名：demo  密码：demo123456
 
 ## 部分功能页面
 
