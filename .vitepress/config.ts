@@ -439,6 +439,16 @@ function sidebarDevelop() {
       ]
     },
     {
+      text: '北向接口',
+      items: [
+        { text: '概要介绍', link: '/develop/northbound/introduce' },
+        { text: 'MQTT方式', link: '/develop/northbound/mqtt' },
+        { text: 'HTTP方式', link: '/develop/northbound/http' },
+        { text: 'WebSocket方式', link: '/develop/northbound/websocket' },
+        { text: '使用示例', link: '/develop/northbound/example' },
+      ]
+    },
+    {
       text: '协议开发',
       items: [
         { text: 'MQTT协议', link: '/develop/protocol/mqtt' },
