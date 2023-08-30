@@ -151,6 +151,7 @@ function sidebarGuide() {
         { text: '创建设备', link: '/guide/device_access/device' },
         { text: '接入设备', link: '/guide/device_access/access' },
         { text: '测试设备接入', link: '/guide/device_access/mqtt' },
+        { text: 'TCP测试设备接入', link: '/guide/device_access/tcp' },
 
       ]
     },
