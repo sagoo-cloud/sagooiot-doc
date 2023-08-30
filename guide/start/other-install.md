@@ -1,12 +1,14 @@
 # 其他服务部署
 
-## 插件编译
+::: warning 注意：
+其他服务部署主要讲部署企业版中的增值功能，使用社区开源版请忽略。
+:::
 
-如果要使用插件，需要提前将插件进行编译。直接使用plugins下面的编译脚本直接执行就可以。
+基础服务部署完成后，还需要部署流媒体服务、规则引擎服务、可视化大屏等模块，本文档将介绍如何部署这些服务。
 
-## 服务端编译部署
 
-一、流媒体部署
+
+## 流媒体部署
 
 1. 进入项目根目录下，使用`./build.sh linux|windows|mac`进行程序编译
 2. 进入到服务器`/opt/sagoo/iot-server`下
@@ -120,7 +122,7 @@
 
 5. 使用`./curl.sh start`进行启动
 
-二、rule-engine(规则引擎)部署
+## 可试化规则引擎部署
 
 **服务器(cent os)安装nodejs 最新版**
 
@@ -172,16 +174,16 @@
 
 8. 按照【rule-engine】项目下 `nginx/node-red.conf` 文件的配置增加一下nginx配置，来保证规则引擎和iot的同源
 
-## 前端编译部署
+9. 如果要修改favicon.ico, 就将`packages/node_modules/@node-red/editor-client/public/favicon.ico`这个文件进行替换即可。
 
-一、大屏项目部署
+## 可视化大屏服务部署
 
 1. 进入项目根目录下使用`npm run build`命令进行源码编译
 
 2. 进入`/opt/sagoo/iot-ui`目录下创建plugin文件夹
 3. 将编译之后生成的screen全部文件上传到服务器`/opt/sagoo/iot-ui/plugin`目录下
 
-二、组态项目部署
+## 可视化组态部署
 
 1. 进入项目根目录下使用`npm run build`命令进行源码编译
 
@@ -272,7 +274,7 @@
 
 部署完可以通过`http://localhost`进行访问, 超级管理员账号: `admin` 密码: `admin123456`
 
-### 其它问题
+## 其它问题
 
 一、**在macOS下遇到 Warning :`IOMasterPort`：**
 

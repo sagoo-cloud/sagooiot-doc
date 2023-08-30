@@ -74,7 +74,8 @@ export default defineConfig({
     sidebar: {
       '/guide/': sidebarGuide(),
       '/develop/': sidebarDevelop(),
-      '/cases/': sidebarCases()
+      '/cases/': sidebarCases(),
+      '/join/': sidebarJoin()
 
     },
 
@@ -89,6 +90,7 @@ function nav() {
     { text: '开发手册', link: '/develop/readme', activeMatch: '/develop/' },
     { text: '项目案例', link: '/cases/introduction', activeMatch: '/cases/' },
     { text: '问题反馈', link: 'https://support.qq.com/product/595720'},
+    { text: '加入我们', link: '/join/readme', activeMatch: '/join/' },
     {
       text: "相关链接",
       items: [
@@ -408,6 +410,8 @@ function sidebarDevelop() {
         { text: '概要说明', link: '/develop/base/introduce' },
         { text: '开发规范', link: '/develop/base/standard' },
         { text: '开发说明', link: '/develop/base/explain' },
+        { text: 'API 文档', link: 'https://console-docs.apipost.cn/preview/d393eb385b7dd7bd/48d460f580a0997b' },
+
       ]
     },
     {
@@ -432,6 +436,16 @@ function sidebarDevelop() {
       items: [
         { text: '开发说明', link: '/develop/business/introduce' },
         { text: '快速开始', link: '/develop/business/start' },
+      ]
+    },
+    {
+      text: '北向接口',
+      items: [
+        { text: '概要介绍', link: '/develop/northbound/introduce' },
+        { text: 'MQTT方式', link: '/develop/northbound/mqtt' },
+        { text: 'HTTP方式', link: '/develop/northbound/http' },
+        { text: 'WebSocket方式', link: '/develop/northbound/websocket' },
+        { text: '使用示例', link: '/develop/northbound/example' },
       ]
     },
     {
@@ -462,6 +476,7 @@ function sidebarDevelop() {
       items: [
         { text: '前端介绍', link: '/develop/front/introduce' },
         { text: '增加新页面', link: '/develop/front/addPage' },
+        { text: '字典的使用', link: '/develop/front/dict' },
         { text: '编译与部署', link: '/develop/front/build' },
       ]
     },
@@ -486,6 +501,18 @@ function sidebarCases(){
         { text: '电力运维', link: '/cases/power' },
         { text: '智慧园区', link: '/cases/park' },
         { text: '供热运维', link: '/cases/heating' }
+      ]
+    }
+  ]
+}
+
+function sidebarJoin(){
+  return [
+    {
+      text: '贡献代码',
+      items: [
+        { text: '参与代码贡献', link: '/join/partake/code' },
+        { text: '参与文档贡献', link: '/join/partake/doc' }
       ]
     }
   ]

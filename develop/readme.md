@@ -10,7 +10,7 @@ SagooIOT是一个基于golang开发的轻量级的物联网平台。支持跨平
 :::warning 项目库地址
 
 
-主库：[https://github.com/sagoo-cloud](https://github.com/sagoo-cloud)
+主库：[https://github.com/sagoo-cloud](https://github.com/orgs/sagoo-cloud/repositories)
 
 码云：[https://gitee.com/sagoo-cloud](https://gitee.com/sagoo-cloud)
 

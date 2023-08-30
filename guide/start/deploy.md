@@ -15,13 +15,16 @@
 
 **推荐配置**
 
-|CPU|2核+|
+|CPU|4核+|
 |--|--|
-|内存|4GB+|
+|内存|16GB+|
 |硬盘|40GB+|
 
+SagooIOT的系统采用Golang开发，系统本身对于环境要求不高。主要是基础环境的要求。
+可以参考TDengine系统运行所需要的内存、CPU 以及硬盘空间。 [TDengine容量规划](https://docs.taosdata.com/operation/planning/)
+
 ## 支持平台
-SagooIOT采用Golang开发，拥有良好的跨平台特性。支持的平台如下：
+SagooIOT采用Golang开发，拥有良好的跨平台特性，主要支持linux、windows、MacOS等。详细支持的平台如下：
 
 ```
 aix/ppc64
@@ -69,7 +72,7 @@ windows/arm
 
 ## 独立部署
 
-服务器推荐使用lnix服务器系列(包括:Linux, MacOS, *BSD)，以下使用Linux系统为例，介绍如何部署。
+服务器推荐使用Unix服务器系列(包括:Linux, MacOS, *BSD)，以下使用Linux系统为例，介绍如何部署。
 将应用服务目录复制到目标位置，里面写好了执行的脚本，通过脚本来执行。
 
 
@@ -131,6 +134,27 @@ server {
 **系统部署图**
 
 ![集群部署](../../public/imgs/guide/start/deploy.png)
+
+
+
+- 如果使用集群，可以开启redis token模式；在SagooIOT的主程序中修改配置文件如下：
+
+```
+# 缓存模式 1 gcache 2 gredis
+cache-mode = 2
+
+# Redis数据库配置
+[redis]
+  default = "127.0.0.1:16379,0,soccer"
+  cache   = "127.0.0.1:16379,1,soccer?idleTimeout=600"
+```
+
+- mysql数据库集群 【[参考这个内容](https://zhuanlan.zhihu.com/p/365812699)】
+- EMQX 集群【[参考这个内容](https://docs.emqx.com/zh/emqx-terraform/latest/getting-started/getting-started-ali.html)】
+- TDengine 集群【[参考这个内容](https://docs.taosdata.com/deployment/deploy/)】
+- SagooIOT主系统做多个部署，需要通过Nginx进行路由分发。
+
+  
 
 
 

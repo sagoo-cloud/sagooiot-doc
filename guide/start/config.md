@@ -29,14 +29,14 @@ server:
 # 数据库连接配置
 database:
   logger:
-    path:    "logs/sql"
-    level:   "all"
-    stdout:  true
-    ctxKeys: ["RequestId"]
+    path:    "logs/sql" #日志文件存储目录路径，建议使用绝对路径。
+    level:   "all" #日志级别，支持all、debug、info、warn、error、fatal、panic，默认为all
+    stdout:  true #是否输出到终端，默认为true
+    ctxKeys: ["RequestId"] #用于配置需要从context.Context接口对象中读取并输出的键名。
 
   default:
     link:   "mysql:zhg3wwn:w3212233@tcp(111.210.198.229:3306)/zhgy_sagoo_cn"
-    debug:  true
+    debug:  true #是否开启调试模式，开启后会在控制台打印出SQL语句及执行时间，默认为false
     charset: "utf8mb4" #数据库编码
     dryRun: false #空跑
     maxIdle: 10 #连接池最大闲置的连接数
@@ -50,13 +50,13 @@ tdengine:
 
 # 文件上传设置
 upload:
-  path: "upload"
+  path: "upload" #文件上传目录
 
 logger:
-  path: "resource/log/run"
-  file: "{Y-m-d}.log"
+  path: "resource/log/run" #日志文件存储目录路径。
+  file: "{Y-m-d}.log" 
   level: "all"
-  stdout: true
+  stdout: true #是否输出到终端，默认为false
   ctxKeys: ["RequestId"] #用于配置需要从context.Context接口对象中读取并输出的键名。
 
 #GFToken
@@ -75,8 +75,8 @@ redis:
     address: r-24643458n347ypd.redis.rds.aliyuncs.com:6379
     db: 1
     pass: F22LK23123k9mut
-    idleTimeout: 600
-    maxActive: 100
+    idleTimeout: 600 #空闲超时时间，单位秒
+    maxActive: 100 #最大活跃连接数
 
 system:
   cache:

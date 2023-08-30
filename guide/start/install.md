@@ -2,16 +2,18 @@
 # 详细安装过程
 
 ## 基础环境安装
+SagooIOT基础环境安装包括以下几个部分：
 
-1. Redis 7.0.4
+1. Redis 7.0.4   【[官方安装文档](https://redis.io/docs/getting-started/installation/)】
 
-2. TDengine 3.0.1.5 【[安装文档](https://docs.taosdata.com/get-started/package/)】
+2. TDengine 3.0.1.5 【[官方安装文档](https://docs.taosdata.com/get-started/package/)】
 
-3. EMQX 5.0.9-el8
+3. EMQX 5.0.9-el8  【[官方安装文档](https://www.emqx.io/docs/zh/v5.1/getting-started/getting-started.html)】
 
 4. Nginx 1.22.0
 
-5. rule-engine
+5. MySQL 5.7 或 PostgreSQL 13.4
+
 
 ### 1. 安装redis
 
@@ -152,3 +154,35 @@
    ```
 
 详细的安装过程请看 [Nginx安装教程](https://www.runoob.com/linux/nginx-install-setup.html)
+
+### 5. 安装MySQL
+
+1. 官网地址: `https://dev.mysql.com/downloads/mysql/`
+
+2. 选择适合自己的版本下载，此处以`mysql-8.0.34-linux-glibc2.28-x86_64.tar.gz`为例，将下载后的压缩包上传到服务器`/opt/mysql`目录下
+
+3. 使用命令解压
+
+   ```shell
+     tar xvf mysql-8.0.25-linux-glibc2.28-x86_64.tar.gz
+   ```
+
+4. 将解压后的文件移动到`/usr/local`目录下
+   
+   ```shell
+     mv mysql-8.0.25-linux-glibc2.28-x86_64 /usr/local/mysql
+   ```
+
+5. 创建 MySQL 数据存储目录
+
+   ```shell
+     mkdir /var/local/mysql/data
+   ```
+
+6. 初始化数据库
+   
+   ```shell
+     1. cd /usr/local/mysql
+     2. ./bin/mysqld --initialize --basedir=/usr/local/mysql --datadir=/var/local/mysql/data
+   ```
+   **此处需注意保存生成的密码,之后需用到**
