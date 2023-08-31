@@ -463,6 +463,7 @@ function sidebarDevelop() {
         { text: '开发说明', link: '/develop/plugin/start' },
         { text: '协议插件', link: '/develop/plugin/protocol' },
         { text: '通知插件', link: '/develop/plugin/notice' },
+        { text: 'tcp协议插件', link: '/develop/plugin/tcp-protocol' },
       ]
     },
     {
