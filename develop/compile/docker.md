@@ -53,18 +53,6 @@
                 - ./mysql/init:/docker-entrypoint-initdb.d
                 ports:
                 - "3306:3306"
-            nginx:
-                image: nginx:1.25.1
-                restart: always
-                container_name: nginx
-                privileged: true
-                ports:
-                - 80:80
-                volumes:
-                - "./nginx/conf/nginx.conf:/etc/nginx/nginx.conf"
-                - "./nginx/html/:/usr/share/nginx/html/"
-                - "./nginx/logs/:/var/log/nginx/"
-      
        ```
     
     b. 使用`docker ps -a`验证MySQL、Redis、Tdengine、Emqx启动是否成功
