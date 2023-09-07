@@ -68,6 +68,9 @@ public class AkskTest {
         }
     }
 
+    /**
+	 * 使用jdk8版本
+	 */
     public static void main() {
 
         String ak = "aadfsdfsasdfssdf"; // Access Key
