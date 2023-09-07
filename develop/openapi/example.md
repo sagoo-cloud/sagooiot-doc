@@ -29,24 +29,92 @@
 
 ```jade
 
-import java.security.MessageDigest;
-import java.util.Base64;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
+import javax.xml.bind.DatatypeConverter;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.time.Instant;
 
-public class HMACSHA256 {
-    public static String GenerateSignature(String message, String secret) {
+public class AkskTest {
+
+    /**
+     * 生成签名
+     * @param message
+     * @param secret
+     * @return
+     */
+    public static String generateSignature(String message, String secret) {
         try {
-            Mac sha256_HMAC = Mac.getInstance("HmacSHA256");
-            SecretKeySpec secret_key = new SecretKeySpec(secret.getBytes("UTF-8"), "HmacSHA256");
-            sha256_HMAC.init(secret_key);
-            byte[] hash = sha256_HMAC.doFinal(message.getBytes("UTF-8"));
-            return Base64.getEncoder().encodeToString(hash).toLowerCase();
+            SecretKeySpec keySpec = new SecretKeySpec(
+                    secret.getBytes(StandardCharsets.UTF_8), "HmacSHA256");
+
+            Mac mac = Mac.getInstance("HmacSHA256");
+            mac.init(keySpec);
+
+            byte[] rawHmac = mac.doFinal(message.getBytes(StandardCharsets.UTF_8));
+
+            return DatatypeConverter.printHexBinary(rawHmac).toLowerCase();
+
         } catch (Exception e) {
-            System.out.println("Error: " + e);
+            throw new RuntimeException("Unable to generate HMAC : " + e.getMessage(), e);
         }
-        return "";
     }
+
+    public static void main() {
+
+        String ak = "aadfsdfsasdfssdf"; // Access Key
+        String sk = "asdfasdfasdfdsdfadfwojdsf"; // Secret Key
+
+        // 获取当前时间戳
+        String timestamp = String.valueOf(Instant.now().getEpochSecond());
+
+        // 生成签名
+        String message = "ak=" + ak + "&time=" + timestamp;
+        String sign = generateSignature(message, sk);
+
+        // 构造请求URL
+        String requestURL = "http://localhost:8199/openapi/v1/product/device/page_list?pageNum=1&pageSize=10&ak=" + ak + "&time=" + timestamp + "&sign=" + sign;
+        System.out.println(requestURL);
+
+        // 创建 HttpClient 实例
+        CloseableHttpClient httpClient = HttpClients.createDefault();
+
+        // 创建 GET 请求对象
+        HttpGet httpGet = new HttpGet(requestURL);
+
+        try {
+            // 发送请求并获取响应
+            CloseableHttpResponse response = httpClient.execute(httpGet);
+
+            // 获取响应实体
+            HttpEntity entity = response.getEntity();
+
+            // 输出响应状态码和响应体
+            System.out.println("Response Code: " + response.getStatusLine().getStatusCode());
+            System.out.println("Response Body: " + EntityUtils.toString(entity));
+
+            // 关闭响应
+            response.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                // 关闭 HttpClient
+                httpClient.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
 }
 
 ```
