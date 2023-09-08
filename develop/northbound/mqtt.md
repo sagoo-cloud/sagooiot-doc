@@ -46,18 +46,18 @@
 
 北向接口暂时定义这些消息，按照需要订阅相关topic接收对应消息，后续会有相关的扩充
 
-| 分类   | topic                                | 消息类型                 | 描述            |
-|------|--------------------------------------|----------------------|---------------|
-| 设备操作 | /message/device/online               | DeviceOnlineMessage  | 设备上线          |
-| 设备操作 | /message/device/offline              | DeviceOfflineMessage | 设备下线          |
-| 设备操作 | /message/device/add                  |    DeviceAddMessage                  | 设备添加          |
-| 设备操作 | /message/device/delete               |  DeviceDeleteMessage                    | 设备删除          |
-| 物物模型 | /message/tsl/receive/property/report | PropertyReportMessage                     | 设备上报属性        |
-| 物物模型 | /message/tsl/receive/event/report    |   EventReportMessage                   | 设备上报事件        |
-| 物物模型 | /message/tsl/send/service/call       |  ServiceCallMessage                    | 平台调用设备服务请求    |
-| 物物模型 | /message/tsl/receive/service/reply   |    ServiceReplyMessage                  | 平台接收到设备服务响应   |
-| 物物模型 | /message/tsl/send/property/set       |         PropertySetMessage             | 平台设置设备属性      |
-| 物物模型 | /message/tsl/receive/property/reply  |           PropertySetReplyMessage           | 平台接收到设置设备属性响应 |
+| 分类   | topic                                | 消息类型                    | 描述            |
+|------|--------------------------------------|-------------------------|---------------|
+| 设备操作 | /message/device/online               | DeviceOnlineMessage     | 设备上线          |
+| 设备操作 | /message/device/offline              | DeviceOfflineMessage    | 设备下线          |
+| 设备操作 | /message/device/add                  | DeviceAddMessage        | 设备添加          |
+| 设备操作 | /message/device/delete               | DeviceDeleteMessage     | 设备删除          |
+| 物物模型 | /message/tsl/receive/property/report | PropertyReportMessage   | 设备上报属性        |
+| 物物模型 | /message/tsl/receive/event/report    | EventReportMessage      | 设备上报事件        |
+| 物物模型 | /message/tsl/send/service/call       | ServiceCallMessage      | 平台调用设备服务请求    |
+| 物物模型 | /message/tsl/receive/service/reply   | ServiceCallReplyMessage    | 平台接收到设备服务响应   |
+| 物物模型 | /message/tsl/send/property/set       | PropertySetMessage      | 平台设置设备属性      |
+| 物物模型 | /message/tsl/receive/property/reply  | PropertySetReplyMessage | 平台接收到设置设备属性响应 |
 
 
 ### 1.1.4. 消息格式
@@ -235,7 +235,7 @@ type (
 1. 对应的go结构体
 ```go
 type (
-    ServiceReplyMessage struct {
+    ServiceCallReplyMessage struct {
         ServiceId string `json:"serviceId"`//string类型，服务标识
         Code      int `json:"code"`//int类型，响应码
         Data      map[string]interface{} `json:"data"`//map类型，响应数据列表，key为数据标识，value为数据值
