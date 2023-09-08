@@ -182,6 +182,20 @@ function sidebarGuide() {
       ]
     },
     {
+      text: '设备运维',
+      collapsed: false,
+      items: [
+        {
+          text: '远程配置',
+          link: '/guide/operate/remoteconf'
+        },
+        {
+          text: 'OTA升级',
+          link: '/guide/operate/ota'
+        }
+      ]
+    },
+    {
       text: '网络组件',
       collapsed: false,
       items: [
