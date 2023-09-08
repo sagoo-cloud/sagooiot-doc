@@ -57,7 +57,7 @@
 | 物物模型 | /message/tsl/send/service/call       |  ServiceCallMessage                    | 平台调用设备服务请求    |
 | 物物模型 | /message/tsl/receive/service/reply   |    ServiceReplyMessage                  | 平台接收到设备服务响应   |
 | 物物模型 | /message/tsl/send/property/set       |         PropertySetMessage             | 平台设置设备属性      |
-| 物物模型 | /message/tsl/receive/property/reply  |           ServiceReplyMessage           | 平台接收到设置设备属性响应 |
+| 物物模型 | /message/tsl/receive/property/reply  |           PropertySetReplyMessage           | 平台接收到设置设备属性响应 |
 
 
 ### 1.1.4. 消息格式
@@ -281,7 +281,7 @@ type (
 1. 对应的go结构体
 ```go
 type (
-    ServiceReplyMessage struct {
+    PropertySetReplyMessage struct {
         Code      int `json:"code"`//int类型，响应码
         Data      map[string]interface{} `json:"data"`//map类型，响应数据列表，key为数据标识，value为数据值
         Timestamp int64 `json:"timestamp"`//int64类型，时间戳，单位为毫秒
