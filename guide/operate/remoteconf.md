@@ -38,6 +38,7 @@
 
 在物联网平台控制台，向某一产品下的所有设备批量推送配置文件。
 ![远程配置场景一](../../public/imgs/guide/operate/p001.png)
+
 1. 设备上线。
 
    需配置设备端订阅推送配置信息的Topic：`/sys/${productKey}/${deviceKey}/thing/config/push`。
