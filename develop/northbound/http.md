@@ -16,15 +16,15 @@
 2. productId: 产品id
 3. deviceId: 设备id
 
-| api名称  | url                                                         | method| api描述    |
-|--------|-------------------------------------------------------------|--------------|----------|
-| 获取产品详情 | https://{domain}/api/v1/product/detail?id={productId}       | GET| 获取产品详情   |
-| 获取设备详情 | https://{domain}/api/v1/product/device/detail?id={deviceId} | GET| 获取设备详情   |
-| 获取设备列表 | https://{domain}/api/v1/product/device/list?id={productId}  | GET| 获取设备列表   |
-| 获取设备属性 | https://{domain}/openapi/v1/product/device/property/list    | GET| 获取设备属性   |
-| 设置设备属性 | https://{domain}/api/v1/product/property/set                | POST| 设置设备属性   |
-| 获取事件列表 | https://{domain}/api/v1/product/tsl/event/all?key={keyword}       | GET| 获取产品事件列表 |
-| 调用设备服务 | https://{domain}/api/v1/product/function/do                        | POST| 调用设备服务   |
+| api名称  | url                                                               | method| api描述    |
+|--------|-------------------------------------------------------------------|--------------|----------|
+| 获取产品详情 | https://{domain}/api/v1/north/product/detail?id={productId}       | GET| 获取产品详情   |
+| 获取设备详情 | https://{domain}/api/v1/north/product/device/detail?id={deviceId} | GET| 获取设备详情   |
+| 获取设备列表 | https://{domain}/api/v1/north/product/device/list?id={productId}  | GET| 获取设备列表   |
+| 获取设备属性 | https://{domain}/api/v1/north/device/property/list              | GET| 获取设备属性   |
+| 设置设备属性 | https://{domain}/api/v1/north/product/property/set                | POST| 设置设备属性   |
+| 获取事件列表 | https://{domain}/api/v1/north/product/tsl/event/all?key={keyword} | GET| 获取产品事件列表 |
+| 调用设备服务 | https://{domain}/api/v1/north/product/function/do                 | POST| 调用设备服务   |
 
 
 ### 1.1.3. 接口定义
@@ -32,7 +32,7 @@
 #### 1.1.3.1. 获取产品详情
 
 1. 请求方式：`GET`
-2. 请求url：`https://{domain}/api/v1/product/detail?id={productId}`
+2. 请求url：`https://{domain}/api/v1/north/product/detail?id={productId}`
 3. 请求参数：
 
    | 参数名称 | 是否必传 | 类型 | 描述   |
@@ -298,7 +298,7 @@
 
 #### 1.1.3.2. 获取设备详情
 1. 请求方式：`GET`
-2. 请求url：`https://{domain}/api/v1/product/device/detail?id={deviceId}`
+2. 请求url：`https://{domain}/api/v1/north/product/device/detail?id={deviceId}`
 3. 请求参数：
 
    | 参数名称 | 是否必传 | 类型 | 描述   |
@@ -574,7 +574,7 @@
 
 #### 1.1.3.3. 获取设备列表
 1. 请求方式：`GET`
-2. 请求url：` https://{domain}/api/v1/product/device/list?id={productId}`
+2. 请求url：` https://{domain}/api/v1/north/product/device/list?id={productId}`
 3. 请求参数：
 
    | 参数名称 | 是否必传 | 类型 | 描述   |
@@ -815,7 +815,7 @@
 
 #### 1.1.3.5. 设置设备属性
 1. 请求方式：`POST`
-2. 请求url：`https://{domain}/api/v1/product/property/set `
+2. 请求url：`https://{domain}/api/v1/north/product/property/set `
 3. 请求参数：
 详细参数定义参见[DevicePropertyInput](https://github.com/sagoo-cloud/sagooiot/blob/main/internal/model/dev_device_property.go)
 ```json
@@ -844,7 +844,7 @@
 
 #### 1.1.3.6. 获取设备事件列表
 1. 请求方式：`GET`
-2. 请求url：`https://{domain}/api/v1/product/tsl/event/all?key={keyword}`
+2. 请求url：`https://{domain}/api/v1/north/product/tsl/event/all?key={keyword}`
 3. 请求参数：
 4. 
    | 参数名称 | 是否必传 | 类型       | 描述                  |
@@ -852,7 +852,7 @@
    | key| 是 | string     | 事件关键字               |
 
 5. 返回参数：
-详细参数定义参见 [AllTSLPropertyRes](https://github.com/sagoo-cloud/sagooiot/blob/main/api/v1/product/tsl.go)
+详细参数定义参见 [AllTSLPropertyRes](https://github.com/sagoo-cloud/sagooiot/blob/main/api/v1/north/product/tsl.go)
 ```json
 {
    "code": 0,
@@ -924,9 +924,9 @@
 
 #### 1.1.3.7. 调用设备服务
 1. 请求方式：`POST`
-2. 请求url：`https://{domain}/api/v1/product/function/do`
+2. 请求url：`https://{domain}/api/v1/north/product/function/do`
 3. 请求参数：
-详细参数定义参见[DeviceFunctionReq](https://github.com/sagoo-cloud/sagooiot/tree/main/api/v1/product/device_function.go)
+详细参数定义参见[DeviceFunctionReq](https://github.com/sagoo-cloud/sagooiot/tree/main/api/v1/north/product/device_function.go)
 ```json
 {
    "deviceKey": "string",
@@ -938,7 +938,7 @@
 }
 ```
 4. 返回参数：
-   详细参数定义参见[DeviceFunctionRes](https://github.com/sagoo-cloud/sagooiot/tree/main/api/v1/product/device_function.go)
+   详细参数定义参见[DeviceFunctionRes](https://github.com/sagoo-cloud/sagooiot/tree/main/api/v1/north/product/device_function.go)
 ```json
 {
    "code": 0,
