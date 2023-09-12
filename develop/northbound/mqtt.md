@@ -3,33 +3,61 @@
 
 ## 1.1. 开发
 
-### 1.1.1. 修改系统配置文件 `manifest/config/config.yaml` 在原有的mqtt配置添加以下配置项
+### 1.1.1. 开启mqtt北向消息开关
 
+修改系统配置文件 `manifest/config/config.yaml` 在原有的mqtt配置添加`messagingEnable`配置项,配置如下
     ```yaml
-    messagingEnable: true
+    mqtt:
+      addr: 127.0.0.1:1885
+      clientId: exampleClientId
+      deviceLiveDuration: 30
+      messagingEnable: true
+      auth:
+        userName: sagoo_admin
+        userPassWorld: sagoo_admin
     ```
 
-### 1.1.2. 申请系统token
+### 1.1.2. mqtt连接信息
 
-1. 登录`sagoo` 系统，进入`系统配置`-> `北向客户端` -> `mqtt` 页面，添加一个客户端
-2. 添加完成后系统会生成一个随机的`clientId`,用来作为`mqtt`的客户端`id`，此`id`必须仅能给一个客户端使用，`id`复用会导致可能接收不到消息
-
+1. `mqtt` 相关的连接信息在系统配置文件 `manifest/config/config.yaml` 中查看
+2. 连接使用的`mqtt`的`clientId`
+    1. 登录`sagoo` 系统，进入`系统配置`-> `基础配置` 查找下面两个的值，分别对应`SK`和`AK`
+       - `开放接口AK`: `Ak`
+       - `开放接口SK`: `SK`
+    2. 连接的`clientId`为`Ak`和`SK`的`base64`编码,即为`base64(Ak:SK)`,使用golang代码示例如下
+        ```go
+        package main
+        
+        import (
+        	"encoding/base64"
+        	"fmt"
+        )
+        
+        func main() {
+        	ak := "testAk"
+        	sk := "testSk"
+        	akSk := ak + ":" + sk
+        	akSkBase64 := base64.StdEncoding.EncodeToString([]byte(akSk))
+        	fmt.Println(akSkBase64)
+        }
+        ```
+       
 ### 1.1.3. 消息定义
 
 北向接口暂时定义这些消息，按照需要订阅相关topic接收对应消息，后续会有相关的扩充
 
-| 分类   | topic                                | 消息类型                 | 描述            |
-|------|--------------------------------------|----------------------|---------------|
-| 设备操作 | /message/device/online               | DeviceOnlineMessage  | 设备上线          |
-| 设备操作 | /message/device/offline              | DeviceOfflineMessage | 设备下线          |
-| 设备操作 | /message/device/add                  |    DeviceAddMessage                  | 设备添加          |
-| 设备操作 | /message/device/delete               |  DeviceDeleteMessage                    | 设备删除          |
-| 物物模型 | /message/tsl/receive/property/report | PropertyReportMessage                     | 设备上报属性        |
-| 物物模型 | /message/tsl/receive/event/report    |   EventReportMessage                   | 设备上报事件        |
-| 物物模型 | /message/tsl/send/service/call       |  ServiceCallMessage                    | 平台调用设备服务请求    |
-| 物物模型 | /message/tsl/receive/service/reply   |    ServiceReplyMessage                  | 平台接收到设备服务响应   |
-| 物物模型 | /message/tsl/send/property/set       |         PropertySetMessage             | 平台设置设备属性      |
-| 物物模型 | /message/tsl/receive/property/reply  |           ServiceReplyMessage           | 平台接收到设置设备属性响应 |
+| 分类   | topic                                | 消息类型                    | 描述            |
+|------|--------------------------------------|-------------------------|---------------|
+| 设备操作 | /message/device/online               | DeviceOnlineMessage     | 设备上线          |
+| 设备操作 | /message/device/offline              | DeviceOfflineMessage    | 设备下线          |
+| 设备操作 | /message/device/add                  | DeviceAddMessage        | 设备添加          |
+| 设备操作 | /message/device/delete               | DeviceDeleteMessage     | 设备删除          |
+| 物物模型 | /message/tsl/receive/property/report | PropertyReportMessage   | 设备上报属性        |
+| 物物模型 | /message/tsl/receive/event/report    | EventReportMessage      | 设备上报事件        |
+| 物物模型 | /message/tsl/send/service/call       | ServiceCallMessage      | 平台调用设备服务请求    |
+| 物物模型 | /message/tsl/receive/service/reply   | ServiceCallReplyMessage    | 平台接收到设备服务响应   |
+| 物物模型 | /message/tsl/send/property/set       | PropertySetMessage      | 平台设置设备属性      |
+| 物物模型 | /message/tsl/receive/property/reply  | PropertySetReplyMessage | 平台接收到设置设备属性响应 |
 
 
 ### 1.1.4. 消息格式
@@ -207,7 +235,7 @@ type (
 1. 对应的go结构体
 ```go
 type (
-    ServiceReplyMessage struct {
+    ServiceCallReplyMessage struct {
         ServiceId string `json:"serviceId"`//string类型，服务标识
         Code      int `json:"code"`//int类型，响应码
         Data      map[string]interface{} `json:"data"`//map类型，响应数据列表，key为数据标识，value为数据值
@@ -253,7 +281,7 @@ type (
 1. 对应的go结构体
 ```go
 type (
-    ServiceReplyMessage struct {
+    PropertySetReplyMessage struct {
         Code      int `json:"code"`//int类型，响应码
         Data      map[string]interface{} `json:"data"`//map类型，响应数据列表，key为数据标识，value为数据值
         Timestamp int64 `json:"timestamp"`//int64类型，时间戳，单位为毫秒
