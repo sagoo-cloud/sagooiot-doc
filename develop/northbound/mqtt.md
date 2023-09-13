@@ -1,48 +1,49 @@
 
-# 1. MQTT方式
+# MQTT方式
 
-## 1.1. 开发
 
-### 1.1.1. 开启mqtt北向消息开关
+## 开启mqtt北向消息开关
 
 修改系统配置文件 `manifest/config/config.yaml` 在原有的mqtt配置添加`messagingEnable`配置项,配置如下
-    ```yaml
-    mqtt:
-      addr: 127.0.0.1:1885
-      clientId: exampleClientId
-      deviceLiveDuration: 30
-      messagingEnable: true
-      auth:
-        userName: sagoo_admin
-        userPassWorld: sagoo_admin
-    ```
 
-### 1.1.2. mqtt连接信息
+```yaml
+mqtt:
+  addr: 127.0.0.1:1885
+  clientId: exampleClientId
+  deviceLiveDuration: 30
+  messagingEnable: true
+  auth:
+    userName: sagoo_admin
+    userPassWorld: sagoo_admin
+```
+
+## mqtt连接信息
 
 1. `mqtt` 相关的连接信息在系统配置文件 `manifest/config/config.yaml` 中查看
 2. 连接使用的`mqtt`的`clientId`
     1. 登录`sagoo` 系统，进入`系统配置`-> `基础配置` 查找下面两个的值，分别对应`SK`和`AK`
        - `开放接口AK`: `Ak`
        - `开放接口SK`: `SK`
-    2. 连接的`clientId`为`Ak`和`SK`的`base64`编码,即为`base64(Ak:SK)`,使用golang代码示例如下
-        ```go
-        package main
-        
-        import (
-        	"encoding/base64"
-        	"fmt"
-        )
-        
-        func main() {
-        	ak := "testAk"
-        	sk := "testSk"
-        	akSk := ak + ":" + sk
-        	akSkBase64 := base64.StdEncoding.EncodeToString([]byte(akSk))
-        	fmt.Println(akSkBase64)
-        }
-        ```
-       
-### 1.1.3. 消息定义
+2. 连接的`clientId`为`Ak`和`SK`的`base64`编码,即为`base64(Ak:SK)`,使用golang代码示例如下
+
+```go
+package main
+    
+import (
+    "encoding/base64"
+    "fmt"
+)
+    
+func main() {
+    ak := "testAk"
+    sk := "testSk"
+    akSk := ak + ":" + sk
+    akSkBase64 := base64.StdEncoding.EncodeToString([]byte(akSk))
+    fmt.Println(akSkBase64)
+}
+```
+
+## 消息定义
 
 北向接口暂时定义这些消息，按照需要订阅相关topic接收对应消息，后续会有相关的扩充
 
@@ -60,7 +61,7 @@
 | 物物模型 | /message/tsl/receive/property/reply  | PropertySetReplyMessage | 平台接收到设置设备属性响应 |
 
 
-### 1.1.4. 消息格式
+## 消息格式
 
 所有的消息报文都为json结构体，统一结构如下,其中所有的消息类型都是放在data里面
 1. 对应的go结构体
@@ -86,9 +87,9 @@ type Message struct {
 }
 ```
 
-### 1.1.5. 消息类型定义
+## 消息类型定义
 
-#### 1.1.5.1. 设备上线
+### 设备上线
 
 1. 对应的go结构体
 ```go
@@ -105,7 +106,7 @@ type DeviceOnlineMessage struct {
 }
 ```
 
-#### 1.1.5.2. 设备下线
+### 设备下线
 
 1. 对应的go结构体
 ```go
@@ -122,7 +123,7 @@ type DeviceOfflineMessage struct {
 }
 ```
 
-#### 1.1.5.3. 设备添加
+### 设备添加
 
 1. 对应的go结构体
 ```go
@@ -139,7 +140,7 @@ type DeviceAddMessage struct {
 }
 ```
 
-#### 1.1.5.4. 设备删除
+### 设备删除
 
 1. 对应的go结构体
 ```go
@@ -156,7 +157,7 @@ type DeviceDeleteMessage struct {
 }
 ```
 
-#### 1.1.5.5. 设备上报属性
+### 设备上报属性
 
 1. 对应的go结构体
 ```go
@@ -182,7 +183,7 @@ type (
 }
 ```
 
-#### 1.1.5.6. 设备上报事件
+### 设备上报事件
 
 1. 对应的go结构体
 ```go
@@ -206,7 +207,7 @@ type (
 ```
 
 
-#### 1.1.5.7. 平台调用设备服务请求
+### 平台调用设备服务请求
 
 1. 对应的go结构体
 ```go
@@ -230,7 +231,7 @@ type (
 }
 ```
 
-#### 1.1.5.8. 平台接收到设备服务响应
+### 平台接收到设备服务响应
 
 1. 对应的go结构体
 ```go
@@ -255,7 +256,7 @@ type (
 }
 ```
 
-#### 1.1.5.9. 平台设置设备属性
+### 平台设置设备属性
 
 1. 对应的go结构体
 ```go
@@ -276,7 +277,7 @@ type (
 }
 ```
 
-#### 1.1.5.10. 平台接收到设置设备属性响应
+### 平台接收到设置设备属性响应
 
 1. 对应的go结构体
 ```go
