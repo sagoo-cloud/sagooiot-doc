@@ -139,6 +139,32 @@ function sidebarGuide() {
       ]
     },
     {
+      text: '系统说明',
+      collapsed: false,
+      items: [
+        {
+          text: '名词解释',
+          link: '/guide/description/noun'
+        },
+        {
+          text: '物模型说明',
+          link: '/guide/description/tsl'
+        },
+        {
+          text: '标识符命名规范',
+          link: '/guide/description/identifiers'
+        },
+        {
+          text: '数据类型说明',
+          link: '/guide/description/datatype'
+        },
+        {
+          text: 'SagooMQTT协议',
+          link: '/guide/description/sagoomqtt'
+        },
+      ]
+    },
+    {
       text: '设备接入',
       collapsed: false,
       items: [
@@ -160,20 +186,12 @@ function sidebarGuide() {
       collapsed: false,
       items: [
         {
-          text: '名词解释',
-          link: '/guide/device/start'
-        },
-        {
           text: '产品管理',
           link: '/guide/device/product'
         },
         {
           text: '设备管理',
           link: '/guide/device/instance'
-        },
-        {
-          text: '物模型说明',
-          link: '/guide/device/tsl'
         },
         {
           text: '设备影子',
