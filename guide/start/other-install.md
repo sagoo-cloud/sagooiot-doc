@@ -180,15 +180,21 @@
 
 1. 进入项目根目录下使用`npm run build`命令进行源码编译
 
-2. 进入`/opt/sagoo/iot-ui`目录下创建plugin文件夹
-3. 将编译之后生成的screen全部文件上传到服务器`/opt/sagoo/iot-ui/plugin`目录下
+2. 执行完之后会在项目根目录下生成`dist`目录，将`dist`目录名更改为`screen`
+
+3. 进入`/opt/sagoo/iot-ui`目录下创建plugin文件夹
+
+4. 将第二步执行完之后的`screen`全部文件上传到服务器`/opt/sagoo/iot-ui/plugin`目录下
 
 ## 可视化组态部署
 
 1. 进入项目根目录下使用`npm run build`命令进行源码编译
 
-2. 进入`/opt/sagoo/iot-ui`目录下创建plugin文件夹
-3. 将编译之后生成的topo全部文件上传到服务器`/opt/sagoo/iot-ui/plugin`目录下
+2. 执行完之后会在项目根目录下生成`dist`目录，将`dist`目录名更改为`topo`
+
+3. 进入`/opt/sagoo/iot-ui`目录下创建`plugin`文件夹, 如果存在 `plugin`文件夹则忽略
+
+4. 将第二步执行完之后的`topo`全部文件上传到服务器`/opt/sagoo/iot-ui/plugin`目录下
 
 ## nginx配置
 
