@@ -46,4 +46,4 @@
 1. 上面所有步骤都完成后，就可以测试设备了，打开设备列表，找到自己对应的测试设备(`物联管理`->`设备管理`->`设备`)。
 ![device-list.png](..%2F..%2Fpublic%2Fimgs%2Fguide%2Fdevice_access%2Fdevice-list.png)
 2. 找到对应测试设备后，点击`操作`下面的`详情`按钮，进入设备详情查看设备状态是否在线以及相关属性信息是否上报成功。
-![device-info.png](..%2F..%2Fpublic%2Fimgs%2Fguide%2Fdevice_access%2Fdevice-info.png)3.
+![device-info.png](..%2F..%2Fpublic%2Fimgs%2Fguide%2Fdevice_access%2Fdevice-info.png)
