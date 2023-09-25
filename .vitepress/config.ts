@@ -158,10 +158,6 @@ function sidebarGuide() {
                     text: '数据类型说明',
                     link: '/guide/description/datatype'
                 },
-                {
-                    text: 'SagooMQTT协议',
-                    link: '/guide/description/sagoomqtt'
-                },
             ]
         },
         {
@@ -482,9 +478,9 @@ function sidebarDevelop() {
             ]
         },
         {
-            text: '协议开发',
+            text: '消息协议开发',
             items: [
-                {text: 'MQTT协议', link: '/develop/protocol/mqtt'},
+                {text: 'SagooMqtt协议', link: '/develop/protocol/mqtt'},
                 {text: 'Modbus开发', link: '/develop/protocol/modbus'},
             ]
         },
