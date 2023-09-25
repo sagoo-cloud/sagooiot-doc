@@ -15,15 +15,15 @@
 2. productId: 产品id
 3. deviceId: 设备id
 
-| api名称  | url                                                               | method| api描述    |
-|--------|-------------------------------------------------------------------|--------------|----------|
-| 获取产品详情 | https://{domain}/openapi/v1/north/product/detail?id={productId}       | GET| 获取产品详情   |
-| 获取设备详情 | https://{domain}/openapi/v1/north/product/device/detail?id={deviceId} | GET| 获取设备详情   |
-| 获取设备列表 | https://{domain}/openapi/v1/north/product/device/list?id={productId}  | GET| 获取设备列表   |
-| 获取设备属性 | https://{domain}/openapi/v1/north/device/property/list              | GET| 获取设备属性   |
-| 设置设备属性 | https://{domain}/openapi/v1/north/product/property/set                | POST| 设置设备属性   |
-| 获取事件列表 | https://{domain}/openapi/v1/north/product/tsl/event/all?key={keyword} | GET| 获取产品事件列表 |
-| 调用设备服务 | https://{domain}/openapi/v1/north/product/function/do                 | POST| 调用设备服务   |
+| api名称  | url                                                          | method| api描述    |
+|--------|--------------------------------------------------------------|--------------|----------|
+| 获取产品详情 | https://{domain}/openapi/v1/north/product/detail?id={productId}  | GET| 获取产品详情   |
+| 获取设备详情 | https://{domain}/openapi/v1/north/device/detail?id={deviceId} | GET| 获取设备详情   |
+| 获取设备列表 | https://{domain}/openapi/v1/north/device/list?id={productId} | GET| 获取设备列表   |
+| 获取设备属性 | https://{domain}/openapi/v1/north/device/property/list         | GET| 获取设备属性   |
+| 设置设备属性 | https://{domain}/openapi/v1/north/property/set            | POST| 设置设备属性   |
+| 获取事件列表 | https://{domain}/openapi/v1/north/tsl/event/all?key={keyword} | GET| 获取产品事件列表 |
+| 调用设备服务 | https://{domain}/openapi/v1/north/function/do              | POST| 调用设备服务   |
 
 
 ## 接口定义
@@ -297,7 +297,7 @@
 
 ### 获取设备详情
 1. 请求方式：`GET`
-2. 请求url：`https://{domain}/openapi/v1/north/product/device/detail?id={deviceId}`
+2. 请求url：`https://{domain}/openapi/v1/north/device/detail?id={deviceId}`
 3. 请求参数：
 
    | 参数名称 | 是否必传 | 类型 | 描述   |
@@ -573,7 +573,7 @@
 
 ### 取设备列表
 1. 请求方式：`GET`
-2. 请求url：` https://{domain}/openapi/v1/north/product/device/list?id={productId}`
+2. 请求url：`https://{domain}/openapi/v1/north/device/list?id={productId}`
 3. 请求参数：
 
    | 参数名称 | 是否必传 | 类型 | 描述   |
@@ -780,7 +780,7 @@
 
 ### 获取设备属性
 1. 请求方式：`GET`
-2. 请求url：`https://{domain}/openapi/v1/product/device/property/list`
+2. 请求url：`https://{domain}/openapi/v1/device/property/list`
 3. 请求参数：
    
       | 参数名称 | 是否必传 | 类型 | 描述 |
@@ -843,7 +843,7 @@
 
 ### 获取设备事件列表
 1. 请求方式：`GET`
-2. 请求url：`https://{domain}/openapi/v1/north/product/tsl/event/all?key={keyword}`
+2. 请求url：`https://{domain}/openapi/v1/north/tsl/event/all?key={keyword}`
 3. 请求参数：
 4. 
    | 参数名称 | 是否必传 | 类型       | 描述                  |
@@ -923,7 +923,7 @@
 
 ### 调用设备服务
 1. 请求方式：`POST`
-2. 请求url：`https://{domain}/openapi/v1/north/product/function/do`
+2. 请求url：`https://{domain}/openapi/v1/north/function/do`
 3. 请求参数：
 详细参数定义参见[DeviceFunctionReq](https://github.com/sagoo-cloud/sagooiot/tree/main/api/v1/north/product/device_function.go)
 ```json
