@@ -11,6 +11,8 @@
 
 ## api接口列表
 
+***注意事项:其中`domain`根据实际配置来定，因为有时会为了前端后端使用统一域名对url进行重写，比如加上`/base-api`这个时候对应的也要加上前缀，比如原本的`https://{domain}/openapi`就变成了`https://{domain}/base-api/openapi`***
+
 1. domain: 为api服务的域名
 2. productId: 产品id
 3. deviceId: 设备id
