@@ -172,7 +172,7 @@
 
 之后可以通过 `pm2 show rule-engine:2881` 查看项目运行情况
 
-8. 按照【rule-engine】项目下 `nginx/node-red.conf` 文件的配置增加一下nginx配置，来保证规则引擎和iot的同源
+8. 按照【rule-engine】项目下 `nginx/node-red.conf` 文件的配置增加一下nginx配置，来保证规则引擎和iot的同源（主nginx配置中已包含该配置，可忽略此项）
 
 9. 如果要修改favicon.ico, 就将`packages/node_modules/@node-red/editor-client/public/favicon.ico`这个文件进行替换即可。
 

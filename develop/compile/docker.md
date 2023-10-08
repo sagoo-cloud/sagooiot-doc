@@ -33,9 +33,9 @@
     # 基础接口路径
     VITE_API_URL = '/api/v1'
   ```
-  3. 使用`npm install`或`yarn`进行项目依赖安装
+  3. 使用`yarn`进行项目依赖安装
   
-  4. 使用`npm run dev`启动项目
+  4. 使用`yarn run dev`启动项目
 
 
 ## 其它问题
