@@ -28,24 +28,22 @@ hero:
       link: /guide/base/version
 
 features:
-  - title: 低代码开发
-    details: 提供代码生成工具，通过低代码开发工具进行业务快速开发，提升开发效率。
-  - title: RBAC权限
-    details: 权限控制采用 RBAC，基于角色的访问控制。封装完善的用户、角色、菜单、组织等基础权限功能。
+  - title: 统一物模型
+    details: 通过统一物模型定义设备接入标准，实现设备相关属性、服务、事件等数据的直接获取，同时支持开发者自定义物模型。
   - title: 多协议适配
     details: 支持多种通信协议(MQTT，MODBUS，TCP,UDP，HTTP,CoAP)等，支持自定义消息协议，灵活接入不同厂商不同设备。
   - title: 远程控制
     details: 使用PRC API可以实现服务器对设备的精准控制和设备主动向服务器发送请求通知。
-  - title: 安全保障
-    details: 支持MQTT SSL配置、HTTP SSL配置、CoAP DTLS配置；支持访问令牌（Access Tokens）鉴权模式。
-  - title: 统一物模型
-    details: 通过统一物模型定义设备接入标准，实现设备相关属性、服务、事件等数据的直接获取，同时支持开发者自定义物模型。
   - title: 接入网关
     details: 提供通用的边缘服务，支持虚拟网关；支提设备接入、服务系统接入、产品接入。
-  - title: 规则引擎
-    details: 强大的可视化规则设计器，灵活的规则模型配置,可通过托拽的方式处理数据输入、清洗、计算、测试、输出、推送、存储。
+  - title: 场景联动
+    details: 提供可配置的场景联动功能，支持手动、设备输出、定时等场景类型，支持设备到设备，设备到业务等多种场景。
+  - title: 安全保障
+    details: 支持MQTT SSL配置、HTTP SSL配置、CoAP DTLS配置；支持访问令牌（Access Tokens）鉴权模式。
   - title: 实时报警
     details: 实时检测异常，支持企业微信、短信、语音、Webhook等多种通知方式。
+  - title: 规则引擎
+    details: 强大的可视化规则设计器，灵活的规则模型配置,可通过托拽的方式处理数据输入、清洗、计算、测试、输出、推送、存储。
   - title: web组态工具
     details: 提供Web组态工具，丰富的组态图库，动态数据绑定，直观展示设备运行状态。
   - title: 可视化大屏工具
@@ -60,4 +58,5 @@ features:
     details: 强大的插件系统，支持跨语言接入，可以通过Golang,C/C++,Python等编写的插件进行功能增强。
   - title: 跨平台运行
     details: 支持跨平台运行，能运行于各类操作系统，快速实现边缘计算、自动预警，自动执行等功能。
-
+  - title: 低代码开发
+    details: 提供代码生成工具，通过低代码开发工具进行业务快速开发，提升开发效率。
