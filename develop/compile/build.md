@@ -1,13 +1,18 @@
 # 源码编译
 
+## 安装依赖
 
-## 本地源码运行
+`go mod download` 或 `go mod tidy`
 
-将manifest/config/config.example.yaml 这个文件改名为 config.yaml
+## 修改项目配置文件
 
-修改config.toml文件，并配置相关项
+将 `manifest/config/config.example.yaml` 这个文件改名为 `config.yaml`，并修改其中的配置项。
+
 
 请跟据注释进行配置修改，包括服务相关配置，日志相关配置。
+
+## 导入业务数据表
+在manifest目录下，有一个`init.sql`文件，将该文件导入到mysql数据库中，创建数据库表。
 
 `go run main.go`
 
