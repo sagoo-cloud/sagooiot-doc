@@ -457,6 +457,7 @@ function sidebarDevelop() {
             text: '系统开发',
             items: [
                 {text: '权限开发', link: '/develop/system/authorize'},
+                {text: '数据权限', link: '/develop/system/data_authorize'},
                 {text: '数据中心', link: '/develop/system/datahub'},
             ]
         },
