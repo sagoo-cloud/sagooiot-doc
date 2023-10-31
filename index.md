@@ -2,12 +2,12 @@
 layout: home
 
 title: SagooIOT
-titleTemplate: 沙果物联网应用平台
+titleTemplate: 沙果物联网平台
 
 hero:
   name: SagooIOT
-  text: 开源物联网平台
-  tagline: 旨在提供高性能、低成本、易用的物联网系统。
+  text: 开源物联网系统
+  tagline: 旨在提供高性能、低成本、易用的企业级物联网系统。
   image:
     src: /imgs/sagooiot.svg
     alt: SagooIOT
@@ -38,6 +38,10 @@ features:
     details: 提供通用的边缘服务，支持虚拟网关；支提设备接入、服务系统接入、产品接入。
   - title: 场景联动
     details: 提供可配置的场景联动功能，支持手动、设备输出、定时等场景类型，支持设备到设备，设备到业务等多种场景。
+  - title: OTA升级
+    details: 提供设备固件版本管理，及远程升级能力。
+  - title: 远程配置
+    details: 提供的远程配置功能，可在不用重启设备或中断设备运行的情况下，在线远程更新设备的系统参数、网络参数等配置信息。
   - title: 安全保障
     details: 支持MQTT SSL配置、HTTP SSL配置、CoAP DTLS配置；支持访问令牌（Access Tokens）鉴权模式。
   - title: 实时报警

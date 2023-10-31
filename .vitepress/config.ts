@@ -466,6 +466,7 @@ function sidebarDevelop() {
             items: [
                 {text: '开发说明', link: '/develop/business/introduce'},
                 {text: '快速开始', link: '/develop/business/start'},
+                {text: '多租户开发', link: '/develop/business/tenant'},
             ]
         },
         {
