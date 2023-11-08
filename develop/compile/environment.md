@@ -12,7 +12,18 @@
 
 ## 开发环境
 
-GoFrame 使用的是V2.2.0版本，需要Go1.16以上版本
+需要Go1.16以上版本
+
+**推荐使用Go1.20.8**
+
+注意GO的版本最高使用到Go1.20.8，不要使用Go1.20.8以上版本，否则会出现编译错误。
+
+GoFrame V2.2.0
+GoFrame CLI Tool v2.2.0
+详见 https://goframe.org
+
+
+（推荐使用GoLand开发工具开发）
 
 需要在go.mod中引用
 
