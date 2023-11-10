@@ -21,6 +21,13 @@ const data = ref()
 const dataJson = {
   platinum: [
     {
+      name: 'm7s开源流媒体服务',
+      logo: `/imgs/ads/m7s.svg`,
+      img: `/imgs/ads/m7s.svg`,
+      url: 'https://m7s.live/',
+      message: '开源Go语言流媒体服务器开发框架'
+    },
+    {
       name: '可视化组态工具',
       logo: `/imgs/confingure.svg`,
       img: `/imgs/confingure.svg`,
