@@ -201,6 +201,15 @@
 1. 修改nginx配置，可参考以下配置内容
 
    ```nginx
+      gzip on;
+      gzip_min_length  10k;
+      gzip_buffers     4 16k;
+      gzip_comp_level 6;
+      gzip_types     text/plain application/javascript application/x-javascript text/javascript text/css application/xml;
+      gzip_vary on;
+      gzip_proxied   expired no-cache no-store private auth;
+      gzip_disable   "MSIE [1-6]\.";
+      
       server {
         listen       80;
         server_name  localhost;
