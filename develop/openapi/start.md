@@ -10,7 +10,7 @@ ak/sk是一种身份认证方式，常用于系统间接口调用时的身份验
 1. ak：标明请求方是谁，即该例子中的ak
 2. time：请求时间，时间戳，将会被对应的sk配合加密算法进行加密，得到一个signature签名
 3. sign：签名，使用sk配合对应的加密算法后进行加密得到的签名。
-4. appId: 应用id，在系统中创建
+4. appId: 应用id，在系统中创建，用于标识应用的唯一性。
 
 请求示例：
 https://xxx.com/students?ak=reewrwererw&time=1640494526&sign=54acba6857b284a8a481ed5913edd34d994721cc584305ff02c81bb3ced17212&appId=aaaa

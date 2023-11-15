@@ -143,8 +143,8 @@
     VITE_API_URL = '/api/v1'
   ```
 
-  3. 使用`npm install`或`yarn`进行项目依赖安装
-  4. 使用`npm run dev`启动项目
+  3. 使用`yarn`进行项目依赖安装
+  4. 使用`yarn run dev`启动项目
 
 ## 源码编译部署
 
@@ -193,6 +193,16 @@
   2. 修改配置文件，以下是参考内容:
 
   ```nginx
+  
+    gzip on;
+    gzip_min_length  10k;
+    gzip_buffers     4 16k;
+    gzip_comp_level 6;
+    gzip_types     text/plain application/javascript application/x-javascript text/javascript text/css application/xml;
+    gzip_vary on;
+    gzip_proxied   expired no-cache no-store private auth;
+    gzip_disable   "MSIE [1-6]\.";
+
     server {
         listen       80;
         server_name  localhost;

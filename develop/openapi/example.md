@@ -4,6 +4,7 @@
 
 ```go
 
+        appId := "aaaa" //应用ID
 		ak := "aadfsdfsa" //Access Key
 		sk := "asfwerttytyrtyewrwerfasdfsfsfsf2" //Secret Key
 
@@ -15,7 +16,7 @@
 		sign := GenerateSignature(message, sk)
 		
 		// 构造请求URL
-		requestURL := "http://127.0.0.1:8199/openapi/v1/product/device/page_list?pageNum=1&pageSize=10&ak=aadfsdfsa&time=" + timestamp + "&sign=" + sign
+		requestURL := "http://127.0.0.1:8199/openapi/v1/product/device/page_list?pageNum=1&pageSize=10&ak=aadfsdfsa&time=" + timestamp + "&sign=" + sign + "&appId=" + appId
 		fmt.Println(requestURL)
 		
 		//Http 客户端进行调用
@@ -73,6 +74,7 @@ public class AkskTest {
 	 */
     public static void main() {
 
+        String appId = "aaaa"; // 应用ID
         String ak = "aadfsdfsasdfssdf"; // Access Key
         String sk = "asdfasdfasdfdsdfadfwojdsf"; // Secret Key
 
@@ -84,7 +86,7 @@ public class AkskTest {
         String sign = generateSignature(message, sk);
 
         // 构造请求URL
-        String requestURL = "http://localhost:8199/openapi/v1/product/device/page_list?pageNum=1&pageSize=10&ak=" + ak + "&time=" + timestamp + "&sign=" + sign;
+        String requestURL = "http://localhost:8199/openapi/v1/product/device/page_list?pageNum=1&pageSize=10&ak=" + ak + "&time=" + timestamp + "&sign=" + sign + "&appId=" + appId;
         System.out.println(requestURL);
 
         // 创建 HttpClient 实例

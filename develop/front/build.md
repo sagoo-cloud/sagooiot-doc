@@ -1,16 +1,11 @@
 # 编译与部署
 
-
-
-
-
 ## 程序编译
 
 需要打包发布，执行下面的命令
 
-
 ```shell
-cnpm run build
+npm run build
 
 ```
 

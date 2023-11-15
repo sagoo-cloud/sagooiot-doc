@@ -16,7 +16,7 @@
 
 ## 使用说明
 
-建议使用 cnpm，因为 yarn 有时会报错。[node 版本 > 12xx.xx.x](https://gitee.com/link?target=http%3A%2F%2Fnodejs.cn%2F)
+建议使用 yarn。[node 版本 > 12xx.xx.x](https://gitee.com/link?target=http%3A%2F%2Fnodejs.cn%2F)
 
 ```
 # 克隆项目
@@ -26,13 +26,13 @@ git clone XXXXX
 cd sagoo-admin-ui
 
 # 安装依赖
-cnpm install
+yarn
 
 # 运行项目
-cnpm run dev
+yarn run dev
 
 # 打包发布
-cnpm run build
+yarn run build
 ```
 
 #### 
