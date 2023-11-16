@@ -513,6 +513,12 @@ function sidebarDevelop() {
             ]
         },
         {
+            text: '前端开发-组态图',
+            items: [
+                {text: '图元扩展', link: '/develop/front-topo/introduce'},
+            ]
+        },
+        {
             text: 'OpenAPIs',
             items: [
                 {text: 'AKSK鉴权', link: '/develop/openapi/start'},
