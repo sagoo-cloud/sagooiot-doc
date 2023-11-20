@@ -484,6 +484,7 @@ function sidebarDevelop() {
             items: [
                 {text: 'SagooMqtt协议', link: '/develop/protocol/mqtt'},
                 {text: 'Modbus开发', link: '/develop/protocol/modbus'},
+                {text: '云网关开发', link: '/develop/protocol/iotgateway'},
             ]
         },
         {
