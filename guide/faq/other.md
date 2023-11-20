@@ -1,15 +1,15 @@
 # 其它常见问题
 
-## 操作系统如何优化
+## 如果遇到高并发情况下，有出现tcp端口用尽的情况或者文件打开限制错误，如何优化？
 
-### 修改`limits.conf`
+### 修改`limits.conf`，文件位置 `/etc/security/limits.conf`(需要重启重新登录重启进程)
 
 ```txt
 * soft nofile 1000000
 * hard nofile 1000000
 ```
 
-### 修改`sysctl.conf`
+### 修改`sysctl.conf`，对tcp连接进行调优，文件位置 `/etc/sysctl.conf`
 
 ```txt
 # 该参数控制半连接队列的最大大小，即等待完成三次握手的连接的数量，默认值：依赖于内核版本和系统配置，通常在 128 到 1024 之间。
@@ -26,7 +26,7 @@ net.ipv4.tcp_keepalive_probes = 5
 net.ipv4.tcp_keepalive_intvl = 15
 ```
 
-## 如何使用epoll
+## 使用高版本的go编译，开启epoll
 
 1. 在 Go 1.9 及以后的版本中，Go 在 Linux 上默认使用 `epoll` 作为事件通知机制。因此，你无需手动启用 `epoll`，Go 将根据操作系统的支持自动选择最佳的事件通知机制。
 2. 可以使用下面的代码检查是否使用了`epoll`,如果输出中 `Event mechanism` 显示为 `epoll`，那么你的 Go 程序已经在 Linux 上启用了 `epoll`。
