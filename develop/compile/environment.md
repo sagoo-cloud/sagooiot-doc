@@ -6,7 +6,7 @@
 
 中间件：Redis、Nginx
 
-业务数据库：Mysql / Postgresql
+业务数据库：Mysql5.x / Postgresql
 
 时序数据库：TDengine
 
@@ -40,3 +40,29 @@ require (
 
 
 [服务端API文档](https://console-docs.apipost.cn/preview/d393eb385b7dd7bd/48d460f580a0997b)
+
+## 代码自动化工具
+
+### 生成数据库操作 DAO
+
+用命令行自动生成数据库操作的DAO层代码
+
+1，配置 `hack/config.toml` 文件
+
+tables 为表名，可以配置多个表，用英文逗号分隔
+
+2，在控制台执行命令 `gf gen dao`
+
+### 生成业务代码
+详细见这儿里【[代码生成](/develop/gencode/gen.md)】
+
+### 自动规范生成Service
+
+编辑API、Controller、Logic后，执行命令 `gf gen service`，自动生成Service层代码
+
+参见GoFrame框架的说明： https://goframe.org/pages/viewpage.action?pageId=49770772
+
+
+
+
+
