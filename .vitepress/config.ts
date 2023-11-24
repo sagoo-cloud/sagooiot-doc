@@ -308,6 +308,25 @@ function sidebarGuide() {
             ]
         },
         {
+            text: '场景联动',
+            collapsed: false,
+            items: [
+                {
+                    text: '概述',
+                    link: '/guide/scene/based'
+                },
+                {
+                    text: '管理场景',
+                    link: '/guide/scene/manage'
+                },
+                {
+                    text: '添加场景',
+                    link: '/guide/scene/add'
+                }
+            ]
+        },
+
+        {
             text: '通知服务',
             collapsed: false,
             items: [
