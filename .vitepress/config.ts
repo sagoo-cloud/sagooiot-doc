@@ -308,6 +308,25 @@ function sidebarGuide() {
             ]
         },
         {
+            text: '场景联动',
+            collapsed: false,
+            items: [
+                {
+                    text: '概述',
+                    link: '/guide/scene/based'
+                },
+                {
+                    text: '管理场景',
+                    link: '/guide/scene/manage'
+                },
+                {
+                    text: '添加场景',
+                    link: '/guide/scene/add'
+                }
+            ]
+        },
+
+        {
             text: '通知服务',
             collapsed: false,
             items: [
@@ -484,6 +503,7 @@ function sidebarDevelop() {
             items: [
                 {text: 'SagooMqtt协议', link: '/develop/protocol/mqtt'},
                 {text: 'Modbus开发', link: '/develop/protocol/modbus'},
+                {text: '云网关开发', link: '/develop/protocol/iotgateway'},
             ]
         },
         {
@@ -510,6 +530,12 @@ function sidebarDevelop() {
                 {text: '增加新页面', link: '/develop/front/addPage'},
                 {text: '字典的使用', link: '/develop/front/dict'},
                 {text: '编译与部署', link: '/develop/front/build'},
+            ]
+        },
+        {
+            text: '前端开发-组态图',
+            items: [
+                {text: '图元扩展', link: '/develop/front-topo/introduce'},
             ]
         },
         {
