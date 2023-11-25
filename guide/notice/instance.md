@@ -30,14 +30,28 @@ MailUser: "xxxxx@qq.com"
 MailPass: "232ddwdzplnabiig"
 ```
 
-## 语音配置
-
-
 ## 钉钉配置
 
+参考示例：
+```yaml
+
+AppKey: "sdfadfasdfasdfasdfasdf"
+AppSecret: "ewrerwerwerrwerwerwerwer"
+
+```
 
 ## 企业微信配置
 
+参考示例：
+
+```yaml
+Corpid: ""
+AgentID: ""
+Secret: ""
+Token: ""
+EncodingAESKey: ""
+
+```
 
 
 ## Webhook配置
@@ -56,3 +70,5 @@ webhook:
     Secret: "aaaadfasdfasf333"
 ```
 
+PayloadURL：回调地址
+Secret: 调用密钥
