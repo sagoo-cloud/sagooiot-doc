@@ -316,12 +316,12 @@ function sidebarGuide() {
                     link: '/guide/scene/based'
                 },
                 {
-                    text: '管理场景',
-                    link: '/guide/scene/manage'
-                },
-                {
                     text: '添加场景',
                     link: '/guide/scene/add'
+                },
+                {
+                    text: '场景编辑',
+                    link: '/guide/scene/manage'
                 }
             ]
         },

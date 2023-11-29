@@ -28,6 +28,14 @@
 
 ![组态界面](../../public/imgs/configure.jpg)
 
+## 移动端页面
+
+
+| ![登录页](../../public/imgs/demo/m01.jpg) | ![首页](../../public/imgs/demo/m02.jpg)  |
+|----------------------------------------|----------------------------------------|
+| ![设备页](../../public/imgs/demo/m03.jpg) | ![告警页](../../public/imgs/demo/m04.jpg) |
+
+
 
 
 

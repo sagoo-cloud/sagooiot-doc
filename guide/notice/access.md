@@ -1,58 +1,27 @@
-# 发送通道配置
+# 模版配置
 
-本系统的通知发送通道是基于插件的方式提供。每一种发送通道都是一个系统插件。通过通知配置管理的页面进入到每一种配置中进行设置。
+在通知配置中，进入`管理`，添加或选择一个模版点击`模版配置`，可以对通知模版进行配置。
 
-通知的配置是采用yaml格式进行编写的，请注意[yaml编写规范](/guide/other/yaml.html) 。
+可配置的参数有：	Level,Product,Device,Rule
+
+分别对应：		告警级别，产品名称，设备名称，规则名称
 
 
-## 短信配置
+如邮件模版，可以配置邮件的标题和内容，内容支持html格式，可以使用模版变量，模版变量的格式见下面的示例，如下所示：
 
-参考示例：
+```html
 
-```yaml
-ProviderName: "alisms"
-Title: "阿里云"
-RegionId: "cn-hangzhou"
-AccessKeyId: "LsfsdfsdfI6B"
-accessSecret: "AsesfsfsdfdsfsdfeqLZIwYjxa"
-SignName: "SagooIOT"
+<div>你好，你的系统有如下告警：</div>
+<div> </div>
+<div>产品：{{.Product}} </div>
+<div>设备：{{.Device}} </div>
+<div>级别：{{.Level}} </div>
+<div>触发规则：{{.Rule}} </div>
+
 ```
 
+## 注意事项
 
-## 邮件配置
+短信模版的内容必须是已经在阿里云/腾讯短信服务中创建的模版，否则无法发送。
 
-参考示例：
-
-```yaml
-MailHost: "smtp.qq.com"
-MailPort: "465"
-MailUser: "xxxxx@qq.com"
-MailPass: "232ddwdzplnabiig"
-```
-
-## 语音配置
-
-
-## 钉钉配置
-
-
-## 企业微信配置
-
-
-
-## Webhook配置
-
-webhook可以配置多个联动地址。
-
-参考示例：
-
-```yaml
-webhook:
-  - PayloadURL: "http://127.0.0.1:8180/test/webhook"
-    Secret: "aaaadfasdfasf"
-  - PayloadURL: "http://127.0.0.1:8180/test/webhook22"
-    Secret: "aaaadfasdfasf22"
-  - PayloadURL: "http://127.0.0.1:8180/test/webhook33"
-    Secret: "aaaadfasdfasf333"
-```
-
+并且在阿里云/腾讯短信服务中，需要配置好签名和模版，并且内部参数为：${product}，${device}，${level}，${rule}，否则无法发送。
