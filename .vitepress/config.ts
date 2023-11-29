@@ -502,6 +502,7 @@ function sidebarDevelop() {
             text: '消息协议开发',
             items: [
                 {text: 'SagooMqtt协议', link: '/develop/protocol/mqtt'},
+                {text: 'SagooHttp协议', link: '/develop/protocol/http'},
                 {text: 'Modbus开发', link: '/develop/protocol/modbus'},
                 {text: '云网关开发', link: '/develop/protocol/iotgateway'},
             ]

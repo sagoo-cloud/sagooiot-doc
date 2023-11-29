@@ -7,11 +7,11 @@
 1. 登录`sagoo` 系统，进入`系统配置`-> `基础配置` 查找下面两个的值，分别对应`SK`和`AK`
     - `开放接口AK`: `Ak`
     - `开放接口SK`: `SK`
-2. 参照[AK/SK认证过程](https://iotdoc.sagoo.cn/develop/openapi/start.html) 针对请求进行鉴权
+2. 参照[AK/SK认证过程](https://iotdoc.sagoo.cn/develop/base-api/openapi/start.html) 针对请求进行鉴权
 
 ## api接口列表
 
-***注意事项:其中`domain`根据实际配置来定，因为有时会为了前端后端使用统一域名对url进行重写，比如加上`/base-api`这个时候对应的也要加上前缀，比如原本的`https://{domain}/openapi`就变成了`https://{domain}/base-api/openapi`***
+***注意事项:其中`domain`根据实际配置来定，因为有时会为了前端后端使用统一域名对url进行重写，比如加上`/base-api`这个时候对应的也要加上前缀，比如原本的`https://{domain}/base-api/openapi`就变成了`https://{domain}/base-api/base-api/openapi`***
 
 1. domain: 为api服务的域名
 2. productId: 产品id
@@ -19,13 +19,13 @@
 
 | api名称  | url                                                          | method| api描述    |
 |--------|--------------------------------------------------------------|--------------|----------|
-| 获取产品详情 | https://{domain}/openapi/v1/north/product/detail?id={productId}  | GET| 获取产品详情   |
-| 获取设备详情 | https://{domain}/openapi/v1/north/device/detail?id={deviceId} | GET| 获取设备详情   |
-| 获取设备列表 | https://{domain}/openapi/v1/north/device/list?id={productId} | GET| 获取设备列表   |
-| 获取设备属性 | https://{domain}/openapi/v1/north/device/property/list         | GET| 获取设备属性   |
-| 设置设备属性 | https://{domain}/openapi/v1/north/property/set            | POST| 设置设备属性   |
-| 获取事件列表 | https://{domain}/openapi/v1/north/tsl/event/all?key={keyword} | GET| 获取产品事件列表 |
-| 调用设备服务 | https://{domain}/openapi/v1/north/function/do              | POST| 调用设备服务   |
+| 获取产品详情 | https://{domain}/base-api/openapi/v1/north/product/detail?id={productId}  | GET| 获取产品详情   |
+| 获取设备详情 | https://{domain}/base-api/openapi/v1/north/device/detail?id={deviceId} | GET| 获取设备详情   |
+| 获取设备列表 | https://{domain}/base-api/openapi/v1/north/device/list?id={productId} | GET| 获取设备列表   |
+| 获取设备属性 | https://{domain}/base-api/openapi/v1/north/device/property/list         | GET| 获取设备属性   |
+| 设置设备属性 | https://{domain}/base-api/openapi/v1/north/property/set            | POST| 设置设备属性   |
+| 获取事件列表 | https://{domain}/base-api/openapi/v1/north/tsl/event/all?key={keyword} | GET| 获取产品事件列表 |
+| 调用设备服务 | https://{domain}/base-api/openapi/v1/north/function/do              | POST| 调用设备服务   |
 
 
 ## 接口定义
@@ -33,7 +33,7 @@
 ### 获取产品详情
 
 1. 请求方式：`GET`
-2. 请求url：`https://{domain}/openapi/v1/north/product/detail?id={productId}`
+2. 请求url：`https://{domain}/base-api/openapi/v1/north/product/detail?id={productId}`
 3. 请求参数：
 
    | 参数名称 | 是否必传 | 类型 | 描述   |
@@ -299,7 +299,7 @@
 
 ### 获取设备详情
 1. 请求方式：`GET`
-2. 请求url：`https://{domain}/openapi/v1/north/device/detail?id={deviceId}`
+2. 请求url：`https://{domain}/base-api/openapi/v1/north/device/detail?id={deviceId}`
 3. 请求参数：
 
    | 参数名称 | 是否必传 | 类型 | 描述   |
@@ -575,7 +575,7 @@
 
 ### 取设备列表
 1. 请求方式：`GET`
-2. 请求url：`https://{domain}/openapi/v1/north/device/list?id={productId}`
+2. 请求url：`https://{domain}/base-api/openapi/v1/north/device/list?id={productId}`
 3. 请求参数：
 
    | 参数名称 | 是否必传 | 类型 | 描述   |
@@ -782,7 +782,7 @@
 
 ### 获取设备属性
 1. 请求方式：`GET`
-2. 请求url：`https://{domain}/openapi/v1/device/property/list`
+2. 请求url：`https://{domain}/base-api/openapi/v1/device/property/list`
 3. 请求参数：
    
       | 参数名称 | 是否必传 | 类型 | 描述 |
@@ -816,7 +816,7 @@
 
 #### 1.1.3.5. 设置设备属性
 1. 请求方式：`POST`
-2. 请求url：`https://{domain}/openapi/v1/north/product/property/set `
+2. 请求url：`https://{domain}/base-api/openapi/v1/north/product/property/set `
 3. 请求参数：
 详细参数定义参见[DevicePropertyInput](https://github.com/sagoo-cloud/sagooiot/blob/main/internal/model/dev_device_property.go)
 ```json
@@ -845,7 +845,7 @@
 
 ### 获取设备事件列表
 1. 请求方式：`GET`
-2. 请求url：`https://{domain}/openapi/v1/north/tsl/event/all?key={keyword}`
+2. 请求url：`https://{domain}/base-api/openapi/v1/north/tsl/event/all?key={keyword}`
 3. 请求参数：
 4. 
    | 参数名称 | 是否必传 | 类型       | 描述                  |
@@ -925,7 +925,7 @@
 
 ### 调用设备服务
 1. 请求方式：`POST`
-2. 请求url：`https://{domain}/openapi/v1/north/function/do`
+2. 请求url：`https://{domain}/base-api/openapi/v1/north/function/do`
 3. 请求参数：
 详细参数定义参见[DeviceFunctionReq](https://github.com/sagoo-cloud/sagooiot/tree/main/api/v1/north/product/device_function.go)
 ```json

@@ -14,4 +14,6 @@ OTA（Over-the-Air Technology）即空中下载技术，是指通过无线网络
 
 ### http方式
 
-等待补充
+
+参考[http协议-OTA相关部分](https://iotdoc.sagoo.cn/develop/protocol/http.html#ota%E7%9B%B8%E5%85%B3)
+
