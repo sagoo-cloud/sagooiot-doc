@@ -15,7 +15,7 @@
     1. 设备获取升级包信息(设备端发起)
         1. 请求url:`https://{domain}/base-api/api/v1/get_ota_info`
     2. 上报升级进度信息(设备端发起)
-        1. 请求url:`https://{domain}/base-api/ota/device/progress/${productKey}/${deviceKey}`
+        1. 请求url:`https://{domain}/base-api/api/v1/write_ota_info`
 
 ## OTA相关
 
@@ -23,19 +23,19 @@
 
 #### 请求
 
-1. 请求url: `https://{domain}/base-api/api/v1/ota/get_ota_info`
+1. 请求url: `https://{domain}/base-api/api/v1/get_ota_info`
 2. 请求method: GET
 3. application_type: application/json
 4. 请求参数
 
-| 参数名 | 类型 | 必填 | 说明             |
-| --- | --- | --- |----------------|
-| deviceKey | string | 是 | 设备key          |
-| version | string | 是 | 设备模块当前版本号      |
-| module | string | 是 | OTA模块名称，类型为字符串 |
-
+| 参数名       | 类型     | 必填 | 说明             |
+|-----------|--------|----|----------------|
+| deviceKey | string | 是  | 设备key          |
+| version   | string | 是  | 设备模块当前版本号      |
+| module    | string | 是  | OTA模块名称，类型为字符串 |
 
 5. 响应:
+
 ```json
 {
   "code": 0,
@@ -69,7 +69,7 @@
 
 #### 请求
 
-1. 请求Topic: `https://{domain}/base-api/api/v1/ota/upgrade/${productKey}/${deviceKey}`
+1. 请求Topic: `https://{domain}/base-api/api/v1/write_ota_info`
 2. 请求method: POST
 3. application_type: application/json
 4. 请求参数
@@ -82,14 +82,14 @@
     }
     ```
    字段说明
-   1. deviceKey: 设备key，设备唯一标识
-   2. step: OTA升级进度，类型为字符串.取值范围如下
-       1. 1~100的整数：升级进度百分比。
-       2. -1：升级失败。
-       3. -2：下载失败。
-       4. -3：校验失败。
-       5. -4：烧写失败。
-   3. module: OTA模块名称，类型为字符串
+    1. deviceKey: 设备key，设备唯一标识
+    2. step: OTA升级进度，类型为字符串.取值范围如下
+        1. 1~100的整数：升级进度百分比。
+        2. -1：升级失败。
+        3. -2：下载失败。
+        4. -3：校验失败。
+        5. -4：烧写失败。
+    3. module: OTA模块名称，类型为字符串
 5. 响应
     ```json
     {
@@ -98,8 +98,8 @@
     }
     ```
 
-    字段说明
-    
+   字段说明
+
     1. code: 应答码，200表示成功，其他表示失败。
     2. message: 结果信息
 
