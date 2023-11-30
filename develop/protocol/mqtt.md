@@ -4,8 +4,11 @@
 本系统默认的协议是`Sagoo Mqtt协议`,如果设备或者网关消息不满足`Sagoo Mqtt协议`格式要求，可以有以下两种方式处理
 
 1. 按照[插件开发](/develop/plugin/hashicorp)开发好合适的插件，并在`系统管理`->`插件管理` 点击 
-   `上传插件ZIP`上传开发好的插件，然后在`物联管理`->`设备管理`->`产品` 新建产品的时候选择对应的消息协议
+   `上传插件ZIP`上传开发好的插件。
     ![upload-plugin.png](../../public/imgs/develop/protocol/upload-plugin.png)
+   
+   然后在`物联管理`->`设备管理`->`产品` 新建产品的时候选择对应的消息协议
+
     ![select- protocol.png](../../public/imgs/develop/protocol/select-protocol.png)
 2. 开发相应的网关，转换私有协议的消息为标准`Sagoo Mqtt协议`的消息按照[MQTT 设备接入](/guide/device_access/mqtt.md)进行接入
 
