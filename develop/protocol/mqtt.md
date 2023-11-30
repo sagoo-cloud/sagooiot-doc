@@ -363,14 +363,11 @@
    1. 升级包为https
       ```json
       {
-          "code": "1000",
+          "code": "200",
           "data": {
               "size": 432945,
               "version": "2.0.0",
-              "isDiff": 1,
               "url": "https://***/nop***.tar.gz?Expires=1502955804&OSSAccessKeyId=***&Signature=XfgJu7P6DW***qAKU%3D&security-token=***Tz2IHtIf3***",
-              "md5": "93230c3bde425a9d***",
-              "digestsign":"A4WOP***SYHJ6DDDJD9***",
               "sign": "93230c3bde425a9d***",
               "signMethod": "MD5",
               "module": "MCU",
@@ -389,15 +386,12 @@
       2. id: 消息ID，每个请求唯一
       3. message: 结果信息
       4. version: 设备升级包的版本信息
-      5. isDiff: 仅当升级包类型为差分时，消息包含此参数。取值为1，表示仅包含新版本升级包与之前版本的差异部分，需要设备进行差分还原
-      6. url: 升级包下载地址，类型为字符串,OTA升级包中仅有一个升级包文件，且下载协议为HTTPS时，包含该参数。
-      7. md5: 当签名方法为MD5时，除了会给sign赋值外还会给md5赋值。OTA升级包中仅有一个升级包文件时，包含该参数
-      8. sign: 	OTA升级包文件的签名。OTA升级包中仅有一个升级包文件时，包含该参数。
-      9.  signMethod: 签名方法。取值：SHA256 MD5 对于Android差分升级包类型，仅支持MD5签名方法。
-      10. module: 升级包所属的模块名。模块名为default时，物联网平台不下发module参数。
-      11. extData: 扩展数据，类型为json字符串,升级批次标签列表和推送给设备的自定义信息。_package_udi表示自定义信息的字段。单个标签格式："key":"value"
-      12. dProtocol: 升级包传输协议，类型为字符串,仅升级包下载协议为MQTT时，包含该参数.
-      13. digestsign: OTA升级包文件安全升级后的签名。仅当OTA升级包开启安全升级功能，才有此参数
+      5. url: 升级包下载地址，类型为字符串,OTA升级包中仅有一个升级包文件，且下载协议为HTTPS时，包含该参数。
+      6. sign: 	OTA升级包文件的签名。OTA升级包中仅有一个升级包文件时，包含该参数。
+      7. signMethod: 签名方法。取值：SHA256 MD5 对于Android差分升级包类型，仅支持MD5签名方法。
+      8. module: 升级包所属的模块名。模块名为default时，物联网平台不下发module参数。
+      9. extData: 扩展数据，类型为json字符串,升级批次标签列表和推送给设备的自定义信息。_package_udi表示自定义信息的字段。单个标签格式："key":"value"
+      10. dProtocol: 升级包传输协议，类型为字符串,仅升级包下载协议为MQTT时，包含该参数.
 
 
 ### 上报升级进度信息
