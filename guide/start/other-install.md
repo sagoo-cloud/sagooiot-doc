@@ -318,3 +318,11 @@ go env -w CGO_ENABLED="0"
 
 1. 检查规则引擎是否启动成功，开放端口是否跟nginx配置转发路由端口一致
 2. 查看`/opt/sagoo/iot-server/bin/sagoo-admin`是否以8200端口进行启动
+
+四、**访问过程中，发现图片/文件上传之后无法预览或者访问：**
+
+1. 在系统配置-参数管理下找到参数键名为`sys.uploadFile.domain`, 将参数键值修改为当前服务器的域名。
+   特别注意: 线上环境使用nginx进行转发，所以域名后面必须跟指定的路由`base-api`, 本地启动服务访问无须增加此路由
+  
+   - 本地开发环境示例: `http://localhost:8200`
+   - 线上生产环境示例: `https://domain/base-api`
