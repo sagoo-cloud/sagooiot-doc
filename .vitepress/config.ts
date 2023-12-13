@@ -469,7 +469,7 @@ function sidebarDevelop() {
                 {text: '源码编译', link: '/develop/compile/build'},
                 {text: '服务部署', link: '/develop/compile/deploy'},
                 {text: 'Docker编译', link: '/develop/compile/docker'},
-
+                {text: '系统调优', link: '/develop/compile/optimize'},
             ]
         },
         {
