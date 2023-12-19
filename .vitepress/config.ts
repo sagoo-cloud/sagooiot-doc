@@ -529,6 +529,7 @@ function sidebarDevelop() {
             items: [
                 {text: '前端介绍', link: '/develop/front/introduce'},
                 {text: '增加新页面', link: '/develop/front/addPage'},
+                {text: '开发规范', link: '/develop/front/rule'},
                 {text: '字典的使用', link: '/develop/front/dict'},
                 {text: '编译与部署', link: '/develop/front/build'},
             ]
