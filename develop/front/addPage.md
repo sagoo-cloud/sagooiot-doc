@@ -12,7 +12,7 @@
 
 ## 文件基础模板
 
-```
+``` vue
 <template>
 	<div>demo初始化模板</div>
 </template>
@@ -26,7 +26,7 @@
 
 ## 简单增删改查页面模板
 
-```
+``` vue
 <template>
   <div class="page">
     <el-card shadow="hover">
