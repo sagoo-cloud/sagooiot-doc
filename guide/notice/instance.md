@@ -42,6 +42,19 @@ AppSecret: "ewrerwerwerrwerwerwerwer"
 
 ## 企业微信配置
 
+支持企业微信自建应用发送消息。
+
+需要企业微信管理员在企业微信后台创建应用，获取到应用的相关信息。
+
+应用管理--》创建应用
+
+创建好应用后，需要在“启用接收消息”--》设置API接收 获取Token与EncodingAESKey。些处要求的回调地址验证，
+
+请填写：`http://你的域名/api/v1/wework/verify`
+
+
+注意：如果在告警规则等地方使用企业微信发送信息的时候，接收人为：在企业微信的个人账号。
+
 参考示例：
 
 ```yaml
@@ -52,7 +65,6 @@ Token: ""
 EncodingAESKey: ""
 
 ```
-
 
 ## Webhook配置
 
