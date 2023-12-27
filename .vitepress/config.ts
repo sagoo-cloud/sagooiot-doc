@@ -559,8 +559,10 @@ function sidebarCases() {
             items: [
                 {text: '介绍', link: '/cases/introduction'},
                 {text: '电力运维', link: '/cases/power'},
+                {text: '供热运维', link: '/cases/heating'},
                 {text: '智慧园区', link: '/cases/park'},
-                {text: '供热运维', link: '/cases/heating'}
+                {text: '智慧城市', link: '/cases/city'}
+
             ]
         }
     ]

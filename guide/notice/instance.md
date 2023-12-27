@@ -74,8 +74,9 @@ webhook可以配置多个联动地址。
 
 ```yaml
 webhook:
-  - PayloadURL: "http://127.0.0.1:8180/test/webhook"
-    Secret: "aaaadfasdfasf"
+  - PayloadURL: "https://qyapi.weixin.qq.com/cgi-bin/webhook/send"
+    Secret: "4f812376-e24e-47ba-7e1b-9138115221d2"
+    From: "wework"
   - PayloadURL: "http://127.0.0.1:8180/test/webhook22"
     Secret: "aaaadfasdfasf22"
   - PayloadURL: "http://127.0.0.1:8180/test/webhook33"
@@ -84,3 +85,6 @@ webhook:
 
 PayloadURL：回调地址
 Secret: 调用密钥
+From: 来源，用于区分不同的webhook配置，可选值：`wework` (企业微信webhook方式机器人)
+
+默认为自定义webhook的方式。需要自己在编写回调地址程序里进行内容处理。
