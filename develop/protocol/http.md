@@ -1,4 +1,4 @@
-# Sagoo Mqtt协议
+# Sagoo HTTP协议
 
 本系统默认的协议是`Sagoo Http协议`,
 
@@ -78,7 +78,8 @@
       "deviceKey": "deviceKey", 
       "step": "-1",
       "desc": "OTA升级失败，请求不到升级包信息。",
-      "module": "MCU"
+      "module": "MCU",
+      "strategy": "1"
     }
     ```
    字段说明
@@ -90,6 +91,7 @@
         4. -3：校验失败。
         5. -4：烧写失败。
     3. module: OTA模块名称，类型为字符串
+    4. strategy: OTA批次ID
 5. 响应
     ```json
     {
