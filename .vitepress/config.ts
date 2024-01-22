@@ -276,6 +276,10 @@ function sidebarGuide() {
                     link: '/guide/configure/diagram'
                 },
                 {
+                    text: '快捷键操作',
+                    link: '/guide/configure/keys'
+                },
+                {
                     text: '目录管理',
                     link: '/guide/configure/folder'
                 },
