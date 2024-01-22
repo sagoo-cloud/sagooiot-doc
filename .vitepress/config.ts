@@ -469,7 +469,6 @@ function sidebarDevelop() {
                 {text: '源码编译', link: '/develop/compile/build'},
                 {text: '服务部署', link: '/develop/compile/deploy'},
                 {text: 'Docker编译', link: '/develop/compile/docker'},
-                {text: '系统调优', link: '/develop/compile/optimize'},
             ]
         },
         {
@@ -547,6 +546,14 @@ function sidebarDevelop() {
                 {text: 'Access Key', link: '/develop/openapi/safety'},
                 {text: '调用示例', link: '/develop/openapi/example'},
 
+            ]
+        },
+        {
+            text: '性能分析与优化',
+            items: [
+                {text: '性能分析', link: '/develop/performance/pprof'},
+                {text: '任务列队', link: '/develop/performance/taskmq'},
+                {text: '系统调优', link: '/develop/performance/optimize'},
             ]
         },
     ]
