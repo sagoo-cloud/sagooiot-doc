@@ -19,7 +19,7 @@ asynq dash
 
 ```
 效果如下：
-![taskmq01.png](../../public/imgs/develop/performance/taskmq01.png)
+![taskmq01.png](../../public/imgs/develop/performance/taskmqcmd.gif)
 
 
 ## WebUI监控
