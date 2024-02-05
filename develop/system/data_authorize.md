@@ -1,4 +1,4 @@
-# 数据权限开发
+# 数据权限
 
 ## 概述
 
@@ -25,6 +25,6 @@
 
 ## 数据权限配置
 
-![角色管理](../../public/imgs/develop/authorize/role_managerment.png)
+![角色管理](../imgs/authorize/role_managerment.png)
 
-![数据权限](../../public/imgs/develop/authorize/role_data_auth.png)
+![数据权限](../imgs/authorize/role_data_auth.png)

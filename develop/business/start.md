@@ -3,32 +3,32 @@
 1. 添加数据源
     
     a. 新建数据源，输入获取天气预报的第三方API接口及参数配置
-    ![](../../public/imgs/develop/business/16774773091278.jpg)
+    ![](../imgs/business/16774773091278.jpg)
    
    b. 点击列表中上一步所创建的数据源详情按钮，配置数据节点
-     ![](../../public/imgs/develop/business/16774774331352.jpg)
+     ![](../imgs/business/16774774331352.jpg)
    
    c. 添加数据节点用户获取json字符串中某一个字段的值
-    ![](../../public/imgs/develop/business/16774774981030.jpg)
+    ![](../imgs/business/16774774981030.jpg)
     这里的规则表达式可以自己写正则表达式对源json中某一个字段值进行匹配返回自定义内容
-![](../../public/imgs/develop/business/16774775186900.jpg)
+![](../imgs/business/16774775186900.jpg)
 
 2. 发布数据源
-    ![](../../public/imgs/develop/business/16775529427961.jpg)
+    ![](../imgs/business/16775529427961.jpg)
 
 1. 根据业务创建数据建模
    
    a. 新建数据建模
-    ![](../../public/imgs/develop/business/16775538647760.jpg)
+    ![](../imgs/business/16775538647760.jpg)
     这里的单元类型是在数据字典中配置，对应的业务模块，比如天气监测，对应的参数值会在下面业务实现中用到
      
      b. 新建字段节点选择对应的数据源获取数据
-     ![](../../public/imgs/develop/business/16775539751418.jpg)
+     ![](../imgs/business/16775539751418.jpg)
    
-   ![](../../public/imgs/develop/business/16775539938702.jpg)
+   ![](../imgs/business/16775539938702.jpg)
  
    c. 发布对应的数据建模
-   ![](../../public/imgs/develop/business/16775540263939.jpg)
+   ![](../imgs/business/16775540263939.jpg)
 
 1. 获取建模数据处理对应业务返回前端
    

@@ -35,14 +35,14 @@
 }
 ```
 
-![](../../public/imgs/develop/frontend/WechatIMG3413.jpg)
+![](../imgs/frontend/WechatIMG3413.jpg)
 
 ## 批量增加图元分组
 
 1. 先将图片文件放到 `public/static` 下的文件夹中，然后再 `json` 配置中写好以 `public` 为根路径下的绝对路径。
 
-![](../../public/imgs/develop/frontend/WechatIMG3414.jpg)
+![](../imgs/frontend/WechatIMG3414.jpg)
 
 2.将文件引入到 `menu.ts` 中进行使用。
 
-![](../../public/imgs/develop/frontend/WechatIMG3417.jpg)
+![](../imgs/frontend/WechatIMG3417.jpg)

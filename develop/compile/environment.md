@@ -1,3 +1,6 @@
+---
+sidebar_position: 0
+---
 # 开发环境
 
 ## 基础环境：
@@ -54,7 +57,7 @@ tables 为表名，可以配置多个表，用英文逗号分隔
 2，在控制台执行命令 `gf gen dao`
 
 ### 生成业务代码
-详细见这儿里【[代码生成](/develop/gencode/gen.md)】
+详细见这儿里【[代码生成](../gencode/gen.md)】
 
 ### 自动规范生成Service
 

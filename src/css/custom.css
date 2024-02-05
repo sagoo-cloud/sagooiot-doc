@@ -1,0 +1,93 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --home-color-characteristic-background-color: #f5f6f7;
+
+  /* 底部LOGO大小设置 */
+  --ifm-footer-logo-max-width: 180px;
+
+  --ifm-card-background-color: #fff;
+  --ifm-card-border-radius: 10px;
+  --ifm-global-shadow-lw: 0 1px 2px 0 rgba(0,0,0,.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --home-color-characteristic-background-color: #1c1e21;
+
+  --ifm-card-background-color: #1c1e21;
+
+}
+
+
+.card{
+  /*background-color: var(--ifm-card-background-color);*/
+  /*border-radius: var(--ifm-card-border-radius);*/
+  /*box-shadow: var(--ifm-global-shadow-lw);*/
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+/* 头部导航LOGO标识 */
+.navbar__title{
+  font-size: 20px;
+}
+.hero__title{
+  font-size: 2rem;
+}
+.hero__subtitle{
+  font-size: 1.2rem;
+}
+/* 首页中间导航按钮 */
+.buttons_src-pages-index-module{
+  display: flex;
+  flex-wrap: wrap;
+}
+.button.button--secondary {
+  margin-right: 5px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.title--logo {
+  animation-duration: 2s;
+  animation-name: b;
+  float: right;
+  margin: 0;
+  font-size: 1.5rem;
+  width: 500px;
+    height: 260px;
+  text-decoration: none;
+}
+
+/* 底部背景颜色设置 */
+.footer--dark {
+  --ifm-footer-background-color: #2b3137;
+}

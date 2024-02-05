@@ -32,7 +32,7 @@ system:
 * 协程性能分析: `go tool pprof  http://127.0.0.1:8000/debug/pprof/goroutine`
 
 执行后可以使用 web、top等命令查看分析的内容
-![pprof01.png](../../public/imgs/develop/performance/pprof01.png)
+![pprof01.png](../imgs/performance/pprof01.png)
 
 **基于WEB查看分析数据**
 ```shell
@@ -65,7 +65,7 @@ SagooIot提供了一个非常方便的性能实时监控工具，可以在浏览
 
 域名或是IP以实际运行的环境为准。
 
-![statsviz.png](../../public/imgs/develop/performance/statsviz.png)
+![statsviz.png](../imgs/performance/statsviz.png)
 
 ## Expvar开放性能参数查看
 

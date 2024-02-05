@@ -1,4 +1,4 @@
-# SagooIoT HTTP协议
+# HTTP 协议
 
 本系统默认的协议是`Sagoo Http协议`,
 
@@ -7,23 +7,25 @@
 1. 登录`sagoo` 系统，进入`系统配置`-> `基础配置` 查找下面两个的值，分别对应`SK`和`AK`
     - `开放接口AK`: `Ak`
     - `开放接口SK`: `SK`
-2. 参照[AK/SK认证过程](https://iotdoc.sagoo.cn/develop/openapi/start.html#ak-sk%E8%AE%A4%E8%AF%81%E8%BF%87%E7%A8%8B) 针对请求进行鉴权
+2. 参照[AK/SK认证过程](../openapi/authority/start.md) 针对请求进行鉴权
 
 ## 协议接口列表
 
-1. OTA相关
-    1. 设备获取升级包信息(设备端发起)
-        1. 请求url:`https://{domain}/openapi/v1/ota/get_ota_info`
-    2. 上报升级进度信息(设备端发起)
-        1. 请求url:`https://{domain}/openapi/v1/ota/write_ota_info`
+OTA相关
+
+设备获取升级包信息
+
+请求url:`https://{domain}/base-api/openapi/v1/ota/get_ota_info`
+
+上报升级进度信息
+
+请求url:`https://{domain}/base-api/openapi/v1/ota/write_ota_info`
 
 ## OTA相关
 
-### 设备获取升级包信息(设备端发起)
+## OTA相关-设备获取升级包信息
 
-#### 请求
-
-1. 请求url: `https://{domain}/openapi/v1/ota/get_ota_info`
+1. 请求url: `https://{domain}/base-api/openapi/v1/ota/get_ota_info`
 2. 请求method: GET
 3. application_type: application/json
 4. 请求参数
@@ -65,22 +67,20 @@
 8. extData: 扩展数据，类型为json字符串,升级批次标签列表和推送给设备的自定义信息。_package_udi表示自定义信息的字段。单个标签格式："key":"value"
 
 
-### 上报升级进度信息(设备端发起)
+## OTA相关-上报升级进度信息
 
-#### 请求
-
-1. 请求Topic: `https://{domain}/openapi/v1/ota/write_ota_info`
+1. 请求Topic: `https://{domain}/base-api/openapi/v1/ota/write_ota_info`
 2. 请求method: POST
 3. application_type: application/json
 4. 请求参数
     ```json
-    {
-      "deviceKey": "deviceKey", 
-      "step": "-1",
-      "desc": "OTA升级失败，请求不到升级包信息。",
-      "module": "MCU",
-      "strategy": "1"
-    }
+   {
+      "params": {
+        "deviceKey": "deviceKey", 
+        "step": "-1",
+        "strategy": "1"
+      }
+   }
     ```
    字段说明
     1. deviceKey: 设备key，设备唯一标识
@@ -90,7 +90,6 @@
         3. -2：下载失败。
         4. -3：校验失败。
         5. -4：烧写失败。
-    3. module: OTA模块名称，类型为字符串
     4. strategy: OTA批次ID
 5. 响应
     ```json
@@ -99,9 +98,7 @@
       "message": ""
     }
     ```
-
    字段说明
-
     1. code: 应答码，200表示成功，其他表示失败。
     2. message: 结果信息
 

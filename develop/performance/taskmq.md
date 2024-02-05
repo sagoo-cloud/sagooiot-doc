@@ -19,7 +19,7 @@ asynq dash
 
 ```
 效果如下：
-![taskmq01.png](../../public/imgs/develop/performance/taskmqcmd.gif)
+![taskmq01.png](../imgs/performance/taskmqcmd.gif)
 
 
 ## WebUI监控
@@ -27,4 +27,4 @@ asynq dash
 webUI监控是通过开源的asynqmon包实现的，地址是 https://github.com/hibiken/asynqmon
 
 如下图所示：
-![taskmq02.png](../../public/imgs/develop/performance/taskmq02.png)
+![taskmq02.png](../imgs/performance/taskmq02.png)

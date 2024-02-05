@@ -1,0 +1,1138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="-217.83333 -847.8333 1263.4167 787.8367" width="1263.4167" height="787.8367">
+  <defs>
+    <linearGradient x1="0" x2="1" id="Gradient" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#59d0fc"/>
+      <stop offset="0" stop-color="#52a6fe"/>
+      <stop offset="1" stop-color="#4b79ff"/>
+    </linearGradient>
+    <linearGradient id="Obj_Gradient" xl:href="#Gradient" gradientTransform="translate(528.25 -578.76296) rotate(90) scale(102.26297)"/>
+    <linearGradient id="Obj_Gradient_2" xl:href="#Gradient" gradientTransform="translate(532.199 -587.55976) rotate(90) scale(67.62551)"/>
+    <linearGradient id="Obj_Gradient_3" xl:href="#Gradient" gradientTransform="translate(532.199 -614.5) rotate(90) scale(67.62549)"/>
+    <linearGradient id="Obj_Gradient_4" xl:href="#Gradient" gradientTransform="translate(469.4844 -323.41225) rotate(90) scale(38.9851)"/>
+    <linearGradient id="Obj_Gradient_5" xl:href="#Gradient" gradientTransform="translate(432.81535 -313.7351) rotate(90) scale(38.9851)"/>
+    <linearGradient id="Obj_Gradient_6" xl:href="#Gradient" gradientTransform="translate(394.229 -323.41225) rotate(90) scale(38.9851)"/>
+    <linearGradient id="Obj_Gradient_7" xl:href="#Gradient" gradientTransform="translate(394.229 -345.53146) rotate(90) scale(38.9851)"/>
+    <linearGradient id="Obj_Gradient_8" xl:href="#Gradient" gradientTransform="translate(432.81535 -358.25) rotate(90) scale(38.9851)"/>
+    <linearGradient id="Obj_Gradient_9" xl:href="#Gradient" gradientTransform="translate(469.4844 -345.53146) rotate(90) scale(38.9851)"/>
+    <linearGradient id="Obj_Gradient_10" xl:href="#Gradient" gradientTransform="translate(432.81535 -335.5778) rotate(90) scale(38.9851)"/>
+    <linearGradient id="Obj_Gradient_11" xl:href="#Gradient" gradientTransform="translate(432.81535 -335.5778) rotate(90) scale(19.3543)"/>
+    <linearGradient x1="0" x2="1" id="Gradient_2" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#59d0fc"/>
+      <stop offset="0" stop-color="#52a6fe"/>
+      <stop offset="1" stop-color="#4b79ff"/>
+    </linearGradient>
+    <linearGradient id="Obj_Gradient_12" xl:href="#Gradient_2" gradientTransform="translate(429.77576 -318.4907) rotate(22.303914) scale(38.174665)"/>
+    <linearGradient id="Obj_Gradient_13" xl:href="#Gradient" gradientTransform="translate(323.42493 -192.5565) rotate(90) scale(74.27646)"/>
+    <linearGradient x1="0" x2="1" id="Gradient_3" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#24b0e4"/>
+      <stop offset="0" stop-color="#1a7bdf"/>
+      <stop offset="1" stop-color="#1043da"/>
+    </linearGradient>
+    <linearGradient id="Obj_Gradient_14" xl:href="#Gradient_3" gradientTransform="translate(304.1106 -188.6801) rotate(90) scale(78.4301)"/>
+    <linearGradient id="Obj_Gradient_15" xl:href="#Gradient" gradientTransform="translate(297.86918 -184.52646) rotate(90) scale(74.27646)"/>
+    <linearGradient x1="0" x2="1" id="Gradient_4" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#59d0fc"/>
+      <stop offset="0" stop-color="#52a6fe"/>
+      <stop offset="1" stop-color="#4b79ff"/>
+    </linearGradient>
+    <linearGradient id="Obj_Gradient_16" xl:href="#Gradient_4" gradientTransform="translate(733.6401 -748.53685) rotate(13.80953) scale(104.31802)"/>
+    <linearGradient x1="0" x2="1" id="Gradient_5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3470af"/>
+      <stop offset="0" stop-color="#366abd"/>
+      <stop offset="1" stop-color="#3965ca"/>
+    </linearGradient>
+    <linearGradient id="Obj_Gradient_17" xl:href="#Gradient_5" gradientTransform="translate(755.5733 -782.2593) rotate(51.72746) scale(93.42743)"/>
+    <linearGradient x1="0" x2="1" id="Gradient_6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#59d0fc"/>
+      <stop offset="0" stop-color="#52a6fe"/>
+      <stop offset="1" stop-color="#4b79ff"/>
+    </linearGradient>
+    <linearGradient id="Obj_Gradient_18" xl:href="#Gradient_6" gradientTransform="translate(757.8098 -718.9296) rotate(-44.51584) scale(74.44345)"/>
+    <linearGradient id="Obj_Gradient_19" xl:href="#Gradient" gradientTransform="translate(784.26645 -828.25) rotate(90) scale(93.0311)"/>
+    <linearGradient x1="0" x2="1" id="Gradient_7" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#59d0fc"/>
+      <stop offset="0" stop-color="#52a6fe"/>
+      <stop offset="1" stop-color="#4b79ff"/>
+    </linearGradient>
+    <linearGradient id="Obj_Gradient_20" xl:href="#Gradient_7" gradientTransform="translate(774.3894 -830.1995) rotate(81.7139) scale(97.66389)"/>
+    <linearGradient x1="0" x2="1" id="Gradient_8" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#97dbf4"/>
+      <stop offset="0" stop-color="#76aefa"/>
+      <stop offset="1" stop-color="#537fff"/>
+    </linearGradient>
+    <linearGradient id="Obj_Gradient_21" xl:href="#Gradient_8" gradientTransform="translate(781.42685 -817.6824) rotate(90) scale(77.8406)"/>
+    <linearGradient id="Obj_Gradient_22" xl:href="#Gradient" gradientTransform="translate(203.42493 -264.5565) rotate(90) scale(74.27646)"/>
+    <linearGradient id="Obj_Gradient_23" xl:href="#Gradient_3" gradientTransform="translate(184.1106 -260.6801) rotate(90) scale(78.4301)"/>
+    <linearGradient id="Obj_Gradient_24" xl:href="#Gradient" gradientTransform="translate(177.86918 -256.52646) rotate(90) scale(74.27646)"/>
+    <linearGradient id="Obj_Gradient_25" xl:href="#Gradient" gradientTransform="translate(27.924925 -367.0565) rotate(90) scale(74.27646)"/>
+    <linearGradient id="Obj_Gradient_26" xl:href="#Gradient_3" gradientTransform="translate(8.6106 -363.1801) rotate(90) scale(78.4301)"/>
+    <linearGradient id="Obj_Gradient_27" xl:href="#Gradient" gradientTransform="translate(2.369175 -359.02646) rotate(90) scale(74.27646)"/>
+    <linearGradient id="Obj_Gradient_28" xl:href="#Gradient" gradientTransform="translate(-95.07508 -439.0565) rotate(90) scale(74.27646)"/>
+    <linearGradient id="Obj_Gradient_29" xl:href="#Gradient_3" gradientTransform="translate(-114.38939 -435.1801) rotate(90) scale(78.4301)"/>
+    <linearGradient id="Obj_Gradient_30" xl:href="#Gradient" gradientTransform="translate(-120.63082 -431.02646) rotate(90) scale(74.27646)"/>
+    <linearGradient id="Obj_Gradient_31" xl:href="#Gradient_4" gradientTransform="translate(827.1401 -705.03685) rotate(13.80953) scale(104.31802)"/>
+    <linearGradient id="Obj_Gradient_32" xl:href="#Gradient_5" gradientTransform="translate(849.0733 -738.7593) rotate(51.72746) scale(93.42743)"/>
+    <linearGradient id="Obj_Gradient_33" xl:href="#Gradient_6" gradientTransform="translate(851.3098 -675.4296) rotate(-44.51584) scale(74.44345)"/>
+    <linearGradient id="Obj_Gradient_34" xl:href="#Gradient" gradientTransform="translate(877.7664 -784.75) rotate(90) scale(93.0311)"/>
+    <linearGradient id="Obj_Gradient_35" xl:href="#Gradient_7" gradientTransform="translate(867.8894 -786.6995) rotate(81.7139) scale(97.66389)"/>
+    <linearGradient id="Obj_Gradient_36" xl:href="#Gradient_8" gradientTransform="translate(874.9268 -774.1824) rotate(90) scale(77.8406)"/>
+  </defs>
+  <g id="Canvas_1" fill-opacity="1" stroke-opacity="1" stroke-dasharray="none" fill="none" stroke="none">
+    <title>Canvas 1</title>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Group_2">
+        <title>版面___2</title>
+        <g id="Group_3">
+          <title>版面___2_图层_1</title>
+          <g id="Group_4">
+            <title>Group_2</title>
+            <g id="Group_5">
+              <title>Group_3</title>
+              <g id="Group_342">
+                <title>Group_235</title>
+                <g id="Group_343">
+                  <title>Line_236</title>
+                  <g id="Line_344">
+                    <line x1="353.2209" y1="-184.30825" x2="406.4539" y2="-218.14806" stroke="#d6d6d6" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_339">
+                <title>Group_233</title>
+                <g id="Group_340">
+                  <title>Line_234</title>
+                  <g id="Line_341">
+                    <line x1="251.2791" y1="-244.9102" x2="304.51214" y2="-278.75" stroke="#d6d6d6" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_336">
+                <title>Group_231</title>
+                <g id="Group_337">
+                  <title>Line_232</title>
+                  <g id="Line_338">
+                    <line x1="460.25" y1="-375.9102" x2="513.483" y2="-409.75" stroke="#ebebeb" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_333">
+                <title>Group_229</title>
+                <g id="Group_334">
+                  <title>Line_230</title>
+                  <g id="Line_335">
+                    <line x1="548.75" y1="-330.9102" x2="601.983" y2="-364.75" stroke="#d6d6d6" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_330">
+                <title>Group_227</title>
+                <g id="Group_331">
+                  <title>Line_228</title>
+                  <g id="Line_332">
+                    <line x1="620.25" y1="-622.9102" x2="708.1238" y2="-670.75" stroke="#d6d6d6" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_327">
+                <title>Group_225</title>
+                <g id="Group_328">
+                  <title>Line_226</title>
+                  <g id="Line_329">
+                    <line x1="668.3762" y1="-597.25" x2="756.25" y2="-645.0898" stroke="#d6d6d6" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_324">
+                <title>Group_223</title>
+                <g id="Group_325">
+                  <title>Line_224</title>
+                  <g id="Line_326">
+                    <line x1="-36.25" y1="-414.9102" x2="237.25" y2="-571.0607" stroke="#d6d6d6" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_321">
+                <title>Group_221</title>
+                <g id="Group_322">
+                  <title>Line_222</title>
+                  <g id="Line_323">
+                    <path d="M 69 -348.75 L 97.375 -364.42188 L 349.75 -507.9539" stroke="#d6d6d6" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_314">
+                <title>Group_216</title>
+                <g id="Group_315">
+                  <title>Group_217</title>
+                  <g id="Group_316">
+                    <title>Group_218</title>
+                    <g id="Group_319">
+                      <title>Graphic_220</title>
+                      <g id="Graphic_320">
+                        <path d="M 523.3854 -664.2675 L 326.57265 -538.97555 C 324.853 -537.8808 323.8068 -535.9878 323.7949 -533.9493 L 323.7703 -529.75465 C 323.75774 -527.6112 324.8896 -525.6239 326.7395 -524.5412 L 521.4 -410.6134 C 522.3157 -410.0774 523.3573 -409.7939 524.4184 -409.7917 L 543.0479 -409.7536 C 544.1968 -409.75125 545.3222 -410.0788 546.2904 -410.6973 L 745.4701 -537.9412 C 747.1932 -539.042 748.2371 -540.9446 748.2399 -542.98934 L 748.2452 -546.9003 C 748.2482 -549.0621 747.088 -551.0583 745.2082 -552.12586 L 548.2901 -663.9549 C 547.4311 -664.44276 546.4649 -664.71094 545.4773 -664.73566 L 526.7576 -665.2042 C 525.56545 -665.23406 524.3914 -664.90795 523.3854 -664.2675 Z" fill="#0188fe" fill-opacity=".2"/>
+                      </g>
+                    </g>
+                    <g id="Group_317">
+                      <title>Graphic_219</title>
+                      <g id="Graphic_318">
+                        <path d="M 523.3854 -664.2675 L 326.57265 -538.97555 C 324.853 -537.8808 323.8068 -535.9878 323.7949 -533.9493 L 323.7703 -529.75465 C 323.75774 -527.6112 324.8896 -525.6239 326.7395 -524.5412 L 521.4 -410.6134 C 522.3157 -410.0774 523.3573 -409.7939 524.4184 -409.7917 L 543.0479 -409.7536 C 544.1968 -409.75125 545.3222 -410.0788 546.2904 -410.6973 L 745.4701 -537.9412 C 747.1932 -539.042 748.2371 -540.9446 748.2399 -542.98934 L 748.2452 -546.9003 C 748.2482 -549.0621 747.088 -551.0583 745.2082 -552.12586 L 548.2901 -663.9549 C 547.4311 -664.44276 546.4649 -664.71094 545.4773 -664.73566 L 526.7576 -665.2042 C 525.56545 -665.23406 524.3914 -664.90795 523.3854 -664.2675 Z" stroke="#d5e7ff" stroke-linecap="butt" stroke-linejoin="round" stroke-width=".666667"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_307">
+                <title>Group_211</title>
+                <g id="Group_308">
+                  <title>Group_212</title>
+                  <g id="Group_309">
+                    <title>Group_213</title>
+                    <g id="Group_312">
+                      <title>Graphic_215</title>
+                      <g id="Graphic_313">
+                        <path d="M 634.9287 -601.25 L 433.814 -473.2194 L 433.75 -462.29083 L 632.7982 -345.79503 L 654.8075 -345.75 L 858.2354 -475.70784 L 858.25 -486.3984 L 656.9816 -600.698 Z" fill="#0188fe" fill-opacity=".2"/>
+                      </g>
+                    </g>
+                    <g id="Group_310">
+                      <title>Graphic_214</title>
+                      <g id="Graphic_311">
+                        <path d="M 634.9287 -601.25 L 433.814 -473.2194 L 433.75 -462.29083 L 632.7982 -345.79503 L 654.8075 -345.75 L 858.2354 -475.70784 L 858.25 -486.3984 L 656.9816 -600.698 Z" stroke="#d5e8ff" stroke-linecap="butt" stroke-linejoin="round" stroke-width=".666667"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_300">
+                <title>Group_206</title>
+                <g id="Group_301">
+                  <title>Group_207</title>
+                  <g id="Group_302">
+                    <title>Group_208</title>
+                    <g id="Group_305">
+                      <title>Graphic_210</title>
+                      <g id="Graphic_306">
+                        <path d="M 826.4004 -847.5 L 629.3128 -728.7397 L 629.25 -718.6025 L 824.3126 -610.5418 L 845.8812 -610.5 L 1045.2357 -731.048 L 1045.25 -740.9645 L 848.0117 -846.988 Z" fill="#0188fe" fill-opacity=".2"/>
+                      </g>
+                    </g>
+                    <g id="Group_303">
+                      <title>Graphic_209</title>
+                      <g id="Graphic_304">
+                        <path d="M 826.4004 -847.5 L 629.3128 -728.7397 L 629.25 -718.6025 L 824.3126 -610.5418 L 845.8812 -610.5 L 1045.2357 -731.048 L 1045.25 -740.9645 L 848.0117 -846.988 Z" stroke="#a5a5a5" stroke-linecap="butt" stroke-linejoin="round" stroke-width=".666667"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_293">
+                <title>Group_201</title>
+                <g id="Group_294">
+                  <title>Group_202</title>
+                  <g id="Group_295">
+                    <title>Group_203</title>
+                    <g id="Group_298">
+                      <title>Graphic_205</title>
+                      <g id="Graphic_299">
+                        <path d="M 415.4287 -724.25 L 214.31404 -598.2238 L 214.25 -587.4663 L 413.2982 -472.79433 L 435.3075 -472.75 L 638.7354 -600.6733 L 638.75 -611.1965 L 437.4816 -723.70665 Z" fill="#0188fe" fill-opacity=".2"/>
+                      </g>
+                    </g>
+                    <g id="Group_296">
+                      <title>Graphic_204</title>
+                      <g id="Graphic_297">
+                        <path d="M 415.4287 -724.25 L 214.31404 -598.2238 L 214.25 -587.4663 L 413.2982 -472.79433 L 435.3075 -472.75 L 638.7354 -600.6733 L 638.75 -611.1965 L 437.4816 -723.70665 Z" stroke="#d6e7ff" stroke-linecap="butt" stroke-linejoin="round" stroke-width=".666667"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_286">
+                <title>Group_196</title>
+                <g id="Group_287">
+                  <title>Group_197</title>
+                  <g id="Group_288">
+                    <title>Group_198</title>
+                    <g id="Group_291">
+                      <title>Graphic_200</title>
+                      <g id="Graphic_292">
+                        <path d="M 423.53455 -385.75 L 274.2975 -299.81165 L 274.25 -292.47604 L 421.9536 -214.2802 L 438.2856 -214.25 L 589.2392 -301.482 L 589.25 -308.65784 L 439.8989 -385.3795 Z" fill="#0188fe" fill-opacity=".2"/>
+                      </g>
+                    </g>
+                    <g id="Group_289">
+                      <title>Graphic_199</title>
+                      <g id="Graphic_290">
+                        <path d="M 423.53455 -385.75 L 274.2975 -299.81165 L 274.25 -292.47604 L 421.9536 -214.2802 L 438.2856 -214.25 L 589.2392 -301.482 L 589.25 -308.65784 L 439.8989 -385.3795 Z" stroke="#d6d6d6" stroke-linecap="butt" stroke-linejoin="round" stroke-width=".666667"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_279">
+                <title>Group_191</title>
+                <g id="Group_280">
+                  <title>Group_192</title>
+                  <g id="Group_281">
+                    <title>Group_193</title>
+                    <g id="Group_284">
+                      <title>Graphic_195</title>
+                      <g id="Graphic_285">
+                        <path d="M -111.57905 -450.25 L -217.46628 -378.09185 L -217.5 -371.9325 L -112.70075 -306.2754 L -101.11283 -306.25 L 5.99234 -379.49434 L 6 -385.51956 L -99.96816 -449.9389 Z" fill="#0188fe" fill-opacity=".2"/>
+                      </g>
+                    </g>
+                    <g id="Group_282">
+                      <title>Graphic_194</title>
+                      <g id="Graphic_283">
+                        <path d="M -111.57905 -450.25 L -217.46628 -378.09185 L -217.5 -371.9325 L -112.70075 -306.2754 L -101.11283 -306.25 L 5.99234 -379.49434 L 6 -385.51956 L -99.96816 -449.9389 Z" stroke="#a5a5a5" stroke-linecap="butt" stroke-linejoin="round" stroke-width=".666667"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_266">
+                <title>Group_182</title>
+                <g id="Group_267">
+                  <title>Group_183</title>
+                  <g id="Group_274">
+                    <title>Group_188</title>
+                    <g id="Group_277">
+                      <title>Graphic_190</title>
+                      <g id="Graphic_278">
+                        <path d="M 534.18395 -571.12515 C 566.7334 -581.3089 600.3515 -581.3089 635.0382 -571.12515 C 656.914 -562.2622 671.508 -542.904 635.0382 -522.1461 C 635.0382 -522.1461 662.0018 -500.96143 612.2464 -483.97153 C 562.491 -466.9816 512.9711 -483.0576 494.5519 -491.94794 C 482.2724 -497.87484 454.6785 -509.76935 411.77015 -527.6315 C 391.707 -541.6048 395.7568 -554.6392 423.9195 -566.7347 C 452.0822 -578.8302 488.837 -580.2937 534.18395 -571.12515 Z" fill="url(#Obj_Gradient)"/>
+                      </g>
+                    </g>
+                    <g id="Group_275">
+                      <title>Graphic_189</title>
+                      <g id="Graphic_276">
+                        <path d="M 534.18395 -571.12515 C 566.7334 -581.3089 600.3515 -581.3089 635.0382 -571.12515 C 656.914 -562.2622 671.508 -542.904 635.0382 -522.1461 C 635.0382 -522.1461 662.0018 -500.96143 612.2464 -483.97153 C 562.491 -466.9816 512.9711 -483.0576 494.5519 -491.94794 C 482.2724 -497.87484 454.6785 -509.76935 411.77015 -527.6315 C 391.707 -541.6048 395.7568 -554.6392 423.9195 -566.7347 C 452.0822 -578.8302 488.837 -580.2937 534.18395 -571.12515 Z" stroke="#0096ff" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1"/>
+                      </g>
+                    </g>
+                  </g>
+                  <g id="Group_271">
+                    <title>Group_186</title>
+                    <g id="Group_272">
+                      <title>Graphic_187</title>
+                      <g id="Graphic_273">
+                        <path d="M 536.1348 -582.50896 C 557.7237 -589.24336 580.0214 -589.24336 603.0279 -582.50896 C 617.5373 -576.64795 627.2171 -563.84656 603.0279 -550.1196 C 603.0279 -550.1196 620.9119 -536.1104 587.9109 -524.8751 C 554.9098 -513.63985 522.065 -524.2707 509.8482 -530.14984 C 501.7037 -534.06924 483.4016 -541.93496 454.9419 -553.747 C 441.63474 -562.9874 444.3208 -571.60696 463.0002 -579.6056 C 481.6795 -587.60424 506.0577 -588.572 536.1348 -582.50896 Z" fill="url(#Obj_Gradient_2)"/>
+                      </g>
+                    </g>
+                  </g>
+                  <g id="Group_268">
+                    <title>Group_184</title>
+                    <g id="Group_269">
+                      <title>Graphic_185</title>
+                      <g id="Graphic_270">
+                        <path d="M 536.1348 -609.4492 C 557.7237 -616.1836 580.0214 -616.1836 603.0279 -609.4492 C 617.5373 -603.5882 627.2171 -590.7868 603.0279 -577.05985 C 603.0279 -577.05985 620.9119 -563.0506 587.9109 -551.81535 C 554.9098 -540.5801 522.065 -551.211 509.8482 -557.0901 C 501.7037 -561.0095 483.4016 -568.8752 454.9419 -580.68725 C 441.63474 -589.9277 444.3208 -598.5472 463.0002 -606.54584 C 481.6795 -614.5445 506.0577 -615.5123 536.1348 -609.4492 Z" fill="url(#Obj_Gradient_3)"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_188">
+                <title>Group_131</title>
+                <g id="Group_189">
+                  <title>Group_132</title>
+                  <g id="Group_190">
+                    <title>Group_133</title>
+                    <g id="Group_261">
+                      <title>Group_179</title>
+                      <g id="Group_264">
+                        <title>Graphic_181</title>
+                        <g id="Graphic_265">
+                          <path d="M 469.4844 -323.41225 L 498.75 -313.666 L 498.75 -294.1734 L 469.4844 -284.42715 L 440.2188 -294.1734 L 440.2188 -313.666 Z" fill="url(#Obj_Gradient_4)"/>
+                        </g>
+                      </g>
+                      <g id="Group_262">
+                        <title>Graphic_180</title>
+                        <g id="Graphic_263">
+                          <path d="M 469.4844 -323.41225 L 498.75 -313.666 L 498.75 -294.1734 L 469.4844 -284.42715 L 440.2188 -294.1734 L 440.2188 -313.666 Z" stroke="black" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_256">
+                      <title>Group_176</title>
+                      <g id="Group_259">
+                        <title>Graphic_178</title>
+                        <g id="Graphic_260">
+                          <path d="M 432.8154 -313.7351 L 462.2885 -303.9888 L 462.2885 -284.4963 L 432.8154 -274.75 L 403.3422 -284.4963 L 403.3422 -303.9888 Z" fill="url(#Obj_Gradient_5)"/>
+                        </g>
+                      </g>
+                      <g id="Group_257">
+                        <title>Graphic_177</title>
+                        <g id="Graphic_258">
+                          <path d="M 432.8154 -313.7351 L 462.2885 -303.9888 L 462.2885 -284.4963 L 432.8154 -274.75 L 403.3422 -284.4963 L 403.3422 -303.9888 Z" stroke="black" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_251">
+                      <title>Group_173</title>
+                      <g id="Group_254">
+                        <title>Graphic_175</title>
+                        <g id="Graphic_255">
+                          <path d="M 394.229 -323.41225 L 423.4946 -313.666 L 423.4946 -294.1734 L 394.229 -284.42715 L 364.9634 -294.1734 L 364.9634 -313.666 Z" fill="url(#Obj_Gradient_6)"/>
+                        </g>
+                      </g>
+                      <g id="Group_252">
+                        <title>Graphic_174</title>
+                        <g id="Graphic_253">
+                          <path d="M 394.229 -323.41225 L 423.4946 -313.666 L 423.4946 -294.1734 L 394.229 -284.42715 L 364.9634 -294.1734 L 364.9634 -313.666 Z" stroke="#003776" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_246">
+                      <title>Group_170</title>
+                      <g id="Group_249">
+                        <title>Graphic_172</title>
+                        <g id="Graphic_250">
+                          <path d="M 394.229 -345.53146 L 423.4946 -335.7852 L 423.4946 -316.29263 L 394.229 -306.54636 L 364.9634 -316.29263 L 364.9634 -335.7852 Z" fill="url(#Obj_Gradient_7)"/>
+                        </g>
+                      </g>
+                      <g id="Group_247">
+                        <title>Graphic_171</title>
+                        <g id="Graphic_248">
+                          <path d="M 394.229 -345.53146 L 423.4946 -335.7852 L 423.4946 -316.29263 L 394.229 -306.54636 L 364.9634 -316.29263 L 364.9634 -335.7852 Z" stroke="black" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_243">
+                      <title>Group_168</title>
+                      <g id="Group_244">
+                        <title>Graphic_169</title>
+                        <g id="Graphic_245">
+                          <path d="M 440.0054 -313.7351 L 469.2447 -303.9658 L 469.2447 -284.42715" stroke="#003776" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_240">
+                      <title>Group_166</title>
+                      <g id="Group_241">
+                        <title>Graphic_167</title>
+                        <g id="Graphic_242">
+                          <path d="M 403.576 -304.05795 L 432.8154 -294.28863 L 432.8154 -274.75" stroke="#003776" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_237">
+                      <title>Group_164</title>
+                      <g id="Group_238">
+                        <title>Graphic_165</title>
+                        <g id="Graphic_239">
+                          <path d="M 364.75 -313.7351 L 394.4687 -303.9658 L 394.4687 -284.42715" stroke="#003776" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_234">
+                      <title>Group_162</title>
+                      <g id="Group_235">
+                        <title>Graphic_163</title>
+                        <g id="Graphic_236">
+                          <path d="M 364.75 -335.5778 L 394.4687 -325.90066 L 394.4687 -306.54636" stroke="#003776" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_231">
+                      <title>Group_160</title>
+                      <g id="Group_232">
+                        <title>Line_161</title>
+                        <g id="Line_233">
+                          <line x1="469.2447" y1="-304.05795" x2="498.4841" y2="-313.7351" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_228">
+                      <title>Group_158</title>
+                      <g id="Group_229">
+                        <title>Line_159</title>
+                        <g id="Line_230">
+                          <line x1="432.8154" y1="-294.3808" x2="462.0547" y2="-304.05795" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_225">
+                      <title>Group_156</title>
+                      <g id="Group_226">
+                        <title>Line_157</title>
+                        <g id="Line_227">
+                          <line x1="394.4687" y1="-304.05795" x2="423.708" y2="-313.7351" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_222">
+                      <title>Group_154</title>
+                      <g id="Group_223">
+                        <title>Line_155</title>
+                        <g id="Line_224">
+                          <line x1="394.4687" y1="-325.90066" x2="423.708" y2="-335.5778" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_217">
+                      <title>Group_151</title>
+                      <g id="Group_220">
+                        <title>Graphic_153</title>
+                        <g id="Graphic_221">
+                          <path d="M 432.8154 -358.25 L 462.2885 -348.5037 L 462.2885 -329.0112 L 432.8154 -319.2649 L 403.3422 -329.0112 L 403.3422 -348.5037 Z" fill="url(#Obj_Gradient_8)"/>
+                        </g>
+                      </g>
+                      <g id="Group_218">
+                        <title>Graphic_152</title>
+                        <g id="Graphic_219">
+                          <path d="M 432.8154 -358.25 L 462.2885 -348.5037 L 462.2885 -329.0112 L 432.8154 -319.2649 L 403.3422 -329.0112 L 403.3422 -348.5037 Z" stroke="black" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_212">
+                      <title>Group_148</title>
+                      <g id="Group_215">
+                        <title>Graphic_150</title>
+                        <g id="Graphic_216">
+                          <path d="M 469.4844 -345.53146 L 498.75 -335.7852 L 498.75 -316.29263 L 469.4844 -306.54636 L 440.2188 -316.29263 L 440.2188 -335.7852 Z" fill="url(#Obj_Gradient_9)"/>
+                        </g>
+                      </g>
+                      <g id="Group_213">
+                        <title>Graphic_149</title>
+                        <g id="Graphic_214">
+                          <path d="M 469.4844 -345.53146 L 498.75 -335.7852 L 498.75 -316.29263 L 469.4844 -306.54636 L 440.2188 -316.29263 L 440.2188 -335.7852 Z" stroke="#003776" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_209">
+                      <title>Group_146</title>
+                      <g id="Group_210">
+                        <title>Graphic_147</title>
+                        <g id="Graphic_211">
+                          <path d="M 403.576 -348.57285 L 432.8154 -338.80353 L 432.8154 -319.2649" stroke="#003776" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_206">
+                      <title>Group_144</title>
+                      <g id="Group_207">
+                        <title>Graphic_145</title>
+                        <g id="Graphic_208">
+                          <path d="M 440.0054 -335.5778 L 469.2447 -325.90066 L 469.2447 -306.54636" stroke="#003776" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_203">
+                      <title>Group_142</title>
+                      <g id="Group_204">
+                        <title>Line_143</title>
+                        <g id="Line_205">
+                          <line x1="432.8154" y1="-338.6192" x2="462.0547" y2="-348.57285" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_200">
+                      <title>Group_140</title>
+                      <g id="Group_201">
+                        <title>Line_141</title>
+                        <g id="Line_202">
+                          <line x1="469.2447" y1="-325.90066" x2="498.4841" y2="-335.5778" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_197">
+                      <title>Group_138</title>
+                      <g id="Group_198">
+                        <title>Graphic_139</title>
+                        <g id="Graphic_199">
+                          <path d="M 432.8154 -335.5778 L 462.2885 -325.83154 L 462.2885 -306.339 L 432.8154 -296.5927 L 403.3422 -306.339 L 403.3422 -325.83154 Z" fill="url(#Obj_Gradient_10)"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_194">
+                      <title>Group_136</title>
+                      <g id="Group_195">
+                        <title>Graphic_137</title>
+                        <g id="Graphic_196">
+                          <path d="M 432.8154 -335.5778 L 462.0547 -325.90066 L 432.8154 -316.2235 L 403.576 -325.90066 Z" fill="url(#Obj_Gradient_11)"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_191">
+                      <title>Group_134</title>
+                      <g id="Group_192">
+                        <title>Graphic_135</title>
+                        <g id="Graphic_193">
+                          <path d="M 462.0547 -325.90066 L 462.0547 -306.36203 L 432.8154 -296.5927 L 432.8154 -316.13135 Z" fill="url(#Obj_Gradient_12)"/>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_171">
+                <title>Group_119</title>
+                <g id="Group_172">
+                  <title>Group_120</title>
+                  <g id="Group_173">
+                    <title>Group_121</title>
+                    <g id="Group_183">
+                      <title>Group_128</title>
+                      <g id="Group_186">
+                        <title>Graphic_130</title>
+                        <g id="Graphic_187">
+                          <path d="M 297.80575 -192.5565 L 349.0441 -168.20616 L 349.0441 -118.28004 L 297.80575 -142.4307 Z" fill="url(#Obj_Gradient_13)"/>
+                        </g>
+                      </g>
+                      <g id="Group_184">
+                        <title>Graphic_129</title>
+                        <g id="Graphic_185">
+                          <path d="M 297.80575 -192.5565 L 349.0441 -168.20616 L 349.0441 -118.28004 L 297.80575 -142.4307 Z" stroke="#797979" stroke-linecap="butt" stroke-linejoin="round" stroke-dasharray="12.0,12.0" stroke-width="3"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_180">
+                      <title>Group_126</title>
+                      <g id="Group_181">
+                        <title>Graphic_127</title>
+                        <g id="Graphic_182">
+                          <path d="M 310.01165 -198.25 L 361.25 -173.89965 L 361.25 -123.9735 L 310.01165 -148.1242 Z" stroke="#929292" stroke-linecap="butt" stroke-linejoin="round" stroke-dasharray="12.0,12.0" stroke-width="3"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_177">
+                      <title>Group_124</title>
+                      <g id="Group_178">
+                        <title>Graphic_125</title>
+                        <g id="Graphic_179">
+                          <path d="M 323.48835 -110.25 L 335.9712 -115.2883 L 334.8395 -165.4511 L 284.6016 -188.6801 L 272.25 -184.52646 Z" fill="url(#Obj_Gradient_14)"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_174">
+                      <title>Group_122</title>
+                      <g id="Group_175">
+                        <title>Graphic_123</title>
+                        <g id="Graphic_176">
+                          <path d="M 272.25 -184.52646 L 323.48835 -160.1761 L 323.48835 -110.25 L 272.25 -134.40065 Z" fill="url(#Obj_Gradient_15)"/>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_135">
+                <title>Group_94</title>
+                <g id="Group_136">
+                  <title>Group_95</title>
+                  <g id="Group_137">
+                    <title>Group_96</title>
+                    <g id="Group_168">
+                      <title>Group_117</title>
+                      <g id="Group_169">
+                        <title>Graphic_118</title>
+                        <g id="Graphic_170">
+                          <path d="M 735.9168 -755.4235 L 833.25 -735.1227 L 833.25 -729.6056 C 833.25 -728.5004 832.5351 -727.47825 831.3724 -726.9211 L 814.3488 -718.7633 C 808.7363 -716.07375 801.7931 -716.0793 796.1869 -718.7777 L 737.2041 -747.1684 C 735.9418 -747.776 735.219 -748.9263 735.3475 -750.1229 Z" fill="url(#Obj_Gradient_16)"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_165">
+                      <title>Group_115</title>
+                      <g id="Group_166">
+                        <title>Graphic_116</title>
+                        <g id="Graphic_167">
+                          <path d="M 762.2755 -767.0247 L 830.2603 -738.3187 C 832.1198 -737.5335 832.852 -735.6594 831.8956 -734.1328 C 831.5883 -733.6422 831.1275 -733.2276 830.5606 -732.9316 L 820.0516 -727.4441 C 810.9522 -722.6926 799.36 -722.5828 790.1295 -727.1606 L 738.5292 -752.7512 C 736.7394 -753.63885 736.165 -755.5496 737.2461 -757.0191 C 737.5969 -757.4958 738.0972 -757.8863 738.6947 -758.14995 L 758.7517 -766.9986 C 759.8495 -767.4829 761.1672 -767.4927 762.2755 -767.0247 Z" fill="url(#Obj_Gradient_17)"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_162">
+                      <title>Group_113</title>
+                      <g id="Group_163">
+                        <title>Graphic_114</title>
+                        <g id="Graphic_164">
+                          <path d="M 761.2627 -760.8099 L 820.1807 -736.05255 C 820.646 -735.857 820.8302 -735.3888 820.592 -735.0067 C 820.5111 -734.877 820.3875 -734.7686 820.2351 -734.6938 L 810.5633 -729.9466 C 807.8117 -728.5961 804.3924 -728.5504 801.5887 -729.8267 L 749.2252 -753.6633 C 748.0822 -754.18355 747.6694 -755.366 748.3031 -756.3044 C 748.5249 -756.6328 748.8579 -756.9014 749.2617 -757.0777 L 757.7602 -760.78745 C 758.853 -761.2645 760.1609 -761.2729 761.2627 -760.8099 Z" fill="url(#Obj_Gradient_18)"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_159">
+                      <title>Group_111</title>
+                      <g id="Group_160">
+                        <title>Graphic_112</title>
+                        <g id="Graphic_161">
+                          <path d="M 768.4335 -827.5109 L 804.8878 -810.0805 C 808.09 -808.5494 810.0597 -805.7363 810.0597 -802.6939 L 810.0597 -741.1339 C 810.0597 -738.5418 807.832 -736.3098 804.7363 -735.8003 L 801.2038 -735.2189 L 764.4109 -754.3636 C 760.7137 -756.28735 758.4732 -759.6309 758.4732 -763.2246 L 758.4732 -822.8103 C 758.4732 -825.8146 761.4397 -828.25 765.099 -828.25 C 766.2706 -828.25 767.4212 -827.995 768.4335 -827.5109 Z" fill="url(#Obj_Gradient_19)"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_156">
+                      <title>Group_109</title>
+                      <g id="Group_157">
+                        <title>Graphic_110</title>
+                        <g id="Graphic_158">
+                          <path d="M 765.601 -826.7255 L 802.0592 -809.2438 C 805.2553 -807.7113 807.2201 -804.9011 807.2201 -801.8625 L 807.2201 -741.7264 C 807.2201 -738.7221 804.2536 -736.2867 800.5943 -736.2867 C 799.4453 -736.2867 798.316 -736.532 797.3173 -736.9986 L 762.092 -753.4554 C 758.0994 -755.3207 755.6336 -758.8019 755.6336 -762.5733 L 755.6336 -822.0283 C 755.6336 -825.0325 758.6 -827.468 762.2594 -827.468 C 763.4337 -827.468 764.5869 -827.2117 765.601 -826.7255 Z" fill="url(#Obj_Gradient_20)"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_153">
+                      <title>Group_107</title>
+                      <g id="Group_154">
+                        <title>Graphic_108</title>
+                        <g id="Graphic_155">
+                          <path d="M 764.9461 -817.1732 L 799.3792 -799.9786 C 802.4848 -798.4278 804.3805 -795.6596 804.3805 -792.6753 L 804.3805 -741.7845 C 804.3805 -740.7116 803.321 -739.8418 802.0141 -739.8418 C 801.5972 -739.8418 801.1877 -739.9322 800.827 -740.1039 L 766.4918 -756.4516 C 761.5284 -758.8148 758.4732 -763.169 758.4732 -767.8796 L 758.4732 -814.1855 C 758.4732 -816.1168 760.3802 -817.6824 762.7326 -817.6824 C 763.5134 -817.6824 764.2791 -817.5062 764.9461 -817.1732 Z" fill="url(#Obj_Gradient_21)"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_150">
+                      <title>Group_105</title>
+                      <g id="Group_151">
+                        <title>Graphic_106</title>
+                        <g id="Graphic_152">
+                          <path d="M 774.924 -818.17635 L 788.6421 -811.4163 C 789.0624 -811.2092 789.1986 -810.7616 788.9463 -810.4165 C 788.9462 -810.4164 788.946 -810.4162 788.9459 -810.416 C 788.693 -810.0707 788.1471 -809.959 787.7263 -810.1663 L 774.0082 -816.9264 C 773.588 -817.1335 773.4518 -817.5811 773.704 -817.9261 C 773.7042 -817.9263 773.7043 -817.9265 773.7044 -817.9267 C 773.9574 -818.272 774.5033 -818.3837 774.924 -818.17635 Z" fill="#aabcff"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_147">
+                      <title>Group_103</title>
+                      <g id="Group_148">
+                        <title>Line_104</title>
+                        <g id="Line_149">
+                          <line x1="731.75" y1="-817.0054" x2="760.113" y2="-804.1987" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_144">
+                      <title>Group_101</title>
+                      <g id="Group_145">
+                        <title>Graphic_102</title>
+                        <g id="Graphic_146">
+                          <path d="M 746.1682 -783.3991 L 768.3809 -773.6731 L 774.5644 -770.9655" stroke="white" stroke-opacity=".51976376" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_141">
+                      <title>Group_99</title>
+                      <g id="Group_142">
+                        <title>Line_100</title>
+                        <g id="Line_143">
+                          <line x1="731.75" y1="-813.1257" x2="760.113" y2="-800.6957" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_138">
+                      <title>Group_97</title>
+                      <g id="Group_139">
+                        <title>Line_98</title>
+                        <g id="Line_140">
+                          <line x1="764.6257" y1="-771.7426" x2="775.0377" y2="-767.08" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_118">
+                <title>Group_82</title>
+                <g id="Group_119">
+                  <title>Group_83</title>
+                  <g id="Group_120">
+                    <title>Group_84</title>
+                    <g id="Group_130">
+                      <title>Group_91</title>
+                      <g id="Group_133">
+                        <title>Graphic_93</title>
+                        <g id="Graphic_134">
+                          <path d="M 177.80575 -264.5565 L 229.0441 -240.20616 L 229.0441 -190.28004 L 177.80575 -214.4307 Z" fill="url(#Obj_Gradient_22)"/>
+                        </g>
+                      </g>
+                      <g id="Group_131">
+                        <title>Graphic_92</title>
+                        <g id="Graphic_132">
+                          <path d="M 177.80575 -264.5565 L 229.0441 -240.20616 L 229.0441 -190.28004 L 177.80575 -214.4307 Z" stroke="#797979" stroke-linecap="butt" stroke-linejoin="round" stroke-dasharray="12.0,12.0" stroke-width="3"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_127">
+                      <title>Group_89</title>
+                      <g id="Group_128">
+                        <title>Graphic_90</title>
+                        <g id="Graphic_129">
+                          <path d="M 190.01165 -270.25 L 241.25 -245.89965 L 241.25 -195.97354 L 190.01165 -220.1242 Z" stroke="#929292" stroke-linecap="butt" stroke-linejoin="round" stroke-dasharray="12.0,12.0" stroke-width="3"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_124">
+                      <title>Group_87</title>
+                      <g id="Group_125">
+                        <title>Graphic_88</title>
+                        <g id="Graphic_126">
+                          <path d="M 203.48835 -182.25 L 215.9712 -187.2883 L 214.83953 -237.4511 L 164.6016 -260.6801 L 152.25 -256.52646 Z" fill="url(#Obj_Gradient_23)"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_121">
+                      <title>Group_85</title>
+                      <g id="Group_122">
+                        <title>Graphic_86</title>
+                        <g id="Graphic_123">
+                          <path d="M 152.25 -256.52646 L 203.48835 -232.1761 L 203.48835 -182.25 L 152.25 -206.40065 Z" fill="url(#Obj_Gradient_24)"/>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_101">
+                <title>Group_70</title>
+                <g id="Group_102">
+                  <title>Group_71</title>
+                  <g id="Group_103">
+                    <title>Group_72</title>
+                    <g id="Group_113">
+                      <title>Group_79</title>
+                      <g id="Group_116">
+                        <title>Graphic_81</title>
+                        <g id="Graphic_117">
+                          <path d="M 2.30575 -367.0565 L 53.5441 -342.70616 L 53.5441 -292.78004 L 2.30575 -316.9307 Z" fill="url(#Obj_Gradient_25)"/>
+                        </g>
+                      </g>
+                      <g id="Group_114">
+                        <title>Graphic_80</title>
+                        <g id="Graphic_115">
+                          <path d="M 2.30575 -367.0565 L 53.5441 -342.70616 L 53.5441 -292.78004 L 2.30575 -316.9307 Z" stroke="#797979" stroke-linecap="butt" stroke-linejoin="round" stroke-dasharray="12.0,12.0" stroke-width="3"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_110">
+                      <title>Group_77</title>
+                      <g id="Group_111">
+                        <title>Graphic_78</title>
+                        <g id="Graphic_112">
+                          <path d="M 14.51165 -372.75 L 65.75 -348.39965 L 65.75 -298.47354 L 14.51165 -322.6242 Z" stroke="#929292" stroke-linecap="butt" stroke-linejoin="round" stroke-dasharray="12.0,12.0" stroke-width="3"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_107">
+                      <title>Group_75</title>
+                      <g id="Group_108">
+                        <title>Graphic_76</title>
+                        <g id="Graphic_109">
+                          <path d="M 27.98835 -284.75 L 40.4712 -289.7883 L 39.33953 -339.9511 L -10.8984 -363.1801 L -23.25 -359.02646 Z" fill="url(#Obj_Gradient_26)"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_104">
+                      <title>Group_73</title>
+                      <g id="Group_105">
+                        <title>Graphic_74</title>
+                        <g id="Graphic_106">
+                          <path d="M -23.25 -359.02646 L 27.98835 -334.6761 L 27.98835 -284.75 L -23.25 -308.90065 Z" fill="url(#Obj_Gradient_27)"/>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_84">
+                <title>Group_58</title>
+                <g id="Group_85">
+                  <title>Group_59</title>
+                  <g id="Group_86">
+                    <title>Group_60</title>
+                    <g id="Group_96">
+                      <title>Group_67</title>
+                      <g id="Group_99">
+                        <title>Graphic_69</title>
+                        <g id="Graphic_100">
+                          <path d="M -120.69425 -439.0565 L -69.4559 -414.70616 L -69.4559 -364.78004 L -120.69425 -388.9307 Z" fill="url(#Obj_Gradient_28)"/>
+                        </g>
+                      </g>
+                      <g id="Group_97">
+                        <title>Graphic_68</title>
+                        <g id="Graphic_98">
+                          <path d="M -120.69425 -439.0565 L -69.4559 -414.70616 L -69.4559 -364.78004 L -120.69425 -388.9307 Z" stroke="#797979" stroke-linecap="butt" stroke-linejoin="round" stroke-dasharray="12.0,12.0" stroke-width="3"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_93">
+                      <title>Group_65</title>
+                      <g id="Group_94">
+                        <title>Graphic_66</title>
+                        <g id="Graphic_95">
+                          <path d="M -108.48835 -444.75 L -57.25 -420.39965 L -57.25 -370.47354 L -108.48835 -394.6242 Z" stroke="#929292" stroke-linecap="butt" stroke-linejoin="round" stroke-dasharray="12.0,12.0" stroke-width="3"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_90">
+                      <title>Group_63</title>
+                      <g id="Group_91">
+                        <title>Graphic_64</title>
+                        <g id="Graphic_92">
+                          <path d="M -95.01165 -356.75 L -82.52878 -361.7883 L -83.66047 -411.9511 L -133.8984 -435.1801 L -146.25 -431.02646 Z" fill="url(#Obj_Gradient_29)"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_87">
+                      <title>Group_61</title>
+                      <g id="Group_88">
+                        <title>Graphic_62</title>
+                        <g id="Graphic_89">
+                          <path d="M -146.25 -431.02646 L -95.01165 -406.6761 L -95.01165 -356.75 L -146.25 -380.90065 Z" fill="url(#Obj_Gradient_30)"/>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_77">
+                <title>Group_53</title>
+                <g id="Group_78">
+                  <title>Group_54</title>
+                  <g id="Group_79">
+                    <title>Group_55</title>
+                    <g id="Group_82">
+                      <title>Graphic_57</title>
+                      <g id="Graphic_83">
+                        <path d="M 10.09095 -376.33 L -95.79628 -304.17185 L -95.83 -298.0125 L 8.96925 -232.3554 L 20.55717 -232.33 L 127.66234 -305.57434 L 127.67 -311.59956 L 21.70184 -376.0189 Z" fill="#0188fe" fill-opacity=".2"/>
+                      </g>
+                    </g>
+                    <g id="Group_80">
+                      <title>Graphic_56</title>
+                      <g id="Graphic_81">
+                        <path d="M 10.09095 -376.33 L -95.79628 -304.17185 L -95.83 -298.0125 L 8.96925 -232.3554 L 20.55717 -232.33 L 127.66234 -305.57434 L 127.67 -311.59956 L 21.70184 -376.0189 Z" stroke="#a5a5a5" stroke-linecap="butt" stroke-linejoin="round" stroke-width=".666667"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_70">
+                <title>Group_48</title>
+                <g id="Group_71">
+                  <title>Group_49</title>
+                  <g id="Group_72">
+                    <title>Group_50</title>
+                    <g id="Group_75">
+                      <title>Graphic_52</title>
+                      <g id="Graphic_76">
+                        <path d="M 181.67095 -278.75 L 75.7837 -206.59185 L 75.75 -200.4325 L 180.54925 -134.7754 L 192.1372 -134.75 L 299.24234 -207.99434 L 299.25 -214.01956 L 193.28184 -278.4389 Z" fill="#0188fe" fill-opacity=".2"/>
+                      </g>
+                    </g>
+                    <g id="Group_73">
+                      <title>Graphic_51</title>
+                      <g id="Graphic_74">
+                        <path d="M 181.67095 -278.75 L 75.7837 -206.59185 L 75.75 -200.4325 L 180.54925 -134.7754 L 192.1372 -134.75 L 299.24234 -207.99434 L 299.25 -214.01956 L 193.28184 -278.4389 Z" stroke="#a5a5a5" stroke-linecap="butt" stroke-linejoin="round" stroke-width=".666667"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_63">
+                <title>Group_43</title>
+                <g id="Group_64">
+                  <title>Group_44</title>
+                  <g id="Group_65">
+                    <title>Group_45</title>
+                    <g id="Group_68">
+                      <title>Graphic_47</title>
+                      <g id="Graphic_69">
+                        <path d="M 305.9884 -204.33 L 196.7848 -132.17185 L 196.75 -126.0125 L 304.83155 -60.3554 L 316.7824 -60.33 L 427.2421 -133.57434 L 427.25 -139.59956 L 317.9629 -204.0189 Z" fill="#0188fe" fill-opacity=".2"/>
+                      </g>
+                    </g>
+                    <g id="Group_66">
+                      <title>Graphic_46</title>
+                      <g id="Graphic_67">
+                        <path d="M 305.9884 -204.33 L 196.7848 -132.17185 L 196.75 -126.0125 L 304.83155 -60.3554 L 316.7824 -60.33 L 427.2421 -133.57434 L 427.25 -139.59956 L 317.9629 -204.0189 Z" stroke="#a5a5a5" stroke-linecap="butt" stroke-linejoin="round" stroke-width=".666667"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_27">
+                <title>Group_18</title>
+                <g id="Group_28">
+                  <title>Group_19</title>
+                  <g id="Group_29">
+                    <title>Group_20</title>
+                    <g id="Group_60">
+                      <title>Group_41</title>
+                      <g id="Group_61">
+                        <title>Graphic_42</title>
+                        <g id="Graphic_62">
+                          <path d="M 829.4168 -711.9235 L 926.75 -691.6227 L 926.75 -686.1056 C 926.75 -685.0004 926.0351 -683.97825 924.8724 -683.4211 L 907.8488 -675.2633 C 902.2363 -672.57375 895.293 -672.5793 889.687 -675.2777 L 830.7041 -703.6684 C 829.4418 -704.276 828.719 -705.4263 828.8475 -706.6229 Z" fill="url(#Obj_Gradient_31)"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_57">
+                      <title>Group_39</title>
+                      <g id="Group_58">
+                        <title>Graphic_40</title>
+                        <g id="Graphic_59">
+                          <path d="M 855.7755 -723.5247 L 923.7603 -694.8187 C 925.6198 -694.0335 926.352 -692.1594 925.3956 -690.6328 C 925.0883 -690.1422 924.6275 -689.7276 924.0606 -689.4316 L 913.5516 -683.9441 C 904.4522 -679.1926 892.86 -679.0828 883.6295 -683.6606 L 832.0292 -709.2512 C 830.2394 -710.13885 829.665 -712.0496 830.7461 -713.5191 C 831.0969 -713.9958 831.5972 -714.3863 832.1947 -714.64995 L 852.2517 -723.4986 C 853.3495 -723.9829 854.6672 -723.9927 855.7755 -723.5247 Z" fill="url(#Obj_Gradient_32)"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_54">
+                      <title>Group_37</title>
+                      <g id="Group_55">
+                        <title>Graphic_38</title>
+                        <g id="Graphic_56">
+                          <path d="M 854.7627 -717.3099 L 913.6807 -692.55255 C 914.146 -692.357 914.3302 -691.8888 914.092 -691.5067 C 914.0111 -691.377 913.8875 -691.2686 913.7351 -691.1938 L 904.0633 -686.4466 C 901.3117 -685.0961 897.8924 -685.0504 895.0887 -686.3267 L 842.7252 -710.1633 C 841.5822 -710.68355 841.1694 -711.866 841.8031 -712.8044 C 842.0249 -713.1328 842.3579 -713.4014 842.7617 -713.5777 L 851.2602 -717.28745 C 852.353 -717.7645 853.6609 -717.7729 854.7627 -717.3099 Z" fill="url(#Obj_Gradient_33)"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_51">
+                      <title>Group_35</title>
+                      <g id="Group_52">
+                        <title>Graphic_36</title>
+                        <g id="Graphic_53">
+                          <path d="M 861.9335 -784.0109 L 898.3878 -766.58055 C 901.59 -765.0494 903.5597 -762.2363 903.5597 -759.1939 L 903.5597 -697.6339 C 903.5597 -695.0418 901.332 -692.8098 898.2363 -692.3003 L 894.7038 -691.7189 L 857.9109 -710.8636 C 854.2137 -712.78735 851.9732 -716.1309 851.9732 -719.7246 L 851.9732 -779.3103 C 851.9732 -782.3146 854.9397 -784.75 858.599 -784.75 C 859.7706 -784.75 860.9212 -784.495 861.9335 -784.0109 Z" fill="url(#Obj_Gradient_34)"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_48">
+                      <title>Group_33</title>
+                      <g id="Group_49">
+                        <title>Graphic_34</title>
+                        <g id="Graphic_50">
+                          <path d="M 859.101 -783.2255 L 895.5592 -765.7438 C 898.7553 -764.2113 900.7201 -761.4011 900.7201 -758.36245 L 900.7201 -698.2264 C 900.7201 -695.2221 897.7536 -692.7867 894.0943 -692.7867 C 892.9453 -692.7867 891.816 -693.032 890.8173 -693.4986 L 855.592 -709.9554 C 851.5994 -711.8207 849.1336 -715.3019 849.1336 -719.0733 L 849.1336 -778.5283 C 849.1336 -781.5325 852.1 -783.968 855.7594 -783.968 C 856.9337 -783.968 858.0869 -783.7117 859.101 -783.2255 Z" fill="url(#Obj_Gradient_35)"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_45">
+                      <title>Group_31</title>
+                      <g id="Group_46">
+                        <title>Graphic_32</title>
+                        <g id="Graphic_47">
+                          <path d="M 858.4461 -773.67315 L 892.8792 -756.4786 C 895.9848 -754.9278 897.8805 -752.1596 897.8805 -749.1753 L 897.8805 -698.2845 C 897.8805 -697.2116 896.821 -696.3418 895.5141 -696.3418 C 895.0972 -696.3418 894.6877 -696.4322 894.327 -696.6039 L 859.9918 -712.9516 C 855.0284 -715.31475 851.9732 -719.669 851.9732 -724.3796 L 851.9732 -770.6855 C 851.9732 -772.6168 853.8802 -774.1824 856.2326 -774.1824 C 857.0134 -774.1824 857.7791 -774.0062 858.4461 -773.67315 Z" fill="url(#Obj_Gradient_36)"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_42">
+                      <title>Group_29</title>
+                      <g id="Group_43">
+                        <title>Graphic_30</title>
+                        <g id="Graphic_44">
+                          <path d="M 868.424 -774.67635 L 882.1421 -767.9163 C 882.5624 -767.7092 882.6986 -767.2616 882.4463 -766.91655 C 882.4462 -766.91635 882.446 -766.9162 882.4459 -766.916 C 882.193 -766.5707 881.6471 -766.459 881.2263 -766.6663 L 867.5082 -773.4264 C 867.088 -773.6335 866.9518 -774.0811 867.204 -774.4261 C 867.2042 -774.4263 867.2043 -774.4265 867.2044 -774.4267 C 867.4574 -774.772 868.0033 -774.8837 868.424 -774.67635 Z" fill="#aabcff"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_39">
+                      <title>Group_27</title>
+                      <g id="Group_40">
+                        <title>Line_28</title>
+                        <g id="Line_41">
+                          <line x1="825.25" y1="-773.5054" x2="853.613" y2="-760.6987" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_36">
+                      <title>Group_25</title>
+                      <g id="Group_37">
+                        <title>Graphic_26</title>
+                        <g id="Graphic_38">
+                          <path d="M 839.6682 -739.89915 L 861.8809 -730.1731 L 868.0644 -727.4655" stroke="white" stroke-opacity=".519764" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_33">
+                      <title>Group_23</title>
+                      <g id="Group_34">
+                        <title>Line_24</title>
+                        <g id="Line_35">
+                          <line x1="825.25" y1="-769.6257" x2="853.613" y2="-757.1957" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="Group_30">
+                      <title>Group_21</title>
+                      <g id="Group_31">
+                        <title>Line_22</title>
+                        <g id="Line_32">
+                          <line x1="858.1257" y1="-728.2426" x2="868.5377" y2="-723.58" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_24">
+                <title>Group_16</title>
+                <g id="Group_25">
+                  <title>Graphic_17</title>
+                  <g id="Graphic_26">
+                    <title>Text</title>
+                    <text transform="translate(472.5 -604)" fill="white">
+                      <tspan font-family="Helvetica" font-size="31" fill="white" x="0" y="67">SagooIOT</tspan>
+                    </text>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_21">
+                <title>Group_14</title>
+                <g id="Group_22">
+                  <title>Graphic_15</title>
+                  <g id="Graphic_23">
+                    <title>Text</title>
+                    <text transform="translate(364.75 -315.54)" fill="white">
+                      <tspan font-family="PingFang SC" font-size="31" fill="white" x="0" y="70">边缘计算</tspan>
+                    </text>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_18">
+                <title>Group_12</title>
+                <g id="Group_19">
+                  <title>Graphic_13</title>
+                  <g id="Graphic_20">
+                    <title>Text</title>
+                    <text transform="translate(281 -151.5)" fill="white">
+                      <tspan font-family="PingFang SC" font-size="31" fill="white" x="0" y="70">设备</tspan>
+                    </text>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_15">
+                <title>Group_10</title>
+                <g id="Group_16">
+                  <title>Graphic_11</title>
+                  <g id="Graphic_17">
+                    <title>Text</title>
+                    <text transform="translate(156.5 -224)" fill="white">
+                      <tspan font-family="PingFang SC" font-size="31" fill="white" x="0" y="70">设备</tspan>
+                    </text>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_12">
+                <title>Group_8</title>
+                <g id="Group_13">
+                  <title>Graphic_9</title>
+                  <g id="Graphic_14">
+                    <title>Text</title>
+                    <text transform="translate(-13.5 -322.5)" fill="white">
+                      <tspan font-family="PingFang SC" font-size="31" fill="white" x="0" y="70">设备</tspan>
+                    </text>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_9">
+                <title>Group_6</title>
+                <g id="Group_10">
+                  <title>Graphic_7</title>
+                  <g id="Graphic_11">
+                    <title>Text</title>
+                    <text transform="translate(-134.5 -396)" fill="#0096ff">
+                      <tspan font-family="PingFang SC" font-size="31" fill="white" x="0" y="70">设备</tspan>
+                    </text>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_6">
+                <title>Group_4</title>
+                <g id="Group_7">
+                  <title>Graphic_5</title>
+                  <g id="Graphic_8">
+                    <title>Text</title>
+                    <text transform="translate(778.5 -741.5)" fill="white">
+                      <tspan font-family="PingFang SC" font-size="31" fill="white" x="0" y="70">应用</tspan>
+                    </text>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

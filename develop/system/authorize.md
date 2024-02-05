@@ -3,7 +3,7 @@
 ## 后端
 ### 权限结构表物理模型关系图
 
-![IOT权限表结构物理模型](../../public/imgs/develop/authorize/authorize-model.jpg)
+![IOT权限表结构物理模型](../imgs/authorize/authorize-model.jpg)
 
 ### 数据库设计
 
@@ -259,7 +259,7 @@ func (s *sMiddleware) Auth(r *ghttp.Request) {
    logic/system/sys_authorize_utils.go中查找GetDataWhere()方法，在业务端调用次方法可以进行数据权限设置
    在登录日志调用数据权限示例:
 
-![](../../public/imgs/develop/authorize/16715498975158.jpg)
+![](../imgs/authorize/16715498975158.jpg)
 
 ## 前端
 
@@ -268,15 +268,15 @@ func (s *sMiddleware) Auth(r *ghttp.Request) {
 1. 先在菜单管理页面增加按钮权限，为按钮权限起名，如【新增: add】
 2. 在需要控制的按钮上增加 v-auth="'add'" ，如果用户有这个按钮权限这个按钮就可以正常使用，否则按钮不可点击。
 
-![image-20221222213500853](../../public/imgs/develop/authorize/image-20221222213500853.png)
+![image-20221222213500853](../imgs/authorize/image-20221222213500853.png)
 
-![image-20221222213359185](../../public/imgs/develop/authorize/image-20221222213359185.png)
+![image-20221222213359185](../imgs/authorize/image-20221222213359185.png)
 
 ### 2. 列表权限使用说明
 
 1. 先在菜单管理页面增加列表权限，为列表权限起名，如【操作: handle】。
 2. 在需要控制的 el-table-column 上增加 v-col="'handle'" ，如果用户有这个列表权限这一列就可以正常显示，否则该列在图表中不显示。
 
-![image-20221222213636611](../../public/imgs/develop/authorize/image-20221222213636611.png)
+![image-20221222213636611](../imgs/authorize/image-20221222213636611.png)
 
-![image-20221222213746490](../../public/imgs/develop/authorize/image-20221222213746490.png)
+![image-20221222213746490](../imgs/authorize/image-20221222213746490.png)

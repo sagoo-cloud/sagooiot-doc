@@ -1,28 +1,47 @@
 {
-	"name": "SagooIot-doc",
-	"version": "1.0.0",
-	"description": "SagooIOT",
-	"repository": "https://www.sagoo.cn/",
-	"author": "microrain",
-	"private": true,
-	"devDependencies": {
-		"chalk": "^4.1.0",
-		"gray-matter": "^4.0.3",
-		"lodash": "^4.17.21",
-		"sass": "^1.57.1",
-		"vite": "^2.9.12",
-		"vitepress": "1.0.0-alpha.29",
-		"yorkie": "^2.0.0"
-	},
-	"scripts": {
-		"dev": "vitepress dev .",
-		"build": "node ./scripts/build.js && vitepress build .",
-		"serve": "vitepress serve ."
-	},
-	"gitHooks": {
-		"commit-msg": "node scripts/verifyCommit.js"
-	},
-	"dependencies": {
-		"vue": "^3.2.41"
-	}
+  "name": "sagooiot-doc",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.1.1",
+    "@docusaurus/preset-classic": "3.1.1",
+    "@docusaurus/theme-search-algolia": "^3.1.1",
+    "@mdx-js/react": "^3.0.0",
+    "clsx": "^2.0.0",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "rehype-katex": "7",
+    "remark-math": "6"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "3.1.1",
+    "@docusaurus/types": "3.1.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0"
+  }
 }
