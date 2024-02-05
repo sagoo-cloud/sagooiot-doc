@@ -105,7 +105,7 @@ sidebar_position: 0
 
 ## SagooMQTT 协议
 
-`SagooMQTT 协议` 为`sagoo`平台默认的消息协议，详细内容参见[Sagoo Mqtt协议介绍](/develop/protocol/mqtt.md)
+`SagooMQTT 协议` 为`sagoo`平台默认的消息协议，详细内容参见[Sagoo Mqtt协议介绍](../../../develop/protocol/mqtt.md)
 
 
 

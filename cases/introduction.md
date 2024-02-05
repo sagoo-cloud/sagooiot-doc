@@ -18,7 +18,7 @@ sidebar_position: 1
 2. 企业租租户端系统
 3. 物联管理系统
 
-[更多信息...](/cases/power.html)
+[更多信息...](./power.md)
 
 ![](./imgs/dianli01.png)
 
