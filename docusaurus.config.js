@@ -107,6 +107,16 @@ const config = {
         // ... other options
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'join',
+        path: 'join',
+        routeBasePath: 'join',
+        sidebarPath: './sidebarsJoin.js',
+        // ... other options
+      },
+    ],
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -172,13 +182,14 @@ const config = {
           },
           {to: '/blog', label: '博客', position: 'right'},
           {
-            href: 'https://support.qq.com/product/595720',
-            label: '问题反馈',
+            to: '/join/intro',
+            label: '加入我们',
             position: 'right',
+            activeBaseRegex: `/join/`,
           },
           {
-            href: 'https://github.com/sagoo-cloud/sagooiot',
-            label: 'GitHub',
+            href: 'https://support.qq.com/product/595720',
+            label: '问题反馈',
             position: 'right',
           },
         ],
