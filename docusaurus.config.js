@@ -191,7 +191,7 @@ const config = {
             items: [
               {
                 label: '用户手册',
-                to: '/docs/intro',
+                to: '/docs/base/introduce',
               },
               {
                 label: '开发手册',
