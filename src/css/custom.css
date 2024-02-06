@@ -68,13 +68,13 @@
 
 /* 首页中间导航按钮 */
 .buttons_src-pages-index-module {
-  display: flex;
+  /*display: flex;*/
   flex-wrap: wrap;
 }
 
 .button.button--secondary {
   margin-right: 5px;
-  border-radius: 20px;
+  /*border-radius: 20px;*/
   margin-bottom: 10px;
 }
 
