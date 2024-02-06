@@ -7,5 +7,6 @@
 
 .featureSvg {
   height: 200px;
-  width: 200px;
+  width: 320px;
+  border-radius: 5px;
 }
