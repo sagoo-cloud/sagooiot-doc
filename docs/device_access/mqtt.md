@@ -1,3 +1,6 @@
+---
+sidebar_position: 3
+---
 # MQTT 设备接入
 
 通过一个模拟设备的接入，来演示系统接入设备的情况。以MQTTX为例，介绍使用第三方软件以MQTT协议接入SagooIOT物联网平台。

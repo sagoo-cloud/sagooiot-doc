@@ -1,4 +1,6 @@
-
+---
+sidebar_position: 4
+---
 # HTTP 设备接入
 
 本教程介绍如何使用`HTTP`协议接入sagoo物联网平台。
