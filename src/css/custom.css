@@ -23,7 +23,7 @@
 
   --ifm-card-background-color: #fff;
   --ifm-card-border-radius: 10px;
-  --ifm-global-shadow-lw: 0 1px 2px 0 rgba(0,0,0,.1);
+  --ifm-global-shadow-lw: 0 1px 2px 0 rgba(0, 0, 0, .1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -37,16 +37,14 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --home-color-characteristic-background-color: #1c1e21;
-
-  --ifm-card-background-color: #1c1e21;
-
+  --ifm-card-background-color: #242526;
 }
 
 
-.card{
-  /*background-color: var(--ifm-card-background-color);*/
-  /*border-radius: var(--ifm-card-border-radius);*/
-  /*box-shadow: var(--ifm-global-shadow-lw);*/
+.card {
+  background-color: var(--ifm-card-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -56,20 +54,24 @@
 }
 
 /* 头部导航LOGO标识 */
-.navbar__title{
+.navbar__title {
   font-size: 20px;
 }
-.hero__title{
+
+.hero__title {
   font-size: 2rem;
 }
-.hero__subtitle{
+
+.hero__subtitle {
   font-size: 1.2rem;
 }
+
 /* 首页中间导航按钮 */
-.buttons_src-pages-index-module{
+.buttons_src-pages-index-module {
   display: flex;
   flex-wrap: wrap;
 }
+
 .button.button--secondary {
   margin-right: 5px;
   border-radius: 20px;
@@ -83,7 +85,7 @@
   margin: 0;
   font-size: 1.5rem;
   width: 500px;
-    height: 260px;
+  height: 260px;
   text-decoration: none;
 }
 
