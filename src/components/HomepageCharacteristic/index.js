@@ -104,13 +104,16 @@ const FeatureList = [
 
 function Feature({Svg, title, description}) {
   return (
-    <div className={clsx('card col col--4')}>
+    <div
+      className={clsx("card col tweetsSection_Fqsy margin--sm")}
+      style={{ minWidth: "30%" }}
+    >
       <div className="{styles.text--center} padding-horiz--md">
         <Heading as="h4">{title}</Heading>
         <p className={styles.details}>{description}</p>
       </div>
     </div>
-  );
+  )
 }
 
 export default function HomepageFeatures() {
