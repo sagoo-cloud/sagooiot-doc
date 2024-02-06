@@ -29,5 +29,4 @@ sidebar_position: 0
 
 平台针对工业领域类设备，提供Modbus（TCP）、OPC UA协议的接入。
 
-[MQTT设备接入说明
-](mqtt.md)
+[MQTT设备接入说明](mqtt.md)

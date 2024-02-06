@@ -7,7 +7,7 @@ sidebar_position: 5
 
 ## 安装插件(上传插件)
 
-1. 开发插件，关于插件开发请参阅 [tcp协议插件](../../develop/plugin/tcp-protocol.md)
+1. 开发插件，关于插件开发请参阅 [tcp协议插件](../../develop/plugin/tcp-protocol)
 2. 点击左侧导航栏的`系统配置`->`插件管理`->`上传插件zip`，上传好插件，然后点击 `启用`
 
 ![plugin-add.png](../imgs/device_access/plugin-add.png)

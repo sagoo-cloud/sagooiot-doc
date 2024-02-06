@@ -261,7 +261,7 @@ const config = {
           href: 'https://sagoo.cn',
         },
         copyright: `Copyright © ${new Date().getFullYear()} Sagoo Cloud Technology Co., Ltd
-. Built with Docusaurus.`,
+. Built with Docusaurus. <br/><a href="http://beian.miit.gov.cn/" target="_blank" >辽ICP备20007259号-1</a> `,
       },
       prism: {
         theme: prismThemes.github,
