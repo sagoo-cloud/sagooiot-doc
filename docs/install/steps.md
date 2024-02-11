@@ -3,7 +3,6 @@ sidebar_position: 2
 ---
 # 安装过程
 
-## 基础环境安装
 SagooIOT基础环境安装包括以下几个部分：
 
 1. Redis 7.0.4   【[官方安装文档](https://redis.io/docs/getting-started/installation/)】
@@ -17,11 +16,11 @@ SagooIOT基础环境安装包括以下几个部分：
 5. MySQL 5.7 或 PostgreSQL 13.4
 
 
-### 1. 安装redis
+## 安装redis
 
 下面是在 Linux 上安装 Redis 7.x 的详细步骤：
 
-1.1 升级系统并安装必要的软件包：
+1 升级系统并安装必要的软件包：
 
 ```shell
     sudo apt-get update
@@ -30,7 +29,7 @@ SagooIOT基础环境安装包括以下几个部分：
 ```
 
 
-1.2 下载 Redis 源代码：
+2 下载 Redis 源代码：
 
 ```shell
   wget http://download.redis.io/releases/redis-7.0.12.tar.gz
@@ -38,7 +37,7 @@ SagooIOT基础环境安装包括以下几个部分：
 ```
 
 
-1.3 解压缩源代码：
+3 解压缩源代码：
 
 ```shell
     tar xzf redis-7.0.12.tar.gz
@@ -46,31 +45,31 @@ SagooIOT基础环境安装包括以下几个部分：
 ```
 
 
-1.4 编译和安装 Redis：
+4 编译和安装 Redis：
 ```shell
     make
     sudo make install
 ```
 
-1.5 创建 Redis 配置文件目录：
+5 创建 Redis 配置文件目录：
 
 ```shell
     sudo mkdir /etc/redis
     sudo cp redis.conf /etc/redis
 ```
 
-1.6 修改 Redis 配置文件：
+6 修改 Redis 配置文件：
 
 ```shell
   sudo nano /etc/redis/redis.conf
 
 ```
-1.7 启动 Redis 服务：
+7 启动 Redis 服务：
 ```shell
   redis-server /etc/redis/redis.conf
 
 ```
-1.8 测试 Redis 连接：
+8 测试 Redis 连接：
 
 ```shell
   redis-cli ping
@@ -83,7 +82,7 @@ SagooIOT基础环境安装包括以下几个部分：
 
 请确保您有 root 权限，并在每一步操作前确保系统已经升级到最新版本。
 
-### 2. 安装TDengine
+## 安装TDengine
 
 1. 官网地址:` https://www.taosdata.com/`
 
@@ -110,7 +109,7 @@ SagooIOT基础环境安装包括以下几个部分：
 详细的安装过程请看Tdengine的官网说明：[官网安装手册](https://docs.taosdata.com/get-started/package/)
 
 
-### 3. 安装EMQX
+## 安装EMQX
 
 1. 官网地址:` https://www.emqx.com/zh`
 
@@ -129,7 +128,7 @@ SagooIOT基础环境安装包括以下几个部分：
 详细的安装过程请看EMQX的官网说明：[官网安装手册](https://www.emqx.io/docs/zh/v5.0/deploy/install.html)
 
 
-### 4.  安装Nginx
+## 安装Nginx
 
 1. 官网地址：`http://nginx.org/en/download.html`
 
@@ -157,7 +156,7 @@ SagooIOT基础环境安装包括以下几个部分：
 
 详细的安装过程请看 [Nginx安装教程](https://www.runoob.com/linux/nginx-install-setup.html)
 
-### 5. 安装MySQL
+## 安装MySQL
 
 1. 官网地址: `https://dev.mysql.com/downloads/mysql/`
 

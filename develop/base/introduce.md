@@ -1,8 +1,12 @@
-# 系统介绍
+---
+sidebar_position: 0
+---
+
+# 程序说明
 
 ## 关于SagooIOT
 
-SagooIOT基于GoFrame2.1，Vue3+Element plus 开发的一体化基础的物联网平台系统。
+SagooIOT基于GoFrame，Vue3+Element plus 开发的一体化基础的物联网平台系统。
 
 ## 技术选型
 
@@ -184,7 +188,8 @@ start|stop|restart|status|tail
 
 ## 其它问题
 
-### 如果在macOS下遇到 Warning :`IOMasterPort`：
+**1，如果在macOS下遇到 Warning :`IOMasterPort`：**
+
 ```
 warning: ‘IOMasterPort‘ is deprecated: first deprecated in macOS 12.0 [-Wdeprecated-declarations]
 ```
@@ -198,7 +203,7 @@ warning: ‘IOMasterPort‘ is deprecated: first deprecated in macOS 12.0 [-Wdep
 go env -w CGO_ENABLED="0"
 ```
 
-### 如果采用HTTPS方式时SSE不工作，需要如下配置：
+** 2，如果采用HTTPS方式时SSE不工作，需要如下配置：**
 
 ```Nginx
     proxy_set_header Connection '';
