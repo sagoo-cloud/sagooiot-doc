@@ -92,7 +92,7 @@ const FeatureList = [
     ),
   },
   {
-    title: "开发的数据接口",
+    title: "开放的数据接口",
     description: (
       <>
         提供南向、北向开发接口，提供OpenAPIs系统接口，支持多应用接入认证及数据权限处理。
