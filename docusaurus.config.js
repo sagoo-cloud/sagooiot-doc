@@ -6,7 +6,7 @@ import rehypeKatex from 'rehype-katex';
 const config = {
   title: 'SagooIoT',
   tagline: '开源物联网系统',
-  deploymentBranch: '旨在提供高性能、低成本、易用的企业级物联网系统。',
+  deploymentBranch: '旨在提供高性能、低成本、易用的企业级物联网系统',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
