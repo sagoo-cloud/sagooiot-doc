@@ -11,7 +11,7 @@
 
 ## 配置物模型
 
-[参加《产品物模型配置》说明](../../iot/device/product_tsl.md)
+[参加《产品物模型配置》说明](../../iot/device/product.md)
 
 ## 启用产品
 
