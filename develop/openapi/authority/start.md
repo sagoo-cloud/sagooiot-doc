@@ -1,11 +1,11 @@
 ---
 sidebar_position: 0
 ---
-# OpenAPI 说明
+# AK/SK说明
 
 SagooIOT提供OpenAPIs功能，方便第三方应用直接调用系统相关的开发接口。该接口是通过AK/SK的方式进行鉴权。需要调用方跟据Secret Key与Access Key值计算签名。
 
-## 什么是AKSK
+## 什么是AK/SK
 ak/sk是一种身份认证方式，常用于系统间接口调用时的身份验证，其中ak为Access Key ID，sk为Secret Access Key。客户端和服务端两者会协商保存一份相同的sk，其中sk必须保密。
 
 ## AK/SK认证过程

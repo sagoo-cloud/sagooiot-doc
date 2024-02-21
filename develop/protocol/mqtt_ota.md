@@ -26,11 +26,11 @@ OTA升级运行原理如下图所示：
 
 ```json
 {
-    "id": "123",
-    "params": {
-        "version": "1.0.1",
-        "module": "MCU"
-    }
+  "id": "123",
+  "params": {
+    "version": "1.0.1",
+    "module": "MCU"
+  }
 }
 ```
 
@@ -39,7 +39,8 @@ OTA升级运行原理如下图所示：
 2. version: OTA模块版本，类型为字符串
 3. module: OTA模块名称，类型为字符串
 
-
+### MQTT示例
+![push_ota.png](../imgs/operate/push_ota.png)
 
 ##  推送ota升级包
 1. 请求Topic: `/ota/device/upgrade/${productKey}/${deviceKey}`
@@ -102,3 +103,9 @@ OTA升级运行原理如下图所示：
     5. -4：烧写失败。
 3. desc: 升级描述，类型为字符串，长度不超过128个字符。如果发生异常，此字段可承载错误信息。
 4. module: OTA模块名称，类型为字符串
+
+### MQTT示例
+![schedule_ota.png](../imgs/operate/schedule_ota.png)
+
+### 界面示例
+![schedule_list.png](../imgs/operate/schedule_list.png)
