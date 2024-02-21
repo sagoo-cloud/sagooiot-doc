@@ -239,7 +239,7 @@ const config = {
             title: '联系我们',
             items: [
               {
-                label: '客服电话：17202015016',
+                label: '客服电话：400 115 1569',
                 href: '#',
               },
               {
