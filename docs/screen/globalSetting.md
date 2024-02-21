@@ -1,7 +1,7 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
-# 设置介绍
+# 设置说明
 
 注意：切换语言刷新页面，不会保存当前页面数据，请谨慎勾选
 

@@ -25,4 +25,4 @@ type Queue interface {
 }
 ``` 
 
-可以参考工程中实现的系统操作日志记录的处理过程的处理。位置在：`internal/queues/sysOperLog.go`。
+可以参考工程中实现的系统操作日志记录的处理过程。位置在：`internal/queues/sysOperLog.go`。
