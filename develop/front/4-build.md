@@ -12,10 +12,10 @@ SagooIoT前端工程编译与部署，工程都已经编写好脚本。可以通
 * .env.golocal：自定义的SagooIOT服务程序下的运行环境的配置文件
 
 :::tip 本地开发配置
-如本地开发，可以工程根目录下创建一个 `.end.local` 配置文件
+如本地开发，可以工程根目录下创建一个 `.env.local` 配置文件
 :::
 
-.end.local 文件内容如下：
+.env.local 文件内容如下：
 ```yaml
 # 本地环境
 ENV = 'development'

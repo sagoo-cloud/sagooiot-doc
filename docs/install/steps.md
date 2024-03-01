@@ -22,12 +22,26 @@ SagooIOT基础环境安装包括以下几个部分：
 
 1 升级系统并安装必要的软件包：
 
+如果在Debian和Ubuntu系统下使用下面的命令：
+
 ```shell
     sudo apt-get update
     sudo apt-get upgrade
     sudo apt-get install build-essential tcl
 ```
 
+:::note 注意
+如果是centos系统 则需要用到yum命令：
+  CentOS 7 及以下版本：
+* sudo yum update
+* sudo yum install gcc make tcl
+
+如果使用的是 CentOS 8 或更高版本，您应该使用 dnf：
+* sudo dnf check-update
+* sudo dnf upgrade
+* sudo dnf install gcc make tcl
+
+:::
 
 2 下载 Redis 源代码：
 
@@ -84,6 +98,14 @@ SagooIOT基础环境安装包括以下几个部分：
 
 ## 安装TDengine
 
+:::tip 提示
+
+建议安装 TDengine 3.x 最新版，TDengine安装参考其官方安装文档：https://docs.taosdata.com/get-started/
+
+安装包地址：https://docs.taosdata.com/get-started/package/
+
+:::
+
 1. 官网地址:` https://www.taosdata.com/`
 
 2. 下载安装包到服务器`/opt/TDengine`目录下
@@ -92,9 +114,9 @@ SagooIOT基础环境安装包括以下几个部分：
 
 3. 使用tar -zxf解压压缩包
 
-4. 进入到TDengine-server-3.0.1.5目录里使用命令`sudo ./install.sh`进行安装
+4. 进入到TDengine-server-3.0.1.5目录（目录取决于你安装的版本）里使用命令`sudo ./install.sh`进行安装
 
-5. 使用`systemctl start taos`启动
+5. 使用`systemctl start taosd`启动
 
 6. 使用`systemctl status taosd`查看TD是否启动成功
 
@@ -108,10 +130,16 @@ SagooIOT基础环境安装包括以下几个部分：
 
 详细的安装过程请看Tdengine的官网说明：[官网安装手册](https://docs.taosdata.com/get-started/package/)
 
+:::tip 提示 推荐使用DBeaver工具进行TDengine数据库管理
+
+DBeaver  是一个通用的数据库管理工具和 SQL 客户端，支持 MySQL, PostgreSQL, Oracle, DB2, MSSQL, Sybase, Mimer, HSQLDB, Derby, 以及其他兼容 JDBC 的数据库。DBeaver 提供一个图形界面用来查看数据库结构、执行SQL查询和脚本，浏览和导出数据，处理BLOB/CLOB 数据，修改数据库结构等等。
+https://dbeaver.io/
+:::
+
 
 ## 安装EMQX
 
-1. 官网地址:` https://www.emqx.com/zh`
+1. 官网地址:https://www.emqx.com/zh
 
 2. `wget https://www.emqx.com/zh/downloads/broker/5.0.9/emqx-5.0.9-el8-amd64.tar.gz `下载对应版本的emqx到/opt目录下
 
