@@ -125,20 +125,22 @@
 ## 可试化规则引擎部署
 
 **服务器(cent os)安装nodejs 最新版**
+ 
+1. 规则引擎项目根目录下`config.js`中`SERVER_PORT`是IOT服务的端口，因为要访问IOT服务，进行token验证，实现免登录，如果端口不一致需要修改这里
 
-1. 查看是否为最新版本
+2. 查看是否为最新版本
 
 ```shell
   yum list nodejs
 ``` 
 
-2. 如果不是，通过下面代码增加源信息
+3. 如果不是，通过下面代码增加源信息
 
 ```shell
   curl --silent --location https://rpm.nodesource.com/setup_18.x | sudo bash
 ```
 
-3. 安装nodejs
+4. 安装nodejs
 
 ```shell
     yum install nodejs
@@ -150,21 +152,21 @@
   npm config set registry https://registry.npm.taobao.org/
 ```
 
-4. 全局安装 pm2 
+5. 全局安装 pm2 
 
 ```shell
   sudo npm i pm2 -g
  ```
 
-5. 将【rule-engine】项目拷贝到服务器上
+6. 将【rule-engine】项目拷贝到服务器上
 
-6. 在【rule-engine】目录下安装包依赖
+7. 在【rule-engine】目录下安装包依赖
 
    ```shell
     npm install
     ```
 
-7. 启动项目 
+8. 启动项目 
 
 ```shell
     pm2 start packages/node_modules/node-red/red.js --name rule-engine:2881
@@ -172,9 +174,9 @@
 
 之后可以通过 `pm2 show rule-engine:2881` 查看项目运行情况
 
-8. 按照【rule-engine】项目下 `nginx/node-red.conf` 文件的配置增加一下nginx配置，来保证规则引擎和iot的同源（主nginx配置中已包含该配置，可忽略此项）
+9. 按照【rule-engine】项目下 `nginx/node-red.conf` 文件的配置增加一下nginx配置，来保证规则引擎和iot的同源（主nginx配置中已包含该配置，可忽略此项）
 
-9. 如果要修改favicon.ico, 就将`packages/node_modules/@node-red/editor-client/public/favicon.ico`这个文件进行替换即可。
+10. 如果要修改favicon.ico, 就将`packages/node_modules/@node-red/editor-client/public/favicon.ico`这个文件进行替换即可。
 
 ## 可视化大屏服务部署
 
