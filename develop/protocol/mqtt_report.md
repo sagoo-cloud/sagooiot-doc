@@ -6,7 +6,7 @@ sidebar_position: 2
 ## 设备上报属性
 
 1. 请求Topic: `/sys/${productKey}/${deviceKey}/thing/event/property/post`
-2. 请求数据格式:
+2. 请求数据格式示例:
 ```json
 {
     "id": "123",
@@ -30,19 +30,19 @@ sidebar_position: 2
 
 字段说明
 
-1. id: 消息ID，用于唯一标识一条消息，由设备端生成，必须保证唯一性。
+1. id: 消息ID，用于唯一标识一条消息，由设备端生成，必须保证唯一性。注：**消息ID必须为字符类型**。
 2. version: 消息版本号，目前版本为1.0。
-3. sys: 系统级参数，目前仅支持ack，ack=0表示不需要应答，ack=1表示需要应答。
+3. sys: 系统级参数，目前仅支持ack，ack=0表示不需要应答，ack=1表示需要应答。注：**ack必须为数字类型**。
 4. params: 消息体，消息体中包含了设备上报的属性值，属性值的格式为JSON格式。
 5. method: 消息类型，目前仅支持thing.event.property.post。
 6. Power: 属性名称，必须与物模型中定义的属性名称一致。
-7. value: 属性值，必须与物模型中定义的属性类型一致。
-8. time: 属性值的时间戳，单位为秒，可选，如果不携带该字段，则默认为消息发送时间。
+7. value: 属性值，必须与物模型中定义的属性类型一致。注：**属性值需要物模型的配置一至**。
+8. time: 属性值的时间戳，单位为秒，可选，如果不携带该字段，则默认为消息发送时间。注：**时间戳必须为数字类型**。
 
 ### 应答
 
 1. 应答Topic: `/sys/${productKey}/${deviceKey}/thing/event/property/post_reply`
-2. 应答数据格式:
+2. 应答数据格式示例:
 
 ```json
 {
@@ -66,7 +66,7 @@ sidebar_position: 2
 ## 设备属性设置
 
 1. 请求Topic：`/sys/${productKey}/${deviceKey}/thing/service/property/set`
-2. 请求数据格式：
+2. 请求数据格式示例：
 ```json
 {
     "id": "123",
@@ -88,7 +88,7 @@ sidebar_position: 2
 ### 应答
 
 1. 应答Topic：`/sys/${productKey}/${deviceKey}/thing/service/property/set_reply`
-2. 请求数据格式：
+2. 请求数据格式示例：
 ```json
 {
     "code": 200,
@@ -109,7 +109,7 @@ sidebar_position: 2
 ## 设备上报事件
 
 1. 请求Topic: `/sys/${productKey}/${deviceKey}/thing/event/${eventIdentifier}/post`
-2. 请求数据格式:
+2. 请求数据格式示例:
 
 ```json
 {
@@ -143,7 +143,7 @@ sidebar_position: 2
 ### 应答
 
 1. 应答Topic: `/sys/${productKey}/${deviceKey}/thing/event/${eventIdentifier}/post_reply`
-2. 请求数据格式:
+2. 请求数据格式示例:
 
 ```json
 {
@@ -167,7 +167,7 @@ sidebar_position: 2
 
 ## 服务调用
 1. 请求Topic: `/sys/${productKey}/${deviceKey}/thing/service/${tsl.service.identifier}`
-2. 请求数据格式:
+2. 请求数据格式示例:
 
 ```json
 {
@@ -190,7 +190,7 @@ sidebar_position: 2
 ### 应答
 
 1. 应答Topic: `/sys/${productKey}/${deviceKey}/thing/service/${tsl.service.identifier}_reply`
-2. 应答数据格式:
+2. 应答数据格式示例:
 
 ```json
 {
@@ -211,7 +211,7 @@ sidebar_position: 2
 
 ## 网关批量上传事件和属性
 1. 请求Topic: `/sys/${productKey}/${deviceKey}/thing/event/property/pack/post`
-2. 请求数据格式:
+2. 请求数据格式示例:
 
 ```json
 {
@@ -298,7 +298,7 @@ sidebar_position: 2
 ### 响应
 
 1. 响应Topic: `/sys/${productKey}/${deviceKey}/thing/event/property/pack/post`
-2. 响应数据格式:
+2. 响应数据格式示例:
 
 ```json
 {
