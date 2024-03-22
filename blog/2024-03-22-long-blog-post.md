@@ -1,10 +1,9 @@
 ---
 slug: sagooiot-updatav1tov2
-title: SagooIoT V1.x到V2.x版本更新说明
+title: SagooIoT V1.x到V2.x升级说明
 authors: [microrain]
 tags: [sagooiot,版本升级]
 ---
-
 
 专业版或是企业版用户注意阅读这篇文章，这篇文章主要是针对V1.x版本升级到V2.x版本的更新说明。V2.x版本对数据库字段有所改动，所以需要注意以下内容。
 
@@ -84,7 +83,9 @@ tags: [sagooiot,版本升级]
 
 
 ## 以下是所有项目所需仓库和拉取分支说明
+
       * 注：不要拉错仓库，也不要拉错分支。如需更新分支代码请联系企业微信工作人员。
+
 | 服务名称     | 前端/后端 | 语言类型   | 仓库地址 | 分支            | 
 |----------|----|--------|-----|---------------|
 | IOT主程序后端服务 | 后端 | GO     | http://git.mydig.net/Sagoo-Cloud/sagooiot-professional.git | main          |
