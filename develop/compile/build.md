@@ -21,7 +21,14 @@ sidebar_position: 1
 
 ## 关于build.sh编译脚本
 
-可以使用build.sh进行程序编译，如果在使用build.sh脚本进行程序编译时，提示
+可以使用build.sh进行程序编译。可选编译参数有linux、windows、mac。
+
+如编译mac版本：
+```shell
+./build.sh mac
+```
+
+如果在使用build.sh脚本进行程序编译时，提示
 
 ```
 fatal: No names found, cannot describe anything.
@@ -30,13 +37,15 @@ fatal: No names found, cannot describe anything.
 ```
 是因为源码没有进行git版本的标签设置。
 
-支持将git的tag编译到程序中。需要创建git的tag。只有创建了tag，编译的程序才会显示版本号。
+这个编译脚本支持将git的tag编译到程序中，所以需要创建git的tag。只有创建了tag，编译后的程序才会显示版本号。
 
+创建tag的命令如下：
 ```
 git tag v0.0.1
 
 git push origin v0.0.1
 ```
+注意：v0.0.1是tag的版本号，可以根据实际情况进行修改。
 
 ## 编译后执行脚本
 
