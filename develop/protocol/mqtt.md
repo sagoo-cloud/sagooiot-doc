@@ -7,7 +7,7 @@ SagooIoT内部是基于mqtt协议的，有自己的协议格式，内部称为Sa
 
 本系统默认的协议是`SagooMqtt协议`,如果设备或者网关消息不满足`SagooMqtt协议`格式要求，可以有以下两种方式处理
 
-1. 按照[插件开发](../plugin/hashicorp.md)开发好合适的插件，并在`系统管理`->`插件管理` 点击 
+1. 开发好合适的插件，并在`系统管理`->`插件管理` 点击 
    `上传插件ZIP`上传开发好的插件。
     ![upload-plugin.png](../imgs/protocol/upload-plugin.png)
    
