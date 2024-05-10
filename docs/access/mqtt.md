@@ -36,7 +36,7 @@ sidebar_position: 3
 
 设备连接上平台后，就可进行一些事件上报、属性读取等操作。
 
-MQTTX 进行数据上报,详细的消息协议请参考[Sagoo Mqtt协议介绍](/develop/protocol/mqtt.md)
+MQTTX 进行数据上报,详细的消息协议请参考[Sagoo Mqtt协议介绍](../../develop/protocol/mqtt.md)
 
 ![mqttx-willmessage](../imgs/device_access/mqttx-willmessage.png)
 
