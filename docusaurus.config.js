@@ -40,11 +40,6 @@ const config = {
       src: 'https://hm.baidu.com/hm.js?b8d6166a7eddaa8fe0a45f63a1a82066',
       async: true
     },
-    // {
-    //     async: true,
-    //     defer: true,
-    //     src:"http://127.0.0.1:8080/api/application/embed?protocol=http&host=127.0.0.1:8080&token=1266627a551bb5ac",
-    // }
 ],
 presets: [
   [
