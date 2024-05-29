@@ -114,6 +114,26 @@ SagooIoT 对mqtt设备的支持是采有自己的数据格式，如果您的设�
 
 使用内部函数parse进行解析，其中函数入参data就是原始报文。你可以在这个函数内部通过JavaScript脚本进行处理。
 
+#### 脚本编写注意事项
+* ECMAScript 5.1 兼容性：
+
+    确保代码符合 ECMAScript 5.1 规范。
+    
+    使用 `let` 和 `const` 代替 `var`，以获得更严格的块级作用域。
+
+* SagooIoT 内置处理函数：
+
+    `parse` 用于处理接收到设备端的数据。
+
+    `send` 用于处理向设备端下发的数据。
+
+    `reply` 用于处理设备端的回复数据。
+
+* 错误处理：
+
+    使用 try-catch 语句来捕获和处理 JavaScript 错误。
+
+
 ### 示例代码
 
 ```javascript

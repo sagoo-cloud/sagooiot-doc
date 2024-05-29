@@ -17,22 +17,20 @@
 ## 创建main.go文件
 
 ```go
+
 package main
 
 import (
-	"ccpc/events"
-	"ccpc/protocol"
-	"context"
-	"fmt"
 	"github.com/gogf/gf/v2/frame/g"
-	"github.com/gogf/gf/v2/util/gconv"
+	"github.com/gogf/gf/v2/os/gctx"
+	"github.com/gogf/gf/v2/os/glog"
 	"github.com/sagoo-cloud/iotgateway"
-	"github.com/sagoo-cloud/iotgateway/conf"
-	"github.com/sagoo-cloud/iotgateway/log"
 	"github.com/sagoo-cloud/iotgateway/version"
+	"sagoo-modbus-gateway/events"
+	"sagoo-modbus-gateway/modbus"
 )
 
-//定义编译时的版本信息
+// 定义编译时的版本信息
 var (
 	BuildVersion = "0.0"
 	BuildTime    = ""
@@ -40,45 +38,77 @@ var (
 )
 
 func main() {
-
-    //显示版本信息
+	glog.SetDefaultLogger(g.Log())
+	//显示版本信息
 	version.ShowLogo(BuildVersion, BuildTime, CommitID)
-	fmt.Println("iotgateway-ccpc start...")
+	ctx := gctx.GetInitCtx()
 
-    //读取配置文件
-	options := new(conf.GatewayConfig)
-	conf, err := g.Cfg().Data(context.Background())
-	if err != nil {
-		log.Error("读取配置文件失败", err)
-		return
-	}
-	err = gconv.Scan(conf, options)
-	if err != nil {
-		log.Error("读取配置文件失败", err)
-		return
-	}
-
-
-	events.Init() //初始化事件
-	//需要解析的协议
+    //需要解析的协议
 	chargeProtocol := protocol.ChargeProtocol{}
 	
 	//创建网关
-	gateway, err := iotgateway.NewGateway(options, &chargeProtocol)
+	gateway, err := iotgateway.NewGateway(ctx, chargeProtocol)
 	if err != nil {
 		panic(err)
 	}
-	
+
+	events.Init()                     //初始化事件
+
 	//启动网关
 	gateway.Start()
 
 }
 
 ```
+## 网关配置文件
+
+在网关工程的config目录下创建一个gateway.toml文件，用于配置网关的相关信息。
+
+```yaml
+server:
+  name: "sagooiot-modbus"
+  addr: ":8198" # 服务于服务监听地址，格式为: ":port"
+  netType: "mqtt" # 支持mqtt、tcp、udp 三种服务类型，mqtt为默认服务类型
+  duration: 20 # 网关服务心跳间隔，单位秒
+  productKey: "sagoo-modbus202405"   # 网关产品标识，用于区分不同的网关产品
+  deviceKey: "modbus20240517"   # 网关实例标识，用于区分不同的网关实例，每个部署的网关实例必须唯一，用于在平台上添加这个网关设备标识
+  deviceName: "sagoo-modbus网关系统"   # 网关系统名称
+  description: "modbus数据采集云网关系统"   # 网关系统描述
+  deviceType: "modbus"   # 网关系统类型
+  manufacturer: "sagoo.dn"   # 网关系统厂商
+  version: "1.0.0"  # 网关系统版本
+  deviceConfigFile: "config/devices" # 设备配置文件路径
+
+# MQTT Server.
+mqtt:
+  address: 127.0.0.1:1883
+  clientId: sagoo-modbus-gateway202405    # 客户端id，注意：MQTT使用过种客户端id不能重复
+  keepAliveDuration: 30 # mqtt心跳超时时间，单位秒
+  qos: 1 # 服务质量
+  auth:
+    userName: "xinjy"
+    passWord: "123456"
+  clientCertificate: # 客户端证书配置
+    ca: "" # 如果采用证书双向认证，必须填 Client 连接Hub的CA证书路径
+    key: "" # 如果采用证书双向认证，必须填 Client 连接Hub的客户端私钥路径
+    cert: "" # 如果采用证书双向认证，必须填 Client 连接Hub的客户端公钥路径
+
+logger:
+  path:                  "log/"           # 日志文件路径。默认为空，表示关闭，仅输出到终端
+  file:                  "{Y-m-d}.log"         # 日志文件格式。默认为"{Y-m-d}.log"
+  prefix:                ""                    # 日志内容输出前缀。默认为空
+  level:                 "all"                 # 日志输出级别:all > debug > info > warn > error 生成环境建议使用info
+  timeFormat:            "2006-01-02T15:04:05" # 自定义日志输出的时间格式，使用Golang标准的时间格式配置
+  ctxKeys:               []                    # 自定义Context上下文变量名称，自动打印Context的变量到日志中。默认为空
+  header:                true                  # 是否打印日志的头信息。默认true
+  stdout:                true                  # 日志是否同时输出到终端。默认true
+
+```
+
 
 ## 创建协议解析文件
 
-创建一个protocol目录，然后创建一个charge_protocol.go文件，用于实现协议解析的代码。
+创建一个protocol目录，然后创建一个chargeProtocol.go文件，用于实现协议解析的代码。
 
 实现protocol接口处理接收到的数据。在Decode方法中，需要将接收到的数据进行解析，然后返回解析后的数据。在Encode方法中，需要将需要发送的数据进行编码，然后返回编码后的数据。
 
