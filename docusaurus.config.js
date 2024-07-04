@@ -4,8 +4,8 @@ import rehypeKatex from 'rehype-katex';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'SagooIoT',
-  tagline: '开源物联网系统',
+  title: 'SagooIoT沙果物联网系统',
+  tagline: '企业级开源物联网平台系统',
   deploymentBranch: '旨在提供高性能、低成本、易用的企业级物联网系统',
   favicon: 'img/favicon.ico',
 
@@ -40,6 +40,11 @@ const config = {
       src: 'https://hm.baidu.com/hm.js?b8d6166a7eddaa8fe0a45f63a1a82066',
       async: true
     },
+    // {
+    //     async: true,
+    //     defer: true,
+    //     src:"http://127.0.0.1:8080/api/application/embed?protocol=http&host=127.0.0.1:8080&token=1266627a551bb5ac",
+    // }
 ],
 presets: [
   [
