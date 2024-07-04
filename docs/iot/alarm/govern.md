@@ -7,16 +7,17 @@ SagooIoT 系统的告警管理模块提供了一套灵活的告警处理机制�
 
 以下是需要在 SagooIoT 系统参数配置中添加的告警管理相关参数：
 
-| 参数名称 | 参数键名 | 默认值 | 说明 |
-|---------|---------|-------|------|
-| 告警处理周期 | alert.process.interval | 30s | 定期处理告警的时间间隔 |
-| 告警通知周期 | alert.notification.interval | 5m | 发送告警通知的最小时间间隔 |
-| 告警合并时间窗口 | alert.merge.time.window | 30s | 在此时间窗口内的相同告警将被合并 |
-| 告警最大合并次数 | alert.max.merge.count | 10 | 单个告警最多可以合并的次数 |
-| 告警升级计数次数 | alert.upgrade.after.count | 100 | 告警重复此次数后将升级告警级别 |
-| 告警级别长时间窗口后升级 | alert.upgrade.after.long.duration | 24h | 告警持续此时间后将升级到更高级别 |
-| 告警级别中时间窗口后升级 | alert.upgrade.after.medium.duration | 12h | 告警持续此时间后将升级到中等级别 |
-| 告警级别降级时间窗口 | alert.downgrade.after | 48h | 告警在此时间内未再次触发将降级 |
+| 参数名称         | 参数键名 | 默认值  | 说明                |
+|--------------|---------|------|-------------------|
+| 告警处理周期       | alert.process.interval | 30秒  | 定期处理告警的时间间隔       |
+| 告警通知周期       | alert.notification.interval | 5分钟  | 发送告警通知的最小时间间隔     |
+| 告警首发后重复次数    | alert.repetition.count | 3    | 从发生告警开始多少次后触发告警通知 |
+| 告警合并时间窗口     | alert.merge.time.window | 30秒  | 在此时间窗口内的相同告警将被合并  |
+| 告警最大合并次数     | alert.max.merge.count | 10   | 单个告警最多可以合并的次数     |
+| 告警升级计数次数     | alert.upgrade.after.count | 100  | 告警重复此次数后将升级告警级别   |
+| 告警级别长时间窗口后升级 | alert.upgrade.after.long.duration | 24小时 | 告警持续此时间后将升级到更高级别  |
+| 告警级别中时间窗口后升级 | alert.upgrade.after.medium.duration | 12小时 | 告警持续此时间后将升级到中等级别  |
+| 告警级别降级时间窗口   | alert.downgrade.after | 48小时 | 告警在此时间内未再次触发将降级   |
 
 ## 参数说明及建议设置
 
@@ -29,6 +30,11 @@ SagooIoT 系统的告警管理模块提供了一套灵活的告警处理机制�
 
 - **说明**：发送告警通知的最小时间间隔，用于防止频繁发送通知。
 - **建议**：根据运维团队的响应能力和告警重要性来设置。一般可以设置为 5m-15m，确保不会错过重要告警，同时又不会频繁打扰运维人员。
+
+### 告警首发后重复次数 (alert.repetition.count)
+
+- **说明**：告警首次发生后，告警多少次触发告警通知，用于防止刚开始的误报。
+- **建议**：跟据接入设备的情况来设置。一般可以设置为 3-10，确保不会进行初始的误报。
 
 
 ### 告警合并时间窗口 (alert.merge.time.window)
