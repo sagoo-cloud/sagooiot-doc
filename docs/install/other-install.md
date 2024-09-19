@@ -222,6 +222,7 @@
         #前端路由
         location / {
             root /opt/sagoo/iot-ui;
+            try_files $uri $uri/ /index.html;
         }
         
         error_page   500 502 503 504  /50x.html;
