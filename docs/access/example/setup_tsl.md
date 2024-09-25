@@ -1,3 +1,6 @@
+---
+sidebar_position: 2
+---
 # 配置物模型
 
 
