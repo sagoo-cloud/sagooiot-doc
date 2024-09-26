@@ -39,7 +39,7 @@ sequenceDiagram
 ```
 
 
-**注：**文件下载方式现在只支持Https协议，MQTT协议暂不支持。
+**注：** 文件下载方式现在只支持Https协议，MQTT协议暂不支持。
 
 
 ## 上报ota相关信息
