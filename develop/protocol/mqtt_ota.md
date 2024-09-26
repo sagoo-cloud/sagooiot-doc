@@ -16,9 +16,31 @@ OTA升级运行原理如下图所示：
 
 ## 升级步骤
 
-![process.png](../imgs/operate/process.png)
+```mermaid
+sequenceDiagram
+    participant Device as 设备端
+    participant OTA as SagoolOT<br/>OTA服务
+    participant Management as SagoolOT<br/>管理
 
-注：文件下载方式现在只支持Https协议，MQTT协议暂不支持。
+    Device->>OTA: 可选: 设备上报当前版本 (MQTT协议)<br/>/ota/device/inform/${ProductKey}/${DeviceKey}
+
+    Management->>OTA: 在管理页面添加升级包，对设备发起OTA升级
+
+    OTA->>Device: 下发升级包信息给设备 (MQTT协议)<br/>/ota/device/upgrade/${ProductKey}/${DeviceKey}
+
+    OTA->>Device:  设备下载升级包 (HTTPS协议或MQTT协议)
+
+    Device->>OTA: 设备上报升级进度 (MQTT协议)<br/>/ota/device/progress/${ProductKey}/${DeviceKey}
+
+    Device->>OTA: 设备端升级完成后，上报最新版本 (MQTT协议)<br/>/ota/device/inform/${ProductKey}/${DeviceKey}
+
+    OTA->>Management: 管理页面显示OTA升级进度
+    OTA->>Management: 管理页面显示升级成功
+```
+
+
+**注：**文件下载方式现在只支持Https协议，MQTT协议暂不支持。
+
 
 ## 上报ota相关信息
 1. 请求Topic: `/ota/device/inform/${productKey}/${deviceKey}`
