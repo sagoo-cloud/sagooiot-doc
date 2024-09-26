@@ -4,6 +4,8 @@
 
 我们开放了云网关的SDK，你只需要编写基础的协议解析代码，就可以快速的实现设备的接入，而不需要关心底层的通信协议，也不需要关心设备接入平台的管理。
 
+可以参考示例工程：[iotgateway-example](https://github.com/sagoo-cloud/iotgateway-example)
+
 ## 云网关SDK
 
 创建一个独立的网关项目，并引入SagooIOT云网关的SDK，然后实现协议解析的代码。
@@ -114,16 +116,23 @@ logger:
 
 ```go
 
+
 type ChargeProtocol struct {
 }
 
-func (c *ChargeProtocol) Encode(args []byte) (res []byte, err error) {
-	return args, nil
+func (c *ChargeProtocol) Init(device *model.Device, data []byte) error {
+	return nil
 }
 
-func (c *ChargeProtocol) Decode(conn net.Conn, buffer []byte) (res []byte, err error) {
-    return buffer, nil
-}   
+func (c *ChargeProtocol) Encode(device *model.Device, data interface{}, param ...string) (res []byte, err error) {
+	return []byte(""), nil
+}
+
+// Decode 解码 如果是TCP/UDP模式的，则需要从buffer中解析出数据，然后返回数据。否则实现自己的方法
+func (c *ChargeProtocol) Decode(device *model.Device, buffer []byte) (res []byte, err error) {
+	return buffer, nil
+}
+
 
 ```
 
@@ -131,7 +140,7 @@ func (c *ChargeProtocol) Decode(conn net.Conn, buffer []byte) (res []byte, err e
 
 在需要推送数据的地方准备好事件相关数据，然后触发推送事件。
 
-**事件数据上报：**
+## 事件数据上报
 
 触发的是 `consts.PushAttributeDataToMQTT` 事件
 
@@ -157,7 +166,7 @@ func (c *ChargeProtocol) Decode(conn net.Conn, buffer []byte) (res []byte, err e
 	event.MustFire(consts.PushAttributeDataToMQTT, out) 
 
 ```
-**属性数据上报**
+## 属性数据上报
 
 触发的是 `consts.PushAttributeDataToMQTT` 事件
 
@@ -176,7 +185,10 @@ func (c *ChargeProtocol) Decode(conn net.Conn, buffer []byte) (res []byte, err e
 
 ```
 
-由SagooIOT平台端下发后回复：
+## 向SagooIoT平台台回复：
+
+由SagooIOT平台端向设备端下发后的回复处理。包括属性设置下发，功能下发。
+
 触发的是 `consts.PushServiceResDataToMQTT` 事件
 
 ```go
@@ -188,4 +200,30 @@ func (c *ChargeProtocol) Decode(conn net.Conn, buffer []byte) (res []byte, err e
 				"ReplyData": replyData,
 			}
 			event.MustFire(consts.PushServiceResDataToMQTT, outData)
+```
+
+## 上报设备数据属性时间的处理
+
+数据属性上报时间的处理，采用`mqttProtocol.PropertyNode`来定义属性值。
+
+事件属性上报时间的处理，采用`mqttProtocol.EventNode`来定义事件值。
+
+如下：
+
+```go
+	//准备向平台上报的属性数据
+	var propertyData = make(map[string]interface{})
+	var propertyDataValue = mqttProtocol.PropertyNode{}
+	
+	
+    propertyDataValue.Value = "XXX值1"
+    propertyDataValue.CreateTime = 3123131 //时间戳
+    propertyData[key] = propertyDataValue
+
+	//推送数据到SagooIoT
+	out := g.Map{
+		"DeviceKey":         gb.Data.MN,
+		"PropertieDataList": propertyData,
+	}
+	event.MustFire(consts.PushAttributeDataToMQTT, out)
 ```
