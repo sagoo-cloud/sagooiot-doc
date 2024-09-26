@@ -14,7 +14,17 @@
 ### 场景一：物联网平台推送配置信息给设备端
 
 在物联网平台控制台，向某一产品下的所有设备批量推送配置文件。
-![远程配置场景一](../imgs/operate/p001.png)
+
+```mermaid
+sequenceDiagram
+participant Device as 设备
+participant Platform as SagooIOT平台
+participant User as 用户
+    Device->>Platform: 设备订阅配置文件推送Topic<br>/sys/${productKey}/${deviceKey}/thing/config/push
+    User->>Platform: 用户在远程配置功能编辑配置信息
+    User->>Platform: 用户在远程配置功能推送配置信息
+    Platform->>Device: SagooIOT平台推送配置信息到设备<br>/sys/${productKey}/${deviceKey}/thing/config/push
+```
 
 1. 设备上线。
 
@@ -61,7 +71,20 @@
 ### 场景二：设备主动请求配置信息
 
 设备主动查询并更新配置信息流程图如下。
-![远程配置场景二](../imgs/operate/p002.png)
+
+```mermaid
+sequenceDiagram
+participant Device as 设备
+participant Platform as SagooIOT平台
+participant User as 用户
+
+    Device->>Platform: 设备订阅SagooIOT的请求响应Topic<br>/sys/${productKey}/${deviceKey}/thing/config/get_reply
+    Device->>Platform: 设备主动请求配置信息<br>/sys/${productKey}/${deviceKey}/thing/config/get
+    User->>Platform: 用户在远程配置功能编辑配置信息
+    Platform->>Device: SagooIOT平台响应请求，返回配置信息<br>/sys/${productKey}/${deviceKey}/thing/config/get_reply
+```
+
+
 1. 设备上线。
 
    开发设备端时，已配置设备端订阅物联网平台响应设备请求配置信息的Topic：`/sys/${productKey}/${deviceKey}/thing/config/get_reply`。
