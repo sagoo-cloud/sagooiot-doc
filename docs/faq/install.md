@@ -3,7 +3,9 @@ sidebar_position: 0
 ---
 # 安装与运行常见问题
 
-## 1. 首次运行时，报错`taoWS panic: runtime error: invalid memory address or nil pointer dereference`
+## 首次运行时，报时序数据库连接错误
+
+```shell
 
 安装后，运行的时候提示如下错误：
     
@@ -31,3 +33,34 @@ runtime error: invalid memory address or nil pointer dereference
   ./sagooiot -tsd
   
 ```
+
+
+## mqtt设备实时在线离线状态不准确
+
+mqtt设备实时上线离线监听
+
+需要你的服务器支持系统消息的订阅。如果使用的是emqx服务，需要设置你系统连接mqtt的帐号的权限。在emqx服务器上设置ACL权限。 需要配置你的连接帐号允许订阅`$SYS/#`这个主题
+
+:::tip 提示
+ 注意，你的设备连接到mqtt服务的帐号需要与SagooIoT平台上的设备KEY一致，否则无法获取到设备的在线状态。
+:::
+
+ACL配置示例：
+
+```shell
+
+%% 允许用户名是 dashboard 的客户端订阅 "$SYS/#" 这个主题
+{allow, {user, "dashboard"}, subscribe, ["$SYS/#"]}.
+
+%% 允许来自127.0.0.1 的用户发布和订阅 "$SYS/#" 以及 "#"
+{allow, {ipaddr, "127.0.0.1"}, all, ["$SYS/#", "#"]}.
+
+%% 拒绝其他所有用户订阅 `$SYS/#`，`#` 和 `+/#` 主题
+{deny, all, subscribe, ["$SYS/#", {eq, "#"}, {eq, "+/#"}]}.
+
+%% 如果前面的规则都没有匹配到，则允许所有操作
+%% 注意：在生产环境中，最后一条规则应该设置为 `{deny, all}`，并且配置 `authorization.no_match = deny`
+{allow, all}.
+
+```
+
