@@ -3,7 +3,7 @@ sidebar_position: 3
 ---
 # 系统安装
 
-可以获取SagooIOT的二进制编译文件进行部署，也可以通过获取源码自行编译部署。
+SagooIoT系统的安装，通过获取源码进行编译后进行部署。
 
 ## 初始化数据库脚本
 
@@ -12,129 +12,76 @@ sidebar_position: 3
 1. 创建sagoo_iot数据库
 2. 执行`manifest/sql`目录下`init.sql`数据脚本
 
-## 本地编译运行
+## 服务端程序编译与运行
 
- ### 一、服务端本地启动
+### 程序运行
 
    1. 将项目clone到本地工作空间, `https://github.com/sagoo-cloud/sagooiot.git`
-
    2. 使用goland开发工具打开项目并找到goland的setting模块，找到Go Model设置环境代理`https://goproxy.io`.
-
    3. 使用`go mod tidy`同步项目依赖
+   4. 找到`manifest/config/config.example.yaml`文件，将其复制一份改名为`config.yaml`
+   5. 跟据基础环境的相关配置，修改`config.yaml`文件中MySQL、Tdengine、Redis、MQTT等配置信息。 
+   6. go run main.go 建议使用Goland开发工具，直接运行main方法。
 
-   4. 找到`manifest/config/config.example.yaml`文件
+参考配置:
+  详细配置请参考【<a href="config" target="_blank">系统配置参考</a>】
 
-   5. 复制`config.example.yaml`文件在`manifest/config`目录下并重命名为:`config.yaml`
+### 部署
 
-   6. 修改`config.yaml`文件中MySQL、Tdengine、Redis、MQTT等配置信息
+SagooIoT提供了交叉编译的脚本，在项目根目录下。
 
-    其中MySQL配置中，link格式为: 
+在SagooIoT项目根目录下,使用`./build.sh linux|windows|mac`进行程序编译
+
+:::info 备注
+
+    在使用`build.sh`进行程序编译，如果提示
 
   ```shell
-    type:username:password@protocol(address)[/dbname][?param1=value1&...&paramN=valueN]
+    fatal: No names found, cannot describe anything.
+    
   ```
-      
-  即:
-    `类型:账号:密码@协议(地址)/数据库名称?特性配置`
 
-   7. 参考配置:
+出现这个提示是因为源码没有进行git版本的标签设置.这个设置是为了编译后，将版本号打版到二进制编译程序中。
 
-      ```yaml
-          # 配置文件的键名命名方式统一使用小驼峰。
-          # HTTP Server.
-          server:
-            address: ":8200"
-            serverRoot: "resource/public"
-            dumpRouterMap: false
-            routeOverWrite: true
-            openapiPath: "base-api/api.json"
-            swaggerPath: "/swagger"
-            NameToUriType: 3
-            maxHeaderBytes: "20KB"
-            clientMaxBodySize: "50MB"
-            # Logging配置
-            logPath: "resource/log/server"                 # 日志文件存储目录路径，建议使用绝对路径。默认为空，表示关闭
-            logStdout: true               # 日志是否输出到终端。默认为true
-            errorStack: true               # 当Server捕获到异常时是否记录堆栈信息到日志中。默认为true
-            errorLogEnabled: true               # 是否记录异常日志信息到日志中。默认为true
-            errorLogPattern: "error-{Ymd}.log"  # 异常错误日志文件格式。默认为"error-{Ymd}.log"
-            accessLogEnabled: true              # 是否记录访问日志。默认为false
-            accessLogPattern: "access-{Ymd}.log" # 访问日志文件格式。默认为"access-{Ymd}.log"
+如要支持将git的tag编译到程序中。需要创建git的tag。只有创建了tag，编译的程序才会显示版本号.
 
-          # 数据库连接配置
-          database:
-            logger:
-              path: "logs/sql"
-              level: "all"
-              stdout: true
-              ctxKeys: [ "RequestId" ]
+如果不需要，也可以忽略。
 
-            default:
-              link: "mysql:root:kWHPd78TTxUr3Xct@tcp(127.0.0.1:3306)/sagoo_iot?loc=Local&parseTime=true"
-              debug: false #开启调试模式
-              charset: "utf8mb4" #数据库编码(如: utf8/gbk/gb2312)，一般设置为utf8
-              dryRun: false #ORM空跑(只读不写)
-              maxIdle: 10 #连接池最大闲置的连接数
-              maxOpen: 10 #连接池最大打开的连接数
-              maxLifetime: 30 #(单位秒)连接对象可重复使用的时间长度
+向git库，提交git版本号：
+  ```shell
+    git tag v0.0.1
+    git push origin v0.0.1
+    
+  ```
+:::
 
-          # TDengine配置
-          tdengine:
-            type: "taosRestful" #http连接方式，端口是6041
-            dsn: "root:n7XQ!9JG@http(127.0.0.1:6041)/"
-            dbName: "sagoo_iot"
+### 部署
 
-          # 文件上传设置
-          upload:
-            path: "upload"
+1. 执行完第一步的命令之后，会在项目根目录下，生成一个bin目录编译后文件夹.
+2. 将bin目录下所有的文件上传到服务器`/opt/sagoo/iot-server`目录下，或是自行需要放置的目录即可. 
+3. 进入到`/opt/sagoo/iot-server/config`目录下，找到config.yml文件，跟据环境对其进行修改.
+   需要将MySQL、Tdengine、Redis、MQTT等配置信息更改为当前服务器所部署的基础环境. 
+4. 修改完之后，返回到bin目录下，使用 `./curl.sh start` 启动服务
 
-          logger:
-            path: "resource/log/run"
-            file: "{Y-m-d}.log"
-            level: "all"
-            stdout: true
-            ctxKeys: [ "RequestId" ]
+`curl.sh`脚本参数：
 
-          #GFToken
-          gfToken:
-            timeOut: 10800         #token超时时间（秒）
-            maxRefresh: 5400       #token自动刷新时间（秒）
-            multiLogin: true       #是否允许一个账号多人同时登录
-            encryptKey: "49c54195e750b09e74a8429b17896321"    #加密key (32位)
-            excludePaths: #排除不做登录验证的路由地址
-              - "/api/v1/login"
+`start|stop|restart|status|tail` 分别对应 启动、停止、重启、状态、显示动态日志运行信息
 
-          # Redis 配置示例
-          redis:
-            # 单实例配置
-            default:
-              address: 127.0.0.1:6379
-              db: 1
-              pass: FDXLK3LdGYYk9mut
-              idleTimeout: 600
-              maxActive: 100
+`curl.sh`是一个后台驻留的执行脚本，建议采用这个脚本进行执行。
 
-          # 这个mqtt客户端主要是服务端内部处理消息使用的通道
-          mqtt:
-            addr: 127.0.0.1:1883
-            # 最好带上服务名称，变成唯一id
-            clientId: sagoo-iot-open-001
-            deviceLiveDuration: 30
-            auth:
-              userName: admin
-              userPassWorld: 123456
+:::info 注意
 
-          system:
-            pluginsPath: "./plugins/built"
-            cache:
-              prefix: "SagooIOT_" #缓存前缀
-              model: "redis"  #存储引擎 （memory使用内存|redis使用redis）
-      ```
+首次启动SagooIoT系统，用使用 `./sagooiot -tsd` 命令，对TSD数据库进行初始化，否则会出现错误。
 
-### 二、前端本地启动
+:::
 
-  1. 将项目clone到本地工作空间, `https://github.com/sagoo-cloud/sagooiot-ui.git`.
-  2. 在项目根目录下找到`.env.development`文件，修改对应的配置信息，以下是参考内容:
+
+## 前端程序编译与运行
+
+### 程序运行
+
+  1. 获取源代码，将项目clone到本地工作空间，源码库地址： `https://github.com/sagoo-cloud/sagooiot-ui.git`.
+  2. 接取代码到本地后，在项目根目录中找到`.env.development`文件，修改对应的配置信息，以下是参考内容:
 
   ```shell
     VITE_SERVER_PROTOCOL = 'http:'
@@ -146,58 +93,27 @@ sidebar_position: 3
     VITE_API_URL = '/api/v1'
   ```
 
-  3. 使用`yarn`进行项目依赖安装
+  3. 使用`yarn install`进行项目依赖安装
   4. 使用`yarn run dev`启动项目
 
-## 源码编译部署
 
-### 一、服务端源码编译
+###  编译
 
-  1. 进入到项目根目录下,使用`./build.sh linux|windows|mac`进行程序编译
-
-    使用`build.sh`进行程序编译，如果在使用build.sh脚本进行程序编译时，提示
-
-  ```shell
-    fatal: No names found, cannot describe anything.
-  ```
-
-    是因为源码没有进行git版本的标签设置.
-
-    支持将git的tag编译到程序中。需要创建git的tag。只有创建了tag，编译的程序才会显示版本号.
-
-  ```shell
-    git tag v0.0.1
-    git push origin v0.0.1
-  ```
-
-  2. 执行完第一步的命令之后，会在项目根目录下，生成一个bin目录编译后文件夹.
-  3. 将bin目录下所有的文件上传到服务器`/opt/sagoo/iot-server`目录下.
-  4. 进入到`/opt/sagoo/iot-server/config`目录下，找到config.yml文件并对其进行修改.
-    需要将MySQL、Tdengine、Redis、MQTT等配置信息更改为当前服务器所部署的基础环境.
-  5. 修改完之后，返回到bin目录下，使用 `./curl.sh start` 启动服务,curl.sh脚本参数：
-
-  ```shell
-    start|stop|restart|status|tail
-  ```
-
-      分别对应 启动、停止、重启、状态、显示动态日志运行信息
-
-:::tip 注意
-
-首次启动SagooIoT系统，用使用 `./sagooiot -tsd` 命令，对TSD数据库进行初始化，否则会出现错误。
-
-:::
-
-
-###  二、前端源码编译
-
-  1. 进入到项目根目录下使用`npm run build`命令进行编译
+  1. 在项目根目录下使用`npm run build`命令进行编译
 
   2. 执行完之后会在项目根目录下生成`dist`目录，将`dist`目录名更改为`iot-ui`
 
   3. 将第二步执行完的`iot-ui`目录及所有问题上传到服务器`/opt/sagoo`目录下
 
-### 三、nginx配置
+### 部署
+
+#### 单体部署
+如果SagooIoT采用的是单体部署的模式，也就是说，采用的是直接以SagooIoT服务程序为web服务的部署方式。
+将编译好的`dist`目录下的所有文件复制到SagooIoT服务端`public`目录中即可，
+
+#### 代理部署
+
+希望通过Nginx采用代理方式部署，则需要在目标服务器上创建存入前端程序的目录，并配置nginx可以通过域名或是IP访问到这个目录。
 
   1. 进入到`/usr/local/nginx/conf`并对`nginx.conf`进行编辑
   2. 修改配置文件，以下是参考内容:

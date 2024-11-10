@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 ---
-# 安装过程
+# 环境安装
 
 SagooIOT基础环境安装包括以下几个部分：
 
@@ -9,11 +9,9 @@ SagooIOT基础环境安装包括以下几个部分：
 
 2. TDengine 3.0.1.5 【[官方安装文档](https://docs.taosdata.com/get-started/package/)】
 
-3. EMQX 5.0.9-el8  【[官方安装文档](https://www.emqx.io/docs/zh/v5.1/getting-started/getting-started.html)】
+3. EMQX 5.0.9-el8  【[官方安装文档](https://www.emqx.io/docs/zh/v5.1/getting-started/getting-started.html)】 
 
-4. Nginx 1.22.0
-
-5. MySQL 5.7 或 PostgreSQL 13.4
+4. MySQL 5.7 或 PostgreSQL 13.4
 
 
 ## 安装redis
@@ -96,7 +94,7 @@ SagooIOT基础环境安装包括以下几个部分：
 
 请确保您有 root 权限，并在每一步操作前确保系统已经升级到最新版本。
 
-## 安装TDengine
+##  安装TDengine
 
 :::tip 提示
 
@@ -156,34 +154,6 @@ https://dbeaver.io/
 详细的安装过程请看EMQX的官网说明：[官网安装手册](https://www.emqx.io/docs/zh/v5.0/deploy/install.html)
 
 
-## 安装Nginx
-
-1. 官网地址：`http://nginx.org/en/download.html`
-
-2. 将下载后的nginx上传至`/opt/nginx`下
-
-3. 使用`tar zxf`对nginx进行解压
-
-   ```shell
-    tar -zxf nginx-1.25.1.tar.gz
-   ```
-
-4. 进入到nginx-1.25.1目录进行编译安装
-
-   ```shell
-    1. ./configure --prefix=/usr/local/nginx --with-http_ssl_module
-    2. make && make install
-   ```
-
-5. 进入到安装目录下修改nginx.conf配置文件
-
-   ```shell
-   1. cd /usr/local/nginx
-   2. vi conf/nginx.conf
-   ```
-
-详细的安装过程请看 [Nginx安装教程](https://www.runoob.com/linux/nginx-install-setup.html)
-
 ## 安装MySQL
 
 1. 官网地址: `https://dev.mysql.com/downloads/mysql/`
@@ -215,3 +185,34 @@ https://dbeaver.io/
      2. ./bin/mysqld --initialize --basedir=/usr/local/mysql --datadir=/var/local/mysql/data
    ```
    **此处需注意保存生成的密码,之后需用到**
+
+
+如果需要基于Nginx运行，还需要安装Nginx
+
+## 安装Nginx
+
+1. 官网地址：`http://nginx.org/en/download.html`
+
+2. 将下载后的nginx上传至`/opt/nginx`下
+
+3. 使用`tar zxf`对nginx进行解压
+
+   ```shell
+    tar -zxf nginx-1.25.1.tar.gz
+   ```
+
+4. 进入到nginx-1.25.1目录进行编译安装
+
+   ```shell
+    1. ./configure --prefix=/usr/local/nginx --with-http_ssl_module
+    2. make && make install
+   ```
+
+5. 进入到安装目录下修改nginx.conf配置文件
+
+   ```shell
+   1. cd /usr/local/nginx
+   2. vi conf/nginx.conf
+   ```
+
+详细的安装过程请看 [Nginx安装教程](https://www.runoob.com/linux/nginx-install-setup.html)

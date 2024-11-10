@@ -27,57 +27,13 @@ SagooIOT的系统采用Golang开发，系统本身对于环境要求不高。主
 可以参考TDengine系统运行所需要的内存、CPU 以及硬盘空间。 [TDengine容量规划](https://docs.taosdata.com/operation/planning/)
 
 ## 支持平台
-SagooIOT采用Golang开发，拥有良好的跨平台特性，主要支持linux、windows、MacOS等。详细支持的平台如下：
+SagooIOT采用Golang开发，拥有良好的跨平台特性，主要支持linux、windows、MacOS等。详细支持的平台参考golang支持的系统情况。
 
-```
-aix/ppc64
-android/386
-android/amd64
-android/arm
-android/arm64
-darwin/amd64
-darwin/arm64
-dragonfly/amd64
-freebsd/386
-freebsd/amd64
-freebsd/arm
-freebsd/arm64
-illumos/amd64
-js/wasm
-linux/386
-linux/amd64
-linux/arm
-linux/arm64
-linux/mips
-linux/mips64
-linux/mips64le
-linux/mipsle
-linux/ppc64
-linux/ppc64le
-linux/riscv64
-linux/s390x
-netbsd/386
-netbsd/amd64
-netbsd/arm
-netbsd/arm64
-openbsd/386
-openbsd/amd64
-openbsd/arm
-openbsd/arm64
-plan9/386
-plan9/amd64
-plan9/arm
-solaris/amd64
-windows/386
-windows/amd64
-windows/arm
-```
 
 ## 独立部署
 
 服务器推荐使用Unix服务器系列(包括:Linux, MacOS, *BSD)，以下使用Linux系统为例，介绍如何部署。
-将应用服务目录复制到目标位置，里面写好了执行的脚本，通过脚本来执行。
-
+将应用服务目录复制到目标位置，里面写好了执行的脚本，通过我们提供的脚本来执行。
 
 ```
 curl.sh脚本参数：
@@ -85,7 +41,6 @@ curl.sh脚本参数：
 start|stop|restart|status|tail
 
 ```
-
 
 ## 代理部署
 

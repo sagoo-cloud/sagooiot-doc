@@ -1,3 +1,4 @@
+const LATEST_VERSION_LABEL = '专业版';
 import {themes as prismThemes} from 'prism-react-renderer';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
@@ -52,9 +53,14 @@ presets: [
     /** @type {import('@docusaurus/preset-classic').Options} */
     ({
       docs: {
-        sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          sidebarPath: './sidebars.js',
+          lastVersion: 'current',
+          // https://docusaurus.io/docs/versioning
+          versions: {
+            current: {
+              label: LATEST_VERSION_LABEL,
+            },
+          },
           editUrl:
             'https://gitee.com/sagoo-cloud/sagooiot-doc/',
           path: 'docs',
@@ -160,16 +166,81 @@ presets: [
         },
         items: [
           {
-            type: 'docSidebar',
+            type: 'docsVersionDropdown',
+            position: 'left',
+            dropdownActiveClassDisabled: true,
+          },
+          {
+            to: '/docs/base/introduce',
             sidebarId: 'tutorialSidebar',
             position: 'right',
             label: '用户手册',
+            items: [
+              {
+                label: '系统指南',
+                to: '/docs/base/introduce',
+              },
+              {
+                label: '安装部署',
+                to: '/docs/install/deploy',
+              },
+              {
+                label: '物联管理',
+                to: '/docs/iot/device/instance',
+              },
+              {
+                label: '规则引擎',
+                to: '/docs/iot/ruleEngine/instance',
+              },
+              {
+                label: '数据大屏',
+                to: '/docs/screen/pageGuide',
+              },
+              {
+                label: '视频监控',
+                to: '/docs/media/start',
+              },
+              {
+                label: '组态管理',
+                to: '/docs/iot/configure/start',
+              },
+              {
+                label: '设备接入',
+                to: '/docs/access',
+              }
+            ],
           },
           {
             to: '/develop/intro',
             label: '开发手册',
             position: 'right',
             activeBaseRegex: `/develop/`,
+            items: [
+              {
+                label: '程序介绍',
+                to: '/develop/base/introduce',
+              },
+              {
+                label: '编译与部署',
+                to: '/develop/compile/environment',
+              },
+              {
+                label: '消息协议',
+                to:'/develop/protocol/mqtt'
+              },
+              {
+                label: '插件开发',
+                to:'/develop/plugin/start'
+              },
+              {
+                label: '前端开发',
+                to:'/develop/front/introduce'
+              },
+              {
+                label: 'OpenAPIs',
+                to:'/develop/openapi/intro'
+              }
+            ]
           },
           {
             to: '/cases/introduction',
