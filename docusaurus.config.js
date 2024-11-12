@@ -47,6 +47,21 @@ const config = {
     //     src:"http://127.0.0.1:8080/api/application/embed?protocol=http&host=127.0.0.1:8080&token=1266627a551bb5ac",
     // }
 ],
+  // 多语言配置
+  i18n: {
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans', 'en'],
+    path: 'i18n',
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en-US',
+        calendar: 'gregory',
+        path: 'en',
+      },
+    },
+  },
 presets: [
   [
     'classic',
