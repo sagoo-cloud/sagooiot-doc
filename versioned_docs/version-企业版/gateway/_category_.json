@@ -1,6 +1,6 @@
 {
-  "label": "安装部署",
-  "position": 0,
+  "label": "服务端网关",
+  "position": 20,
   "link": {
     "type": "generated-index"
   }
