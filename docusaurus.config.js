@@ -225,7 +225,7 @@ presets: [
             to: '/join/intro',
             label: '加入我们',
             position: 'right',
-            activeBaseRegex: `/join/`,
+            sidebarId: `joinSidebar`,
           },
           {
             href: 'https://support.qq.com/product/595720',
