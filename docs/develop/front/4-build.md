@@ -1,6 +1,6 @@
 # 编译与部署
 
-SagooIoT 前端工程编译与部署，工程都已经编写好脚本。可以通过 `package.json` 文件中 `scripts` 部分直接运行。推荐使用 `Visual Studio Code` 进行开发。
+SagooIoT 前端工程编译与部署，工程都已经编写好脚本。可以通过 `package.json` 文件中 `scripts` 部分直接运行。推荐使用 `Visual Studio Code` 或 `WebStorm` 进行开发。
 
 ## 配置说明
 

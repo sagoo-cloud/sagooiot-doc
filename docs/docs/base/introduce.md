@@ -1,4 +1,7 @@
 ---
+slug: '/docs/base/introduce'
+title: '系统介绍'
+hide_title: true
 sidebar_position: 0
 ---
 # 系统介绍

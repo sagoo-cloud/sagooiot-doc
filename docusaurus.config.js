@@ -15,27 +15,17 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
+  trailingSlash:false,
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'sagoo', // Usually your GitHub org/user name.
   projectName: 'xinjiayu', // Usually your repo name.
-
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   themes: ['@docusaurus/theme-mermaid'],
-  // In order for Mermaid code blocks in Markdown to work,
-  // you also need to enable the Remark plugin with this option
   markdown: {
     mermaid: true,
   },
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
-  // i18n: {
-  //   defaultLocale: 'en',
-  //   locales: ['en'],
-  // },
   scripts: [
     {
       src: 'https://hm.baidu.com/hm.js?b8d6166a7eddaa8fe0a45f63a1a82066',
@@ -68,30 +58,28 @@ presets: [
     /** @type {import('@docusaurus/preset-classic').Options} */
     ({
       docs: {
-          sidebarPath: './sidebars.js',
-          lastVersion: 'current',
+        routeBasePath: '/',
+        sidebarPath: require.resolve('./sidebars.js'),
+        lastVersion: 'current',
           // https://docusaurus.io/docs/versioning
           versions: {
             current: {
               label: LATEST_VERSION_LABEL,
             },
           },
-          editUrl:
-            'https://gitee.com/sagoo-cloud/sagooiot-doc/',
-          path: 'docs',
+          editUrl: 'https://github.com/sagoo-cloud/sagooiot-doc/main',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://gitee.com/sagoo-cloud/sagooiot-doc/',
-        },
-        theme: {
-          customCss: './src/css/custom.css',
-        },
+      blog: {
+        showReadingTime: true,
+        // Please change this to your repo.
+        // Remove this to remove the "edit this page" links.
+        editUrl: 'https://github.com/sagoo-cloud/sagooiot-doc/main',
+      },
+      theme: {
+        customCss: require.resolve('./src/css/custom.css'),
+      },
       }),
     ],
   ],
@@ -104,38 +92,7 @@ presets: [
         crossorigin: 'anonymous',
       },
   ],
-  plugins: [
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'develop',
-        path: 'develop',
-        routeBasePath: 'develop',
-        sidebarPath: './sidebarsDevelop.js',
-        // ... other options
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'cases',
-        path: 'cases',
-        routeBasePath: 'cases',
-        sidebarPath: './sidebarsCases.js',
-        // ... other options
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'join',
-        path: 'join',
-        routeBasePath: 'join',
-        sidebarPath: './sidebarsJoin.js',
-        // ... other options
-      },
-    ],
-  ],
+  plugins: [],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -176,7 +133,7 @@ presets: [
       navbar: {
         title: 'SagooIoT',
         logo: {
-          alt: 'sagooiot',
+          alt: 'SagooIoT',
           src: 'img/logo.svg',
         },
         items: [
@@ -187,7 +144,7 @@ presets: [
           },
           {
             to: '/docs/base/introduce',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'mainSidebar',
             position: 'right',
             label: '用户手册',
             items: [
@@ -229,7 +186,7 @@ presets: [
             to: '/develop/intro',
             label: '开发手册',
             position: 'right',
-            activeBaseRegex: `/develop/`,
+            sidebarId: 'developSidebar',
             items: [
               {
                 label: '程序介绍',
@@ -261,7 +218,7 @@ presets: [
             to: '/cases/introduction',
             label: '项目案例',
             position: 'right',
-            activeBaseRegex: `/cases/`,
+            sidebarId: 'casesSidebar',
           },
           {to: '/blog', label: '博客', position: 'right'},
           {
@@ -276,6 +233,11 @@ presets: [
             position: 'right',
           },
         ],
+      },
+      // toc目录层级显示设置
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 4,
       },
       footer: {
         style: 'dark',
