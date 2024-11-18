@@ -53,7 +53,7 @@ export default function Home() {
     return (
         <Layout
             title={`沙果开源物联网系统 ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="SagooIoT是一个企业级开源物联网平台系统，提供高性能、低成本、易用的企业级物联网解决方案。我们的核心组件包括基于物模型的设备管理、可视化规则引擎、可视化组态工具、视频监控中心和统一的数据处理中心。SagooIoT支持多种接入协议，如TCP、MQTT、UDP、CoAP、HTTP、GRPC、RPC等，适配多种设备和平台，旨在通过可复用的组件减少开发工作，简化和加速物联网开发交付。加入我们，体验高效、灵活的物联网解决方案。">
       <HomepageHeader />
             <main>
                 <HomepageFeatures/>
