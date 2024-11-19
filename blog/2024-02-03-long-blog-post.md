@@ -9,3 +9,4 @@ tags: [sagooiot doc]
 
 对于SagooIoT的文档站，我希望它能够更加简洁，更加易于维护，更加易于阅读。Docusaurus3提供了很多功能。我将逐步使用这些功能来完善SagooIoT的文档站。
 
+{/* truncate */}
