@@ -1,6 +1,6 @@
 {
-  "label": "程序介绍",
-  "position": 1,
+  "label": "概要介绍",
+  "position": 0,
   "link": {
     "type": "generated-index"
   }
