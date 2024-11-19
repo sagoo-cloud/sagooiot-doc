@@ -93,3 +93,10 @@
 .footer--dark {
   --ifm-footer-background-color: #2b3137;
 }
+.markdown {
+  --ifm-h2-vertical-rhythm-top: 1;
+}
+
+.markdown > *:first-child {
+  margin-top: 20px;
+}

@@ -212,6 +212,10 @@ const config: Config = {
           label: '问题反馈',
           position: 'right',
         },
+        // {
+        //   type: 'localeDropdown', //多语言选择
+        //   position: 'left',
+        // },
       ],
     },
     // toc目录层级显示设置
