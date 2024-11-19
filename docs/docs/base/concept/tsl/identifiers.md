@@ -1,7 +1,8 @@
 ---
+title: '英文标识符命名规范'
 sidebar_position: 2
+hide_title: true
 ---
-# 英文标识符命名规范
 
 > 该规范引用ICA数据标准平台 ，解释原文: [英文标识符命名规范](https://g.alicdn.com/aic/ica-docs/1.0.4/za5izx.html)
 

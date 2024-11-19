@@ -7,8 +7,6 @@ keywords: [iot开发,SagooIoT开发,物模型]
 description: '轻量化的物联网系统开发'
 ---
 
-# 程序说明
-
 ## 关于SagooIOT
 
 SagooIOT基于GoFrame，Vue3+Element plus 开发的一体化基础的物联网平台系统。

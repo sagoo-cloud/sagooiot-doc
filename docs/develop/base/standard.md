@@ -1,4 +1,10 @@
-# 开发规范
+---
+title: '开发规范'
+sidebar_position: 3
+hide_title: true
+keywords: [iot开发,SagooIoT开发,物模型]
+description: '轻量化的物联网系统开发'
+---
 
 ## 命名
 

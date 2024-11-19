@@ -1,7 +1,8 @@
 ---
-sidebar_position: 10
+title: '国产化说明'
+hide_title: true
+sidebar_position: 40
 ---
-# 国产化说明
 
 SagooIoT 产品国产化说明，支持的国产化数据库、服务器、操作系统以及国产化中间件。
 

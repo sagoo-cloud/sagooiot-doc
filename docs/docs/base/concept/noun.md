@@ -1,8 +1,8 @@
 ---
+title: '名词解析'
+hide_title: true
 sidebar_position: 0
 ---
-# 名词解释
-
 
 以下对产品/设备管理中所用到的名词进行解释，以便在文档中达成统一。
 

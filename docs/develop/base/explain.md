@@ -1,4 +1,9 @@
-# 开发说明
+---
+title: '开发说明'
+sidebar_position: 1
+hide_title: true
+keywords: [iot开发,SagooIoT开发,物模型]
+---
 
 ## 目录说明
 1. api声明文件，在版本下，如V1目录下，创建模块目录，进行api文件的定义。

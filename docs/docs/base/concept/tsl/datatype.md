@@ -1,7 +1,8 @@
 ---
-sidebar_position: 3
+title: "数据类型详解"
+sidebar_position: 2
+hide_title: true
 ---
-# 数据类型详解
 
 SagooIOT遵循ICA数据标准，提供了7种数据类型，分别为：整数型、浮点型、枚举型、布尔型、字符串、时间型和JSON对象，各数据类型的详细定义如下：
 

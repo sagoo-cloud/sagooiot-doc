@@ -1,4 +1,8 @@
-# 设备和应用接入
+---
+title: '设备和应用接入'
+hide_title: true
+sidebar_position: 40
+---
 
 SagooIoT的核心接入能力可以分为两大方面：南向能力和北向能力。
 
