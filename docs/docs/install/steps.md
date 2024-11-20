@@ -1,18 +1,18 @@
 ---
+title: '环境安装'
 sidebar_position: 2
+hide_title: true
 ---
-# 环境安装
 
 SagooIOT基础环境安装包括以下几个部分：
 
-1. Redis 7.0.4   【[官方安装文档](https://redis.io/docs/getting-started/installation/)】
+1. Redis 7.x以上   【[官方安装文档](https://redis.io/docs/getting-started/installation/)】
 
-2. TDengine 3.0.1.5 【[官方安装文档](https://docs.taosdata.com/get-started/package/)】
+2. MySQL 5.7.x以上 或 PostgreSQL 13.x 以上
 
-3. EMQX 5.0.9-el8  【[官方安装文档](https://www.emqx.io/docs/zh/v5.1/getting-started/getting-started.html)】 
+2. TDengine 3.3.x以上 【[官方安装文档](https://docs.taosdata.com/get-started/package/)】（可选，Influxdb）
 
-4. MySQL 5.7 或 PostgreSQL 13.4
-
+3. EMQX 5.0.9-el8  【[官方安装文档](https://www.emqx.io/docs/zh/v5.1/getting-started/getting-started.html)】 (可选，SagooIoT默认有自己的MQTT服务)
 
 ## 安装redis
 
@@ -94,6 +94,40 @@ SagooIOT基础环境安装包括以下几个部分：
 
 请确保您有 root 权限，并在每一步操作前确保系统已经升级到最新版本。
 
+
+## 安装MySQL
+
+1. 官网地址: `https://dev.mysql.com/downloads/mysql/`
+
+2. 选择适合自己的版本下载，此处以`mysql-8.0.34-linux-glibc2.28-x86_64.tar.gz`为例，将下载后的压缩包上传到服务器`/opt/mysql`目录下
+
+3. 使用命令解压
+
+   ```shell
+     tar xvf mysql-8.0.25-linux-glibc2.28-x86_64.tar.gz
+   ```
+
+4. 将解压后的文件移动到`/usr/local`目录下
+
+   ```shell
+     mv mysql-8.0.25-linux-glibc2.28-x86_64 /usr/local/mysql
+   ```
+
+5. 创建 MySQL 数据存储目录
+
+   ```shell
+     mkdir /var/local/mysql/data
+   ```
+
+6. 初始化数据库
+
+   ```shell
+     1. cd /usr/local/mysql
+     2. ./bin/mysqld --initialize --basedir=/usr/local/mysql --datadir=/var/local/mysql/data
+   ```
+   **此处需注意保存生成的密码,之后需用到**
+
+
 ##  安装TDengine
 
 :::tip 提示
@@ -152,39 +186,6 @@ https://dbeaver.io/
    ![image-20221101231856257](../imgs/install/image-20221101231856257.png)
 
 详细的安装过程请看EMQX的官网说明：[官网安装手册](https://www.emqx.io/docs/zh/v5.0/deploy/install.html)
-
-
-## 安装MySQL
-
-1. 官网地址: `https://dev.mysql.com/downloads/mysql/`
-
-2. 选择适合自己的版本下载，此处以`mysql-8.0.34-linux-glibc2.28-x86_64.tar.gz`为例，将下载后的压缩包上传到服务器`/opt/mysql`目录下
-
-3. 使用命令解压
-
-   ```shell
-     tar xvf mysql-8.0.25-linux-glibc2.28-x86_64.tar.gz
-   ```
-
-4. 将解压后的文件移动到`/usr/local`目录下
-   
-   ```shell
-     mv mysql-8.0.25-linux-glibc2.28-x86_64 /usr/local/mysql
-   ```
-
-5. 创建 MySQL 数据存储目录
-
-   ```shell
-     mkdir /var/local/mysql/data
-   ```
-
-6. 初始化数据库
-   
-   ```shell
-     1. cd /usr/local/mysql
-     2. ./bin/mysqld --initialize --basedir=/usr/local/mysql --datadir=/var/local/mysql/data
-   ```
-   **此处需注意保存生成的密码,之后需用到**
 
 
 如果需要基于Nginx运行，还需要安装Nginx

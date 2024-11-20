@@ -1,7 +1,14 @@
-# 配置文件
-
+---
+title: "配置文件"
+sidebar_position: 5
+hide_title: true
+---
 
 ## 主系统配置参考
+
+开发环境下，配置文件在`manifest/config/config.example.yaml`，复制一份命名为`config.yaml`，根据实际情况修改配置。
+
+如果是编译后部署的情况下，通常配置文件会是`config/config.yaml`。
 
 ```yaml
 

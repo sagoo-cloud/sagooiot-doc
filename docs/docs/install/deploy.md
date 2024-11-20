@@ -1,10 +1,11 @@
 ---
+title: 部署说明
 sidebar_position: 1
+hide_title: true
 ---
-# 部署说明
 
 
-该程序可以独立部署，直接执行使用，也可以与nginx或是apache联合使用。
+SagooIoT 可以独立部署，直接执行使用，也可以采用代理方式与nginx或是apache联合使用。
 
 
 ## 硬件要求

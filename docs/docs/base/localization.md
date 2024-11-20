@@ -28,6 +28,7 @@ SagooIoT 产品国产化说明，支持的国产化数据库、服务器、操�
 * Vitess
 * 达梦
 
+只要是兼容mysql、postgresql协议的数据库，都可以尝试替换。
 
 ## 中间件	
 * EMQX

@@ -1,44 +1,24 @@
-# 快速开始
+---
+title: "快速开始"
+sidebar_position: 0
+hide_title: true
+---
 
-## 准备工作
+:::info 前置条件
+- 本地已安装 Docker
+- docker（版本>=20.0.0）以及docker-compose。
+:::
 
+## 快速部署
 
-### 环境准备
+通过 Docker 快速部署 SagooIoT 服务端和前端。
 
+通过官方提供的内部git仓库，获取SagooIoT的Docker部署文件。
 
+拉取后，进入到docker-compose目录，执行`docker-compose up -d`命令，即可启动SagooIoT服务。
 
-### 下载测试客户端
+## 访问系统
 
-#### MQTT客户端
+访问SagooIoT管理界面
 
-下载MQTT客户端工具「MQTTBox」，用于模拟设备连接平台，[下载地址](https://www.aliyundrive.com/s/PBkXRPfremg)
-
-
-#### TCP/UDP 客户端
-
-
-
-
-## 创建产品
-
-### 产品信息管理
-
-
-### 物模型管理
-
-
-## 创建设备
-
-
-## 连接设备
-
-
-## 查看实时数据
-
-
-## 配置告警
-
-
-## 配置场景联动
-
-
+- 服务端：`http://localhost:8200`

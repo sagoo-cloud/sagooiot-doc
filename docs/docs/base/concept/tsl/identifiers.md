@@ -12,7 +12,7 @@ hide_title: true
 
 > 例如，使用Color，而不是Colour。
 
-• 尽可能使用在世界范围内被广泛认可的缩写，可参考RFC EditorAbbreviations List （http://www.rfc-editor.org/materials/abbrev.expansion.txt）中带星号的，并且全部大写。
+• 尽可能使用在世界范围内被广泛认可的缩写，可参考[RFC EditorAbbreviations List](http://www.rfc-editor.org/materials/abbrev.expansion.txt)中带星号的，并且全部大写。
 
 > 例如，使用HTML orID（for identity），但是不要使用temp来表示temperature。
 

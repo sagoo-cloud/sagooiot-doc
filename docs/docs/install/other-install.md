@@ -1,9 +1,15 @@
-# 服务部署
+---
+title: "服务部署"
+sidebar_position: 10
+hide_title: true
+---
+
+这里主要介绍的是共它独立服务的部署。SagooIoT的生态应用服务，都是基于Golang开发的，所以部署的环境要求不高，只要是支持Golang的系统都可以部署。
 
 ## 流媒体部署
 
-1. 进入项目根目录下，使用`./build.sh linux|windows|mac`进行程序编译
-2. 进入到服务器`/opt/sagoo/iot-server`下
+1. 进入流媒体项目根目录下，使用`./build.sh linux|windows|mac`进行程序编译
+2. 进入到服务器`/opt/sagoo/iot-server`下，跟据实际情况确定部署目录。
 3. 创建server文件夹及SagooMedia子文件夹，并将第一步编译后的所有文件放到SagooMedia子文件夹下
 4. 进入到`server/SagooMedia`目录下修改config.toml配置，可参考以下配置内容
 

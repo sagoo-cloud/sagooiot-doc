@@ -1,16 +1,18 @@
 ---
+title: 系统安装
 sidebar_position: 3
+hide_title: true
 ---
-# 系统安装
+
 
 SagooIoT系统的安装，通过获取源码进行编译后进行部署。
 
-## 初始化数据库脚本
+## 初始化数据库
 
-基础环境安装后，需要初始化数据库脚本。
+基础环境安装后，需要初始化数据库。
 
 1. 创建sagoo_iot数据库
-2. 执行`manifest/sql`目录下`init.sql`数据脚本
+2. 导入`manifest/sql`目录下的`init.sql`数据脚本
 
 ## 服务端程序编译与运行
 
