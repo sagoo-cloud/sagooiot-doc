@@ -1,5 +1,5 @@
 ---
-title: "服务部署"
+title: "其它服务"
 sidebar_position: 10
 hide_title: true
 ---

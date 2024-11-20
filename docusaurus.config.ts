@@ -173,7 +173,7 @@ const config: Config = {
               to: '/develop/base/introduce',
             },
             {
-              label: '编译与部署',
+              label: '编译与运行',
               to: '/develop/compile/environment',
             },
             {
