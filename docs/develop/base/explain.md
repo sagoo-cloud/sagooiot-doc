@@ -5,10 +5,16 @@ hide_title: true
 keywords: [iot开发,SagooIoT开发,物模型]
 ---
 
-## 目录说明
-1. api声明文件，在版本下，如V1目录下，创建模块目录，进行api文件的定义。
-2. internal进行功能实现。其中主要实现的有controller、logic两个目录的内容。
-dao、model中的do、entity目录是由gf gen 工具自动生成的。对于model的结构体的自定义放在model下的对应文件中
+在开发前，需要了解项目的基本结构和规范，以便更好的进行开发。请熟悉[Goframe框架的使用](https://goframe.org/quick/install)，以及项目的基本结构。
+
+
+
+## 核心业务目录说明
+**1. API定义：** 在`API`目录中进行定义，在版本下，如V1目录下，创建模块目录，进行api文件的定义。
+
+**2. 业务逻辑实现：** 在`internal`目录中进行俱体的业务功能实现。其中主要实现的有controller、logic两个目录的内容。
+
+**3. 业务Model：**  在`internal`下的dao、model中的do、entity目录是由[gf gen 工具](https://goframe.org/docs/cli)自动生成的。对于model的结构体的自定义放在model下的对应文件中
 
 
 每个独立完整的功能，建议创建独立的功能目录，在controller、logic等下面。
@@ -48,17 +54,6 @@ dao、model中的do、entity目录是由gf gen 工具自动生成的。对于mod
 * 第二步: 定义业务单元常量
 * 第三步: 在controller中定义接口，并调用InitConnection()方法初始化连接
 * 第四步: 编写对应的Heartbeat业务
-
-## TDengine
-TDengine 官方提供两种连接器：原生连接、REST连接(http)  
-在使用时可以灵活配置，配置方式如下：
-
-1. 在hack/config.yaml中配置
-2. 原生连接：type=taosSql，端口是6030
-3. REST连接：type=taosRestful，端口是6041
-4. 修改驱动的引入方式(import)：sagoo-admin/internal/logic/tdengine/td_engine.go
-
-***`注：原生连接使用了cgo`***
 
 ## 添加数据
 

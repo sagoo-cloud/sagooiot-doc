@@ -1,27 +1,32 @@
 ---
+title: 源码编译
 sidebar_position: 1
+hide_title: true
 ---
-# 源码编译
 
-## 安装依赖
+## 服务端源码编译
+
+### 安装依赖
 
 `go mod download` 或 `go mod tidy`
 
-## 修改项目配置文件
+### 修改项目配置文件
 
 将 `manifest/config/config.example.yaml` 这个文件改名为 `config.yaml`，并修改其中的配置项。
 
 
 请跟据注释进行配置修改，包括服务相关配置，日志相关配置。
 
-## 导入业务数据表
+### 导入业务数据表
 在manifest目录下，有一个`init.sql`文件，将该文件导入到mysql数据库中，创建数据库表。
+
+### 程序运行
 
 `go run main.go`
 
-## 关于build.sh编译脚本
+### 交叉编译
 
-可以使用build.sh进行程序编译。可选编译参数有linux、windows、mac。
+可以使用build.sh进行程序的交叉编译。可选编译参数有linux、windows、mac。
 
 如编译mac版本：
 ```shell
@@ -47,7 +52,7 @@ git push origin v0.0.1
 ```
 注意：v0.0.1是tag的版本号，可以根据实际情况进行修改。
 
-## 编译后执行脚本
+### 执行脚本
 
 编译后生成的可执行文件放在bin目录下，将bin目录下的文件放到目标服务器，执行`./curl.sh start` 运行即可。
 
@@ -61,4 +66,26 @@ start|stop|restart|status|tail
 分别对应 启动、停止、重启、状态、显示动态日志运行信息
 
 
+## 前端源码编译
 
+### 安装依赖
+
+```shell
+yarn install
+```
+
+### 修改项目配置文件
+
+默认运行的是本地环境，如果需要修改后端接口地址，请修改`.env`相关的文件。
+
+`.env.development` 是开发环境的配置文件
+
+`.env` 是生产环境的配置文件
+
+### 程序运行
+
+```shell
+yarn serve
+```
+
+建议使用pakage.json中的scripts命令，进行快速启动。

@@ -1,14 +1,8 @@
 ---
+title: '分体运行'
 sidebar_position: 10
+hide_title: true
 ---
-
-# 分体运行
-
-:::tip 提示
-
-此能力只有收费版本支持
-
-:::
 
 SagooIoT为了进一步提高对高性能的支持，提供分体运行的方式。也就是将单一服务拆分多个部分进行分别独立运行。
 SagooIoT 支持web服务、设备处理服务、分布式任务队列服务分开独立运行的方式。可以将这三个服务分别部署到不同的服务器上，也可以将web服务和设备处理服务部署到同一台服务器上，将分布式任务队列服务部署到另一台服务器上。
@@ -18,12 +12,19 @@ SagooIoT 支持web服务、设备处理服务、分布式任务队列服务分�
 ## 目录说明
 分体运行的入口程序在工程根目录下的cmd目录中。
 
-* sagoo-admin http服务程序
-* sagoo-core 设备数据处理服务
-* sagoo-task 分布式的任务队列处理服务
-* script 服务运行脚本
+* sagoo-admin是web服务
+* sagoo-core是设备处理服务
+* sagoo-task是分布式任务队列服务
+* sagoo-rule是规则引擎服务
+* sagoo-task是任务处理服务
+* sagoo-mqtt是mqtt服务
 
 进入这些目录可以分别编译与运行。
+
+启用sagoo-admin之外，还需要启用sagoo-core服务。
+
+其它可以跟据需要启用。
+
 
 ## 一键编译
 在工程的根目录提供了`Makefile` 编译脚本。

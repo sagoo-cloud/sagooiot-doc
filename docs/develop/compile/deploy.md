@@ -15,7 +15,7 @@ TDengine 3.0【[安装文档](https://docs.taosdata.com/get-started/package/)】
 
 该程序可以独立部署，直接执行使用，也可以与nginx或是apache联合使用。
 
-### 一、独立部署
+### 独立部署
 
 服务器推荐使用*nix服务器系列(包括:Linux, MacOS, *BSD)，以下使用Linux系统为例，介绍如何部署。
 将应用服务目录复制到目标位置，里面写好了执行的脚本，通过脚本来执行。
@@ -29,7 +29,7 @@ start|stop|restart|status|tail
 ```
 
 
-### 二、代理部署
+### 代理部署
 
 推荐使用Nginx作为反向代理的前端接入层，有两种配置方式实现动静态请求的拆分。
 

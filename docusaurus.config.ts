@@ -58,7 +58,7 @@ const config: Config = {
           editUrl: 'https://github.com/sagoo-cloud/sagooiot-doc/main',
           // 显示更新时间和作者
           showLastUpdateTime: true,
-          showLastUpdateAuthor: true,
+          showLastUpdateAuthor: false,
         },
         // Will be passed to @docusaurus/plugin-content-blog (false to disable)
         blog: {

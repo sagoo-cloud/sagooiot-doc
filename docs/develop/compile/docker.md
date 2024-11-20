@@ -1,9 +1,11 @@
 ---
+title: 'docker部署'
 sidebar_position: 11
+hide_title: true
 ---
-# docker部署
 
- ### 一、服务端本地启动
+
+ ### 服务端本地启动
 
  1. 将项目clone到本地工作空间, `https://github.com/sagoo-cloud/sagooiot.git`
 
@@ -21,7 +23,7 @@ sidebar_position: 11
  
  6. 在根目录下找到`main.go`文件，并启动`iot-server`服务
 
- ### 二、前端本地启动
+ ### 前端本地启动
 
   1. 将项目clone到本地工作空间, `https://github.com/sagoo-cloud/sagooiot-ui.git`.
 
