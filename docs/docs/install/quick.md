@@ -42,7 +42,6 @@ docker编排版本: v2.29.7
 
 访问SagooIoT管理界面
 
-- 服务端：`http://localhost:8200`
 - 地址: http://localhost
    账号: admin
    密码: admin123456
