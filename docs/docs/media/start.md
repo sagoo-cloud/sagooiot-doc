@@ -1,5 +1,9 @@
 ---
+title: '媒体服务简介'
 sidebar_position: 0
+hide_title: true
+keywords: [视频监控,流媒体服务,m7s,Monibuca,RTMP,RTSP,HLS,GB28181,WebRTC,视频流]
+description: '介绍SagooIOT平台的媒体服务功能，包括视频监控、流媒体服务和多协议支持等内容。'
 ---
 # 简介
 

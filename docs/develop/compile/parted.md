@@ -2,6 +2,8 @@
 title: '分体运行'
 sidebar_position: 10
 hide_title: true
+keywords: [分布式部署,服务拆分,高性能架构,微服务,任务队列,设备处理,Web服务,MQTT服务,规则引擎,系统部署]
+description: '详细介绍SagooIOT平台的分布式部署方案，包括服务拆分、独立运行和性能优化等高级部署指南。'
 ---
 
 SagooIoT为了进一步提高对高性能的支持，提供分体运行的方式。也就是将单一服务拆分多个部分进行分别独立运行。

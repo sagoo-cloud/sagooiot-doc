@@ -1,3 +1,9 @@
+---
+sidebar_position: 3
+title: 'MQTT接口说明'
+keywords: [MQTT接口,消息订阅,消息发布,MQTT配置,连接认证,消息格式,实时通信,MQTT协议,物联网通信,消息主题]
+description: '详细说明SagooIOT平台的MQTT接口，包括消息订阅、发布机制和配置说明等MQTT协议通信指南。'
+---
 
 # MQTT方式
 
@@ -297,8 +303,3 @@ type (
   "timestamp":123456789
 }
 ```
-
-
-
-
-

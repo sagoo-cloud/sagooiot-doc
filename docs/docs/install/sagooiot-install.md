@@ -2,6 +2,8 @@
 title: 系统安装
 sidebar_position: 3
 hide_title: true
+keywords: [系统安装,源码编译,数据库初始化,服务部署,程序编译,环境配置,前端部署,Nginx配置,系统配置,安装流程]
+description: '详细指导SagooIOT系统的完整安装流程，包括数据库初始化、服务端编译部署、前端部署和Nginx配置等步骤。'
 ---
 
 
@@ -83,7 +85,7 @@ SagooIoT提供了交叉编译的脚本，在项目根目录下。
 ### 程序运行
 
   1. 获取源代码，将项目clone到本地工作空间，源码库地址： `https://github.com/sagoo-cloud/sagooiot-ui.git`.
-  2. 接取代码到本地后，在项目根目录中找到`.env.development`文件，修改对应的配置信息，以下是参考内容:
+  2. 接取代码到本地后，在项目根目录中找到`.env.development`文件，修改对应的配置信息，以下是参考内容：
 
   ```shell
     VITE_SERVER_PROTOCOL = 'http:'
@@ -118,7 +120,7 @@ SagooIoT提供了交叉编译的脚本，在项目根目录下。
 希望通过Nginx采用代理方式部署，则需要在目标服务器上创建存入前端程序的目录，并配置nginx可以通过域名或是IP访问到这个目录。
 
   1. 进入到`/usr/local/nginx/conf`并对`nginx.conf`进行编辑
-  2. 修改配置文件，以下是参考内容:
+  2. 修改配置文件，以下是参考内容：
 
   ```nginx
   
@@ -170,7 +172,7 @@ SagooIoT提供了交叉编译的脚本，在项目根目录下。
 
   3. 进入到`/usr/local/nginx/sbin`目录下，使用`./nginx -s reload`重载nginx配置文件
 
-以上步骤执行完之后，使用`http://localhost`进行访问，账号信息如下:
+以上步骤执行完之后，使用`http://localhost`进行访问，账号信息如下：
   
   账号: admin
   密码: admin123456

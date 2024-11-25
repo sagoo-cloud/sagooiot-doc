@@ -1,3 +1,9 @@
+---
+sidebar_position: 0
+title: '系统性能优化'
+keywords: [性能优化,EMQX调优,系统调优,epoll优化,内存优化,网络优化,Linux优化,性能调优,系统配置,高性能]
+description: '详细说明SagooIOT平台的系统性能优化方法，包括EMQX调优、系统参数调整和网络优化等全面的性能优化指南。'
+---
 
 # 系统优化
 

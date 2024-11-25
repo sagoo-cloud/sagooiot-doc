@@ -1,3 +1,11 @@
+---
+title: '多租户开发'
+sidebar_position: 2
+hide_title: true
+keywords: [多租户,租户管理,数据隔离,权限管理,多项目,应用管理,组织管理,AK/SK认证,访问控制,企业版]
+description: '详细说明SagooIOT平台的多租户功能，包括租户定义、数据隔离、多项目支持和权限管理等完整的多租户开发指南。'
+---
+
 # 多租户支持
 
 :::tip 说明

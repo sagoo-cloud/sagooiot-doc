@@ -1,3 +1,10 @@
+---
+title: '前端开发规范'
+sidebar_position: 1
+keywords: [Vue3规范,TypeScript规范,代码规范,命名规范,组件开发,文件结构,代码注释,最佳实践,代码风格,开发标准]
+description: '详细说明SagooIOT平台的前端开发规范，包括Vue3代码规范、TypeScript使用规范、组件开发规范和项目结构规范等标准化指南。'
+---
+
 # 前端开发规范
 
 前端使用 `ts` `vue3` `element-plus` 开发，开发新页面及功能时请遵循如下规范：
@@ -398,4 +405,3 @@ const { params, tableData, getList, loading } = useSearch<any[]>(
 
 getList()
 </script>
-```

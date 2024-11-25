@@ -1,5 +1,8 @@
 ---
 sidebar_position: 12
+title: 'CoAP协议'
+keywords: [CoAP协议,轻量级协议,认证鉴权,PSK认证,Token认证,设备通信,物联网协议,DTLS加密,安全通信,CoAP实现]
+description: '详细说明SagooIOT平台的CoAP协议实现，包括无认证和Token认证两种鉴权方式，以及基于PSK的安全通信机制。'
 ---
 # CoAP 协议
 

@@ -1,5 +1,9 @@
 ---
+title: 'RTMP协议接入'
 sidebar_position: 2
+hide_title: true
+keywords: [RTMP协议,视频推流,流媒体服务,直播推流,ffmpeg,视频流,实时传输,流媒体配置,RTMP服务,视频传输]
+description: '介绍SagooIOT平台的RTMP协议接入功能，包括配置说明、推流方法和实际应用示例。'
 ---
 # rtmp接入
 
@@ -31,4 +35,3 @@ ffmpeg -i **** -f flv rtmp://localhost/live/test
 ```
 ffplay -i rtmp://localhost/live/test
 ```
-

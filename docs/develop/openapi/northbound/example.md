@@ -1,3 +1,10 @@
+---
+sidebar_position: 1
+title: '北向接口示例'
+keywords: [接口示例,设备详情,JAVA示例,签名生成,接口调用,设备信息,API调用,开发示例,北向接口,实践指南]
+description: '提供SagooIOT平台北向接口的调用示例，包括设备详情获取、签名生成和接口调用等具体实现方法。'
+---
+
 # 使用示例
 
 本平台向北向开发者开放了相关接口，开发者可以通过[接口文档](https://zhgy.sagoo.cn/base-api/swagger)进行相关开发。

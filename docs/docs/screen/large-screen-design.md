@@ -1,5 +1,9 @@
 ---
+title: '大屏编辑'
 sidebar_position: 3
+hide_title: true
+keywords: [大屏编辑,大屏设计,可视化设计,界面布局,数据展示,大屏创建,设计工具,可视化编辑,大屏管理,界面设计]
+description: '详细介绍SagooIOT平台的大屏编辑功能，包括大屏创建、界面设计和数据展示等内容。'
 ---
 # 大屏编辑
 
@@ -36,6 +40,3 @@ sidebar_position: 3
 
 * 如果需要删除大屏的信息，可以在大屏列表项点击“删除”按钮进行删除。
   ![删除大屏](img/delete-a-large-screen.png)
-
-
-

@@ -1,5 +1,9 @@
 ---
+title: '用户管理'
 sidebar_position: 2
+hide_title: true
+keywords: [用户管理,账户管理,用户权限,身份认证,用户配置,账号管理,用户信息,系统用户,用户维护,访问控制]
+description: '介绍SagooIOT平台的用户管理功能，包括用户创建、权限分配和账户维护等内容。'
 ---
 # 用户管理
 
@@ -53,5 +57,3 @@ sidebar_position: 2
 在弹出的对话框中，输入用户要重置的新密码。
   ![重置](./img/user-management/resetting.png)
 确定后，系统将重置用户密码。
-
-

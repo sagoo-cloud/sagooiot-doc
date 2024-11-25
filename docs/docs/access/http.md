@@ -1,5 +1,9 @@
 ---
+title: 'HTTP设备接入'
+hide_title: true
 sidebar_position: 4
+keywords: [HTTP接入,设备接入,物模型配置,产品创建,设备管理,REST API,HTTP协议,物联网接入,数据上报,设备配置]
+description: '详细指导如何通过HTTP协议接入SagooIOT平台，包括产品创建、物模型配置、设备添加等完整接入流程。'
 ---
 # HTTP 设备接入
 

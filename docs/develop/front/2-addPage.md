@@ -1,3 +1,10 @@
+---
+title: '新增页面开发'
+sidebar_position: 2
+keywords: [页面开发,Vue组件,路由配置,菜单管理,CRUD开发,页面模板,组件开发,前端开发,页面结构,开发流程]
+description: '详细说明SagooIOT平台的新页面开发流程，包括页面创建、路由配置、菜单添加和CRUD模板等完整的页面开发指南。'
+---
+
 # 增加新页面
 
 开发一个新页面的简单模板
@@ -126,5 +133,3 @@ const onDel = (row: ApiRow) => {
   });
 };
 </script>
-
-```

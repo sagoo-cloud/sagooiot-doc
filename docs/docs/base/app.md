@@ -2,6 +2,8 @@
 title: '设备和应用接入'
 hide_title: true
 sidebar_position: 40
+keywords: [设备接入,应用对接,南向能力,北向能力,MQTT协议,CoAP协议,设备管理,数据接口,API开发,物联网集成]
+description: '详解SagooIoT平台的设备接入和应用对接能力，包括南向设备管理和北向应用支持，提供全面的协议支持和API接口。'
 ---
 
 SagooIoT的核心接入能力可以分为两大方面：南向能力和北向能力。

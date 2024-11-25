@@ -1,5 +1,9 @@
 ---
+title: '大屏功能介绍'
 sidebar_position: 0
+hide_title: true
+keywords: [大屏功能,可视化组件,数据展示,交互控件,图表组件,自由布局,可视化拖拽,动态数据,实时展示,数据可视化]
+description: '介绍SagooIOT平台大屏功能的主要特点，包括自由布局、可视化组件和动态数据展示等内容。'
 ---
 # 功能介绍
 

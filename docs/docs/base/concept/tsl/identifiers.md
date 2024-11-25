@@ -2,6 +2,8 @@
 title: '英文标识符命名规范'
 sidebar_position: 2
 hide_title: true
+keywords: [标识符命名,命名规范,英文标识,大骆峰命名法,属性命名,服务命名,事件命名,IoT标准,编程规范,代码规范]
+description: '详细说明物联网平台中英文标识符的命名规范，包括语言使用规则、功能命名规范等，确保代码的规范性和可读性。'
 ---
 
 > 该规范引用ICA数据标准平台 ，解释原文: [英文标识符命名规范](https://g.alicdn.com/aic/ica-docs/1.0.4/za5izx.html)

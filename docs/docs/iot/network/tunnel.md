@@ -1,3 +1,11 @@
+---
+title: '通道管理'
+sidebar_position: 2
+hide_title: true
+keywords: [通道管理,串口通信,TCP客户端,TCP服务端,UDP客户端,通信配置,串口模式,网络通道,设备连接,数据传输]
+description: '详细介绍SagooIOT平台的通道管理功能，包括串口、TCP和UDP通信配置，支持多种通信方式和协议。'
+---
+
 # 通道管理
 
 ## 串口

@@ -2,6 +2,8 @@
 title: '更新记录'
 hide_title: true
 sidebar_position: 50
+keywords: [版本更新,系统升级,功能优化,bug修复,新功能发布,性能提升,系统维护,IoT平台更新,技术迭代,版本历史]
+description: 'SagooIOT平台版本更新记录，包含新功能发布、性能优化、问题修复等详细信息，帮助用户了解平台发展历程和技术迭代。'
 ---
 
 最新社区版代码托管在Github上.

@@ -2,6 +2,8 @@
 title: 开发环境
 sidebar_position: 0
 hide_title: true
+keywords: [开发环境,Go语言,GoFrame框架,Redis,MySQL,TDengine,环境配置,开发工具,版本管理,系统要求]
+description: '详细说明SagooIOT平台的开发环境配置要求，包括操作系统、中间件、数据库和开发工具等环境搭建指南。'
 ---
 
 ## 基础环境：
@@ -66,8 +68,3 @@ tables 为表名，可以配置多个表，用英文逗号分隔
 编辑API、Controller、Logic后，执行命令 `gf gen service`，自动生成Service层代码
 
 参见GoFrame框架的说明： https://goframe.org/pages/viewpage.action?pageId=49770772
-
-
-
-
-

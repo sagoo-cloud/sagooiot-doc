@@ -1,3 +1,11 @@
+---
+title: '模板管理'
+sidebar_position: 2
+hide_title: true
+keywords: [模板管理,数据区管理,变量列表,设备模板,数据采集,模板配置,数据区配置,变量配置,设备绑定,采集模板]
+description: '详细介绍SagooIOT平台的模板管理功能，包括模板创建、数据区配置、变量列表管理等内容。'
+---
+
 # 模版管理
 
 ## 模版管理说明
@@ -78,6 +86,3 @@
 
 如果需要删除模版的信息，可以在模版列表项点击“删除”按钮进行删除。
   ![删除模版](./img/template-management/delete-template.png)
-
-
-

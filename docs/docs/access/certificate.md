@@ -1,3 +1,11 @@
+---
+title: '设备证书'
+hide_title: true
+sidebar_position: 1
+keywords: [设备证书,设备认证,一机一密,一型一密,安全认证,设备鉴权,证书管理,ProjectKey,AccessToken,物联网安全]
+description: '详细说明SagooIOT平台的设备证书管理功能，包括普通证书、一机一密、一型一密等多种设备认证方案，确保设备接入安全。'
+---
+
 # 设备证书
 
 设备证书是云平台颁发给设备的一组密钥，用于设备连接云平台时进行身份认证。SagooIOT 提供了多种设备证书，以适应不同的安全需求。

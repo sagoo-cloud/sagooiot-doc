@@ -1,5 +1,9 @@
 ---
+title: '组态列表'
 sidebar_position: 3
+hide_title: true
+keywords: [组态列表,组态图,系统配置,设备连接,流程图,图形化表示,组态管理,系统关系,设备关系,可视化配置]
+description: '详细介绍SagooIOT平台的组态列表功能，包括组态图的创建、管理和使用，用于展示系统配置和设备关系。'
 ---
 # 组态列表
 
@@ -36,6 +40,3 @@ sidebar_position: 3
 
 如果需要删除组态的信息，可以在组态列表项点击“删除”按钮进行删除。
   ![删除组态](./img/configuration-list/delete-configuration.png)
-
-
-

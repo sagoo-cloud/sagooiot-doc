@@ -1,9 +1,9 @@
 ---
-title: '消息队列'
+title: '消息队列开发'
 sidebar_position: 1
 hide_title: true
-keywords: [iot开发,SagooIoT开发,消息队列]
-description: '消息队列的使用,在SagooIoT中实现消息队列的处理方式'
+keywords: [消息队列,异步任务,消息处理,队列处理器,消息聚合,进程通信,消息分发,任务处理,消息系统,异步通信]
+description: '详细说明SagooIOT平台的消息队列开发，包括处理器实现、消息处理方式和实际应用案例等完整的消息队列开发指南。'
 ---
 
 在SagooIoT中实现消息队列的处理方式很简单，只需要实现一个消息队列处理器即可。
@@ -91,4 +91,3 @@ func TaskDeviceDataTsdSaveRun() {
 **设备数据保存**
 
 适用于需要批量处理的场景，使用聚合处理器，可以提高数据处理效率。
-

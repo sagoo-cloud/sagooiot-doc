@@ -1,5 +1,9 @@
 ---
+title: '数据采集概述'
 sidebar_position: 0
+hide_title: true
+keywords: [数据采集,Modbus协议,采集模块,设备数据,数据监控,实时采集,协议支持,采集方式,数据获取,企业版功能]
+description: '介绍SagooIOT平台的数据采集功能，包括支持的采集协议、采集方式和应用场景等内容。'
 ---
 # 概要说明
 

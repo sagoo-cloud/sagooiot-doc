@@ -1,5 +1,9 @@
 ---
+title: '参数管理'
+hide_title: true
 sidebar_position: 4
+keywords: [参数管理,系统参数,参数配置,键值管理,系统设置,参数分类,配置管理,系统维护,参数定义,系统优化]
+description: '详细说明SagooIOT平台的参数管理功能，包括参数的创建、修改、删除和分类管理等系统参数配置指南。'
 ---
 # 参数管理
 
@@ -40,5 +44,3 @@ sidebar_position: 4
 
 如果需要删除参数的信息，可以在参数列表项点击“删除”按钮进行删除。
   ![删除参数](./img/parameter-management/delete-parameter.png)
-
-

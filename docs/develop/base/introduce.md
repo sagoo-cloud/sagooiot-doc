@@ -3,8 +3,8 @@ slug: '/develop/base'
 title: '程序说明'
 sidebar_position: 0
 hide_title: true
-keywords: [iot开发,SagooIoT开发,物模型]
-description: '轻量化的物联网系统开发'
+keywords: [物联网开发,GoFrame开发,Vue3开发,物联网架构,系统开发,技术栈,开发环境,项目结构,物联网平台,SagooIOT]
+description: '详细介绍SagooIOT平台的技术架构、开发环境要求、项目结构和技术栈选型，为开发者提供完整的开发指南。'
 ---
 
 ## 关于SagooIOT

@@ -1,3 +1,10 @@
+---
+sidebar_position: 2
+title: 'TCP协议插件开发'
+keywords: [TCP插件,协议开发,通信时序,数据格式,设备通信,TCP通信,插件接口,协议实现,通信协议,数据交互]
+description: '详细说明SagooIOT平台的TCP协议插件开发方法，包括通信时序、数据格式和接口实现等TCP通信开发指南。'
+---
+
 #  tcp插件
 
 ## 插件实现接口说明
@@ -343,9 +350,3 @@
 4. message：应答消息，目前为空。
 5. method：消息类型，目前仅支持thing.event.property.pack.post。
 6. version：消息版本号，目前版本为1.0
-
-
-
-
-
-

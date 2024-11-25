@@ -1,3 +1,11 @@
+---
+title: 'CoAP协议'
+hide_title: true
+sidebar_position: 2
+keywords: [CoAP协议,物联网协议,轻量级协议,受限设备,REST架构,6LowPAN,UDP通信,物联网通信,低功耗设备,M2M通信]
+description: '详细介绍CoAP协议的原理、特点和应用场景，包括其在资源受限设备中的优势、与HTTP的映射关系，以及在物联网中的实际应用。'
+---
+
 # CoAP协议
 
 ## 什么是CoAP协议
@@ -29,4 +37,3 @@ CoAP具有低成本和安全的优点。它可以使用10KiB的RAM和100 KiB的�
 传感器设备充当CoAP服务器，与其通信的应用程序是CoAP客户端。
 
 在CoAP中，客户端（平台）和服务器（设备）之间的通信是通过CoAP消息进行的。CoAP消息可以是请求或响应。
-

@@ -1,3 +1,11 @@
+---
+title: '访问黑名单'
+sidebar_position: 1
+hide_title: true
+keywords: [访问黑名单,IP限制,访问控制,安全管理,黑名单管理,IP封禁,安全策略,访问限制,IP管理,安全防护]
+description: '介绍SagooIOT平台的访问黑名单功能，包括黑名单创建、管理和IP地址限制等内容。'
+---
+
 # 访问黑名单
 
 

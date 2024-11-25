@@ -1,9 +1,9 @@
 ---
-title: '定时任务'
+title: '定时任务开发'
 sidebar_position: 3
 hide_title: true
-keywords: [iot开发,SagooIoT开发,定时任务]
-description: '定时任务的使用,在SagooIoT中实现定时任务的处理方式'
+keywords: [定时任务,Asynq,任务调度,定时执行,任务处理器,周期任务,自动化任务,定时器,任务管理,计划任务]
+description: '详细说明SagooIOT平台的定时任务开发，包括任务处理器实现、定时调度配置和实际应用案例等完整的定时任务开发指南。'
 ---
 
 SagooIoT基于Asynq实现了定时任务的处理。定时任务是指在指定的时间点执行任务。例如：每天定时备份数据、清理过期日志、数据同步等。
