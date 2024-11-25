@@ -1,5 +1,8 @@
 ---
 sidebar_position: 0
+title: 'AK/SK认证说明'
+keywords: [AK/SK认证,身份验证,接口鉴权,Access Key,Secret Key,签名验证,认证流程,安全机制,API认证,接口安全]
+description: '详细说明SagooIOT平台的AK/SK认证机制，包括认证原理、流程说明和实施步骤等接口安全指南。'
 ---
 # AK/SK说明
 

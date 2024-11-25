@@ -1,5 +1,9 @@
 ---
+title: '设备接入方式'
+hide_title: true
 sidebar_position: 0
+keywords: [设备接入,MQTT协议,TCP透传,UDP协议,HTTP推送,WebSocket,CoAP,视频设备,GB28181,物联网协议]
+description: '详细介绍SagooIOT平台支持的多种设备接入方式，包括MQTT、TCP、UDP、HTTP等协议接入方案，以及视频设备的GB28181协议接入。'
 ---
 # 设备接入方式
 

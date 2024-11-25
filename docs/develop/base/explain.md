@@ -2,7 +2,8 @@
 title: '开发说明'
 sidebar_position: 1
 hide_title: true
-keywords: [iot开发,SagooIoT开发,物模型]
+keywords: [GoFrame开发,项目结构,API定义,业务逻辑,数据表设计,开发规范,代码组织,数据库设计,物联网开发,系统架构]
+description: '详细说明SagooIOT平台的开发规范，包括项目结构、API定义、业务逻辑实现和数据表设计等核心开发指南。'
 ---
 
 在开发前，需要了解项目的基本结构和规范，以便更好的进行开发。请熟悉[Goframe框架的使用](https://goframe.org/quick/install)，以及项目的基本结构。

@@ -2,6 +2,8 @@
 title: '名词解析'
 hide_title: true
 sidebar_position: 0
+keywords: [物模型,产品模型,设备实例,设备属性,物联网概念,IoT术语,设备通信,物联网平台,设备管理,技术名词]
+description: '详细解析物联网平台中的核心概念和专业术语，包括物模型、产品模型、设备实例等重要名词的定义和应用场景。'
 ---
 
 以下对产品/设备管理中所用到的名词进行解释，以便在文档中达成统一。
@@ -106,6 +108,3 @@ sidebar_position: 0
 ## SagooMQTT 协议
 
 `SagooMQTT 协议` 为`sagoo`平台默认的消息协议，详细内容参见[Sagoo Mqtt协议介绍](/develop/protocol/mqtt)
-
-
-

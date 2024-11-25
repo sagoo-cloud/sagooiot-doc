@@ -1,5 +1,8 @@
 ---
 sidebar_position: 0
+title: 'OpenAPI概述'
+keywords: [OpenAPI接口,API认证,安全认证,Access Key,Secret Key,应用管理,API访问,接口安全,认证机制,北向接口]
+description: '详细说明SagooIOT平台的OpenAPI接口认证机制，包括Access Key创建、安全认证和应用管理等接口访问指南。'
 ---
 # 概述
 
@@ -16,4 +19,3 @@ sidebar_position: 0
 
 * Access Key和Secret Key是敏感信息，请妥善保管，不要泄露给他人。
 * 建议定期更新Access Key和Secret Key以提高安全性。
-

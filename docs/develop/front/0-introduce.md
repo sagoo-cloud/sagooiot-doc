@@ -1,3 +1,10 @@
+---
+title: '前端开发介绍'
+sidebar_position: 0
+keywords: [Vue3开发,TypeScript,Vite构建,Element Plus,前端框架,开发环境,浏览器支持,项目配置,前端模板,Web开发]
+description: '详细介绍SagooIOT平台的前端开发技术栈，包括Vue3、TypeScript、Vite等核心技术以及环境配置说明。'
+---
+
 # 介绍
 
 基于 vue3.x + CompositionAPI + typescript + vite + element plus + vue-router-next + vuex开发。

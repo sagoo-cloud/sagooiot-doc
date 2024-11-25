@@ -1,5 +1,9 @@
 ---
+title: 'MQTT设备接入'
+hide_title: true
 sidebar_position: 3
+keywords: [MQTT接入,MQTTX工具,设备模拟,物联网接入,MQTT协议,设备连接,消息订阅,数据上报,物联网通信,设备调试]
+description: '详细指导如何使用MQTTX工具模拟设备接入SagooIOT平台，包括MQTT连接配置、消息订阅和数据上报等完整操作流程。'
 ---
 # MQTT 设备接入
 
@@ -39,4 +43,3 @@ sidebar_position: 3
 MQTTX 进行数据上报,详细的消息协议请参考[Sagoo Mqtt协议介绍](/develop/protocol/mqtt.html)
 
 ![mqttx-willmessage](../imgs/device_access/mqttx-willmessage.png)
-

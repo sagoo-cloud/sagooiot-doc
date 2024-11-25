@@ -1,5 +1,9 @@
 ---
+title: '角色管理'
 sidebar_position: 3
+hide_title: true
+keywords: [角色管理,权限分配,用户角色,权限控制,角色权限,系统权限,角色定义,权限管理,访问控制,角色设置]
+description: '介绍SagooIOT平台的角色管理功能，包括角色创建、权限分配和角色维护等内容。'
 ---
 # 角色管理
 
@@ -49,5 +53,3 @@ sidebar_position: 3
 
 如果需要删除角色的信息，可以在角色列表项点击“删除”按钮进行删除。
   ![删除角色](./img/role-management/delete-role.png)
-
-

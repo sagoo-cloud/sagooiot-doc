@@ -1,5 +1,9 @@
 ---
+title: '组织管理'
 sidebar_position: 1
+hide_title: true
+keywords: [组织管理,组织架构,部门管理,多租户,组织层级,权限分配,组织结构,企业管理,组织配置,租户管理]
+description: '介绍SagooIOT平台的组织管理功能，包括组织创建、层级管理和多租户配置等内容。'
 ---
 # 组织管理
 
@@ -37,5 +41,3 @@ sidebar_position: 1
 
 如果需要删除组织的信息，可以在组织列表项点击“删除”按钮进行删除。
   ![删除组织](./img/organizational-management/delete-organization.png)
-
-

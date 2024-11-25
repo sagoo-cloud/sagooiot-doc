@@ -1,5 +1,9 @@
 ---
+title: '设备接入协议'
+hide_title: true
 sidebar_position: 1
+keywords: [设备接入协议,MQTT协议,HTTP协议,CoAP协议,物联网协议,实时控制,设备监测,安全认证,数据传输,通信协议]
+description: '全面介绍SagooIOT平台支持的设备接入协议，包括MQTT、HTTP、CoAP等主流协议的特点、应用场景和选型建议。'
 ---
 # 设备接入协议
 
@@ -9,7 +13,7 @@ sidebar_position: 1
 
 MQTT是一种轻量级的发布订阅式消息协议，工作在TCP协议上。它需要设备与云平台建立持久TCP连接，并完成身份验证后，可以进行数据通信。
 
-MQTT协议具有以下显著优势:
+MQTT协议具有以下显著优势：
 
 ### **支持实时控制**
 

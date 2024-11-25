@@ -1,3 +1,11 @@
+---
+title: '证书管理'
+sidebar_position: 1
+hide_title: true
+keywords: [证书管理,安全认证,设备证书,通信安全,证书创建,证书验证,SSL证书,TLS证书,安全措施,加密通信]
+description: '介绍SagooIOT平台的证书管理功能，包括证书的创建、管理和使用，确保设备间通信的安全性。'
+---
+
 # 概要说明
 
 ## 证书管理说明
@@ -28,6 +36,3 @@
 
 * 如果需要删除证书的信息，可以在证书列表项点击“删除”按钮进行删除。
   ![删除证书](./img/delete-certificate.png)
-
-
-

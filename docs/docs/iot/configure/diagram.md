@@ -1,5 +1,9 @@
 ---
+title: '组态图设计'
 sidebar_position: 4
+hide_title: true
+keywords: [组态图设计,状态组合,图元设计,数据绑定,开关显示,状态切换,图形组合,可视化设计,组态编辑,设计指南]
+description: '详细说明SagooIOT平台组态图的设计方法，包括状态组合、图元设计、数据绑定等具体操作步骤。'
 ---
 # 组态图设计
 

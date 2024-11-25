@@ -1,3 +1,11 @@
+---
+title: 'MQTT协议设置'
+sidebar_position: 1
+hide_title: true
+keywords: [MQTT协议,EMQX配置,系统订阅,客户端授权,ACL配置,消息队列,物联网协议,MQTT服务器,通信协议,实时通信]
+description: '介绍SagooIOT平台中MQTT协议的配置和使用，包括EMQX服务器设置、系统订阅和ACL权限配置等内容。'
+---
+
 # mqtt 相关设置
 
 ## 启用系统订阅

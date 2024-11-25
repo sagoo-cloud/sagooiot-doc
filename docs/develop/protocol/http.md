@@ -1,5 +1,8 @@
 ---
 sidebar_position: 11
+title: 'HTTP协议'
+keywords: [HTTP协议,设备通信,认证鉴权,AK/SK认证,API接口,OTA升级,接口列表,通信规范,设备管理,HTTP接入]
+description: '详细说明SagooIOT平台的HTTP协议实现，包括认证鉴权、接口列表和OTA升级等HTTP通信指南。'
 ---
 # HTTP 协议
 
@@ -104,4 +107,3 @@ OTA相关
    字段说明
     1. code: 应答码，200表示成功，其他表示失败。
     2. message: 结果信息
-

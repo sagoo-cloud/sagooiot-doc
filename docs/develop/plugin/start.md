@@ -1,5 +1,8 @@
 ---
 sidebar_position: 0
+title: '插件开发指南'
+keywords: [插件开发,热更新,Golang开发,插件系统,RPC通信,插件配置,开发教程,插件架构,插件示例,扩展开发]
+description: '详细说明SagooIOT平台的插件开发指南，包括插件创建、配置和开发流程等完整的插件系统开发文档。'
 ---
 # 概要说明
 
@@ -112,4 +115,3 @@ info.json 的基础模板如下：
 | rontend.ui            | bool     | 是否有插件页面                                               |                                                              |
 | rontend.url           | string   | 插件页面地址                                                 |                                                              |
 | rontend.configuration | bool     | 是否显示配置页面                                             |                                                              |
-

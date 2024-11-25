@@ -2,6 +2,8 @@
 title: "其它服务"
 sidebar_position: 10
 hide_title: true
+keywords: [服务部署,流媒体服务,独立服务,Golang部署,服务配置,环境部署,系统服务,服务管理,服务启动,配置说明]
+description: '详细说明SagooIOT平台其它独立服务的部署方法，包括流媒体服务等Golang开发的生态应用服务的安装配置流程。'
 ---
 
 这里主要介绍的是共它独立服务的部署。SagooIoT的生态应用服务，都是基于Golang开发的，所以部署的环境要求不高，只要是支持Golang的系统都可以部署。
@@ -119,4 +121,3 @@ hide_title: true
 ```
 
 5. 使用`./curl.sh start`进行启动
-

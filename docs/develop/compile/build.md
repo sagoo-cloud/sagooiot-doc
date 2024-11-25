@@ -2,6 +2,8 @@
 title: 源码编译
 sidebar_position: 1
 hide_title: true
+keywords: [源码编译,交叉编译,依赖安装,配置文件,数据库初始化,程序运行,编译脚本,Go编译,前端编译,部署指南]
+description: '详细说明SagooIOT平台的源码编译过程，包括服务端和前端的编译步骤、配置修改和部署说明。'
 ---
 
 ## 服务端源码编译
@@ -13,7 +15,6 @@ hide_title: true
 ### 修改项目配置文件
 
 将 `manifest/config/config.example.yaml` 这个文件改名为 `config.yaml`，并修改其中的配置项。
-
 
 请跟据注释进行配置修改，包括服务相关配置，日志相关配置。
 

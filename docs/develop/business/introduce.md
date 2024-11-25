@@ -1,7 +1,9 @@
 ---
-title: '概要说明'
+title: '业务开发概述'
 sidebar_position: 0
 hide_title: true
+keywords: [业务开发,IoT中间件,API接口,系统集成,二次开发,数据对接,业务系统,OpenAPI,开发框架,GoFrame]
+description: '详细说明SagooIOT平台的业务开发方式，包括中间件使用、API接口集成和二次开发等完整的业务开发指南。'
 ---
 
 ## 发使用建议

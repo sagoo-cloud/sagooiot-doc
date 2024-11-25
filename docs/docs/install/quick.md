@@ -2,6 +2,8 @@
 title: "快速开始"
 sidebar_position: 0
 hide_title: true
+keywords: [快速部署,Docker安装,快速启动,环境配置,系统部署,容器化部署,一键部署,快速入门,系统安装,Docker Compose]
+description: '通过Docker快速部署SagooIOT平台的完整指南，包括环境要求、部署步骤和系统访问方法的详细说明。'
 ---
 
 :::info 前置条件

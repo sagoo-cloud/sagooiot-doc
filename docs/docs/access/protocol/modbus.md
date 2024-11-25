@@ -1,3 +1,11 @@
+---
+title: 'Modbus协议'
+hide_title: true
+sidebar_position: 3
+keywords: [Modbus协议,Modbus-RTU,Modbus-TCP,RS485,工业通信,串口通信,工业总线,协议转换,工业物联网,设备通信]
+description: '详细说明Modbus协议在SagooIOT平台中的应用，包括Modbus-RTU和Modbus-TCP的实现方式、转换方案和并发处理机制。'
+---
+
 # Modbus协议
 
 ## Modbus-RTU

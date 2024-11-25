@@ -1,3 +1,10 @@
+---
+title: '编译与部署'
+sidebar_position: 4
+keywords: [前端部署,环境配置,编译打包,Nginx配置,开发环境,生产环境,部署流程,构建命令,环境变量,部署指南]
+description: '详细说明SagooIOT平台前端项目的编译和部署流程，包括环境配置、编译命令和部署步骤等完整的部署指南。'
+---
+
 # 编译与部署
 
 SagooIoT 前端工程编译与部署，工程都已经编写好脚本。可以通过 `package.json` 文件中 `scripts` 部分直接运行。推荐使用 `Visual Studio Code` 或 `WebStorm` 进行开发。

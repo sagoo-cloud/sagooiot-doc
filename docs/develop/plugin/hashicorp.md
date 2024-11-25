@@ -1,5 +1,8 @@
 ---
 sidebar_position: 1
+title: 'HashiCorp插件框架'
+keywords: [HashiCorp插件,go-plugin,RPC插件,GRPC插件,插件架构,插件设计,插件通信,进程通信,插件标准,框架介绍]
+description: '详细介绍SagooIOT平台采用的HashiCorp go-plugin框架，包括插件架构、设计标准和通信机制等技术实现说明。'
 ---
 # 插件介绍
 
@@ -81,4 +84,3 @@ go-plugin目前仅设计为在本地[可靠]网络上工作，不支持go-plugin
 
 更多内容请见文章出处：
 [https://zhuanlan.zhihu.com/p/451382884](https://zhuanlan.zhihu.com/p/451382884)
-

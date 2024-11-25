@@ -1,5 +1,9 @@
 ---
+title: '数据建模'
+hide_title: true
 sidebar_position: 2
+keywords: [数据建模,数据模型,字段管理,数据关联,宽表设计,计算字段,数据处理,字段映射,数据分析,可视化分析]
+description: '介绍SagooIOT平台的数据建模功能，包括数据表关联、字段处理、计算字段创建等数据模型构建的完整流程。'
 ---
 # 数据建模
 
@@ -13,5 +17,3 @@ sidebar_position: 2
 
 
 ## 字段管理
-
-

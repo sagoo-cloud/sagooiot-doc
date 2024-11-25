@@ -1,5 +1,9 @@
 ---
+title: '菜单管理'
+hide_title: true
 sidebar_position: 3
+keywords: [菜单管理,导航配置,菜单配置,路由管理,组件路径,菜单权限,系统导航,界面配置,菜单结构,用户界面]
+description: '详细说明SagooIOT平台的菜单管理功能，包括菜单的创建、修改、删除和权限配置等导航管理指南。'
 ---
 # 菜单管理
 

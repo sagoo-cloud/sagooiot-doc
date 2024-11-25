@@ -1,5 +1,8 @@
 ---
 sidebar_position: 0
+title: 'MQTT协议'
+keywords: [MQTT协议,SagooMQTT,物联网通信,协议转换,设备通信,消息格式,插件管理,网关开发,数据交换,通信规范]
+description: '详细介绍SagooIOT平台的MQTT协议实现，包括SagooMQTT协议规范、消息格式、插件开发和网关转换等通信指南。'
 ---
 # Mqtt协议 
 
@@ -15,7 +18,3 @@ SagooIoT内部是基于mqtt协议的，有自己的协议格式，内部称为Sa
 
     ![select- protocol.png](../imgs/protocol/select-protocol.png)
 2. 开发相应的网关，转换私有协议的消息为标准`SagooMqtt协议`的消息进行接入
-
-
-
-

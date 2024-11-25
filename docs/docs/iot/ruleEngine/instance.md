@@ -1,5 +1,9 @@
 ---
+title: '规则引擎使用说明'
 sidebar_position: 0
+hide_title: true
+keywords: [规则引擎,可视化规则,消息处理,注入节点,调试节点,流程设计,规则配置,节点连接,规则编排,逻辑处理]
+description: '详细介绍SagooIOT平台规则引擎的使用方法，包括可视化规则设计、节点配置、消息处理等功能。'
 ---
 # 使用说明
 

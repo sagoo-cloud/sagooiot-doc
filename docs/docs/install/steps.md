@@ -2,6 +2,8 @@
 title: '环境安装'
 sidebar_position: 2
 hide_title: true
+keywords: [环境安装,Redis安装,MySQL安装,TDengine安装,EMQX安装,数据库配置,消息中间件,时序数据库,环境配置,基础服务]
+description: '详细指导SagooIOT平台所需的基础环境安装步骤，包括Redis、MySQL、TDengine和EMQX等核心组件的安装配置。'
 ---
 
 SagooIOT基础环境安装包括以下几个部分：

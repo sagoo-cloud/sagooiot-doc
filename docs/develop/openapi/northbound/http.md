@@ -1,3 +1,9 @@
+---
+sidebar_position: 2
+title: 'HTTP接口说明'
+keywords: [HTTP接口,API接口,设备管理,产品管理,属性管理,接口列表,RESTful API,接口文档,HTTP调用,接口规范]
+description: '详细说明SagooIOT平台的HTTP接口，包括设备管理、产品管理和属性管理等完整的RESTful API接口文档。'
+---
 
 # Http方式
 

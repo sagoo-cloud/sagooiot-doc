@@ -1,5 +1,9 @@
 ---
+title: '配置管理'
+hide_title: true
 sidebar_position: 0
+keywords: [系统配置,基础配置,安全策略,系统名称,系统LOGO,登录配置,系统参数,配置管理,系统设置,界面配置]
+description: '详细说明SagooIOT平台的配置管理功能，包括系统基础配置、界面定制和安全策略等系统配置指南。'
 ---
 # 配置管理
 
@@ -44,7 +48,3 @@ sidebar_position: 0
 3. 安全配置说明
 * 对系统的安全配置可进行调整，其中包含安全控制、登录设置、密码策略设置、权限设置。
   ![安全配置](./img/configuration-management/security-configuration.png)
-
-
-
-

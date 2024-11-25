@@ -1,5 +1,9 @@
 ---
+title: 'TCP设备接入'
+hide_title: true
 sidebar_position: 5
+keywords: [TCP设备接入,TCP协议,插件管理,TCP服务器,协议转换,设备注册,物模型配置,TCP通信,网络协议,设备连接]
+description: '详细指导如何在SagooIOT平台中接入TCP设备，包括插件安装、产品创建、物模型配置和设备调试的完整操作流程。'
 ---
 # TCP设备接入
 

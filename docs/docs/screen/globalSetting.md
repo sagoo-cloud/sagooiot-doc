@@ -1,5 +1,9 @@
 ---
+title: '全局设置说明'
 sidebar_position: 2
+hide_title: true
+keywords: [全局设置,界面配置,语言设置,主题设置,侧边栏模式,显示设置,界面定制,用户偏好,系统配置,界面管理]
+description: '详细介绍SagooIOT平台的全局设置功能，包括界面配置、语言设置和主题定制等内容。'
 ---
 # 设置说明
 

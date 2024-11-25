@@ -1,3 +1,11 @@
+---
+title: 'OTA升级管理'
+sidebar_position: 1
+hide_title: true
+keywords: [OTA升级,固件升级,远程升级,MQTT升级,HTTP升级,升级包管理,升级批次,升级模块,设备升级,空中下载]
+description: '详细介绍SagooIOT平台的OTA升级功能，包括MQTT和HTTP升级方式，支持设备固件、配置文件等的远程升级管理。'
+---
+
 # OTA 升级
 
 ## OTA 介绍

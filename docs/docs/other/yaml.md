@@ -1,3 +1,11 @@
+---
+title: 'YAML格式语法'
+sidebar_position: 0
+hide_title: true
+keywords: [YAML语法,配置文件,数据序列化,YAML格式,配置管理,数据结构,配置规范,YAML教程,配置示例,格式说明]
+description: '详细介绍YAML格式的语法规则，包括基本语法、数据类型、配置示例等内容，帮助用户正确编写YAML配置文件。'
+---
+
 # yaml格式语法
 
 ## 说明

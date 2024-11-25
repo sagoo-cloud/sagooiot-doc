@@ -2,6 +2,8 @@
 title: 部署说明
 sidebar_position: 1
 hide_title: true
+keywords: [系统部署,硬件要求,部署方式,系统配置,运行环境,服务部署,性能优化,资源配置,部署架构,环境要求]
+description: '全面介绍SagooIOT平台的部署要求和方案，包括硬件配置、运行环境、部署架构等关键信息。'
 ---
 
 
@@ -113,7 +115,4 @@ cache-mode = 2
 - TDengine 集群【[参考这个内容](https://docs.taosdata.com/deployment/deploy/)】
 - SagooIOT主系统做多个部署，需要通过Nginx进行路由分发。
 
-  
-
-
-
+   

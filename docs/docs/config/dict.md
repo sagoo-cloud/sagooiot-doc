@@ -1,5 +1,9 @@
 ---
+title: '字典管理'
+hide_title: true
 sidebar_position: 5
+keywords: [字典管理,数据字典,字典配置,字典类型,字典分类,系统字典,数据管理,配置管理,系统设置,数据维护]
+description: '详细说明SagooIOT平台的字典管理功能，包括字典的创建、修改、删除和分类管理等数据字典维护指南。'
 ---
 # 字典管理
 
@@ -39,5 +43,3 @@ SagooIoT系统中涉及到字典内容的都由字典管理进行集中管理。
   ![删除字典](./img/dictionary-managed/delete-dictionary.png)
 
   
-
-

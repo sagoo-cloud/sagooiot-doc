@@ -1,3 +1,10 @@
+---
+sidebar_position: 1
+title: 'API调用示例'
+keywords: [API示例,代码示例,Golang示例,Java示例,Python示例,接口调用,签名生成,请求示例,开发指南,多语言实现]
+description: '提供SagooIOT平台API调用的多语言示例代码，包括Golang、Java和Python等语言的接口调用实现方法。'
+---
+
 # 调用示例
 
 ## Golang

@@ -1,7 +1,9 @@
 ---
-title: '快速开始'
+title: '业务开发快速入门'
 sidebar_position: 1
 hide_title: true
+keywords: [数据源配置,数据建模,API开发,业务实现,数据处理,接口开发,数据节点,业务逻辑,数据集成,快速开发]
+description: '详细说明SagooIOT平台的业务开发流程，包括数据源配置、数据建模、API开发和业务实现等完整的快速开发指南。'
 ---
 
 ## 添加数据源

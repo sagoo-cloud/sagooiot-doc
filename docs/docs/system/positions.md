@@ -1,5 +1,9 @@
 ---
+title: '岗位管理'
 sidebar_position: 5
+hide_title: true
+keywords: [岗位管理,职位管理,职务配置,岗位设置,职位分配,人员管理,岗位职责,职位体系,岗位维护,组织职位]
+description: '介绍SagooIOT平台的岗位管理功能，包括岗位创建、职位配置和岗位维护等内容。'
 ---
 # 岗位管理
 
@@ -34,5 +38,3 @@ sidebar_position: 5
 
 如果需要删除岗位的信息，可以在岗位列表项点击“删除”按钮进行删除。
   ![删除岗位](./img/post-management/delete-position.png)
-
-

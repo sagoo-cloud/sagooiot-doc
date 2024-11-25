@@ -1,5 +1,9 @@
 ---
+title: '场景联动概述'
 sidebar_position: 0
+hide_title: true
+keywords: [场景联动,场景规则,事件响应,条件触发,自动化控制,设备联动,场景管理,规则配置,动作执行,智能场景]
+description: '详细介绍SagooIOT平台的场景联动功能，包括场景定义、规则配置、条件触发和自动化控制等内容。'
 ---
 # 概要说明
 

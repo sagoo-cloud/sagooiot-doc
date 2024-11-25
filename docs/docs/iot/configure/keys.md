@@ -1,5 +1,9 @@
 ---
+title: '快捷键操作'
 sidebar_position: 2
+hide_title: true
+keywords: [快捷键操作,组态快捷键,画布操作,键盘快捷键,操作指南,Windows快捷键,Mac快捷键,组态编辑,快速操作,效率工具]
+description: '详细介绍SagooIOT平台组态编辑器的快捷键操作指南，包括Windows和Mac系统的快捷键列表和功能说明。'
 ---
 # 快捷键操作
 

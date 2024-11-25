@@ -1,3 +1,10 @@
+---
+title: '云网关开发'
+sidebar_position: 13
+keywords: [云网关,协议解析,设备接入,网关SDK,协议开发,设备管理,网关部署,Modbus协议,网关示例,物联网网关]
+description: '详细说明SagooIOT平台的云网关开发指南，包括SDK使用、协议解析实现和设备接入等完整的网关开发流程。'
+---
+
 # 云网关开发
 云网关是一个独立的服务，可以部署在云端，也可以部署在本地，主要用于解决个性化设备接入的协议解析、设备接入平台的统一管理、设备接入的安全性等问题。
 通过开发云网关，可以快速的实现接入各种不同协议的设备，也方便进行大规模设备的接入。
@@ -226,4 +233,3 @@ func (c *ChargeProtocol) Decode(device *model.Device, buffer []byte) (res []byte
 		"PropertieDataList": propertyData,
 	}
 	event.MustFire(consts.PushAttributeDataToMQTT, out)
-```

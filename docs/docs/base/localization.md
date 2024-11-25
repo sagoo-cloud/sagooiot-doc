@@ -2,6 +2,8 @@
 title: '国产化说明'
 hide_title: true
 sidebar_position: 40
+keywords: [国产化,操作系统,服务器,数据库,UOS,红旗Linux,麒麟系统,鲲鹏服务器,国产数据库,物联网平台]
+description: 'SagooIOT平台的国产化适配说明，包括对国产操作系统、服务器硬件和数据库的全面支持，助力企业实现信息系统自主可控。'
 ---
 
 SagooIoT 产品国产化说明，支持的国产化数据库、服务器、操作系统以及国产化中间件。
@@ -33,4 +35,3 @@ SagooIoT 产品国产化说明，支持的国产化数据库、服务器、操�
 ## 中间件	
 * EMQX
 * TDEngine
-

@@ -2,8 +2,8 @@
 title: '开发规范'
 sidebar_position: 3
 hide_title: true
-keywords: [iot开发,SagooIoT开发,物模型]
-description: '轻量化的物联网系统开发'
+keywords: [命名规范,接口定义,RESTful接口,参数管理,字典管理,编码标准,API设计,开发规范,代码规范,最佳实践]
+description: '详细说明SagooIOT平台的开发规范，包括命名规则、接口定义、RESTful设计和参数管理等标准化开发指南。'
 ---
 
 ## 命名
@@ -12,7 +12,6 @@ description: '轻量化的物联网系统开发'
 2. 包名全部小写，多个单词可用下划线。例如：`user_info`。
 3. 局部变量首字母小写，使用驼峰命名。名称要见名知义。例如：`userName`、`userAge`。
 4. 常量首字母使用大写，使用驼峰命名。例如：`CofnigUserName`、`ConfigUserAge`。
-
 
 ## 接口定义
 在api目录中对接口进行定义，入参需要独立设置，不建议直接引用其它自定义包的类型。

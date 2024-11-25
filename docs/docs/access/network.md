@@ -1,5 +1,9 @@
 ---
+title: '设备连网方式'
+hide_title: true
 sidebar_position: 1
+keywords: [设备连网,WiFi接入,以太网,蜂窝网络,5G通信,网关接入,物联网连接,网络协议,通信方式,设备组网]
+description: '详细介绍SagooIOT平台支持的多种设备连网方式，包括WiFi、以太网、蜂窝网络等直连方式，以及网关接入等间接连接方案。'
 ---
 # 设备连网方式
 

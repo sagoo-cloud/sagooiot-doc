@@ -1,5 +1,9 @@
 ---
-sidebar_position: 2
+title: '配置物模型'
+hide_title: true
+sidebar_position: 3
+keywords: [物模型配置,TSL,设备属性,设备功能,设备事件,物模型标签,数字孪生,物联网标准,设备描述,JSON格式]
+description: '详细介绍SagooIOT平台的物模型配置方法，包括TSL语言定义、属性功能事件配置，以及物模型在设备管理中的应用。'
 ---
 # 配置物模型
 

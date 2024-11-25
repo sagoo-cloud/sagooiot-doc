@@ -1,7 +1,9 @@
 ---
-title: 'docker'
+title: 'Docker部署指南'
 sidebar_position: 11
 hide_title: true
+keywords: [Docker部署,容器化部署,环境配置,本地开发,服务启动,开发环境,Docker Compose,环境搭建,服务配置,开发调试]
+description: '详细指导如何使用Docker部署SagooIOT平台，包括本地开发环境搭建、服务配置和启动的完整流程说明。'
 ---
 
 ### 基础环境

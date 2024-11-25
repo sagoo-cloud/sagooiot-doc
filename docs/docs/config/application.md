@@ -1,5 +1,9 @@
 ---
+title: '应用管理'
+hide_title: true
 sidebar_position: 0
+keywords: [应用管理,第三方授权,AK/SK管理,应用授权,访问控制,安全管理,应用配置,权限管理,系统集成,API授权]
+description: '详细说明SagooIOT平台的应用管理功能，包括第三方应用授权、AK/SK管理和访问控制等应用管理指南。'
 ---
 # 应用管理
 

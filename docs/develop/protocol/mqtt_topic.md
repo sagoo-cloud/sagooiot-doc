@@ -1,5 +1,8 @@
 ---
 sidebar_position: 1
+title: 'MQTT Topic说明'
+keywords: [MQTT Topic,消息主题,设备通信,属性上报,事件上报,服务调用,远程配置,OTA升级,Topic格式,通信规范]
+description: '详细说明SagooIOT平台的MQTT Topic结构，包括设备属性上报、事件上报、服务调用等各类消息主题的定义和使用方法。'
 ---
 # Topic 说明
 
