@@ -34,7 +34,7 @@ docker编排版本: v2.29.7
    ```linux
       docker images
    ```
-![alt text](../imgs/install/image-2024112517324787000598.png.png)
+![alt text](../imgs/install/image-2024112517324787000598.png)
 6. 查看容器是否都正常启动
    ```linux
       docker ps -a
