@@ -189,19 +189,19 @@ make &&& make install
 #### 源码下载及编译
 1. IOT服务端仓库地址: 
    ```
-   http://git.mydig.net/Sagoo-Cloud/sagooiot-professional.git
+   http://收费版代码库/Sagoo-Cloud/sagooiot-professional.git
    ```
    IOT前端仓库地址:
    ```
-   http://git.mydig.net/Sagoo-Cloud/sagoo-admin-ui.git
+   http://收费版代码库/Sagoo-Cloud/sagoo-admin-ui.git
    ```
    流媒体服务端地址:
     ```
-   http://git.mydig.net/Sagoo-Media/sagoo-media-workspace.git
+   http://收费版代码库/Sagoo-Media/sagoo-media-workspace.git
    ```
    流媒体前端地址:
    ```
-   http://git.mydig.net/Sagoo-Media/sagoo-media-ui.git
+   http://收费版代码库/Sagoo-Media/sagoo-media-ui.git
    ```
 2. 安装IOT服务端源码依赖关系
    

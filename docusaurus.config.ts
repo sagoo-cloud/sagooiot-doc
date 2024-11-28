@@ -169,10 +169,6 @@ const config: Config = {
           sidebarId: 'developSidebar',
           items: [
             {
-              label: '程序介绍',
-              to: '/develop/base/introduce',
-            },
-            {
               label: '编译与运行',
               to: '/develop/compile/environment',
             },

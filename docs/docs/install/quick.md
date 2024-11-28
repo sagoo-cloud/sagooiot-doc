@@ -22,7 +22,7 @@ docker编排版本: v2.29.7
 1. 下载docker-compose编排文件
    仓库地址:
    ```
-   http://git.mydig.net/Sagoo-Cloud/sagoo-docker-compose.git
+   http://收费版代码库/Sagoo-Cloud/sagoo-docker-compose.git
    ```
 2. 将下载后的docker-compose编排文件上传到服务器目录`/opt/sagoo`
 3. 进入到`/opt/sagoo/docker-compose-base`目录下，
