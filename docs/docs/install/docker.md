@@ -421,9 +421,12 @@ make &&& make install
 
 ## 其它问题
   
-  1. docker部署的MySQL、Redis、Tdengine、Emqx配置的都是默认端口号，为防止本地端口冲突，建议修改端口号配置
+### 本地端口冲突
 
-  2. 部署完成之后，如果发现TD数据库中时区不对，则需要进入到TD容器里面执行一下两个命令，执行完成之后在重启TD容器
+  docker部署的MySQL、Redis、Tdengine、Emqx配置的都是默认端口号，为防止本地端口冲突，建议修改端口号配置
+
+### 时区问题
+  部署完成之后，如果发现TD数据库中时区不对，则需要进入到TD容器里面执行一下两个命令，执行完成之后在重启TD容器
      ```bash
        ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
        echo "Asia/Shanghai" > /etc/timezone
