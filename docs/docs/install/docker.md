@@ -206,11 +206,14 @@ make &&& make install
 2. 安装IOT服务端源码依赖关系
    
    a. 使用goland开发工具打开服务端源码
+
    b. 设置GOROOT和GOPATH
+
    c. 在设置go module中配置环境
    ```
    GOPROXY=https://goproxy.io
    ``` 
+
    d. 在源码根目录下执行`go mod tidy`安装依赖
 3. 增加并修改配置文件
    
@@ -418,6 +421,10 @@ make &&& make install
 
 ## 其它问题
   
-  1. docker-compose文件中，MySQL、Redis、Tdengine、Emqx配置的都是默认端口号，为防止本地端口冲突，建议修改端口号配置
+  1. docker部署的MySQL、Redis、Tdengine、Emqx配置的都是默认端口号，为防止本地端口冲突，建议修改端口号配置
 
-  2. MySQL在启动过程中，由于会初始化数据，建议等待一段时间或者链接数据库查看数据是否创建完毕，在启动IOT服务
+  2. 部署完成之后，如果发现TD数据库中时区不对，则需要进入到TD容器里面执行一下两个命令，执行完成之后在重启TD容器
+     ```bash
+       ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+       echo "Asia/Shanghai" > /etc/timezone
+     ```
