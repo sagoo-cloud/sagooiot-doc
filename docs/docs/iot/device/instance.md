@@ -1,5 +1,5 @@
 ---
-title: '设备管理说明'
+title: '概述'
 sidebar_position: 0
 hide_title: true
 keywords: [设备管理,生命周期,设备驱动,协议管理,产品管理,网关设备,子设备管理,物模型,设备功能,设备监控]
