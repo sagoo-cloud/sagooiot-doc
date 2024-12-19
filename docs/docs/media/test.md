@@ -14,7 +14,7 @@ description: '介绍SagooIOT平台的媒体服务功能，包括视频监控、�
 
 按下面图中标注的位置填写服务端信息。
 
-![img.png](test01.png)
+![img.png](test1.png)
 
 
 服务端信息填写完成后，点击“开始”按钮，即可开始模拟设备测试。
