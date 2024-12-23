@@ -28,6 +28,10 @@ function Transform(msg, metadata, msgType) {
     return {'msg':msg,'metadata':metadata,'msgType':msgType};
 }
 ```
+:::tip 提示
+JavaScript脚本支持ECMAScript 5.1(+) 语法规范和部分ES6规范，如：async/await/Promise/let。允许在脚本中调用Go自定义函数，请参考[udf](https://rulego.cc/pages/d59341/#udf) 。
+:::
+
 
 ## 参数说明
 
