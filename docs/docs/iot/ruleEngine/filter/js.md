@@ -2,8 +2,8 @@
 title: 'JS过滤器'
 sidebar_position: 5
 hide_title: true
-keywords: [规则引擎,规则链,golang,go语言,编排式,热部署,数据集成,IoT,物联网平台,组件化,流程自动化,自动化引擎,应用集成,事件框架]
-description: '轻量级、高性能、嵌入式、新一代组件编排规则引擎'
+keywords: [规则引擎,JS过滤器,脚本过滤,条件过滤,数据验证,JavaScript脚本,过滤规则,业务规则,消息过滤,数据处理]
+description: '详细介绍SagooIOT平台规则引擎中JavaScript过滤器节点的功能和使用方法，包括脚本编写规范、过滤规则、使用场景、最佳实践等内容，帮助用户实现灵活的消息过滤控制。'
 ---
 
 
