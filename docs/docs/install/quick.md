@@ -14,9 +14,10 @@ description: '通过Docker快速部署SagooIOT平台的完整指南，包括环�
 
 ## 快速部署
 
-PS:以下使用docker-compose进行一键安装，在安装之前需要保证服务器支持使用docker-compose命令,未安装可以去docker官网安装docker-compose
+:::tip 提示
+以下使用docker-compose进行一键安装，在安装之前需要保证服务器支持使用docker-compose命令,未安装可以去docker官网安装docker-compose
 官网地址: `https://docs.docker.com/compose/install/`
-
+:::
 docker编排版本: v2.29.7
 
 1. 下载docker-compose编排文件
