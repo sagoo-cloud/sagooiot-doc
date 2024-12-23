@@ -51,8 +51,6 @@ description: '轻量级、高性能、嵌入式、新一代组件编排规则引
 ### 1. 单个表达式转换
 
 ```
-Code
-CopyInsert
 
 // 温度值判断
 msg.temperature > 30 ? "高温" : "正常"
@@ -67,8 +65,7 @@ msg.price * 1.2
 ### 2. 多字段转换映射
 
 ```
-Code
-CopyInsert
+
 
 {
   "deviceName": "upper(msg.name)",
@@ -83,8 +80,6 @@ CopyInsert
 1. **数值处理**
 
 ```
-Code
-CopyInsert
 
 // 温度四舍五入到1位小数
 round(msg.temperature, 1)
@@ -96,9 +91,6 @@ msg.price * 1.2
 1. **字符串处理**
 
 ```
-Code
-CopyInsert
-
 // 转大写
 upper(msg.name)
 
@@ -109,9 +101,6 @@ format("%s-%s", msg.type, msg.id)
 1. **条件判断**
 
 ```
-Code
-CopyInsert
-
 // 简单条件
 msg.value > 100
 
@@ -125,8 +114,6 @@ msg.status == "active" ? "在线" : "离线"
 1. **数组处理**
 
 ```
-Code
-CopyInsert
 
 // 数组长度
 len(msg.items)
@@ -140,8 +127,6 @@ in(msg.type, ["warning", "error"])
 ### 1. 设备状态监控
 
 ```
-Code
-CopyInsert
 
 {
   "deviceStatus": "msg.temperature > 50 || msg.humidity > 80 ? 'warning' : 'normal'",
@@ -152,8 +137,6 @@ CopyInsert
 ### 2. 数据格式化
 
 ```
-Code
-CopyInsert
 
 {
   "formattedTemp": "format('%.1f°C', msg.temperature)",
@@ -164,8 +147,6 @@ CopyInsert
 ### 3. 复合条件处理
 
 ```
-Code
-CopyInsert
 
 {
   "needMaintenance": "msg.runningHours > 1000 || msg.errorCount > 10",

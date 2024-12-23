@@ -24,9 +24,6 @@ JavaScript 转换节点（JsTransform）是一个用于数据转换处理的节�
 脚本编辑区域提供了 JavaScript 代码编辑功能，默认提供了 `Transform` 函数模板：
 
 ```
-Code
-CopyInsert
-
 function Transform(msg, metadata, msgType) {
     return {'msg':msg,'metadata':metadata,'msgType':msgType};
 }
@@ -67,9 +64,6 @@ function Transform(msg, metadata, msgType) {
 必须返回包含以下字段的对象：
 
 ```
-Code
-CopyInsert
-
 {
     'msg': msg,        // 处理后的消息
     'metadata': metadata,  // 更新后的元数据
@@ -82,9 +76,6 @@ CopyInsert
 ### 1. 基本数据传递
 
 ```
-Code
-CopyInsert
-
 function Transform(msg, metadata, msgType) {
     // 直接返回原始数据
     return {'msg':msg,'metadata':metadata,'msgType':msgType};
@@ -94,8 +85,6 @@ function Transform(msg, metadata, msgType) {
 ### 2. JSON 数据处理
 
 ```
-Code
-CopyInsert
 
 function Transform(msg, metadata, msgType) {
     // 解析 JSON 字符串
@@ -116,8 +105,6 @@ function Transform(msg, metadata, msgType) {
 ### 3. 添加元数据
 
 ```
-Code
-CopyInsert
 
 function Transform(msg, metadata, msgType) {
     // 添加处理时间到元数据
@@ -133,9 +120,6 @@ function Transform(msg, metadata, msgType) {
 ### 4. 修改消息类型
 
 ```
-Code
-CopyInsert
-
 function Transform(msg, metadata, msgType) {
     // 根据条件修改消息类型
     if (msg.includes('error')) {
