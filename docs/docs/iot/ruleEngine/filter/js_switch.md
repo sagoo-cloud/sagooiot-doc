@@ -2,8 +2,8 @@
 title: 'js路由'
 sidebar_position: 5
 hide_title: true
-keywords: [规则引擎,规则链,golang,go语言,编排式,热部署,数据集成,IoT,物联网平台,组件化,流程自动化,自动化引擎,应用集成,事件框架]
-description: '轻量级、高性能、嵌入式、新一代组件编排规则引擎'
+keywords: [规则引擎,JS路由,脚本路由,动态路由,消息分发,条件路由,路由规则,JavaScript脚本,路由配置,消息流向]
+description: '详细介绍SagooIOT平台规则引擎中JavaScript路由节点的功能和使用方法，包括脚本编写规范、路由配置、使用场景、最佳实践等内容，帮助用户实现灵活的消息路由控制。'
 ---
 
 

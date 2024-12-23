@@ -2,8 +2,8 @@
 title: '表达式过滤器'
 sidebar_position: 1
 hide_title: true
-keywords: [规则引擎,规则链,golang,go语言,编排式,热部署,数据集成,IoT,物联网平台,组件化,流程自动化,自动化引擎,应用集成,事件框架]
-description: '轻量级、高性能、嵌入式、新一代组件编排规则引擎'
+keywords: [规则引擎,表达式过滤器,条件表达式,数据过滤,消息路由,布尔表达式,过滤规则,条件判断,数据处理,逻辑过滤]
+description: '详细介绍SagooIOT平台规则引擎中表达式过滤器节点的功能和使用方法，包括条件表达式编写、变量使用、路由规则、最佳实践等内容，帮助用户实现灵活的条件过滤和消息路由。'
 ---
 
 
@@ -134,4 +134,3 @@ len(split(msg.content, ",")) > 5  // 避免过多字符串操作
 
 # 安全的空值检查
 msg != nil && msg.temperature != nil && msg.temperature > 
-```
