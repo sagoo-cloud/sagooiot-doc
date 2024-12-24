@@ -61,49 +61,34 @@ SQL语句和参数支持使用变量：
 ## 使用示例
 
 ### 1. 基础查询配置
-```json
-{
-  "id": "node1",
-  "type": "dbClient",
-  "name": "查询数据",
-  "configuration": {
-    "driverName": "mysql",
-    "dsn": "root:root@tcp(127.0.0.1:3306)/test",
-    "sql": "SELECT * FROM users WHERE age > ?",
-    "params": [18]
-  }
-}
+SQL语句填写：
+```sql
+SELECT * FROM users WHERE age > ?
+```
+占位符参数列表，添加一个参数：
+```
+18
 ```
 
 ### 2. 带变量的更新操作
-```json
-{
-  "id": "node2",
-  "type": "dbClient",
-  "name": "更新数据",
-  "configuration": {
-    "driverName": "mysql",
-    "dsn": "root:root@tcp(127.0.0.1:3306)/test",
-    "sql": "UPDATE users SET status = ? WHERE id = ${msg.userId}",
-    "params": ["active"]
-  }
-}
+```sql
+UPDATE users SET status = ? WHERE id = ${msg.userId}
+```
+占位符参数列表，添加一个参数：
+```
+active
 ```
 
 ### 3. 插入操作
-```json
-{
-  "id": "node3",
-  "type": "dbClient",
-  "name": "插入数据",
-  "configuration": {
-    "driverName": "mysql",
-    "dsn": "root:root@tcp(127.0.0.1:3306)/test",
-    "sql": "INSERT INTO logs (device_id, message) VALUES (?, ?)",
-    "params": ["${metadata.deviceId}", "${msg.content}"]
-  }
-}
+```sql
+INSERT INTO logs (device_id, message) VALUES (?, ?)
+
 ```
+占位符参数列表，添加一个参数：
+
+`${metadata.deviceId}`
+
+`${msg.content}`
 
 ## 执行结果
 
