@@ -6,7 +6,6 @@ keywords: [规则引擎,规则链,golang,go语言,编排式,热部署,数据集�
 description: '轻量级、高性能、嵌入式、新一代组件编排规则引擎'
 ---
 
-# 元数据转换节点（MetadataTransform）使用手册
 
 ## 节点说明
 
