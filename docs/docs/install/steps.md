@@ -6,216 +6,465 @@ keywords: [环境安装,Redis安装,MySQL安装,TDengine安装,EMQX安装,数据
 description: '详细指导SagooIOT平台所需的基础环境安装步骤，包括Redis、MySQL、TDengine和EMQX等核心组件的安装配置。'
 ---
 
+## 环境组件
+
 SagooIOT基础环境安装包括以下几个部分：
 
-1. Redis 7.x以上   【[官方安装文档](https://redis.io/docs/getting-started/installation/)】
+| 组件名称 | 版本要求 | 说明 | 相关文档 |
+|---------|---------|------|----------|
+| Redis | ≥ 7.x | 缓存数据库 | [官方安装文档](https://redis.io/docs/getting-started/installation/) |
+| MySQL/PostgreSQL | ≥ 5.7.x / ≥ 16.x | 关系型数据库 | [MySQL](https://dev.mysql.com/doc/) / [PostgreSQL](https://www.postgresql.org/docs/) |
+| TDengine | ≥ 3.3.x | 时序数据库 | [官方安装文档](https://docs.taosdata.com/get-started/package/) |
+| EMQX | 5.8.2-el7-amd64 | 消息中间件 | [官方安装文档](https://www.emqx.io/docs/zh/v5.1/getting-started/getting-started.html) |
+| Nginx | ≥ 1.27.2 | Web服务器 | [官方安装文档](https://nginx.org/en/docs/index.html) |
 
-2. MySQL 5.7.x以上 或 PostgreSQL 13.x 以上
+:::note 说明
+- TDengine可选用Influxdb替代
+- EMQX为可选组件，SagooIoT默认有自己的MQTT服务
+- MySQL和PostgreSQL 任选其一安装即可
+:::
 
-2. TDengine 3.3.x以上 【[官方安装文档](https://docs.taosdata.com/get-started/package/)】（可选，Influxdb）
-
-3. EMQX 5.0.9-el8  【[官方安装文档](https://www.emqx.io/docs/zh/v5.1/getting-started/getting-started.html)】 (可选，SagooIoT默认有自己的MQTT服务)
-
-## 安装redis
+## Redis安装
 
 下面是在 Linux 上安装 Redis 7.x 的详细步骤：
 
-1 升级系统并安装必要的软件包：
+### 1. 升级系统并安装必要的软件包
 
-如果在Debian和Ubuntu系统下使用下面的命令：
-
-```shell
-    sudo apt-get update
-    sudo apt-get upgrade
-    sudo apt-get install build-essential tcl
+**Debian/Ubuntu系统：**
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install build-essential tcl
 ```
 
 :::note 注意
-如果是centos系统 则需要用到yum命令：
-  CentOS 7 及以下版本：
-* sudo yum update
-* sudo yum install gcc make tcl
+**CentOS系统：**
 
-如果使用的是 CentOS 8 或更高版本，您应该使用 dnf：
-* sudo dnf check-update
-* sudo dnf upgrade
-* sudo dnf install gcc make tcl
+CentOS 7 及以下版本：
+```bash
+sudo yum update
+sudo yum install gcc make tcl
+```
 
+CentOS 8 及以上版本：
+```bash
+sudo dnf check-update
+sudo dnf upgrade
+sudo dnf install gcc make tcl
+```
 :::
 
-2 下载 Redis 源代码：
+### 2. 安装Redis
 
-```shell
-  wget http://download.redis.io/releases/redis-7.0.12.tar.gz
-
+1. 下载Redis源代码：
+```bash
+wget http://download.redis.io/releases/redis-7.4.0.tar.gz
 ```
 
-
-3 解压缩源代码：
-
-```shell
-    tar xzf redis-7.0.12.tar.gz
-    cd redis-7.0.12
+2. 解压源码包：
+```bash
+tar xzf redis-7.4.0.tar.gz
 ```
 
-
-4 编译和安装 Redis：
-```shell
-    make
-    sudo make install
+3. 编译并安装Redis：
+```bash
+cd /data/base-server/redis/redis-7.4.0
+make && make PREFIX=./ install
 ```
 
-5 创建 Redis 配置文件目录：
-
-```shell
-    sudo mkdir /etc/redis
-    sudo cp redis.conf /etc/redis
+4. 配置redis.conf：
+```bash
+bind 0.0.0.0          #远程访问
+protected-mode no     #关闭保护模式
+daemonize yes        #开启守护进程
+requirepass admin123456 #设置连接密码
 ```
 
-6 修改 Redis 配置文件：
-
-```shell
-  sudo nano /etc/redis/redis.conf
-
-```
-7 启动 Redis 服务：
-```shell
-  redis-server /etc/redis/redis.conf
-
-```
-8 测试 Redis 连接：
-
-```shell
-  redis-cli ping
-
+5. 启动服务：
+```bash
+cd /data/base-server/redis/redis-7.4.0/src
+./redis-server ../redis.conf
 ```
 
-如果得到 PONG 响应，说明 Redis 服务已经成功启动。
+6. 验证Redis是否启动：
+```bash
+ps -ef | grep redis
+```
 
-请注意，上面的步骤是在一个没有安装 Redis 的系统上执行的。如果您已经安装了 Redis，请先卸载它，然后再按照上面的步骤重新安装。
-
-请确保您有 root 权限，并在每一步操作前确保系统已经升级到最新版本。
-
-
-## 安装MySQL
-
-1. 官网地址: `https://dev.mysql.com/downloads/mysql/`
-
-2. 选择适合自己的版本下载，此处以`mysql-8.0.34-linux-glibc2.28-x86_64.tar.gz`为例，将下载后的压缩包上传到服务器`/opt/mysql`目录下
-
-3. 使用命令解压
-
-   ```shell
-     tar xvf mysql-8.0.25-linux-glibc2.28-x86_64.tar.gz
-   ```
-
-4. 将解压后的文件移动到`/usr/local`目录下
-
-   ```shell
-     mv mysql-8.0.25-linux-glibc2.28-x86_64 /usr/local/mysql
-   ```
-
-5. 创建 MySQL 数据存储目录
-
-   ```shell
-     mkdir /var/local/mysql/data
-   ```
-
-6. 初始化数据库
-
-   ```shell
-     1. cd /usr/local/mysql
-     2. ./bin/mysqld --initialize --basedir=/usr/local/mysql --datadir=/var/local/mysql/data
-   ```
-   **此处需注意保存生成的密码,之后需用到**
-
-
-##  安装TDengine
+7. 连接redis服务：
+```bash
+./redis-cli -h 127.0.0.1 -p 6379 -a admin123456
+```
 
 :::tip 提示
+上面的步骤是在一个没有安装 Redis 的系统上执行的。如果您已经安装了 Redis，请先卸载它，然后再按照上面的步骤重新安装。
+请确保您有 root 权限，并在每一步操作前确保系统已经升级到最新版本。
+:::
 
+## MySQL安装
+
+### 1. 下载与解压
+
+1. 下载MySQL到服务器：
+```bash
+wget https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.20-el7-x86_64.tar.gz
+```
+
+2. 解压文件：
+```bash
+tar xf mysql-8.0.20-el7-x86_64.tar.gz 
+```
+
+### 2. 配置MySQL
+
+1. 创建数据目录：
+```bash
+cd /data/base-server/mysql/mysql-8.0.20-el7-x86_64
+mkdir data
+```
+
+2. 创建配置文件：
+```bash
+cd /data/base-server/mysql/mysql-8.0.20-el7-x86_64
+touch my.cnf
+```
+
+3. 编辑my.cnf：
+```ini
+[mysqld]
+### 端口号                                 
+port=3306
+
+### 安装目录                                
+basedir=/data/base-server/mysql/mysql-8.0.20-el7-x86_64/
+
+### 数据存放路径                              
+datadir=/data/base-server/mysql/mysql-8.0.20-el7-x86_64/data/
+
+### 会话文件目录
+socket=/data/base-server/mysql/mysql-8.0.20-el7-x86_64/data/mysql.sock
+
+# 允许连接失败的最大次数                        
+max_connect_errors=10
+
+# 服务端的字符集编码                           
+character-set-server=utf8mb4
+          
+# 默认存储引擎                              
+default-storage-engine=INNODB
+
+# 默认用户                                
+user=root
+
+# 开启慢查询                               
+#slow_query_log=on                     
+
+# 慢查询日志文件目录                           
+#slow_query_log_file=/data/base-server/mysql/mysql-8.0.20-el7-x86_64/slow-query.log
+
+[client]
+### 连接服务端使用的端口号                          
+port=3306
+### 会话文件                                 
+socket=/data/base-server/mysql/mysql-8.0.20-el7-x86_64/data/mysql.sock
+# 默认字符集编码                              
+default-character-set=utf8mb4
+```
+
+4. 修改mysql.server文件：
+```bash
+cd /data/base-server/mysql/mysql-8.0.20-el7-x86_64
+vi ./support-files/mysql.server
+```
+![](../imgs/install/17322066951188.jpg)
+![](../imgs/install/17322067237924.jpg)
+![](../imgs/install/17322067588547.jpg)
+
+5. 修改mysqld_multi.server文件：
+```bash
+cd /data/base-server/mysql/mysql-8.0.20-el7-x86_64
+vi ./support-files/mysqld_multi.server
+```
+![](../imgs/install/17322068040313.jpg)
+
+### 3. 初始化与启动
+
+1. 初始化数据库：
+```bash
+cd /data/base-server/mysql/mysql-8.0.20-el7-x86_64
+./bin/mysqld --defaults-file=/data/base-server/mysql/mysql-8.0.20-el7-x86_64/my.cnf --initialize --console --user=root
+```
+
+:::tip 提示
+初始化后有一个临时密码，这个临时密码一定要保存，后面第一次登录服务需要
+:::
+
+2. 创建mysql.sock文件：
+```bash
+cd /data/base-server/mysql/mysql-8.0.20-el7-x86_64/data
+touch mysql.sock
+```
+
+3. 启动MySQL服务：
+```bash
+cd /data/base-server/mysql/mysql-8.0.20-el7-x86_64
+./bin/mysqld_safe --defaults-file=my.cnf &
+```
+
+4. 验证MySQL是否启动：
+```bash
+ps -ef | grep mysql
+```
+
+5. 登录MySQL数据库：
+```bash
+cd /data/base-server/mysql/mysql-8.0.20-el7-x86_64
+./bin/mysql --socket=./data/mysql.sock -uroot -p
+```
+
+6. 修改密码及设置远程登录：
+```sql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+show databases;
+use mysql;
+update user set host='%' where user ='root';
+flush privileges;
+```
+
+:::note 备注
+以上步骤执行完成之后，默认账号密码都是root，也可以设置自定义密码
+:::
+
+## PostgreSQL安装
+
+### 1. 环境准备
+
+1. 下载PostgreSQL 16.3：
+```bash
+wget https://www.postgresql.org/ftp/source/v16.3/postgresql-16.3.tar.gz
+```
+
+2. 解压安装包：
+```bash
+tar -zxf postgresql-16.3.tar.gz
+```
+
+### 2. 编译安装
+
+1. 配置和编译：
+```bash
+1. cd /data/base-server/postgres
+2. ./configure --prefix=/data/base-server/postgres/postgres-16.3 --without-readline
+3. make && make install
+```
+### 3. 用户配置
+
+1. 创建系统用户：
+```bash
+useradd -m -s /bin/bash postgres
+```
+
+2. 设置用户密码：
+```bash
+sudo passwd postgres
+```
+
+3. 设置目录权限：
+```bash
+sudo chown -R postgres:postgres /data/base-server/postgres/postgres-16.3
+```
+
+4. 切换用户（可选）：
+```bash
+su - postgres
+```
+
+### 4. 初始化数据库
+
+1. 初始化数据库集群：
+```bash
+1. cd /data/base-server/postgres/postgres-16.3/bin
+2. ./initdb -D /data/base-server/postgres/postgres-16.3/data
+3. ./pg_ctl -D /data/base-server/postgres/postgres-16.3/data -l logfile start
+```
+
+2. 设置postgres用户密码：
+```bash
+1. cd /data/base-server/postgres/postgres-16.3/bin
+2. ./psql
+3. ALTER USER postgres WITH PASSWORD 'postgres';
+4. \q
+```
+
+### 5. 环境变量配置
+
+1. 编辑环境变量文件：
+```bash
+vi /etc/profile.local
+```
+
+2. 添加环境变量：
+```bash
+export PATH=/data/base-server/postgres/postgres-16.3/bin:$PATH
+```
+
+3. 使环境变量生效：
+```bash
+source /etc/profile
+```
+
+### 6. 数据库编码设置
+
+1. 查看当前数据库编码：
+```sql
+SELECT datname, pg_encoding_to_char(encoding) AS encoding FROM pg_database WHERE datname = 'postgres';
+```
+
+2. 修改数据库编码（如果编码为SQL_ASCII）：
+```sql
+UPDATE pg_database SET encoding = pg_char_to_encoding('UTF8') WHERE datname = 'postgres';
+```
+
+3. 检查配置文件编码参数：
+```ini
+lc_messages = 'en_US.UTF-8'		
+lc_monetary = 'en_US.UTF-8'		
+lc_numeric = 'en_US.UTF-8'		
+lc_time = 'en_US.UTF-8'	
+```
+
+### 7. 远程连接配置
+
+1. 进入数据目录：
+```bash
+cd /data/base-server/postgres/postgres-16.3/data
+```
+
+2. 修改postgresql.conf：
+   - 将`listen_addresses="localhost"`改为`listen_addresses="*"`
+   - 取消`port=5432`的注释
+
+3. 修改pg_hba.conf，在IPv4 local connections下添加：
+```
+host    all    all    0.0.0.0/0    md5
+```
+
+4. 重启服务：
+```bash
+1. cd /data/base-server/postgres/postgres-16.3/bin
+2. ./pg_ctl -D /data/base-server/postgres/postgres-16.3/data -l logfile restart
+```
+
+## TDengine安装
+
+:::tip 提示
 建议安装 TDengine 3.x 最新版，TDengine安装参考其官方安装文档：https://docs.taosdata.com/get-started/
 
 安装包地址：https://docs.taosdata.com/get-started/package/
-
 :::
 
-1. 官网地址:` https://www.taosdata.com/`
+### 1. 安装步骤
 
-2. 下载安装包到服务器`/opt/TDengine`目录下
+1. 解压源码包：
+```bash
+tar -zxvf TDengine-server-3.3.4.3-Linux-x64.tar.gz
+```
 
-   ![image-20221101170836289](../imgs/install/image-20221101170836289.png)
+2. 安装：
+```bash
+cd TDengine-server-3.3.4.3-Linux-x64
+sudo ./install.sh
+```
 
-3. 使用tar -zxf解压压缩包
+3. 启动服务：
+```bash
+systemctl start taosd
+systemctl start taosadapter
+systemctl start taoskeeper
+systemctl start taos-monitor
+systemctl start taos-explorer
+```
 
-4. 进入到TDengine-server-3.0.1.5目录（目录取决于你安装的版本）里使用命令`sudo ./install.sh`进行安装
+4. 验证TDengine是否启动：
+```bash
+systemctl status taosd
+systemctl status taosadapter
+systemctl status taoskeeper
+systemctl status taos-monitor
+systemctl status taos-explorer
+```
 
-5. 使用`systemctl start taosd`启动
+:::tip 提示
+推荐使用DBeaver工具进行TDengine数据库管理。DBeaver是一个通用的数据库管理工具和SQL客户端，支持MySQL、PostgreSQL、Oracle、DB2、MSSQL等多种数据库。
 
-6. 使用`systemctl status taosd`查看TD是否启动成功
-
-   ![image-20221101172357637](../imgs/install/image-20221101172357637.png)
-
-7. 使用命令taos进入命令窗口
-
-8. 使用`alter user root pass '密码';`对root用户设置权限，也可使用create user创建用户
-
-9. 系统使用http形式连接，故需`systemctl start taosadapter`启动taosadapter
-
-详细的安装过程请看Tdengine的官网说明：[官网安装手册](https://docs.taosdata.com/get-started/package/)
-
-:::tip 提示 推荐使用DBeaver工具进行TDengine数据库管理
-
-DBeaver  是一个通用的数据库管理工具和 SQL 客户端，支持 MySQL, PostgreSQL, Oracle, DB2, MSSQL, Sybase, Mimer, HSQLDB, Derby, 以及其他兼容 JDBC 的数据库。DBeaver 提供一个图形界面用来查看数据库结构、执行SQL查询和脚本，浏览和导出数据，处理BLOB/CLOB 数据，修改数据库结构等等。
-https://dbeaver.io/
+官网地址：https://dbeaver.io/
 :::
 
+## EMQX安装
 
-## 安装EMQX
+### 1. 安装步骤
 
-1. 官网地址:https://www.emqx.com/zh
+1. 下载安装包：
+```bash
+wget https://www.emqx.com/zh/downloads/broker/5.8.2/emqx-5.8.2-el7-amd64.tar.gz
+```
 
-2. `wget https://www.emqx.com/zh/downloads/broker/5.0.9/emqx-5.0.9-el8-amd64.tar.gz `下载对应版本的emqx到/opt目录下
+2. 安装：
+```bash
+mkdir -p emqx && tar -zxvf emqx-5.8.2-el7-amd64.tar.gz -C emqx
+```
 
-3. 在/opt/目录下通过`mkdir -p emqx && tar -zxvf emqx-5.0.9-el8-amd64.tar.gz -C emqx`解压
+3. 启动服务：
+```bash
+./emqx/bin/emqx start
+```
 
-4. 使用`./emqx/bin/emqx start `命令进行启动
+4. 验证EMQX是否启动：
+```bash
+ps -ef | grep emqx
+```
 
-5. `http://localhost:18083/ `登录此地址查询是否安装成功，默认账号: admin 密码: public
+5. 访问管理控制台：
+通过 `http://localhost:18083/` 登录，默认账号: admin 密码: public
 
-6. 设置权限认证
+6. 设置权限认证：
 
-   ![image-20221101231856257](../imgs/install/image-20221101231856257.png)
+![image-20221101231856257](../imgs/install/image-20221101231856257.png)
 
-详细的安装过程请看EMQX的官网说明：[官网安装手册](https://www.emqx.io/docs/zh/v5.0/deploy/install.html)
+详细安装过程请参考[EMQX官方安装手册](https://www.emqx.io/docs/zh/v5.0/deploy/install.html)
 
+## Nginx安装
 
-如果需要基于Nginx运行，还需要安装Nginx
+### 1. 安装步骤
 
-## 安装Nginx
+1. 下载安装包：
+```bash
+wget http://nginx.org/download/nginx-1.27.2.tar.gz
+```
 
-1. 官网地址：`http://nginx.org/en/download.html`
+2. 解压源码包：
+```bash
+tar -zxf nginx-1.27.2.tar.gz
+```
 
-2. 将下载后的nginx上传至`/opt/nginx`下
+3. 安装依赖：
+```bash
+sudo yum install gcc-c++ pcre-devel zlib-devel make openssl-devel
+```
 
-3. 使用`tar zxf`对nginx进行解压
+4. 配置Nginx（指定安装目录和开启SSL支持）：
+```bash
+./configure --prefix=/data/base-server/nginx/nginx --with-http_ssl_module
+```
 
-   ```shell
-    tar -zxf nginx-1.25.1.tar.gz
-   ```
+5. 编译和安装：
+```bash
+make && make install
+```
 
-4. 进入到nginx-1.25.1目录进行编译安装
+6. 启动服务：
+```bash
+./nginx
+```
 
-   ```shell
-    1. ./configure --prefix=/usr/local/nginx --with-http_ssl_module
-    2. make && make install
-   ```
-
-5. 进入到安装目录下修改nginx.conf配置文件
-
-   ```shell
-   1. cd /usr/local/nginx
-   2. vi conf/nginx.conf
-   ```
-
-详细的安装过程请看 [Nginx安装教程](https://www.runoob.com/linux/nginx-install-setup.html)
+详细安装过程请参考[Nginx安装教程](https://www.runoob.com/linux/nginx-install-setup.html)
