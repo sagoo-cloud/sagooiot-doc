@@ -1,7 +1,9 @@
 ---
-title: "配置文件"
-sidebar_position: 0
+title: '配置文件'
 hide_title: true
+sidebar_position: 0
+keywords: [配置文件,系统配置,数据库配置,MQTT配置,时序数据库,Redis配置,规则服务]
+description: '本文档详细说明了SagooIoT系统的配置文件，包括系统配置、数据库配置、MQTT配置、时序数据库配置、Redis配置以及规则服务配置等。'
 ---
 
 ## 主系统配置参考

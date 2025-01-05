@@ -1,7 +1,9 @@
 ---
-sidebar_position: 3
+title: '端口配置'
 hide_title: true
-title: 端口配置
+sidebar_position: 3
+keywords: [端口配置,系统核心服务,数据库服务,MQTT服务,流媒体服务,端口修改,端口建议]
+description: '本文档详细说明了SagooIoT系统中使用的所有端口配置信息。包括系统核心服务、数据库服务、MQTT服务以及流媒体服务等各个组件的默认端口和配置方法。'
 ---
 
 
