@@ -1,4 +1,11 @@
-# 使用说明
+---
+title: 'ICE104 Gateway Usage'
+hide_title: true
+sidebar_position: 3
+keywords: [ICE104, gateway, device management, product configuration, sub-device, data items, actions]
+description: 'This document details the usage of the ICE104 cloud gateway with the SagooIOT platform, including adding gateway products, configuring data items, and managing sub-devices.'
+---
+
 
 对于SagooIOT平台来说，ICE104云服务网关，也是看成一种设备，是一种网关设备。
 

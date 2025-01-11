@@ -61,6 +61,7 @@ SagooIOT基于模块化管理，所有版本均提供源代码
 | [ICE104云网关](/enterprise/gateway/ice104/)             | ⭕                                                   | ⭕                      | ✅                        |
 | [JT/T 808云网关](/enterprise/gateway/jt808)             | ⭕                                                   | ⭕                      | ✅                        |
 | [GB/T 212-2017云网关](/enterprise/gateway/gbt212)       | ⭕                                                   | ⭕                      | ✅                        |
+| [基于人工智能大模型的数据助手](/enterprise/experiment/agents)      | ⭕                                                   | ⭕                      | ✅                        |
 | [设备本地端网关](/enterprise/gateway/gw)                    | ⭕                                                   | 单独付费                   | 单独付费                     |
 | [工业协议网关](/enterprise/gateway/industry) （支持200+的协议转换） | ⭕                                                   | 单独付费                   | 单独付费                     |
 | 商业限制                                                 | 仅用研究学习与内部使用，不可以用于任何商业项目 <br />(如需用到商业项目请联系我们进行购买授权） | 不限项目数量使用，禁止单独售卖源代码及编译程序。 | 不限项目数量使用，禁止单独售卖源代码及编译程序。 |
