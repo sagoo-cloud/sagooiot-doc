@@ -46,6 +46,9 @@ description: '详细说明SagooIOT平台的MQTT Topic结构，包括设备属性
 
     获取:`/sys/${productKey}/${deviceKey}/thing/shadow/get`
 
+7. [设备标签Topic](mqtt_shadow.md)
+
+   发布:`/sys/${productKey}/${deviceKey}/thing/tags`
 
 :::note 提示
 网关上报的topic中的 `${productKey}` 为网关的产品标识，`${deviceKey}` 为网关的设备标识。子设备在数据中`subDevices`下的 `productKey` 和 `deviceKey` 为子设备的产品标识和设备标识。

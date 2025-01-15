@@ -168,6 +168,38 @@ description: '详细说明SagooIOT平台的设备数据上报机制，包括属�
 5. method: 消息类型，目前仅支持thing.event.`${tsl.event.identifier}`.post。
 6. version: 消息版本号，目前版本为1.0
 
+
+## 设备上报标签
+
+1. 请求Topic: `/sys/${productKey}/${deviceKey}/thing/tags`
+2. 请求数据格式示例:
+```json
+{
+  "id": "123",
+  "version": "1.0",
+  "sys":{
+    "ack":0
+  },
+  "params": {
+    "tags": {
+      "temperature": 25.3,
+      "humidity": 60.5,
+      "status": "normal"
+    },
+    "time": 1633024800000
+  }
+}
+```
+
+字段说明
+1. id: 消息ID，用于唯一标识一条消息，由设备端生成，必须保证唯一性。
+2. version: 消息版本号，目前版本为1.0。
+3. sys: 系统级参数，目前仅支持ack，ack=0表示不需要应答，ack=1表示需要应答。
+4. params: 消息体，消息体中包含了设备上报的标签值，标签值的格式为JSON格式。
+5. tags: 标签值，必须与物模型中定义的标签类型一致。
+6. time: 标签值的时间戳，单位为毫秒，可选，如果不携带该字段，则默认为消息发送时间。
+
+
 ## 服务调用
 1. 请求Topic: `/sys/${productKey}/${deviceKey}/thing/service/${tsl.service.identifier}`
 2. 请求数据格式示例:
