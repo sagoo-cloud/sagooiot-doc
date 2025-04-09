@@ -54,7 +54,6 @@ SagooIOT基于模块化管理，所有版本均提供源代码
 | 物联卡管理 （电信）                                           | ⭕                                                   | ⭕                      | ✅                        | ✅                       |
 | 移动端系统（H5，小程序，苹果，安卓）                                  | ⭕                                                   | ⭕                      | ✅                        | ✅                       |
 | 集群部署支持（服务）                                           | ⭕                                                   | ⭕                       | ✅                        | ✅                       |
-| [指数计算管理](/enterprise/totalIndex/)                    | ⭕                                                   | ⭕                      | ✅                        | ✅                       |
 | [大屏协同播放控制器](/enterprise/lsc/)                        | ⭕                                                   | ⭕                      | ✅                        | ✅                       |
 | [OPCUA云网关](/enterprise/gateway/opcua)                | ⭕                                                   | ⭕                      | ✅                        | ✅                       |
 | [modbus云网关](/enterprise/gateway/modbus)              | ⭕                                                   | ⭕                      | ✅                        | ✅                       |
@@ -62,8 +61,9 @@ SagooIOT基于模块化管理，所有版本均提供源代码
 | [JT/T 808云网关](/enterprise/gateway/jt808)             | ⭕                                                   | ⭕                      | ✅                        | ✅                       |
 | [GB/T 212-2017云网关](/enterprise/gateway/gbt212)       | ⭕                                                   | ⭕                      | ✅                        | ✅                       |
 | [基于人工智能大模型的数据助手](/enterprise/experiment/agents)      | ⭕                                                   | ⭕                      | ✅                        | ✅                       |
-| 电力监控业务模型 | ⭕ | ⭕ | ⭕ | ✅ |
 | 可视化低代码开发功能，可以快速构建业务功能。 | ⭕ | ⭕ | ⭕ | ✅ |
+| 电力监控业务模型 | ⭕                                                            | ⭕                                                | ⭕                                                | ✅ |
+| [指数计算管理](/enterprise/totalIndex/) | ⭕                                                            | ⭕                                                | ⭕                                                | ✅ |
 | 基于插件化高并发设备接入网关 | ⭕ | ⭕ | ⭕ | ✅ |
 | Bacnet云网关 | ⭕ | ⭕ | ⭕ | ✅ |
 | [设备本地端网关](/enterprise/gateway/gw) 硬件产品               | ⭕                                                   | 单独付费                   | 单独付费                     | 单独付费                 |
