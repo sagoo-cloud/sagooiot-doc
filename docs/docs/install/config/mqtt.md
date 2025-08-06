@@ -77,3 +77,6 @@ mqtt:
 SagooIoT 系统自带了MQTT服务，如果需要第三方的MQTT服务，可以在配置文件中修改`mqttAppName`配置项。如： `sagoomqtt`、`emqx`、`coolpy7`
 
 
+## MQTT设备在线离线监听
+
+SagooIoT 通过订阅 `$SYS/brokers/+/clients/+/connected` 和 `$SYS/brokers/+/clients/+/disconnected` 两个主题来监听设备的上线与离线状态。为确保 MQTT 客户端能够正常订阅这些主题，需配置 ACL（访问控制列表）以允许对 `$SYS` 主题的订阅权限。
