@@ -433,6 +433,12 @@ ps -ef | grep emqx
 
 详细安装过程请参考[EMQX官方安装手册](https://www.emqx.io/docs/zh/v5.0/deploy/install.html)
 
+:::tip 提示
+也可以使用SagooIoT内置的MQTT服务，配置参考[MQTT配置说明](../install/config/mqtt)
+
+:::
+
+
 ## Nginx安装
 
 ### 1. 安装步骤
