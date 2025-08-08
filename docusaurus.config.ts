@@ -37,7 +37,12 @@ const config: Config = {
   },
   // https://www.docusaurus.cn/blog/releases/3.6#docusaurus-faster
   future: {
-    experimental_faster: true,
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true,
+    },
+    experimental_faster: {
+      ssgWorkerThreads: true,
+    },
   },
   presets: [
     [
@@ -306,7 +311,7 @@ const config: Config = {
       defaultLanguage: 'go',
       additionalLanguages: ['bash', 'javascript', 'toml', 'ini'], // 添加语言
       // 默认支持的语言 https://github.com/FormidableLabs/prism-react-renderer/blob/master/packages/generate-prism-languages/index.ts#L9-L23
-      // 默认支持的语言 "markup","jsx","tsx","swift","kotlin","objectivec","js-extras","reason","rust","graphql","yaml","go","cpp","markdown","python","json"
+      // 默认支持的语言 "markup","jsx","tsx","swift","kotlin","objectivec","js-extras","reason","rust","graphql","yaml","go","cpp","python","json"
     },
     // 搜索配置
     algolia: {
