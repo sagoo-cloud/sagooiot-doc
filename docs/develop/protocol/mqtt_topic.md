@@ -34,25 +34,25 @@ description: '详细说明SagooIOT平台的MQTT Topic结构，包括设备属性
 
     响应:`/sys/{childProductKey}/{gateWayDeviceKey}/child/{childDeviceKey}/thing/service/property/set_reply`
 
-4. [服务调用(平台侧发起)](mqtt_report.md#服务调用)
+5. [服务调用(平台侧发起)](mqtt_report.md#服务调用)
 
     请求:`/sys/${productKey}/${deviceKey}/thing/service/${tsl.service.identifier}`
 
     响应:`/sys/${productKey}/${deviceKey}/thing/service/${tsl.service.identifier}_reply`
 
-5. [网关批量上传事件和属性(网关发起)](mqtt_report.md#网关批量上传事件和属性)
+6. [网关批量上传事件和属性(网关发起)](mqtt_report.md#网关批量上传事件和属性)
 
   请求:`/sys/${productKey}/${deviceKey}/thing/event/property/pack/post`
 
   响应:`/sys/${productKey}/${deviceKey}/thing/event/property/pack/post`
 
-6. [设备影子Topic](mqtt_shadow.md)
+7. [设备影子Topic](mqtt_shadow.md)
 
     发布:`/sys/${productKey}/${deviceKey}/thing/shadow/update`
 
     获取:`/sys/${productKey}/${deviceKey}/thing/shadow/get`
 
-7. [设备标签Topic](mqtt_shadow.md)
+8. [设备标签Topic](mqtt_shadow.md)
 
    发布:`/sys/${productKey}/${deviceKey}/thing/tags`
 
