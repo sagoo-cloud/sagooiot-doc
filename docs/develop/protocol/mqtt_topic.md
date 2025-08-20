@@ -28,6 +28,12 @@ description: '详细说明SagooIOT平台的MQTT Topic结构，包括设备属性
 
     响应:`/sys/${productKey}/${deviceKey}/thing/service/property/set_reply`
 
+4. [子设备属性设置(平台侧发起)](mqtt_report.md#设备属性设置)
+
+    请求:`/sys/{childProductKey}/{gateWayDeviceKey}/child/{childDeviceKey}/thing/service/property/set`
+
+    响应:`/sys/{childProductKey}/{gateWayDeviceKey}/child/{childDeviceKey}/thing/service/property/set_reply`
+
 4. [服务调用(平台侧发起)](mqtt_report.md#服务调用)
 
     请求:`/sys/${productKey}/${deviceKey}/thing/service/${tsl.service.identifier}`
