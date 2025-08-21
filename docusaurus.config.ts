@@ -162,6 +162,10 @@ const config: Config = {
               to: '/docs/iot/configure/start',
             },
             {
+              label: '设计器',
+              to: '/docs/iot/designer/start',
+            },
+            {
               label: '设备接入',
               to: '/docs/access',
             }
