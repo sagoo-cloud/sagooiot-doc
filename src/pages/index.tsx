@@ -6,6 +6,7 @@ import styles from './index.module.css';
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import HomepageCharacteristic from '@site/src/components/HomepageCharacteristic';
+import CustomerLogos from '@site/src/components/CustomerLogos';
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
     return (
@@ -57,6 +58,7 @@ export default function Home() {
             <main>
                 <HomepageFeatures/>
                 <HomepageCharacteristic/>
+                <CustomerLogos />
             </main>
         </Layout>
     );
