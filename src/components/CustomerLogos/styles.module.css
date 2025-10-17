@@ -1,0 +1,107 @@
+.customers {
+  padding: 4rem 0;
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+[data-theme='dark'] .customers {
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--ifm-color-secondary-darkest);
+  margin-bottom: 3rem;
+}
+
+[data-theme='dark'] .subtitle {
+  color: var(--ifm-color-secondary-lightest);
+}
+
+.customerLogo {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  padding: 1rem;
+  background: var(--ifm-card-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  width: 100%;
+  max-width: 200px;
+}
+
+.logoContainer:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+[data-theme='dark'] .logoContainer {
+  background: var(--ifm-color-emphasis-100);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .logoContainer:hover {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.logo {
+  max-width: 100%;
+  max-height: 60px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.2s ease-in-out;
+}
+
+.logoContainer:hover .logo {
+  filter: grayscale(0%);
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 996px) {
+  .customerLogo {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .customerLogo {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .customerLogo {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
