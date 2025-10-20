@@ -52,7 +52,30 @@ const CustomerLogos = [
     name: '伴悦科技',
     logo: '/img/customers/011.png',
   },
-
+    {
+        name: '赫曦电气',
+        logo: '/img/customers/013.png',
+    },
+    {
+        name: 'beta',
+        logo: '/img/customers/014.png',
+    },
+    {
+        name: '领克',
+        logo: '/img/customers/015.png',
+    },
+    {
+        name: '路途智能',
+        logo: '/img/customers/016.png',
+    },
+    {
+        name: '轻易云',
+        logo: '/img/customers/017.png',
+    },
+    {
+        name: '德力信',
+        logo: '/img/customers/018.png',
+    },
 ];
 
 interface CustomerLogoProps {
