@@ -69,7 +69,7 @@ const CustomerLogos = [
         logo: '/img/customers/016.png',
     },
     {
-        name: '轻易云',
+        name: '俱数科技',
         logo: '/img/customers/017.png',
     },
     {
