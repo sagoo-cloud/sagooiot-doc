@@ -1,15 +1,15 @@
 ---
-title: 'ICE104 Gateway Usage'
+title: 'IEC104 Gateway Usage'
 hide_title: true
 sidebar_position: 3
-keywords: [ICE104, gateway, device management, product configuration, sub-device, data items, actions]
-description: 'This document details the usage of the ICE104 cloud gateway with the SagooIOT platform, including adding gateway products, configuring data items, and managing sub-devices.'
+keywords: [IEC104, gateway, device management, product configuration, sub-device, data items, actions]
+description: 'This document details the usage of the IEC104 cloud gateway with the SagooIOT platform, including adding gateway products, configuring data items, and managing sub-devices.'
 ---
 
 
-对于SagooIOT平台来说，ICE104云服务网关，也是看成一种设备，是一种网关设备。
+对于SagooIOT平台来说，IEC104云服务网关，也是看成一种设备，是一种网关设备。
 
-所以使用ICE104云网关的时候，需要在平台的设备管理功能中，添加产品，将ICE104云网关添加到产品。
+所以使用IEC104云网关的时候，需要在平台的设备管理功能中，添加产品，将IEC104云网关添加到产品。
 
 
 ## 添加网关产品
@@ -22,7 +22,7 @@ description: 'This document details the usage of the ICE104 cloud gateway with t
 ![](../../imgs/extended/104add.png)
 
 ### 配置物模型
-在产品列表中找到添加的ICE104网关的产品，点详情进入到产品的详情页，进入到物模型的配置标签页中进行物模型配置。
+在产品列表中找到添加的IEC104网关的产品，点详情进入到产品的详情页，进入到物模型的配置标签页中进行物模型配置。
 
 添加一个版本属性，标识为：GatewayVersion，类型为字符型。
 

@@ -23,7 +23,7 @@ const FeatureList: FeatureItem[] = [
     title: "多协议适配",
     description: (
         <>
-          支持多种通信协议(MQTT，MODBUS，TCP,UDP，HTTP,CoAP)等，支持自定义消息协议，灵活接入不同厂商不同设备。
+          支持多种通信协议(MQTT，MODBUS，TCP,UDP，HTTP,OPC UA,CoAP,SNMP,IEC104,Siements-S7,DL/T 645,CJ/T 188-2004,BACnet/IP)等，支持自定义消息协议，灵活接入不同厂商不同设备。
         </>
     ),
   },

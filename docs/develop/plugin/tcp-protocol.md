@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: 'TCP协议插件开发'
+title: 'TCP协议插件示例'
 keywords: [TCP插件,协议开发,通信时序,数据格式,设备通信,TCP通信,插件接口,协议实现,通信协议,数据交互]
 description: '详细说明SagooIOT平台的TCP协议插件开发方法，包括通信时序、数据格式和接口实现等TCP通信开发指南。'
 ---
